@@ -21,5 +21,18 @@ namespace gymKing
         {
             MessageBox.Show("DENEME!!!");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text == "admin" && textBox2.Text == "123")
+            {
+                MessageBox.Show("Giriş başarılı");
+
+            }
+            else
+            {
+                MessageBox.Show("BAŞARISIZ!!");
+            }
+        }
     }
 }
