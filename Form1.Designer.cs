@@ -28,13 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.button1111 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // button1111
+            // 
+            this.button1111.Location = new System.Drawing.Point(281, 105);
+            this.button1111.Name = "button1111";
+            this.button1111.Size = new System.Drawing.Size(210, 138);
+            this.button1111.TabIndex = 0;
+            this.button1111.Text = "button111";
+            this.button1111.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1111);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1111;
     }
 }
 
