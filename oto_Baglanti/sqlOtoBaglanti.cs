@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace gymKing.oto_Baglanti
 {
     public class sqlOtoBaglanti
@@ -26,6 +26,24 @@ namespace gymKing.oto_Baglanti
             return baglantiDize;
         }
 
+        public static  bool baglanti_durumu = false;
+
+        public static void baglan()
+        {
+            SqlConnection baglanti = new SqlConnection(sqlBaglantiDize());
+            if(sqlOtoBaglanti.baglanti_durumu == false)
+            {
+                baglanti.Open();
+                sqlOtoBaglanti.baglanti_durumu = true;
+            }
+            else
+            {
+                baglanti.Close();
+                sqlOtoBaglanti.baglanti_durumu = false;
+
+                
+            }
+        }
 
     }
 }

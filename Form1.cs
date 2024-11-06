@@ -25,8 +25,7 @@ namespace gymKing
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            conn.Open();
+            sqlOtoBaglanti.baglan();
             if(textBox1.Text == "admin" && textBox2.Text == "123")
             {
                 MessageBox.Show("Giriş başarılı");
@@ -36,7 +35,7 @@ namespace gymKing
             {
                 MessageBox.Show("BAŞARISIZ!!");
             }
-            conn.Close();
+            sqlOtoBaglanti.baglan();
         }
     }
 }
