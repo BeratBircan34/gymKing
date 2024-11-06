@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gymKing.oto_Baglanti;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace gymKing
 {
     public partial class Form1 : Form
@@ -19,11 +20,13 @@ namespace gymKing
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("DENEME!!!");
+            sqlOtoBaglanti.pcAdiAl();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            conn.Open();
             if(textBox1.Text == "admin" && textBox2.Text == "123")
             {
                 MessageBox.Show("Giriş başarılı");
@@ -33,6 +36,7 @@ namespace gymKing
             {
                 MessageBox.Show("BAŞARISIZ!!");
             }
+            conn.Close();
         }
     }
 }
