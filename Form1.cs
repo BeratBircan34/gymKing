@@ -13,6 +13,9 @@ namespace gymKing
 {
     public partial class Form1 : Form
     {
+
+        Temizlik temizlik = new Temizlik();
+
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +32,8 @@ namespace gymKing
             if(textBox1.Text == "admin" && textBox2.Text == "123")
             {
                 MessageBox.Show("Giriş başarılı");
+                this.Hide();
+                temizlik.Show();
 
             }
             else
