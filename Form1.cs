@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
 namespace gymKing
 {
     public partial class Form1 : Form
@@ -26,21 +27,48 @@ namespace gymKing
             sqlOtoBaglanti.pcAdiAl();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void girisKontrol(string kullaniciAdi,string sifre)
         {
-            sqlOtoBaglanti.baglan();
-            if(textBox1.Text == "admin" && textBox2.Text == "123")
+            string rol = "Yok";
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand kmt = new SqlCommand("select  * from tbl_giris_bilgileri where kullaniciadi = @kAdi and sifre = @sifre", baglanti);
+            kmt.Parameters.Add("@kAdi", kullaniciAdi);
+            kmt.Parameters.Add("@sifre", sifre);
+            SqlDataReader dr = kmt.ExecuteReader();
+            if (dr.Read())
             {
-                MessageBox.Show("Giriş başarılı");
-                this.Hide();
-                temizlik.Show();
-
+                rol = dr["rol"].ToString();
+                switch (rol)
+                {
+                    case "Temizlikçi":
+                        Temizlik frm = new Temizlik();
+                        frm.Show();
+                        break;
+                    case "Pt":
+                        frm_pt frmpt = new frm_pt();
+                        frmpt.Show();
+                        this.Hide();
+                        MessageBox.Show("Hoşgeldiniz!");
+                        break;
+                    default:
+                        MessageBox.Show("Rolünüzün giriş ekranı yapım aşamasında");
+                        break;
+                }
             }
             else
             {
-                MessageBox.Show("BAŞARISIZ!!");
+                MessageBox.Show("Giriş bilgilerini kontrol ediniz!");
             }
-            sqlOtoBaglanti.baglan();
+            baglanti.Close();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            girisKontrol(txtK_adi.Text, txt_Sifre.Text);
+            
         }
     }
 }
