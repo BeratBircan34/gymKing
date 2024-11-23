@@ -16,5 +16,15 @@ namespace gymKing
         {
             InitializeComponent();
         }
+
+        private void frm_pt_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_saat.Text = DateTime.Now.Hour.ToString()+":"+DateTime.Now.Minute.ToString()+":"+DateTime.Now.Second.ToString();
+        }
     }
 }

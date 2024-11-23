@@ -52,6 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="kaynaklar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kaynaklar.resx</DependentUpon>
+    </Compile>
     <Compile Include="pt_forms\frm_pt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +74,10 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kaynaklar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>kaynaklar.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="pt_forms\frm_pt.resx">
       <DependentUpon>frm_pt.cs</DependentUpon>
@@ -97,6 +106,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
