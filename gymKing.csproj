@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="controls\perBilgiAl.cs" />
     <Compile Include="controls\Pt_analizHesaplama.cs" />
+    <Compile Include="diyetisyen_forms\frm_diyetisyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diyetisyen_forms\frm_diyetisyen.Designer.cs">
+      <DependentUpon>frm_diyetisyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Temizlik.Designer.cs">
       <DependentUpon>Temizlik.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="diyetisyen_forms\frm_diyetisyen.resx">
+      <DependentUpon>frm_diyetisyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

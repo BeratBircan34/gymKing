@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using gymKing.controls;
+using gymKing.diyetisyen_forms;
 
 namespace gymKing
 {
@@ -58,6 +59,14 @@ namespace gymKing
                         MessageBox.Show(id);
                         MessageBox.Show("Hoşgeldiniz!"+per.ad+" "+per.soyad);
                         break;
+                    case "Diyetisyen":
+                        frm_diyetisyen frmdiyet = new frm_diyetisyen();
+                        perBilgiAl perBilgi = new perBilgiAl(id);
+                        frmdiyet.diyetisyen_oturumSahibi = perBilgi.ad+" "+ perBilgi.soyad;
+                        frmdiyet.Show();
+                        this.Hide();
+                        break;
+
                     default:
                         MessageBox.Show("Rolünüzün giriş ekranı yapım aşamasında");
                         break;
