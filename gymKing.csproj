@@ -46,8 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controls\formYapiAyarla.cs" />
     <Compile Include="controls\perBilgiAl.cs" />
     <Compile Include="controls\Pt_analizHesaplama.cs" />
+    <Compile Include="diyetisyen_forms\deneme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diyetisyen_forms\deneme.Designer.cs">
+      <DependentUpon>deneme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="diyetisyen_forms\deneme2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diyetisyen_forms\deneme2.Designer.cs">
+      <DependentUpon>deneme2.cs</DependentUpon>
+    </Compile>
     <Compile Include="diyetisyen_forms\frm_diyetisyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +99,12 @@
     <Compile Include="Temizlik.Designer.cs">
       <DependentUpon>Temizlik.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="diyetisyen_forms\deneme.resx">
+      <DependentUpon>deneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="diyetisyen_forms\deneme2.resx">
+      <DependentUpon>deneme2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="diyetisyen_forms\frm_diyetisyen.resx">
       <DependentUpon>frm_diyetisyen.cs</DependentUpon>
     </EmbeddedResource>

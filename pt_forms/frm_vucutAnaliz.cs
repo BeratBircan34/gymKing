@@ -31,5 +31,10 @@ namespace gymKing.pt_forms
         {
             this.Close();
         }
+
+        private void frm_vucutAnaliz_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
