@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="diyetisyen_forms\deneme.cs">
+    <Compile Include="diyetisyen_forms\deneme.cs" />
     <Compile Include="controls\perBilgiAl.cs" />
     <Compile Include="controls\Pt_analizHesaplama.cs" />
     <Compile Include="diyetisyen_forms\deneme.cs">
