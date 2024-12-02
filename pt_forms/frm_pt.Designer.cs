@@ -153,7 +153,7 @@
             this.label4.ForeColor = System.Drawing.Color.SlateGray;
             this.label4.Location = new System.Drawing.Point(194, 372);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 90);
+            this.label4.Size = new System.Drawing.Size(142, 90);
             this.label4.TabIndex = 18;
             this.label4.Text = " Vücut Analizi";
             // 
@@ -197,7 +197,7 @@
             this.label7.ForeColor = System.Drawing.Color.SlateGray;
             this.label7.Location = new System.Drawing.Point(885, 372);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(152, 90);
+            this.label7.Size = new System.Drawing.Size(171, 90);
             this.label7.TabIndex = 26;
             this.label7.Text = "Güncel Kayıtlar";
             // 

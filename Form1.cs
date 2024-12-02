@@ -11,14 +11,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using gymKing.controls;
 using gymKing.diyetisyen_forms;
+using gymKing.kasiyer_forms;
 
 namespace gymKing
 {
     public partial class Form1 : Form
     {
-
-        Temizlik temizlik = new Temizlik();
-
         public Form1()
         {
             InitializeComponent();
@@ -65,6 +63,14 @@ namespace gymKing
                         frmdiyet.diyetisyen_oturumSahibi = perBilgi.ad+" "+ perBilgi.soyad;
                         frmdiyet.Show();
                         this.Hide();
+                        break;
+                    case "Kasiyer":
+                        Kasiyer kasiyer = new Kasiyer();
+                        perBilgiAl K_bilgi = new perBilgiAl(id);
+                        kasiyer.kasiyer_oturumSahibi = K_bilgi.ad + " " + K_bilgi.soyad;
+                        kasiyer.Show();
+                        this.Hide();
+                        MessageBox.Show("Hoşgeldiniz!" + K_bilgi.ad + " " +K_bilgi.soyad);
                         break;
 
                     default:

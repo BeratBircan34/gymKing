@@ -73,6 +73,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="kasiyer_forms\Kasiyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kasiyer_forms\Kasiyer.Designer.cs">
+      <DependentUpon>Kasiyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kasiyer_forms\K_Uyelik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kasiyer_forms\K_Uyelik.Designer.cs">
+      <DependentUpon>K_Uyelik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kasiyer_forms\urunSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kasiyer_forms\urunSatis.Designer.cs">
+      <DependentUpon>urunSatis.cs</DependentUpon>
+    </Compile>
     <Compile Include="kaynaklar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +128,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kasiyer_forms\Kasiyer.resx">
+      <DependentUpon>Kasiyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kasiyer_forms\K_Uyelik.resx">
+      <DependentUpon>K_Uyelik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kasiyer_forms\urunSatis.resx">
+      <DependentUpon>urunSatis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kaynaklar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -190,6 +217,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\cashier_icon.ico" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\member_add.png" />
+    <Content Include="Resources\remove.png" />
+    <Content Include="Resources\shop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

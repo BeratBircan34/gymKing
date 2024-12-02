@@ -19,6 +19,7 @@ namespace gymKing
             InitializeComponent();
         }
         public string oturmSahibi = "";
+
         private void frm_pt_Load(object sender, EventArgs e)
         {
 

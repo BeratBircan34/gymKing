@@ -40,7 +40,7 @@
             this.btn_girisYap.Location = new System.Drawing.Point(248, 186);
             this.btn_girisYap.Name = "btn_girisYap";
             this.btn_girisYap.Size = new System.Drawing.Size(157, 54);
-            this.btn_girisYap.TabIndex = 1;
+            this.btn_girisYap.TabIndex = 3;
             this.btn_girisYap.Text = "GİRİŞ YAP";
             this.btn_girisYap.UseVisualStyleBackColor = true;
             this.btn_girisYap.Click += new System.EventHandler(this.button1_Click);
@@ -50,14 +50,14 @@
             this.txtK_adi.Location = new System.Drawing.Point(333, 86);
             this.txtK_adi.Name = "txtK_adi";
             this.txtK_adi.Size = new System.Drawing.Size(135, 20);
-            this.txtK_adi.TabIndex = 2;
+            this.txtK_adi.TabIndex = 1;
             // 
             // txt_Sifre
             // 
             this.txt_Sifre.Location = new System.Drawing.Point(333, 138);
             this.txt_Sifre.Name = "txt_Sifre";
             this.txt_Sifre.Size = new System.Drawing.Size(135, 20);
-            this.txt_Sifre.TabIndex = 3;
+            this.txt_Sifre.TabIndex = 2;
             // 
             // label2
             // 
@@ -90,6 +90,7 @@
             this.Controls.Add(this.txtK_adi);
             this.Controls.Add(this.btn_girisYap);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
