@@ -29,5 +29,10 @@ namespace gymKing.kasiyer_forms
         {
 
         }
+
+        private void K_Uyelik_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

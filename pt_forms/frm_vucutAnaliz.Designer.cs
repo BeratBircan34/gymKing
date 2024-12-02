@@ -785,6 +785,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label9);
@@ -793,6 +794,8 @@
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_vucutAnaliz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frm_vucutAnaliz";

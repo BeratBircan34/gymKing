@@ -1,4 +1,5 @@
-﻿using gymKing.kasiyer_forms;
+﻿using gymKing.controls;
+using gymKing.kasiyer_forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,7 @@ namespace gymKing.kasiyer_forms
         private void Kasiyer_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            SetMdiContainerBackColor(Color.Gainsboro);
+            
             lbl_oturumSahibi.Text = kasiyer_oturumSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
@@ -49,7 +50,7 @@ namespace gymKing.kasiyer_forms
 
         private void KASİYER_Load(object sender, EventArgs e)
         {
-
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
         }
 
         private void label1_Click(object sender, EventArgs e)

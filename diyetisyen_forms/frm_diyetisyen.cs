@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gymKing.controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace gymKing.diyetisyen_forms
 {
@@ -20,8 +22,10 @@ namespace gymKing.diyetisyen_forms
         private void frm_diyetisyen_Load(object sender, EventArgs e)
         {
             label1.Text = diyetisyen_oturumSahibi;
-            SetMdiContainerBackColor(Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            //SetMdiContainerBackColor(Color.Gainsboro);
         }
+        /*
         private void itemGizle()
         {
             foreach (Control control in this.Controls)
@@ -67,12 +71,14 @@ namespace gymKing.diyetisyen_forms
                 childform.FormClosed += (s, args) => ShowParentControls();
             }
 
-        }
+        }*/
 
         private void button1_Click(object sender, EventArgs e)
         {
             deneme dnm = new deneme();
-            formAc(dnm);
+            otoform_ayarla dnm_p = new otoform_ayarla(dnm);
+            dnm_p.formAc(dnm, this);
+
 
         }
     }

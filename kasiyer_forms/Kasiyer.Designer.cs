@@ -117,13 +117,12 @@
             // 
             // lbl_oturumSahibi
             // 
-            this.lbl_oturumSahibi.AutoSize = true;
             this.lbl_oturumSahibi.BackColor = System.Drawing.Color.Transparent;
             this.lbl_oturumSahibi.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_oturumSahibi.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl_oturumSahibi.Location = new System.Drawing.Point(585, 279);
+            this.lbl_oturumSahibi.Location = new System.Drawing.Point(594, 268);
             this.lbl_oturumSahibi.Name = "lbl_oturumSahibi";
-            this.lbl_oturumSahibi.Size = new System.Drawing.Size(258, 36);
+            this.lbl_oturumSahibi.Size = new System.Drawing.Size(195, 75);
             this.lbl_oturumSahibi.TabIndex = 26;
             this.lbl_oturumSahibi.Text = "Oturum Sahibi";
             // 

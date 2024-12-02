@@ -1,4 +1,5 @@
-﻿using gymKing.pt_forms;
+﻿using gymKing.controls;
+using gymKing.pt_forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,15 +21,15 @@ namespace gymKing
         }
         public string oturmSahibi = "";
 
+        
         private void frm_pt_Load(object sender, EventArgs e)
         {
 
             timer1.Start();
-            SetMdiContainerBackColor(Color.Gainsboro);
             lbl_oturumSahibi.Text = oturmSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
-            
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
         }
       
 
@@ -37,52 +38,7 @@ namespace gymKing
             lbl_saat.Text = DateTime.Now.Hour.ToString()+":"+DateTime.Now.Minute.ToString()+":"+DateTime.Now.Second.ToString("00");
         }
 
-        private void itemGizle()
-        {
-            foreach(Control control in this.Controls)
-            {
-                if (!(control is MdiClient)) // MDI alanını koru
-                {
-                    control.Visible = false;
-                }
-            }
-        }
-        private void ShowParentControls()
-        {
-            foreach (Control control in this.Controls)
-            {
-                if (!(control is MdiClient)) // MDI alanını gösterme
-                {
-                    control.Visible = true; // Kontrolleri tekrar görünür yap
-                }
-            }
-        }
-        private void SetMdiContainerBackColor(Color color)
-        {
-            foreach (Control control in this.Controls)
-            {
-                control.BackColor = Color.Gainsboro;
-                if (control is MdiClient mdiClient)
-                {
-                    mdiClient.BackColor = color; // Arka plan rengini ayarla
-                }
-            }
-        }
-        private void formAc(Form childform)
-        {
-            itemGizle();
-            if (this.IsMdiContainer)
-            {
-                childform.MdiParent = this;
-                childform.FormBorderStyle = FormBorderStyle.None;
-                childform.WindowState = FormWindowState.Maximized;
-                childform.Dock = DockStyle.Fill;
-                childform.Show();
-                childform.BringToFront();
-                childform.FormClosed += (s, args) => ShowParentControls();
-            }
-
-        }
+       
 
         private void pictureBox12_MouseHover(object sender, EventArgs e)
         {
@@ -111,11 +67,9 @@ namespace gymKing
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            
-            
-            
             frm_vucutAnaliz frmanaliz = new frm_vucutAnaliz();
-            formAc(frmanaliz);
+            otoform_ayarla frmanalz = new otoform_ayarla(frmanaliz);
+            frmanalz.formAc(frmanaliz,this);
 
         }
 
@@ -126,7 +80,9 @@ namespace gymKing
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            Form1 frm = new Form1();
+            frm.Show();
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)

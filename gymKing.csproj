@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controls\otoform_ayarla.cs" />
     <Compile Include="diyetisyen_forms\deneme.cs">
       <SubType>Form</SubType>
     </Compile>
