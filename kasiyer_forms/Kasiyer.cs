@@ -50,7 +50,11 @@ namespace gymKing.kasiyer_forms
 
         private void KASİYER_Load(object sender, EventArgs e)
         {
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            timer1.Start();
+            lbl_oturumSahibi.Text = kasiyer_oturumSahibi;
+            lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
+            lbl_gun.Text = DateTime.Now.ToString("dddd");
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -60,21 +64,21 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             K_Uyelik uyelik = new K_Uyelik();
             uyelik.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             urunSatis urun = new urunSatis();
             urun.Show();
-            this.Hide();
+            this.Close();
         }
 
        

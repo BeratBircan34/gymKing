@@ -157,7 +157,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 74);
             this.label4.TabIndex = 32;
-            this.label4.Text = "Üyelık Islemlerı";
+            this.label4.Text = "Üyelik Islemleri";
             // 
             // timer1
             // 
@@ -258,7 +258,6 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.Name = "Kasiyer";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

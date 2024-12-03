@@ -1,4 +1,6 @@
-﻿using System;
+﻿using gymKing.controls;
+using gymKing.pt_forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,12 +29,30 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            K_uyelikSil uyelikSil = new K_uyelikSil();  
+            this.Close();
+            uyelikSil.Show();
         }
 
-        private void K_Uyelik_Load(object sender, EventArgs e)
-        {
+       
 
+        private void K_Uyelik_Load_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            K_uyelikEkle uyelikEkle = new K_uyelikEkle();
+            this.Close();
+            uyelikEkle.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            K_uyelikDuzenle uyelikduzenle = new K_uyelikDuzenle();
+            this.Close();
+            uyelikduzenle.Show();
         }
     }
 }

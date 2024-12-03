@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gymKing.controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,25 +11,23 @@ using System.Windows.Forms;
 
 namespace gymKing.kasiyer_forms
 {
-    public partial class urunSatis : Form
+    public partial class K_uyelikDuzenle : Form
     {
-        public urunSatis()
+        public K_uyelikDuzenle()
         {
             InitializeComponent();
         }
 
-        
-
-        private void urunSatis_Load(object sender, EventArgs e)
+        private void K_uyelikDuzenle_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Kasiyer kasiyer = new Kasiyer();
+            K_Uyelik uyelik = new K_Uyelik();
             this.Close();
-            kasiyer.Show();
+            uyelik.Show();
         }
     }
 }
