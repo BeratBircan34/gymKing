@@ -91,6 +91,7 @@ namespace gymKing
             {
                 MessageBox.Show("Giriş bilgilerini kontrol ediniz!");
             }
+            dr.Close();
             baglanti.Close();
 
         }
@@ -101,5 +102,7 @@ namespace gymKing
             girisKontrol(txtK_adi.Text, txt_Sifre.Text);
             
         }
+
+        
     }
 }

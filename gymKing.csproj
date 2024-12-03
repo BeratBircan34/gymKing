@@ -115,6 +115,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>kaynaklar.resx</DependentUpon>
     </Compile>
+    <Compile Include="pt_forms\frm_analizKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt_forms\frm_analizKayit.Designer.cs">
+      <DependentUpon>frm_analizKayit.cs</DependentUpon>
+    </Compile>
     <Compile Include="pt_forms\frm_pt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     <EmbeddedResource Include="kaynaklar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>kaynaklar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt_forms\frm_analizKayit.resx">
+      <DependentUpon>frm_analizKayit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pt_forms\frm_pt.resx">
       <DependentUpon>frm_pt.cs</DependentUpon>

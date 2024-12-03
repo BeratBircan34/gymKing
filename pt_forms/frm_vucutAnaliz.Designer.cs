@@ -37,59 +37,60 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmbbx_aktivite = new System.Windows.Forms.ComboBox();
+            this.rd_kadin = new System.Windows.Forms.RadioButton();
+            this.rd_erkek = new System.Windows.Forms.RadioButton();
+            this.txt_kalcacevre = new System.Windows.Forms.TextBox();
+            this.txt_boyun = new System.Windows.Forms.TextBox();
+            this.txt_belcevre = new System.Windows.Forms.TextBox();
+            this.txt_boy = new System.Windows.Forms.TextBox();
+            this.txt_kilo = new System.Windows.Forms.TextBox();
+            this.txt_yas = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkbox_sadeceKalori = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.lbl_ik = new System.Windows.Forms.Label();
+            this.lbl_vke = new System.Windows.Forms.Label();
+            this.lbl_vym = new System.Windows.Forms.Label();
+            this.lbl_vkm = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
+            this.lbl_belboy = new System.Windows.Forms.Label();
+            this.lbl_belboyun = new System.Windows.Forms.Label();
+            this.lbl_bko = new System.Windows.Forms.Label();
+            this.lbl_vyo = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.lbl_yi = new System.Windows.Forms.Label();
+            this.lbl_ki = new System.Windows.Forms.Label();
+            this.lbl_pi = new System.Windows.Forms.Label();
+            this.lbl_si = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.lbl_msr = new System.Windows.Forms.Label();
+            this.lbl_bmh = new System.Windows.Forms.Label();
+            this.lbl_gki = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btntemizle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -106,11 +107,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(18, 355);
+            this.label1.Location = new System.Drawing.Point(22, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 27);
+            this.label1.Size = new System.Drawing.Size(209, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Boy Uzunluğu :";
+            this.label1.Text = "Boy Uzunluğu (CM) :";
             // 
             // label2
             // 
@@ -118,7 +119,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(18, 92);
+            this.label2.Location = new System.Drawing.Point(22, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 27);
             this.label2.TabIndex = 2;
@@ -130,11 +131,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(208, 92);
+            this.label3.Location = new System.Drawing.Point(170, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 27);
+            this.label3.Size = new System.Drawing.Size(112, 27);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Kilo :";
+            this.label3.Text = "Kilo (KG) :";
             // 
             // label4
             // 
@@ -142,11 +143,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(18, 41);
+            this.label4.Location = new System.Drawing.Point(18, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 27);
+            this.label4.Size = new System.Drawing.Size(205, 27);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Cinsiyet :";
+            this.label4.Text = "Cinsiyet(Biyolojik) :";
             // 
             // label5
             // 
@@ -154,11 +155,11 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(18, 198);
+            this.label5.Location = new System.Drawing.Point(22, 207);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 27);
+            this.label5.Size = new System.Drawing.Size(187, 27);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Bel Çevresi :";
+            this.label5.Text = "Bel Çevresi (CM) :";
             // 
             // label6
             // 
@@ -166,11 +167,11 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(18, 306);
+            this.label6.Location = new System.Drawing.Point(22, 312);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 27);
+            this.label6.Size = new System.Drawing.Size(216, 27);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Boyun Çevresi :";
+            this.label6.Text = "Boyun Çevresi (CM) :";
             // 
             // label7
             // 
@@ -178,18 +179,18 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(18, 247);
+            this.label7.Location = new System.Drawing.Point(22, 256);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 27);
+            this.label7.Size = new System.Drawing.Size(208, 27);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Kalça Çevresi :";
+            this.label7.Text = "Kalça Çevresi (CM) :";
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(18, 144);
+            this.label8.Location = new System.Drawing.Point(22, 111);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(239, 40);
             this.label8.TabIndex = 8;
@@ -197,142 +198,147 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cmbbx_aktivite);
+            this.groupBox1.Controls.Add(this.rd_kadin);
+            this.groupBox1.Controls.Add(this.rd_erkek);
+            this.groupBox1.Controls.Add(this.txt_kalcacevre);
+            this.groupBox1.Controls.Add(this.txt_boyun);
+            this.groupBox1.Controls.Add(this.txt_belcevre);
+            this.groupBox1.Controls.Add(this.txt_boy);
+            this.groupBox1.Controls.Add(this.txt_kilo);
+            this.groupBox1.Controls.Add(this.txt_yas);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(21, 100);
+            this.groupBox1.Location = new System.Drawing.Point(25, 85);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 398);
+            this.groupBox1.Size = new System.Drawing.Size(402, 365);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kişisel Bilgiler";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // comboBox1
+            // cmbbx_aktivite
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(243, 144);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 31);
-            this.comboBox1.TabIndex = 18;
+            this.cmbbx_aktivite.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbbx_aktivite.ForeColor = System.Drawing.Color.SteelBlue;
+            this.cmbbx_aktivite.FormattingEnabled = true;
+            this.cmbbx_aktivite.Items.AddRange(new object[] {
+            "1"});
+            this.cmbbx_aktivite.Location = new System.Drawing.Point(247, 111);
+            this.cmbbx_aktivite.Name = "cmbbx_aktivite";
+            this.cmbbx_aktivite.Size = new System.Drawing.Size(121, 31);
+            this.cmbbx_aktivite.TabIndex = 18;
             // 
-            // radioButton2
+            // rd_kadin
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.IndianRed;
-            this.radioButton2.Location = new System.Drawing.Point(286, 41);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 27);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Kadın";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rd_kadin.AutoSize = true;
+            this.rd_kadin.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rd_kadin.ForeColor = System.Drawing.Color.IndianRed;
+            this.rd_kadin.Location = new System.Drawing.Point(314, 35);
+            this.rd_kadin.Name = "rd_kadin";
+            this.rd_kadin.Size = new System.Drawing.Size(82, 27);
+            this.rd_kadin.TabIndex = 17;
+            this.rd_kadin.TabStop = true;
+            this.rd_kadin.Text = "Kadın";
+            this.rd_kadin.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rd_erkek
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.radioButton1.Location = new System.Drawing.Point(160, 41);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(81, 27);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Erkek";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rd_erkek.AutoSize = true;
+            this.rd_erkek.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rd_erkek.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.rd_erkek.Location = new System.Drawing.Point(227, 35);
+            this.rd_erkek.Name = "rd_erkek";
+            this.rd_erkek.Size = new System.Drawing.Size(81, 27);
+            this.rd_erkek.TabIndex = 16;
+            this.rd_erkek.TabStop = true;
+            this.rd_erkek.Text = "Erkek";
+            this.rd_erkek.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txt_kalcacevre
             // 
-            this.textBox6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox6.Location = new System.Drawing.Point(243, 252);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(125, 30);
-            this.textBox6.TabIndex = 14;
+            this.txt_kalcacevre.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_kalcacevre.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txt_kalcacevre.Location = new System.Drawing.Point(247, 261);
+            this.txt_kalcacevre.Name = "txt_kalcacevre";
+            this.txt_kalcacevre.Size = new System.Drawing.Size(125, 30);
+            this.txt_kalcacevre.TabIndex = 14;
             // 
-            // textBox5
+            // txt_boyun
             // 
-            this.textBox5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox5.Location = new System.Drawing.Point(243, 308);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 30);
-            this.textBox5.TabIndex = 13;
+            this.txt_boyun.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_boyun.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txt_boyun.Location = new System.Drawing.Point(247, 319);
+            this.txt_boyun.Name = "txt_boyun";
+            this.txt_boyun.Size = new System.Drawing.Size(125, 30);
+            this.txt_boyun.TabIndex = 13;
             // 
-            // textBox4
+            // txt_belcevre
             // 
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox4.Location = new System.Drawing.Point(243, 197);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 30);
-            this.textBox4.TabIndex = 12;
+            this.txt_belcevre.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_belcevre.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txt_belcevre.Location = new System.Drawing.Point(247, 206);
+            this.txt_belcevre.Name = "txt_belcevre";
+            this.txt_belcevre.Size = new System.Drawing.Size(125, 30);
+            this.txt_belcevre.TabIndex = 12;
             // 
-            // textBox3
+            // txt_boy
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox3.Location = new System.Drawing.Point(243, 357);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 30);
-            this.textBox3.TabIndex = 11;
+            this.txt_boy.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_boy.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txt_boy.Location = new System.Drawing.Point(247, 158);
+            this.txt_boy.Name = "txt_boy";
+            this.txt_boy.Size = new System.Drawing.Size(125, 30);
+            this.txt_boy.TabIndex = 11;
             // 
-            // textBox2
+            // txt_kilo
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox2.Location = new System.Drawing.Point(279, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(87, 36);
-            this.textBox2.TabIndex = 10;
+            this.txt_kilo.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txt_kilo.Location = new System.Drawing.Point(281, 68);
+            this.txt_kilo.Name = "txt_kilo";
+            this.txt_kilo.Size = new System.Drawing.Size(87, 36);
+            this.txt_kilo.TabIndex = 10;
             // 
-            // textBox1
+            // txt_yas
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(85, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(80, 36);
-            this.textBox1.TabIndex = 9;
+            this.txt_yas.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txt_yas.Location = new System.Drawing.Point(85, 68);
+            this.txt_yas.Name = "txt_yas";
+            this.txt_yas.Size = new System.Drawing.Size(80, 36);
+            this.txt_yas.TabIndex = 9;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.btntemizle);
+            this.groupBox2.Controls.Add(this.chkbox_sadeceKalori);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox2.Location = new System.Drawing.Point(21, 504);
+            this.groupBox2.Location = new System.Drawing.Point(25, 456);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(402, 85);
+            this.groupBox2.Size = new System.Drawing.Size(402, 130);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hesaplama Ayarları";
             // 
-            // checkBox1
+            // chkbox_sadeceKalori
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(47, 48);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(233, 31);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Sadece Kalori Hesabı";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkbox_sadeceKalori.AutoSize = true;
+            this.chkbox_sadeceKalori.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkbox_sadeceKalori.Location = new System.Drawing.Point(75, 35);
+            this.chkbox_sadeceKalori.Name = "chkbox_sadeceKalori";
+            this.chkbox_sadeceKalori.Size = new System.Drawing.Size(233, 31);
+            this.chkbox_sadeceKalori.TabIndex = 0;
+            this.chkbox_sadeceKalori.Text = "Sadece Kalori Hesabı";
+            this.chkbox_sadeceKalori.UseVisualStyleBackColor = true;
+            this.chkbox_sadeceKalori.CheckedChanged += new System.EventHandler(this.chkbox_sadeceKalori_CheckedChanged);
             // 
             // label9
             // 
@@ -352,21 +358,22 @@
             this.groupBox3.Controls.Add(this.panel3);
             this.groupBox3.Controls.Add(this.panel2);
             this.groupBox3.Controls.Add(this.panel1);
+            this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.groupBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox3.Location = new System.Drawing.Point(456, 100);
+            this.groupBox3.Location = new System.Drawing.Point(460, 85);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(783, 489);
+            this.groupBox3.Size = new System.Drawing.Size(783, 504);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hesaplama Sonuçları";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label35);
-            this.panel4.Controls.Add(this.label34);
-            this.panel4.Controls.Add(this.label33);
-            this.panel4.Controls.Add(this.label32);
+            this.panel4.Controls.Add(this.lbl_ik);
+            this.panel4.Controls.Add(this.lbl_vke);
+            this.panel4.Controls.Add(this.lbl_vym);
+            this.panel4.Controls.Add(this.lbl_vkm);
             this.panel4.Controls.Add(this.label24);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.label26);
@@ -377,45 +384,45 @@
             this.panel4.Size = new System.Drawing.Size(427, 178);
             this.panel4.TabIndex = 25;
             // 
-            // label35
+            // lbl_ik
             // 
-            this.label35.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.IndianRed;
-            this.label35.Location = new System.Drawing.Point(243, 135);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(152, 32);
-            this.label35.TabIndex = 27;
-            this.label35.Text = "Hesaplanmadı";
+            this.lbl_ik.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ik.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_ik.Location = new System.Drawing.Point(243, 135);
+            this.lbl_ik.Name = "lbl_ik";
+            this.lbl_ik.Size = new System.Drawing.Size(152, 32);
+            this.lbl_ik.TabIndex = 27;
+            this.lbl_ik.Text = "Hesaplanmadı";
             // 
-            // label34
+            // lbl_vke
             // 
-            this.label34.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.IndianRed;
-            this.label34.Location = new System.Drawing.Point(49, 135);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(152, 32);
-            this.label34.TabIndex = 26;
-            this.label34.Text = "Hesaplanmadı";
+            this.lbl_vke.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_vke.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_vke.Location = new System.Drawing.Point(49, 135);
+            this.lbl_vke.Name = "lbl_vke";
+            this.lbl_vke.Size = new System.Drawing.Size(152, 32);
+            this.lbl_vke.TabIndex = 26;
+            this.lbl_vke.Text = "Hesaplanmadı";
             // 
-            // label33
+            // lbl_vym
             // 
-            this.label33.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.IndianRed;
-            this.label33.Location = new System.Drawing.Point(223, 70);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(152, 32);
-            this.label33.TabIndex = 25;
-            this.label33.Text = "Hesaplanmadı";
+            this.lbl_vym.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_vym.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_vym.Location = new System.Drawing.Point(223, 70);
+            this.lbl_vym.Name = "lbl_vym";
+            this.lbl_vym.Size = new System.Drawing.Size(152, 32);
+            this.lbl_vym.TabIndex = 25;
+            this.lbl_vym.Text = "Hesaplanmadı";
             // 
-            // label32
+            // lbl_vkm
             // 
-            this.label32.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.IndianRed;
-            this.label32.Location = new System.Drawing.Point(18, 70);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(150, 30);
-            this.label32.TabIndex = 24;
-            this.label32.Text = "Hesaplanmadı";
+            this.lbl_vkm.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_vkm.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_vkm.Location = new System.Drawing.Point(18, 70);
+            this.lbl_vkm.Name = "lbl_vkm";
+            this.lbl_vkm.Size = new System.Drawing.Size(150, 30);
+            this.lbl_vkm.TabIndex = 24;
+            this.lbl_vkm.Text = "Hesaplanmadı";
             // 
             // label24
             // 
@@ -467,10 +474,10 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label43);
-            this.panel3.Controls.Add(this.label42);
-            this.panel3.Controls.Add(this.label41);
-            this.panel3.Controls.Add(this.label40);
+            this.panel3.Controls.Add(this.lbl_belboy);
+            this.panel3.Controls.Add(this.lbl_belboyun);
+            this.panel3.Controls.Add(this.lbl_bko);
+            this.panel3.Controls.Add(this.lbl_vyo);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.label21);
@@ -481,45 +488,45 @@
             this.panel3.Size = new System.Drawing.Size(337, 178);
             this.panel3.TabIndex = 24;
             // 
-            // label43
+            // lbl_belboy
             // 
-            this.label43.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.IndianRed;
-            this.label43.Location = new System.Drawing.Point(181, 138);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(150, 32);
-            this.label43.TabIndex = 27;
-            this.label43.Text = "Hesaplanmadı";
+            this.lbl_belboy.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_belboy.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_belboy.Location = new System.Drawing.Point(181, 138);
+            this.lbl_belboy.Name = "lbl_belboy";
+            this.lbl_belboy.Size = new System.Drawing.Size(150, 32);
+            this.lbl_belboy.TabIndex = 27;
+            this.lbl_belboy.Text = "Hesaplanmadı";
             // 
-            // label42
+            // lbl_belboyun
             // 
-            this.label42.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.IndianRed;
-            this.label42.Location = new System.Drawing.Point(181, 102);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(150, 32);
-            this.label42.TabIndex = 26;
-            this.label42.Text = "Hesaplanmadı";
+            this.lbl_belboyun.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_belboyun.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_belboyun.Location = new System.Drawing.Point(181, 102);
+            this.lbl_belboyun.Name = "lbl_belboyun";
+            this.lbl_belboyun.Size = new System.Drawing.Size(150, 32);
+            this.lbl_belboyun.TabIndex = 26;
+            this.lbl_belboyun.Text = "Hesaplanmadı";
             // 
-            // label41
+            // lbl_bko
             // 
-            this.label41.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.IndianRed;
-            this.label41.Location = new System.Drawing.Point(181, 70);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(150, 32);
-            this.label41.TabIndex = 25;
-            this.label41.Text = "Hesaplanmadı";
+            this.lbl_bko.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bko.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_bko.Location = new System.Drawing.Point(181, 70);
+            this.lbl_bko.Name = "lbl_bko";
+            this.lbl_bko.Size = new System.Drawing.Size(150, 32);
+            this.lbl_bko.TabIndex = 25;
+            this.lbl_bko.Text = "Hesaplanmadı";
             // 
-            // label40
+            // lbl_vyo
             // 
-            this.label40.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.IndianRed;
-            this.label40.Location = new System.Drawing.Point(181, 41);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(150, 32);
-            this.label40.TabIndex = 24;
-            this.label40.Text = "Hesaplanmadı";
+            this.lbl_vyo.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_vyo.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_vyo.Location = new System.Drawing.Point(181, 41);
+            this.lbl_vyo.Name = "lbl_vyo";
+            this.lbl_vyo.Size = new System.Drawing.Size(150, 32);
+            this.lbl_vyo.TabIndex = 24;
+            this.lbl_vyo.Text = "Hesaplanmadı";
             // 
             // label19
             // 
@@ -571,10 +578,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label39);
-            this.panel2.Controls.Add(this.label38);
-            this.panel2.Controls.Add(this.label37);
-            this.panel2.Controls.Add(this.label36);
+            this.panel2.Controls.Add(this.lbl_yi);
+            this.panel2.Controls.Add(this.lbl_ki);
+            this.panel2.Controls.Add(this.lbl_pi);
+            this.panel2.Controls.Add(this.lbl_si);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label13);
@@ -585,59 +592,59 @@
             this.panel2.Size = new System.Drawing.Size(337, 178);
             this.panel2.TabIndex = 22;
             // 
-            // label39
+            // lbl_yi
             // 
-            this.label39.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.IndianRed;
-            this.label39.Location = new System.Drawing.Point(166, 139);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(152, 32);
-            this.label39.TabIndex = 27;
-            this.label39.Text = "Hesaplanmadı";
+            this.lbl_yi.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_yi.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_yi.Location = new System.Drawing.Point(63, 137);
+            this.lbl_yi.Name = "lbl_yi";
+            this.lbl_yi.Size = new System.Drawing.Size(203, 32);
+            this.lbl_yi.TabIndex = 27;
+            this.lbl_yi.Text = "Hesaplanmadı";
             // 
-            // label38
+            // lbl_ki
             // 
-            this.label38.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.IndianRed;
-            this.label38.Location = new System.Drawing.Point(166, 108);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(152, 32);
-            this.label38.TabIndex = 26;
-            this.label38.Text = "Hesaplanmadı";
+            this.lbl_ki.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ki.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_ki.Location = new System.Drawing.Point(147, 105);
+            this.lbl_ki.Name = "lbl_ki";
+            this.lbl_ki.Size = new System.Drawing.Size(187, 32);
+            this.lbl_ki.TabIndex = 26;
+            this.lbl_ki.Text = "Hesaplanmadı";
             // 
-            // label37
+            // lbl_pi
             // 
-            this.label37.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.IndianRed;
-            this.label37.Location = new System.Drawing.Point(166, 75);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(152, 32);
-            this.label37.TabIndex = 25;
-            this.label37.Text = "Hesaplanmadı";
+            this.lbl_pi.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pi.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_pi.Location = new System.Drawing.Point(111, 76);
+            this.lbl_pi.Name = "lbl_pi";
+            this.lbl_pi.Size = new System.Drawing.Size(207, 32);
+            this.lbl_pi.TabIndex = 25;
+            this.lbl_pi.Text = "Hesaplanmadı";
             // 
-            // label36
+            // lbl_si
             // 
-            this.label36.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.IndianRed;
-            this.label36.Location = new System.Drawing.Point(166, 47);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(152, 32);
-            this.label36.TabIndex = 24;
-            this.label36.Text = "Hesaplanmadı";
+            this.lbl_si.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_si.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_si.Location = new System.Drawing.Point(75, 47);
+            this.lbl_si.Name = "lbl_si";
+            this.lbl_si.Size = new System.Drawing.Size(243, 32);
+            this.lbl_si.TabIndex = 24;
+            this.lbl_si.Text = "Hesaplanmadı";
             // 
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(20, 107);
+            this.label17.Location = new System.Drawing.Point(3, 105);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(179, 32);
+            this.label17.Size = new System.Drawing.Size(157, 32);
             this.label17.TabIndex = 23;
             this.label17.Text = "Karbonhidrat :";
             // 
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(76, 75);
+            this.label16.Location = new System.Drawing.Point(3, 74);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(101, 31);
             this.label16.TabIndex = 22;
@@ -646,7 +653,7 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(112, 139);
+            this.label13.Location = new System.Drawing.Point(4, 137);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 32);
             this.label13.TabIndex = 21;
@@ -656,7 +663,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(122, 47);
+            this.label14.Location = new System.Drawing.Point(3, 47);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(49, 27);
             this.label14.TabIndex = 20;
@@ -676,9 +683,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label31);
-            this.panel1.Controls.Add(this.label30);
-            this.panel1.Controls.Add(this.label29);
+            this.panel1.Controls.Add(this.lbl_msr);
+            this.panel1.Controls.Add(this.lbl_bmh);
+            this.panel1.Controls.Add(this.lbl_gki);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
@@ -688,35 +695,35 @@
             this.panel1.Size = new System.Drawing.Size(430, 178);
             this.panel1.TabIndex = 0;
             // 
-            // label31
+            // lbl_msr
             // 
-            this.label31.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.IndianRed;
-            this.label31.Location = new System.Drawing.Point(268, 131);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(152, 32);
-            this.label31.TabIndex = 25;
-            this.label31.Text = "Hesaplanmadı";
+            this.lbl_msr.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_msr.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_msr.Location = new System.Drawing.Point(268, 131);
+            this.lbl_msr.Name = "lbl_msr";
+            this.lbl_msr.Size = new System.Drawing.Size(152, 32);
+            this.lbl_msr.TabIndex = 25;
+            this.lbl_msr.Text = "Hesaplanmadı";
             // 
-            // label30
+            // lbl_bmh
             // 
-            this.label30.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.IndianRed;
-            this.label30.Location = new System.Drawing.Point(268, 87);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(152, 32);
-            this.label30.TabIndex = 24;
-            this.label30.Text = "Hesaplanmadı";
+            this.lbl_bmh.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bmh.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_bmh.Location = new System.Drawing.Point(268, 87);
+            this.lbl_bmh.Name = "lbl_bmh";
+            this.lbl_bmh.Size = new System.Drawing.Size(152, 32);
+            this.lbl_bmh.TabIndex = 24;
+            this.lbl_bmh.Text = "Hesaplanmadı";
             // 
-            // label29
+            // lbl_gki
             // 
-            this.label29.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.IndianRed;
-            this.label29.Location = new System.Drawing.Point(268, 42);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(152, 32);
-            this.label29.TabIndex = 23;
-            this.label29.Text = "Hesaplanmadı";
+            this.lbl_gki.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gki.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_gki.Location = new System.Drawing.Point(268, 42);
+            this.lbl_gki.Name = "lbl_gki";
+            this.lbl_gki.Size = new System.Drawing.Size(152, 32);
+            this.lbl_gki.TabIndex = 23;
+            this.lbl_gki.Text = "Hesaplanmadı";
             // 
             // label18
             // 
@@ -760,25 +767,38 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(136, 609);
+            this.button1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.button1.Location = new System.Drawing.Point(580, 595);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 38);
             this.button1.TabIndex = 21;
             this.button1.Text = "Hesapla";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::gymKing.kaynaklar.arrow_left;
-            this.pictureBox1.Location = new System.Drawing.Point(1171, 609);
+            this.pictureBox1.Location = new System.Drawing.Point(688, 428);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(81, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btntemizle
+            // 
+            this.btntemizle.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntemizle.ForeColor = System.Drawing.Color.Crimson;
+            this.btntemizle.Location = new System.Drawing.Point(88, 72);
+            this.btntemizle.Name = "btntemizle";
+            this.btntemizle.Size = new System.Drawing.Size(194, 40);
+            this.btntemizle.TabIndex = 17;
+            this.btntemizle.Text = "Kutucukları Temizle";
+            this.btntemizle.UseVisualStyleBackColor = true;
+            this.btntemizle.Click += new System.EventHandler(this.btntemizle_Click);
             // 
             // frm_vucutAnaliz
             // 
@@ -791,7 +811,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -832,17 +851,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton rd_kadin;
+        private System.Windows.Forms.RadioButton rd_erkek;
+        private System.Windows.Forms.TextBox txt_kalcacevre;
+        private System.Windows.Forms.TextBox txt_boyun;
+        private System.Windows.Forms.TextBox txt_belcevre;
+        private System.Windows.Forms.TextBox txt_boy;
+        private System.Windows.Forms.TextBox txt_kilo;
+        private System.Windows.Forms.TextBox txt_yas;
+        private System.Windows.Forms.ComboBox cmbbx_aktivite;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkbox_sadeceKalori;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel1;
@@ -869,20 +888,21 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label lbl_ik;
+        private System.Windows.Forms.Label lbl_vke;
+        private System.Windows.Forms.Label lbl_vym;
+        private System.Windows.Forms.Label lbl_vkm;
+        private System.Windows.Forms.Label lbl_ki;
+        private System.Windows.Forms.Label lbl_pi;
+        private System.Windows.Forms.Label lbl_si;
+        private System.Windows.Forms.Label lbl_msr;
+        private System.Windows.Forms.Label lbl_bmh;
+        private System.Windows.Forms.Label lbl_gki;
+        private System.Windows.Forms.Label lbl_belboy;
+        private System.Windows.Forms.Label lbl_belboyun;
+        private System.Windows.Forms.Label lbl_bko;
+        private System.Windows.Forms.Label lbl_vyo;
+        private System.Windows.Forms.Label lbl_yi;
+        private System.Windows.Forms.Button btntemizle;
     }
 }

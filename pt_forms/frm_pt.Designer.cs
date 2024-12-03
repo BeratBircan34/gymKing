@@ -101,7 +101,7 @@
             this.lbl_oturumSahibi.BackColor = System.Drawing.Color.Transparent;
             this.lbl_oturumSahibi.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_oturumSahibi.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl_oturumSahibi.Location = new System.Drawing.Point(918, 56);
+            this.lbl_oturumSahibi.Location = new System.Drawing.Point(830, 51);
             this.lbl_oturumSahibi.Name = "lbl_oturumSahibi";
             this.lbl_oturumSahibi.Size = new System.Drawing.Size(226, 36);
             this.lbl_oturumSahibi.TabIndex = 12;
@@ -113,7 +113,7 @@
             this.lbl_tarih.BackColor = System.Drawing.Color.Transparent;
             this.lbl_tarih.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tarih.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl_tarih.Location = new System.Drawing.Point(917, 118);
+            this.lbl_tarih.Location = new System.Drawing.Point(829, 113);
             this.lbl_tarih.Name = "lbl_tarih";
             this.lbl_tarih.Size = new System.Drawing.Size(91, 36);
             this.lbl_tarih.TabIndex = 13;
@@ -125,7 +125,7 @@
             this.lbl_gun.BackColor = System.Drawing.Color.Transparent;
             this.lbl_gun.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gun.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl_gun.Location = new System.Drawing.Point(1102, 118);
+            this.lbl_gun.Location = new System.Drawing.Point(1014, 113);
             this.lbl_gun.Name = "lbl_gun";
             this.lbl_gun.Size = new System.Drawing.Size(72, 36);
             this.lbl_gun.TabIndex = 14;
@@ -137,7 +137,7 @@
             this.lbl_saat.BackColor = System.Drawing.Color.Transparent;
             this.lbl_saat.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_saat.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl_saat.Location = new System.Drawing.Point(918, 182);
+            this.lbl_saat.Location = new System.Drawing.Point(830, 177);
             this.lbl_saat.Name = "lbl_saat";
             this.lbl_saat.Size = new System.Drawing.Size(81, 36);
             this.lbl_saat.TabIndex = 15;
@@ -370,7 +370,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::gymKing.kaynaklar.clock;
-            this.pictureBox3.Location = new System.Drawing.Point(864, 177);
+            this.pictureBox3.Location = new System.Drawing.Point(776, 172);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(47, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -381,7 +381,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::gymKing.kaynaklar.calendar;
-            this.pictureBox2.Location = new System.Drawing.Point(864, 113);
+            this.pictureBox2.Location = new System.Drawing.Point(776, 108);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -392,7 +392,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::gymKing.kaynaklar.user;
-            this.pictureBox1.Location = new System.Drawing.Point(864, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(776, 46);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -403,7 +403,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.label10);
