@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -138,11 +139,41 @@
     <Compile Include="Temizlik.Designer.cs">
       <DependentUpon>Temizlik.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\persIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\persIslemleri.Designer.cs">
+      <DependentUpon>persIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici_forms\personelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\personelEkle.Designer.cs">
+      <DependentUpon>personelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici_forms\personelGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\personelGüncelle.Designer.cs">
+      <DependentUpon>personelGüncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici_forms\personelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\personelSil.Designer.cs">
+      <DependentUpon>personelSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="yonetici_forms\yonetici.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="yonetici_forms\yonetici.Designer.cs">
       <DependentUpon>yonetici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici_forms\İstatistikler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\İstatistikler.Designer.cs">
+      <DependentUpon>İstatistikler.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="diyetisyen_forms\deneme.resx">
       <DependentUpon>deneme.cs</DependentUpon>
@@ -195,6 +226,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Temizlik.resx">
       <DependentUpon>Temizlik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\persIslemleri.resx">
+      <DependentUpon>persIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\personelEkle.resx">
+      <DependentUpon>personelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\personelGüncelle.resx">
+      <DependentUpon>personelGüncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\personelSil.resx">
+      <DependentUpon>personelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\yonetici.resx">
+      <DependentUpon>yonetici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\İstatistikler.resx">
+      <DependentUpon>İstatistikler.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -257,10 +306,19 @@
   <ItemGroup>
     <Content Include="Resources\accept.png" />
     <Content Include="Resources\add.png" />
+    <None Include="Resources\statisticsPNG.png" />
+    <None Include="Resources\transparentGYMKING.png" />
+    <None Include="Resources\cashierpnl.png" />
     <Content Include="Resources\cashier_icon.ico" />
+    <None Include="Resources\cleanerPNG.png" />
     <Content Include="Resources\delete.png" />
+    <None Include="Resources\dietpng.png" />
     <Content Include="Resources\edit.png" />
+    <None Include="Resources\gymkingg11.png" />
+    <None Include="Resources\employeAdd.png" />
     <Content Include="Resources\member_add.png" />
+    <Content Include="Resources\PT PANEL PNG.png" />
+    <None Include="Resources\PT PANEL PNG1.png" />
     <Content Include="Resources\remove.png" />
     <Content Include="Resources\save.png" />
     <Content Include="Resources\shop.png" />

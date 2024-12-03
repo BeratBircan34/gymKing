@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using gymKing.controls;
 using gymKing.diyetisyen_forms;
 using gymKing.kasiyer_forms;
+using gymKing.yonetici_forms;
 
 namespace gymKing
 {
@@ -72,7 +73,15 @@ namespace gymKing
                         this.Hide();
                         MessageBox.Show("Hoşgeldiniz!" + K_bilgi.ad + " " +K_bilgi.soyad);
                         break;
-
+                    case "Yönetici":
+                        yonetici yonetici = new yonetici();
+                        perBilgiAl perrbilgi = new perBilgiAl(id);
+                        yonetici.yonetici_oturumSahibi = perrbilgi.ad + " " + perrbilgi.soyad;
+                        yonetici.Show();
+                        this.Hide();
+                        MessageBox.Show("Hoşgeldiniz!" + perrbilgi.ad + " " + perrbilgi.soyad);
+                        break;
+ 
                     default:
                         MessageBox.Show("Rolünüzün giriş ekranı yapım aşamasında");
                         break;
