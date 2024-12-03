@@ -1,4 +1,5 @@
 ﻿using gymKing.controls;
+using gymKing.pt_forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace gymKing.diyetisyen_forms
 {
-    public partial class frm_diyetisyen : Form
+
+  public partial class frm_diyetisyen : Form
     {
         public frm_diyetisyen()
         {
@@ -21,65 +23,39 @@ namespace gymKing.diyetisyen_forms
         public string diyetisyen_oturumSahibi = "";
         private void frm_diyetisyen_Load(object sender, EventArgs e)
         {
-            label1.Text = diyetisyen_oturumSahibi;
+            timer1.Start();
+            lbl_oturumSahibi.Text = diyetisyen_oturumSahibi;
+            lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
+            lbl_gun.Text = DateTime.Now.ToString("dddd");
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
             otoform_ayarla.renkAyarla(this, Color.Gainsboro);
             //SetMdiContainerBackColor(Color.Gainsboro);
         }
-        /*
-        private void itemGizle()
-        {
-            foreach (Control control in this.Controls)
-            {
-                if (!(control is MdiClient)) // MDI alanını koru
-                {
-                    control.Visible = false;
-                }
-            }
-        }
-        private void ShowParentControls()
-        {
-            foreach (Control control in this.Controls)
-            {
-                if (!(control is MdiClient)) // MDI alanını gösterme
-                {
-                    control.Visible = true; // Kontrolleri tekrar görünür yap
-                }
-            }
-        }
-        private void SetMdiContainerBackColor(Color color)
-        {
-            foreach (Control control in this.Controls)
-            {
-                control.BackColor = Color.Gainsboro;
-                if (control is MdiClient mdiClient)
-                {
-                    mdiClient.BackColor = color; // Arka plan rengini ayarla
-                }
-            }
-        }
-        private void formAc(Form childform)
-        {
-            itemGizle();
-            if (this.IsMdiContainer)
-            {
-                childform.MdiParent = this;
-                childform.FormBorderStyle = FormBorderStyle.None;
-                childform.WindowState = FormWindowState.Maximized;
-                childform.Dock = DockStyle.Fill;
-                childform.Show();
-                childform.BringToFront();
-                childform.FormClosed += (s, args) => ShowParentControls();
-            }
 
-        }*/
-
-        private void button1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            deneme dnm = new deneme();
-            otoform_ayarla dnm_p = new otoform_ayarla(dnm);
-            dnm_p.formAc(dnm, this);
-
-
+            lbl_saat.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString("00");
         }
-    }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            diyetlist diyetliste = new diyetlist();
+            otoform_ayarla dyetliste = new otoform_ayarla(diyetliste);
+            dyetliste.formAc(diyetliste, this);
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 frm = new Form1();
+            frm.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            vkianalizi vkianaliz = new vkianalizi();
+            otoform_ayarla vkianliz = new otoform_ayarla(vkianaliz);
+            vkianliz.formAc(vkianaliz, this);
+        }
+    }  
 }

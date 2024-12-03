@@ -48,28 +48,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controls\otoform_ayarla.cs" />
-    <Compile Include="diyetisyen_forms\deneme.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="controls\perBilgiAl.cs" />
     <Compile Include="controls\Pt_analizHesaplama.cs" />
-    <Compile Include="diyetisyen_forms\deneme.cs">
+    <Compile Include="diyetisyen_forms\diyetlist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="diyetisyen_forms\deneme.Designer.cs">
-      <DependentUpon>deneme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="diyetisyen_forms\deneme2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="diyetisyen_forms\deneme2.Designer.cs">
-      <DependentUpon>deneme2.cs</DependentUpon>
+    <Compile Include="diyetisyen_forms\diyetlist.Designer.cs">
+      <DependentUpon>diyetlist.cs</DependentUpon>
     </Compile>
     <Compile Include="diyetisyen_forms\frm_diyetisyen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="diyetisyen_forms\frm_diyetisyen.Designer.cs">
       <DependentUpon>frm_diyetisyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="diyetisyen_forms\vkianalizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diyetisyen_forms\vkianalizi.Designer.cs">
+      <DependentUpon>vkianalizi.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -175,14 +172,11 @@
     <Compile Include="yonetici_forms\İstatistikler.Designer.cs">
       <DependentUpon>İstatistikler.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="diyetisyen_forms\deneme.resx">
-      <DependentUpon>deneme.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="diyetisyen_forms\deneme2.resx">
-      <DependentUpon>deneme2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="diyetisyen_forms\frm_diyetisyen.resx">
       <DependentUpon>frm_diyetisyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="diyetisyen_forms\vkianalizi.resx">
+      <DependentUpon>vkianalizi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -304,11 +298,15 @@
     <None Include="Resources\arrow-left.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon.png" />
+    <None Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon1.png" />
     <Content Include="Resources\accept.png" />
     <Content Include="Resources\add.png" />
     <None Include="Resources\statisticsPNG.png" />
     <None Include="Resources\transparentGYMKING.png" />
     <None Include="Resources\cashierpnl.png" />
+    <Content Include="Resources\body.png" />
+    <None Include="Resources\body1.png" />
     <Content Include="Resources\cashier_icon.ico" />
     <None Include="Resources\cleanerPNG.png" />
     <Content Include="Resources\delete.png" />

@@ -1,6 +1,6 @@
 ﻿namespace gymKing.diyetisyen_forms
 {
-    partial class deneme2
+    partial class diyetlist
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // deneme2
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "deneme2";
-            this.Text = "deneme2";
-            this.Load += new System.EventHandler(this.deneme2_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "diyetlist";
         }
 
         #endregion

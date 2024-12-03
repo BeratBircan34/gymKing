@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace gymKing.diyetisyen_forms
 {
-    public partial class deneme : Form
+    public partial class diyetlist : Form
     {
-        public deneme()
+        public diyetlist()
         {
             InitializeComponent();
         }

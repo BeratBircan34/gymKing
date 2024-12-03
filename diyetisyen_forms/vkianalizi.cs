@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace gymKing.diyetisyen_forms
 {
-    public partial class deneme2 : Form
+    public partial class vkianalizi : Form
     {
-        public deneme2()
+        public vkianalizi()
         {
             InitializeComponent();
         }
 
-        private void deneme2_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
