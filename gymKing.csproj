@@ -50,11 +50,11 @@
     <Compile Include="controls\otoform_ayarla.cs" />
     <Compile Include="controls\perBilgiAl.cs" />
     <Compile Include="controls\Pt_analizHesaplama.cs" />
-    <Compile Include="diyetisyen_forms\diyetlist.cs">
+    <Compile Include="diyetisyen_forms\beslenmeprg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="diyetisyen_forms\diyetlist.Designer.cs">
-      <DependentUpon>diyetlist.cs</DependentUpon>
+    <Compile Include="diyetisyen_forms\beslenmeprg.Designer.cs">
+      <DependentUpon>beslenmeprg.cs</DependentUpon>
     </Compile>
     <Compile Include="diyetisyen_forms\frm_diyetisyen.cs">
       <SubType>Form</SubType>
@@ -62,11 +62,11 @@
     <Compile Include="diyetisyen_forms\frm_diyetisyen.Designer.cs">
       <DependentUpon>frm_diyetisyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="diyetisyen_forms\vkianalizi.cs">
+    <Compile Include="diyetisyen_forms\yorumekrani.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="diyetisyen_forms\vkianalizi.Designer.cs">
-      <DependentUpon>vkianalizi.cs</DependentUpon>
+    <Compile Include="diyetisyen_forms\yorumekrani.Designer.cs">
+      <DependentUpon>yorumekrani.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -178,11 +178,14 @@
     <Compile Include="yonetici_forms\İstatistikler.Designer.cs">
       <DependentUpon>İstatistikler.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="diyetisyen_forms\beslenmeprg.resx">
+      <DependentUpon>beslenmeprg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="diyetisyen_forms\frm_diyetisyen.resx">
       <DependentUpon>frm_diyetisyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="diyetisyen_forms\vkianalizi.resx">
-      <DependentUpon>vkianalizi.cs</DependentUpon>
+    <EmbeddedResource Include="diyetisyen_forms\yorumekrani.resx">
+      <DependentUpon>yorumekrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -307,8 +310,12 @@
     <None Include="Resources\arrow-left.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\1291754_notes_todo_notepad_notebook_icon.png" />
+    <None Include="Resources\1291754_notes_todo_notepad_notebook_icon1.png" />
     <Content Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon.png" />
     <None Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon1.png" />
+    <Content Include="Resources\4042258_dairy_diet_eating_food_fresh_icon.png" />
+    <None Include="Resources\4042258_dairy_diet_eating_food_fresh_icon1.png" />
     <Content Include="Resources\accept.png" />
     <Content Include="Resources\add.png" />
     <None Include="Resources\statisticsPNG.png" />

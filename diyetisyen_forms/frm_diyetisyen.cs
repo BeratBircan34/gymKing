@@ -39,9 +39,9 @@ namespace gymKing.diyetisyen_forms
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            diyetlist diyetliste = new diyetlist();
-            otoform_ayarla dyetliste = new otoform_ayarla(diyetliste);
-            dyetliste.formAc(diyetliste, this);
+            beslenmeprg beslenmeprog = new beslenmeprg();
+            otoform_ayarla beslenmepr = new otoform_ayarla(beslenmeprog);
+            beslenmepr.formAc(beslenmeprog, this);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -53,9 +53,10 @@ namespace gymKing.diyetisyen_forms
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            vkianalizi vkianaliz = new vkianalizi();
-            otoform_ayarla vkianliz = new otoform_ayarla(vkianaliz);
-            vkianliz.formAc(vkianaliz, this);
+            yorumekrani yorumekran = new yorumekrani();
+            otoform_ayarla yorumekrn = new otoform_ayarla(yorumekran);
+            yorumekrn.formAc(yorumekran, this);
         }
+        
     }  
 }

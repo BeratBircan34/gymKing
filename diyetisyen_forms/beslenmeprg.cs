@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gymKing.controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace gymKing.diyetisyen_forms
 {
-    public partial class vkianalizi : Form
+    public partial class beslenmeprg : Form
     {
-        public vkianalizi()
+        public beslenmeprg()
         {
             InitializeComponent();
         }
@@ -20,6 +21,16 @@ namespace gymKing.diyetisyen_forms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void beslenmeprg_Load(object sender, EventArgs e)
+        {
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
         }
     }
 }

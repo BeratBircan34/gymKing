@@ -63,9 +63,29 @@ namespace gymKing {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap _1291754_notes_todo_notepad_notebook_icon {
+            get {
+                object obj = ResourceManager.GetObject("1291754_notes_todo_notepad_notebook_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap _2620529_checklist_employee_job_seeker_unemployee_icon {
             get {
                 object obj = ResourceManager.GetObject("2620529_checklist_employee_job_seeker_unemployee_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4042258_dairy_diet_eating_food_fresh_icon {
+            get {
+                object obj = ResourceManager.GetObject("4042258_dairy_diet_eating_food_fresh_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
