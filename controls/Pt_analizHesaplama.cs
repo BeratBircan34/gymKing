@@ -169,6 +169,8 @@ namespace gymKing.controls
             }
             return d;
         }
+        
+
         public Pt_analizHesaplama( int aktiviteSeviye,string cinsiyet,int yas,float kilo,float boy,float belC,float boyunC,float kalcaC)
         {
             

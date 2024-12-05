@@ -58,6 +58,8 @@ namespace gymKing.pt_forms
         private void frm_vucutAnaliz_Load(object sender, EventArgs e)
         {
             ApplyNumericValidationToTextBoxes();
+            //pt_islemKontrol dnm = new pt_islemKontrol(false);
+            btn_metin();
         }
         
         private string cinsiyetAl()
@@ -95,14 +97,32 @@ namespace gymKing.pt_forms
             
 
         }
+        private void btn_metin()
+        {
+            if (pt_islemKontrol.islemYapildiMi == true)
+            {
+                btntemizle.Text = "Belleği Temizle";
+            }
+            else
+            {
+                btntemizle.Text = "Kutucukları Temizle";
+            }
+
+        }
+        private void islemKontrol(bool tf)
+        {
+            pt_islemKontrol kontrol = new pt_islemKontrol(tf);
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
             if(hataKontrol() == true)
             {
                 MessageBox.Show("Aktivite Seviyesi ve Cinsiyet Mutlaka Girilmelidir!!", "Eksik Veri Girişi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
+
                 try { 
                 if (chkbox_sadeceKalori.Checked == false)
                 {
@@ -111,20 +131,25 @@ namespace gymKing.pt_forms
                     sonucYerlestir(hesapla.suIhtiyacı, hesapla.proteinIhtıyacı, hesapla.karbIhtiyacı, hesapla.yagIhtıyacı, hesapla.bazalMetabolizmaHizi,
                         hesapla.gunlukKaloriIhtiyacı, hesapla.vucutKitleEndeksi, hesapla.idealKilo, hesapla.vucutYagMiktari, hesapla.vucutKasMiktari, hesapla.metabolikSendromRiski,
                         hesapla.vucutYagOrani, hesapla.belKalcaOrani, hesapla.belBoyunOrani, hesapla.belBoyOrani_);
+                        islemKontrol(true);
+                        btn_metin();
 
-                }
+                    }
                 else
                 {
                     Pt_analizHesaplama hesapla = new Pt_analizHesaplama(cmbbx_aktivite.SelectedIndex, cinsiyetAl(), int.Parse(txt_yas.Text), float.Parse(txt_kilo.Text), float.Parse(txt_boy.Text), 0, 0, 0);
                     sonucYerlestir(hesapla.suIhtiyacı, hesapla.proteinIhtıyacı, hesapla.karbIhtiyacı, hesapla.yagIhtıyacı, hesapla.bazalMetabolizmaHizi,
                         hesapla.gunlukKaloriIhtiyacı, hesapla.vucutKitleEndeksi, hesapla.idealKilo, hesapla.vucutYagMiktari, hesapla.vucutKasMiktari, hesapla.metabolikSendromRiski,
                         hesapla.vucutYagOrani, hesapla.belKalcaOrani, hesapla.belBoyunOrani, hesapla.belBoyOrani_);
-                }
+                        islemKontrol(true);
+                        btn_metin();
+                    }
                 }
                 catch {     
                     MessageBox.Show("Lütfen Tüm Kutucukları Doldurunuz!","Eksik Veri",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }              
+            }
+          
             }
 
         private void button2_Click(object sender, EventArgs e)
@@ -176,7 +201,13 @@ namespace gymKing.pt_forms
 
         private void btntemizle_Click(object sender, EventArgs e)
         {
-
+      
+        islemKontrol(false);
+        if(btntemizle.Text == "Belleği Temizle")
+            {
+                btntemizle.Text = "Kutucukları Temizle";
+            }
+            
         }
     }
     }
