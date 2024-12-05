@@ -48,17 +48,45 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
+
 
 
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
-            SqlCommand ekle = new SqlCommand("update tbl_musteriler set m_ad="+textBoxAd.Text+",m_soyad="+textBoxSoyad.Text+",m_DogumTarihi="+dateTimePickerDogum.Text+",m_telNo="+textBoxTelefon.Text+
-                ",m_eMail="+textBoxMail.Text+",m_adres="+textBoxAdres.Text+",m_uyelikBaslangic="+dateTimePickerBaslangic.Text +",m_uyelikBitis="+dateTimePickerBitis.Text+
-                ",m_personalTrainer="+comboBoxPt.Text+",m_diyetisyen="+comboBoxDiyetisyen.Text,baglanti);
+
+            // SQL sorgusu (parametreli)
+            string güncelle = @"
+             UPDATE tbl_musteriler 
+             SET 
+                m_ad = @mAd, 
+                m_soyad = @mSoyad, 
+                m_DogumTarihi = @mDogumTarihi, 
+                m_telNo = @mTelNo, 
+                 m_eMail = @mEmail, 
+                 m_adres = @mAdres, 
+                 m_uyelikBaslangic = @mUyelikBaslangic, 
+                 m_uyelikBitis = @mUyelikBitis, 
+                 m_personalTrainer = @mPersonalTrainer, 
+                 m_diyetisyen = @mDiyetisyen
+             WHERE m_id = @id"; 
+
+            SqlCommand ekle = new SqlCommand(güncelle, baglanti);
+
+            ekle.Parameters.AddWithValue("@mAd", textBoxAd.Text);
+            ekle.Parameters.AddWithValue("@mSoyad", textBoxSoyad.Text);
+            ekle.Parameters.AddWithValue("@mDogumTarihi", dateTimePickerDogum.Value);
+            ekle.Parameters.AddWithValue("@mTelNo", textBoxTelefon.Text);
+            ekle.Parameters.AddWithValue("@mEmail", textBoxMail.Text);
+            ekle.Parameters.AddWithValue("@mAdres", textBoxAdres.Text);
+            ekle.Parameters.AddWithValue("@mUyelikBaslangic", dateTimePickerBaslangic.Value);
+            ekle.Parameters.AddWithValue("@mUyelikBitis", dateTimePickerBitis.Value);
+            ekle.Parameters.AddWithValue("@mPersonalTrainer", comboBoxPt.Text);
+            ekle.Parameters.AddWithValue("@mDiyetisyen", comboBoxDiyetisyen.Text);
+            ekle.Parameters.AddWithValue("@id", textBoxID.Text);
+
             ekle.ExecuteNonQuery();
             baglanti.Close();
-            
+
 
 
         }

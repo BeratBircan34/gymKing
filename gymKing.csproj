@@ -360,6 +360,9 @@
     <None Include="Resources\employeAdd.png" />
     <Content Include="Resources\member_add.png" />
     <Content Include="Resources\next.png" />
+    <Content Include="Resources\protein.png" />
+    <Content Include="Resources\protein2.png" />
+    <Content Include="Resources\proteinpng.png" />
     <Content Include="Resources\PT PANEL PNG.png" />
     <None Include="Resources\PT PANEL PNG1.png" />
     <Content Include="Resources\remove.png" />
