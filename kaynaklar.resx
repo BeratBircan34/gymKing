@@ -127,8 +127,8 @@
   <data name="cleanerPNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\cleanerPNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4042258_dairy_diet_eating_food_fresh_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\4042258_dairy_diet_eating_food_fresh_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1291754_notes_todo_notepad_notebook_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\1291754_notes_todo_notepad_notebook_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gymkingg11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\gymkingg11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +187,9 @@
   <data name="arrow_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\arrow-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="4042258_dairy_diet_eating_food_fresh_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\4042258_dairy_diet_eating_food_fresh_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="power" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\power.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,13 +214,16 @@
   <data name="body" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\body1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chart_histogram" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\chart-histogram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1291754_notes_todo_notepad_notebook_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\1291754_notes_todo_notepad_notebook_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="create" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\create.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

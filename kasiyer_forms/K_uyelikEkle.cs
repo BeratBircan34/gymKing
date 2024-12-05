@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,31 +36,44 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            K_uyelikBilgiEkle bilgiEkle = new K_uyelikBilgiEkle();
+            this.Hide();
+            bilgiEkle.Show();
+        }
+
+     
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            string sifre = sifreUretme.GenerateRandomPassword();
+
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
-            SqlCommand ekle = new SqlCommand("insert into tbl_musteriler(m_ad,m_soyad,m_DogumTarihi,m_telNo,m_eMail,m_adres,m_uyelikBaslangic,m_uyelikBitis,m_personalTrainer,m_diyetisyen)" +
-                "values(@m_ad,@m_soyad,@m_DogumTarihi,@m_telNo,@m_eMail,@m_adres,@m_uyelikBaslangic,@m_uyelikBitis,@m_personalTrainer,@m_diyetisyen)", baglanti);
-            ekle.Parameters.AddWithValue("@m_ad", textBoxAd.Text);
-            ekle.Parameters.AddWithValue("@m_soyad", textBoxSoyad.Text);
-            ekle.Parameters.AddWithValue("@m_DogumTarihi", dateTimePickerDogum.Value);
-            ekle.Parameters.AddWithValue("@m_telNo", textBoxTelefon.Text);
-            ekle.Parameters.AddWithValue("@m_eMail", textBoxMail.Text);
-            ekle.Parameters.AddWithValue("@m_adres", textBoxAdres.Text);
-            ekle.Parameters.AddWithValue("@m_uyelikBaslangic", dateTimePickerBaslangic.Value);
-            ekle.Parameters.AddWithValue("@m_uyelikBitis", dateTimePickerBitis.Value);
-            ekle.Parameters.AddWithValue("@m_personalTrainer", comboBoxPt.Text);
-            ekle.Parameters.AddWithValue("@m_diyetisyen", comboBoxDiyetisyen.Text);
-            ekle.ExecuteNonQuery();
+            SqlCommand uyelikEkle = new SqlCommand("insert into tbl_giris_Bilgileri(rol,kullaniciAdi,sifre) values (@rol,@kullaniciAdi,@sifre)", baglanti);
+            uyelikEkle.Parameters.AddWithValue("@rol", "Üye");
+            uyelikEkle.Parameters.AddWithValue("@kullaniciAdi",textBoxAd.Text+"."+textBoxSoyad.Text);
+            uyelikEkle.Parameters.AddWithValue("@sifre",sifre);
+            uyelikEkle.ExecuteNonQuery();
+
+
+            SqlCommand getir = new SqlCommand("select top 1 KullaniciID,kullaniciAdi,sifre from tbl_giris_Bilgileri order by KullaniciID desc", baglanti);
+            SqlDataReader dr = getir.ExecuteReader();
+            dr.Read();
+            textBoxKullaniciAdi.Text = dr["kullaniciAdi"].ToString();
+            textBoxSifre.Text = dr["sifre"].ToString();
+            textBoxID.Text=dr["KullaniciID"].ToString();
+
+
             baglanti.Close();
 
-            MessageBox.Show("Kayıt Tamamlandı");
-            textBoxAd.Clear();
-            textBoxSoyad.Clear();
-            textBoxTelefon.Clear();
-            textBoxMail.Clear();
-            textBoxAdres.Clear();
-            comboBoxPt.SelectedIndex = 0;
-            comboBoxDiyetisyen.SelectedIndex = 0;
+            MessageBox.Show("Üye Eklendi");
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            K_uyelikBilgiEkle uyelikBilgiEkle = new K_uyelikBilgiEkle();
+            this.Hide();
+            uyelikBilgiEkle.Show();
         }
     }
 }

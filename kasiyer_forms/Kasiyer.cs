@@ -22,14 +22,7 @@ namespace gymKing.kasiyer_forms
         }
         public string kasiyer_oturumSahibi = "";
 
-        private void Kasiyer_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-            
-            lbl_oturumSahibi.Text = kasiyer_oturumSahibi;
-            lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
-            lbl_gun.Text = DateTime.Now.ToString("dddd");
-        }
+       
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -57,10 +50,7 @@ namespace gymKing.kasiyer_forms
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
@@ -71,14 +61,14 @@ namespace gymKing.kasiyer_forms
         {
             K_Uyelik uyelik = new K_Uyelik();
             uyelik.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             urunSatis urun = new urunSatis();
             urun.Show();
-            this.Close();
+            this.Hide();
         }
 
        

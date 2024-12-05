@@ -17,11 +17,11 @@ namespace gymKing.kasiyer_forms
             InitializeComponent();
         }
 
-        
+        public string kasiyer_oturumSahibi = "";
 
         private void urunSatis_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -30,5 +30,7 @@ namespace gymKing.kasiyer_forms
             this.Close();
             kasiyer.Show();
         }
+
+       
     }
 }
