@@ -57,12 +57,35 @@ namespace gymKing
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-
+            if(pt_islemKontrol.islemYapildiMi == true)
+            {
+                MessageBox.Show("Form ayarlanınca açılabilecek");
+            }
+            else
+            {
+                MessageBox.Show("Önce İşlem Yap");
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
+            if(pt_islemKontrol.islemYapildiMi == true)
+            {
+                frm_vucutAnaliz drm = new frm_vucutAnaliz();
+                frm_analizKayit analiz_kayit = new frm_analizKayit();
+                otoform_ayarla c_analiz_kayit = new otoform_ayarla(analiz_kayit);
+                c_analiz_kayit.formAc(analiz_kayit, this);
 
+            }
+            else
+            {
+                MessageBox.Show("Önce İşlem Yapmalısınız!");
+            }
+            
+
+            
+            
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)

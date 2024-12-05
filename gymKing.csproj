@@ -50,6 +50,7 @@
     <Compile Include="controls\otoform_ayarla.cs" />
     <Compile Include="controls\perBilgiAl.cs" />
     <Compile Include="controls\Pt_analizHesaplama.cs" />
+    <Compile Include="controls\pt_islemKontrol.cs" />
     <Compile Include="diyetisyen_forms\beslenmeprg.cs">
       <SubType>Form</SubType>
     </Compile>
