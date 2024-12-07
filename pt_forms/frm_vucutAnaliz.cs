@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+using gymKing.oto_Baglanti;
 namespace gymKing.pt_forms
 {
     public partial class frm_vucutAnaliz : Form
@@ -30,7 +31,9 @@ namespace gymKing.pt_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            
             this.Close();
+
         }
 
         private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -54,12 +57,12 @@ namespace gymKing.pt_forms
             }
         }
 
-       
         private void frm_vucutAnaliz_Load(object sender, EventArgs e)
         {
             ApplyNumericValidationToTextBoxes();
             //pt_islemKontrol dnm = new pt_islemKontrol(false);
             btn_metin();
+            
         }
         
         private string cinsiyetAl()
@@ -109,6 +112,7 @@ namespace gymKing.pt_forms
             }
 
         }
+
         private void islemKontrol(bool tf)
         {
             pt_islemKontrol kontrol = new pt_islemKontrol(tf);
@@ -133,6 +137,9 @@ namespace gymKing.pt_forms
                         hesapla.vucutYagOrani, hesapla.belKalcaOrani, hesapla.belBoyunOrani, hesapla.belBoyOrani_);
                         islemKontrol(true);
                         btn_metin();
+                        veriYolla();
+
+
 
                     }
                 else
@@ -143,10 +150,12 @@ namespace gymKing.pt_forms
                         hesapla.vucutYagOrani, hesapla.belKalcaOrani, hesapla.belBoyunOrani, hesapla.belBoyOrani_);
                         islemKontrol(true);
                         btn_metin();
+                        veriYolla();
                     }
                 }
-                catch {     
+                catch(Exception ex) {     
                     MessageBox.Show("Lütfen Tüm Kutucukları Doldurunuz!","Eksik Veri",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(ex.Message);
                 }
             }
           
@@ -157,7 +166,40 @@ namespace gymKing.pt_forms
             MessageBox.Show(cinsiyetAl());
         }
 
-        
+        private void veriYolla()
+        {
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand kmt = new SqlCommand(
+                "UPDATE tbl_gecicibellek " +
+                "SET yas = @pyas, kilo = @pkilo, boy = @boy, bel = @bel, kalca = @kalca, boyun = @boyun, gki = @gki, bmh = @bmh, msr = @msr, si = @si, pi = @pi, ki = @ki, yi = @yi, vkm = @vkm, vym = @vym, vki = @vki, ik = @ik ," +
+                "vyo = @vyo ,bbo = @bbo , bko = @bko , bboyun = @bboyun" ,baglanti
+            );
+            kmt.Parameters.AddWithValue("@pyas", txt_yas.Text);
+            kmt.Parameters.AddWithValue("@pkilo",txt_kilo.Text);
+            kmt.Parameters.AddWithValue("@boy",txt_boy.Text);
+            kmt.Parameters.AddWithValue("@bel",txt_belcevre.Text);
+            kmt.Parameters.AddWithValue("@kalca",txt_kalcacevre.Text);
+            kmt.Parameters.AddWithValue("@boyun",txt_boyun.Text);
+            kmt.Parameters.AddWithValue("@gki",lbl_gki.Text);
+            kmt.Parameters.AddWithValue("@bmh", lbl_bmh.Text);
+            kmt.Parameters.AddWithValue("@msr",lbl_msr.Text);
+            kmt.Parameters.AddWithValue("@si",lbl_si.Text);
+            kmt.Parameters.AddWithValue("@pi",lbl_pi.Text);
+            kmt.Parameters.AddWithValue("@ki",lbl_ki.Text);
+            kmt.Parameters.AddWithValue("@yi",lbl_yi.Text);
+            kmt.Parameters.AddWithValue("@vkm",lbl_vkm.Text);
+            kmt.Parameters.AddWithValue("@vym",lbl_vym.Text);
+            kmt.Parameters.AddWithValue("@vki",lbl_vke.Text);
+            kmt.Parameters.AddWithValue("@ik",lbl_ik.Text);
+            kmt.Parameters.AddWithValue("@vyo",lbl_vyo.Text);
+            kmt.Parameters.AddWithValue("@bbo",lbl_belboy.Text);
+            kmt.Parameters.AddWithValue("@bko",lbl_bko.Text);
+            kmt.Parameters.AddWithValue("@bboyun",lbl_belboyun.Text);
+            kmt.ExecuteNonQuery();
+
+            baglanti.Close();
+        }
         private bool hataKontrol()
         {
             bool hata = false;
@@ -205,10 +247,13 @@ namespace gymKing.pt_forms
         islemKontrol(false);
         if(btntemizle.Text == "Belleği Temizle")
             {
+
                 btntemizle.Text = "Kutucukları Temizle";
             }
             
         }
+
+        
     }
     }
 
