@@ -116,5 +116,11 @@ namespace gymKing
         {
             Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            personelEkle prs = new personelEkle();
+            prs.Show();
+        }
     }
 }
