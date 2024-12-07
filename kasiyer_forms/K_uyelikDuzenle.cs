@@ -129,6 +129,8 @@ namespace gymKing.kasiyer_forms
 
             ekle.ExecuteNonQuery();
             baglanti.Close();
+
+            MessageBox.Show("Düzenleme İşlemi Tamamlandı");
         }
     }
 }
