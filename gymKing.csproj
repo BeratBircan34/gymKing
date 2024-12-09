@@ -125,6 +125,7 @@
       <DependentUpon>Sepet.cs</DependentUpon>
     </Compile>
     <Compile Include="kasiyer_forms\sifreUretme.cs" />
+    <Compile Include="kasiyer_forms\Urunler.cs" />
     <Compile Include="kasiyer_forms\urunSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +224,12 @@
     <Compile Include="Üye_forms\uyeHesapAyarlari.Designer.cs">
       <DependentUpon>uyeHesapAyarlari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Üye_forms\uyeSifreDegistirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Üye_forms\uyeSifreDegistirme.Designer.cs">
+      <DependentUpon>uyeSifreDegistirme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Üye_forms\üyePaneli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Üye_forms\uyeHesapAyarlari.resx">
       <DependentUpon>uyeHesapAyarlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Üye_forms\uyeSifreDegistirme.resx">
+      <DependentUpon>uyeSifreDegistirme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Üye_forms\üyePaneli.resx">
       <DependentUpon>üyePaneli.cs</DependentUpon>

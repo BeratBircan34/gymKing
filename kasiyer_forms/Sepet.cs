@@ -18,10 +18,20 @@ namespace gymKing.kasiyer_forms
             InitializeComponent();
             
         }
-
+        Urunler urun = new Urunler();
         private void Sepet_Load(object sender, EventArgs e)
         {
-            
+            if(urun.urun1 >= 1)
+            {
+                listBox1.Items.Add(urun.urun1);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            urunSatis satis = new urunSatis();
+            this.Close();
+            satis.Show();
         }
     }
 }

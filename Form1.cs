@@ -28,6 +28,9 @@ namespace gymKing
         {
             sqlOtoBaglanti.pcAdiAl();
         }
+        public string id_ = "";
+
+       
 
         private void girisKontrol(string kullaniciAdi,string sifre)
         {
@@ -83,12 +86,14 @@ namespace gymKing
                         MessageBox.Show("Hoşgeldiniz! " + perrbilgi.ad + " " + perrbilgi.soyad);
                         break;
                     case "Üye":
-                        üyePaneli üyelik = new üyePaneli();
+                        üyePaneli üyelik = new üyePaneli(id);
                         uyeBilgiAl uyebilgi = new uyeBilgiAl(id);
+                        üyelik.id_ = id;
                         üyelik.uyeOturumSahibi = uyebilgi.ad+" "+uyebilgi.soyad;
                         üyelik.Show();
                         this.Hide();
                         MessageBox.Show("Hoşgeldiniz! " + uyebilgi.ad + " " + uyebilgi.soyad);
+                        
                         break;
  
                     default:

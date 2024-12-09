@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxId = new System.Windows.Forms.TextBox();
             this.textBoxSifre = new System.Windows.Forms.TextBox();
             this.textBoxKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -43,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +54,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.textBoxId);
             this.groupBox1.Controls.Add(this.textBoxSifre);
             this.groupBox1.Controls.Add(this.textBoxKullaniciAdi);
             this.groupBox1.Controls.Add(this.label12);
@@ -70,11 +76,33 @@
             this.groupBox1.TabIndex = 74;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Üyelik Bilgileri";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SlateGray;
+            this.label1.Location = new System.Drawing.Point(632, 247);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 28);
+            this.label1.TabIndex = 99;
+            this.label1.Text = "ID :";
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxId.Location = new System.Drawing.Point(896, 246);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.ReadOnly = true;
+            this.textBoxId.Size = new System.Drawing.Size(289, 29);
+            this.textBoxId.TabIndex = 98;
+            this.textBoxId.Text = " ";
             // 
             // textBoxSifre
             // 
             this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSifre.Location = new System.Drawing.Point(896, 244);
+            this.textBoxSifre.Location = new System.Drawing.Point(896, 350);
             this.textBoxSifre.Name = "textBoxSifre";
             this.textBoxSifre.Size = new System.Drawing.Size(289, 29);
             this.textBoxSifre.TabIndex = 98;
@@ -104,7 +132,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.SlateGray;
-            this.label13.Location = new System.Drawing.Point(632, 245);
+            this.label13.Location = new System.Drawing.Point(632, 351);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 28);
             this.label13.TabIndex = 95;
@@ -198,6 +226,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 75;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox1
             // 
@@ -211,6 +240,19 @@
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.SlateGray;
+            this.label4.Location = new System.Drawing.Point(1041, 382);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 22);
+            this.label4.TabIndex = 100;
+            this.label4.Text = "Sifre Degistir";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // uyeHesapAyarlari
             // 
@@ -251,5 +293,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.Label label4;
     }
 }

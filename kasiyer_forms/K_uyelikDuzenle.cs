@@ -102,8 +102,7 @@ namespace gymKing.kasiyer_forms
             baglanti.Open();
             string güncelle = @"
              UPDATE tbl_musteriler 
-             SET 
-                
+             SET     
                  m_DogumTarihi = @mDogumTarihi, 
                  m_telNo = @mTelNo, 
                  m_eMail = @mEmail, 

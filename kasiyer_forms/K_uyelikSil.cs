@@ -55,13 +55,13 @@ namespace gymKing.kasiyer_forms
             SqlDataReader getir2 = getir.ExecuteReader();
             while (getir2.Read())
             {
-                dateTimePickerDogum.Text = getir2["m_DogumTarihi"].ToString();
-                dateTimePickerBaslangic.Text = getir2["m_uyelikBaslangic"].ToString();
-                dateTimePickerBitis.Text = getir2["m_uyelikBitis"].ToString();
+                textBoxDogum.Text = getir2["m_DogumTarihi"].ToString();
+                textBoxBaslangic.Text = getir2["m_uyelikBaslangic"].ToString();
+                textBoxBitis.Text = getir2["m_uyelikBitis"].ToString();
                 textBoxMail.Text = getir2["m_eMail"].ToString();
                 textBoxAdres.Text = getir2["m_adres"].ToString();
-                comboBoxPt.Text = getir2["m_personalTrainer"].ToString();
-                comboBoxDiyetisyen.Text = getir2["m_diyetisyen"].ToString();
+                textBoxPt.Text = getir2["m_personalTrainer"].ToString();
+                textBoxDiyetisyen.Text = getir2["m_diyetisyen"].ToString();
                 textBoxTelefon.Text = getir2["m_telNo"].ToString();
             }
             getir2.Close();

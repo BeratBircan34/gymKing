@@ -34,12 +34,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxSifre = new System.Windows.Forms.TextBox();
             this.textBoxKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePickerDogum = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerBitis = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxPt = new System.Windows.Forms.ComboBox();
-            this.comboBoxDiyetisyen = new System.Windows.Forms.ComboBox();
             this.textBoxTelefon = new System.Windows.Forms.TextBox();
             this.textBoxAdres = new System.Windows.Forms.TextBox();
             this.textBoxMail = new System.Windows.Forms.TextBox();
@@ -51,7 +47,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.comboBoxSoyad = new System.Windows.Forms.ComboBox();
             this.comboBoxAd = new System.Windows.Forms.ComboBox();
@@ -61,6 +56,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.textBoxBitis = new System.Windows.Forms.TextBox();
+            this.textBoxBaslangic = new System.Windows.Forms.TextBox();
+            this.textBoxDogum = new System.Windows.Forms.TextBox();
+            this.textBoxDiyetisyen = new System.Windows.Forms.TextBox();
+            this.textBoxPt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -105,15 +105,15 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.Controls.Add(this.textBoxPt);
+            this.groupBox1.Controls.Add(this.textBoxDiyetisyen);
+            this.groupBox1.Controls.Add(this.textBoxDogum);
+            this.groupBox1.Controls.Add(this.textBoxBaslangic);
+            this.groupBox1.Controls.Add(this.textBoxBitis);
             this.groupBox1.Controls.Add(this.textBoxSifre);
             this.groupBox1.Controls.Add(this.textBoxKullaniciAdi);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dateTimePickerDogum);
-            this.groupBox1.Controls.Add(this.dateTimePickerBaslangic);
-            this.groupBox1.Controls.Add(this.dateTimePickerBitis);
-            this.groupBox1.Controls.Add(this.comboBoxPt);
-            this.groupBox1.Controls.Add(this.comboBoxDiyetisyen);
             this.groupBox1.Controls.Add(this.textBoxTelefon);
             this.groupBox1.Controls.Add(this.textBoxAdres);
             this.groupBox1.Controls.Add(this.textBoxMail);
@@ -138,6 +138,7 @@
             this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSifre.Location = new System.Drawing.Point(910, 295);
             this.textBoxSifre.Name = "textBoxSifre";
+            this.textBoxSifre.ReadOnly = true;
             this.textBoxSifre.Size = new System.Drawing.Size(289, 29);
             this.textBoxSifre.TabIndex = 98;
             this.textBoxSifre.UseSystemPasswordChar = true;
@@ -147,8 +148,20 @@
             this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKullaniciAdi.Location = new System.Drawing.Point(910, 230);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
+            this.textBoxKullaniciAdi.ReadOnly = true;
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(289, 29);
             this.textBoxKullaniciAdi.TabIndex = 96;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SlateGray;
+            this.label1.Location = new System.Drawing.Point(646, 230);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(192, 28);
+            this.label1.TabIndex = 94;
+            this.label1.Text = "Kullanıcı Adı :";
             // 
             // label2
             // 
@@ -161,56 +174,12 @@
             this.label2.TabIndex = 95;
             this.label2.Text = "Sifre :";
             // 
-            // dateTimePickerDogum
-            // 
-            this.dateTimePickerDogum.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDogum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDogum.Location = new System.Drawing.Point(296, 40);
-            this.dateTimePickerDogum.Name = "dateTimePickerDogum";
-            this.dateTimePickerDogum.Size = new System.Drawing.Size(288, 32);
-            this.dateTimePickerDogum.TabIndex = 4;
-            // 
-            // dateTimePickerBaslangic
-            // 
-            this.dateTimePickerBaslangic.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerBaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(296, 111);
-            this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
-            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(288, 32);
-            this.dateTimePickerBaslangic.TabIndex = 7;
-            // 
-            // dateTimePickerBitis
-            // 
-            this.dateTimePickerBitis.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerBitis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerBitis.Location = new System.Drawing.Point(296, 171);
-            this.dateTimePickerBitis.Name = "dateTimePickerBitis";
-            this.dateTimePickerBitis.Size = new System.Drawing.Size(288, 32);
-            this.dateTimePickerBitis.TabIndex = 8;
-            // 
-            // comboBoxPt
-            // 
-            this.comboBoxPt.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxPt.FormattingEnabled = true;
-            this.comboBoxPt.Location = new System.Drawing.Point(906, 42);
-            this.comboBoxPt.Name = "comboBoxPt";
-            this.comboBoxPt.Size = new System.Drawing.Size(288, 29);
-            this.comboBoxPt.TabIndex = 9;
-            // 
-            // comboBoxDiyetisyen
-            // 
-            this.comboBoxDiyetisyen.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxDiyetisyen.FormattingEnabled = true;
-            this.comboBoxDiyetisyen.Location = new System.Drawing.Point(910, 114);
-            this.comboBoxDiyetisyen.Name = "comboBoxDiyetisyen";
-            this.comboBoxDiyetisyen.Size = new System.Drawing.Size(288, 29);
-            this.comboBoxDiyetisyen.TabIndex = 10;
-            // 
             // textBoxTelefon
             // 
             this.textBoxTelefon.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefon.Location = new System.Drawing.Point(910, 174);
             this.textBoxTelefon.Name = "textBoxTelefon";
+            this.textBoxTelefon.ReadOnly = true;
             this.textBoxTelefon.Size = new System.Drawing.Size(288, 29);
             this.textBoxTelefon.TabIndex = 11;
             // 
@@ -220,6 +189,7 @@
             this.textBoxAdres.Location = new System.Drawing.Point(296, 297);
             this.textBoxAdres.Multiline = true;
             this.textBoxAdres.Name = "textBoxAdres";
+            this.textBoxAdres.ReadOnly = true;
             this.textBoxAdres.Size = new System.Drawing.Size(288, 203);
             this.textBoxAdres.TabIndex = 6;
             // 
@@ -228,6 +198,7 @@
             this.textBoxMail.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMail.Location = new System.Drawing.Point(296, 229);
             this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.ReadOnly = true;
             this.textBoxMail.Size = new System.Drawing.Size(288, 29);
             this.textBoxMail.TabIndex = 5;
             // 
@@ -318,17 +289,6 @@
             this.label4.Size = new System.Drawing.Size(200, 28);
             this.label4.TabIndex = 35;
             this.label4.Text = "Dogum Tarihi :";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SlateGray;
-            this.label1.Location = new System.Drawing.Point(646, 230);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 28);
-            this.label1.TabIndex = 94;
-            this.label1.Text = "Kullanıcı Adı :";
             // 
             // textBoxID
             // 
@@ -425,6 +385,51 @@
             this.label13.TabIndex = 56;
             this.label13.Text = "Silinme Nedeni :";
             // 
+            // textBoxBitis
+            // 
+            this.textBoxBitis.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBitis.Location = new System.Drawing.Point(296, 170);
+            this.textBoxBitis.Name = "textBoxBitis";
+            this.textBoxBitis.ReadOnly = true;
+            this.textBoxBitis.Size = new System.Drawing.Size(288, 29);
+            this.textBoxBitis.TabIndex = 99;
+            // 
+            // textBoxBaslangic
+            // 
+            this.textBoxBaslangic.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBaslangic.Location = new System.Drawing.Point(296, 113);
+            this.textBoxBaslangic.Name = "textBoxBaslangic";
+            this.textBoxBaslangic.ReadOnly = true;
+            this.textBoxBaslangic.Size = new System.Drawing.Size(288, 29);
+            this.textBoxBaslangic.TabIndex = 100;
+            // 
+            // textBoxDogum
+            // 
+            this.textBoxDogum.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDogum.Location = new System.Drawing.Point(296, 41);
+            this.textBoxDogum.Name = "textBoxDogum";
+            this.textBoxDogum.ReadOnly = true;
+            this.textBoxDogum.Size = new System.Drawing.Size(288, 29);
+            this.textBoxDogum.TabIndex = 101;
+            // 
+            // textBoxDiyetisyen
+            // 
+            this.textBoxDiyetisyen.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDiyetisyen.Location = new System.Drawing.Point(910, 116);
+            this.textBoxDiyetisyen.Name = "textBoxDiyetisyen";
+            this.textBoxDiyetisyen.ReadOnly = true;
+            this.textBoxDiyetisyen.Size = new System.Drawing.Size(288, 29);
+            this.textBoxDiyetisyen.TabIndex = 102;
+            // 
+            // textBoxPt
+            // 
+            this.textBoxPt.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPt.Location = new System.Drawing.Point(910, 44);
+            this.textBoxPt.Name = "textBoxPt";
+            this.textBoxPt.ReadOnly = true;
+            this.textBoxPt.Size = new System.Drawing.Size(288, 29);
+            this.textBoxPt.TabIndex = 103;
+            // 
             // K_uyelikSil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,11 +474,6 @@
         private System.Windows.Forms.TextBox textBoxKullaniciAdi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDogum;
-        private System.Windows.Forms.DateTimePicker dateTimePickerBaslangic;
-        private System.Windows.Forms.DateTimePicker dateTimePickerBitis;
-        private System.Windows.Forms.ComboBox comboBoxPt;
-        private System.Windows.Forms.ComboBox comboBoxDiyetisyen;
         private System.Windows.Forms.TextBox textBoxTelefon;
         private System.Windows.Forms.TextBox textBoxAdres;
         private System.Windows.Forms.TextBox textBoxMail;
@@ -494,5 +494,10 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBoxPt;
+        private System.Windows.Forms.TextBox textBoxDiyetisyen;
+        private System.Windows.Forms.TextBox textBoxDogum;
+        private System.Windows.Forms.TextBox textBoxBaslangic;
+        private System.Windows.Forms.TextBox textBoxBitis;
     }
 }

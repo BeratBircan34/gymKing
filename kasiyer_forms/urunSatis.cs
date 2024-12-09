@@ -18,7 +18,7 @@ namespace gymKing.kasiyer_forms
             InitializeComponent();
         }
 
-
+        Urunler urun = new Urunler();
         
 
         private void urunSatis_Load(object sender, EventArgs e)
@@ -43,11 +43,43 @@ namespace gymKing.kasiyer_forms
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Sepet sepet = new Sepet();
-            otoform_ayarla sepett = new otoform_ayarla(sepet);
-            sepett.formAc(sepet,this);
+            sepet.Show();
+   
+        }
 
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+            urun.urun1--;
+            label2.Text=urun.urun1.ToString();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            urun.urun1++;
+            label2.Text=urun.urun1.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
             
-            
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            urun.urun2++;
+            label5.Text=urun.urun2.ToString();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            urun.urun2--;
+            label5.Text =urun.urun2.ToString();
         }
     }
 }
