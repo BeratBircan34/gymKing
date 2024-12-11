@@ -53,6 +53,7 @@
     <Compile Include="controls\Pt_analizHesaplama.cs" />
     <Compile Include="controls\pt_islemKayit.cs" />
     <Compile Include="controls\pt_islemKontrol.cs" />
+    <Compile Include="controls\uyeBilgiAl.cs" />
     <Compile Include="diyetisyen_forms\beslenmeprg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,7 +119,14 @@
     <Compile Include="kasiyer_forms\K_uyelikSil.Designer.cs">
       <DependentUpon>K_uyelikSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="kasiyer_forms\Sepet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kasiyer_forms\Sepet.Designer.cs">
+      <DependentUpon>Sepet.cs</DependentUpon>
+    </Compile>
     <Compile Include="kasiyer_forms\sifreUretme.cs" />
+    <Compile Include="kasiyer_forms\Urunler.cs" />
     <Compile Include="kasiyer_forms\urunSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +195,12 @@
     <Compile Include="yonetici_forms\persIslemleri.Designer.cs">
       <DependentUpon>persIslemleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\personelBilgiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\personelBilgiEkle.Designer.cs">
+      <DependentUpon>personelBilgiEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="yonetici_forms\personelEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +219,7 @@
     <Compile Include="yonetici_forms\personelSil.Designer.cs">
       <DependentUpon>personelSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\sifreUret.cs" />
     <Compile Include="yonetici_forms\yonetici.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +231,24 @@
     </Compile>
     <Compile Include="yonetici_forms\İstatistikler.Designer.cs">
       <DependentUpon>İstatistikler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Üye_forms\uyeHesapAyarlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Üye_forms\uyeHesapAyarlari.Designer.cs">
+      <DependentUpon>uyeHesapAyarlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Üye_forms\uyeSifreDegistirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Üye_forms\uyeSifreDegistirme.Designer.cs">
+      <DependentUpon>uyeSifreDegistirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Üye_forms\üyePaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Üye_forms\üyePaneli.Designer.cs">
+      <DependentUpon>üyePaneli.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="diyetisyen_forms\beslenmeprg.resx">
       <DependentUpon>beslenmeprg.cs</DependentUpon>
@@ -246,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="kasiyer_forms\K_uyelikSil.resx">
       <DependentUpon>K_uyelikSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kasiyer_forms\Sepet.resx">
+      <DependentUpon>Sepet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kasiyer_forms\urunSatis.resx">
       <DependentUpon>urunSatis.cs</DependentUpon>
@@ -284,6 +320,9 @@
     <EmbeddedResource Include="yonetici_forms\persIslemleri.resx">
       <DependentUpon>persIslemleri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\personelBilgiEkle.resx">
+      <DependentUpon>personelBilgiEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\personelEkle.resx">
       <DependentUpon>personelEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,6 +337,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\İstatistikler.resx">
       <DependentUpon>İstatistikler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Üye_forms\uyeHesapAyarlari.resx">
+      <DependentUpon>uyeHesapAyarlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Üye_forms\uyeSifreDegistirme.resx">
+      <DependentUpon>uyeSifreDegistirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Üye_forms\üyePaneli.resx">
+      <DependentUpon>üyePaneli.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="gymKing_dbDataSet.xsc">
       <DependentUpon>gymKing_dbDataSet.xsd</DependentUpon>
@@ -380,6 +428,7 @@
     <None Include="Resources\statisticsPNG.png" />
     <None Include="Resources\transparentGYMKING.png" />
     <None Include="Resources\cashierpnl.png" />
+    <Content Include="Resources\basket.png" />
     <Content Include="Resources\body.png" />
     <None Include="Resources\body1.png" />
     <Content Include="Resources\cashier_icon.ico" />
@@ -399,6 +448,7 @@
     <None Include="Resources\PT PANEL PNG1.png" />
     <Content Include="Resources\remove.png" />
     <Content Include="Resources\save.png" />
+    <Content Include="Resources\settings.png" />
     <Content Include="Resources\shop.png" />
     <Content Include="Resources\show.png" />
   </ItemGroup>

@@ -13,6 +13,7 @@ using gymKing.controls;
 using gymKing.diyetisyen_forms;
 using gymKing.kasiyer_forms;
 using gymKing.yonetici_forms;
+using gymKing.Üye_forms;
 
 namespace gymKing
 {
@@ -27,6 +28,9 @@ namespace gymKing
         {
             sqlOtoBaglanti.pcAdiAl();
         }
+        public string id_ = "";
+
+       
 
         private void girisKontrol(string kullaniciAdi,string sifre)
         {
@@ -56,7 +60,7 @@ namespace gymKing
                         frmpt.Show();
                         this.Hide();
                         MessageBox.Show(id);
-                        MessageBox.Show("Hoşgeldiniz!"+per.ad+" "+per.soyad);
+                        MessageBox.Show("Hoşgeldiniz! "+per.ad+" "+per.soyad);
                         break;
                     case "Diyetisyen":
                         frm_diyetisyen frmdiyet = new frm_diyetisyen();
@@ -71,7 +75,7 @@ namespace gymKing
                         kasiyer.kasiyer_oturumSahibi = K_bilgi.ad + " " + K_bilgi.soyad;
                         kasiyer.Show();
                         this.Hide();
-                        MessageBox.Show("Hoşgeldiniz!" + K_bilgi.ad + " " +K_bilgi.soyad);
+                        MessageBox.Show("Hoşgeldiniz! " + K_bilgi.ad + " " +K_bilgi.soyad);
                         break;
                     case "Yönetici":
                         yonetici yonetici = new yonetici();
@@ -79,7 +83,17 @@ namespace gymKing
                         yonetici.yonetici_oturumSahibi = perrbilgi.ad + " " + perrbilgi.soyad;
                         yonetici.Show();
                         this.Hide();
-                        MessageBox.Show("Hoşgeldiniz!" + perrbilgi.ad + " " + perrbilgi.soyad);
+                        MessageBox.Show("Hoşgeldiniz! " + perrbilgi.ad + " " + perrbilgi.soyad);
+                        break;
+                    case "Üye":
+                        üyePaneli üyelik = new üyePaneli(id);
+                        uyeBilgiAl uyebilgi = new uyeBilgiAl(id);
+                        üyelik.id_ = id;
+                        üyelik.uyeOturumSahibi = uyebilgi.ad+" "+uyebilgi.soyad;
+                        üyelik.Show();
+                        this.Hide();
+                        MessageBox.Show("Hoşgeldiniz! " + uyebilgi.ad + " " + uyebilgi.soyad);
+                        
                         break;
  
                     default:

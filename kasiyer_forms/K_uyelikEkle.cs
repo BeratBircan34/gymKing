@@ -66,7 +66,7 @@ namespace gymKing.kasiyer_forms
 
             baglanti.Close();
 
-            MessageBox.Show("Üye Eklendi");
+            MessageBox.Show("Kullanıcı Adı ve Şifre Oluşturuldu");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

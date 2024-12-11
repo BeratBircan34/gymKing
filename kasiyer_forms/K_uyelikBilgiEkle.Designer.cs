@@ -34,6 +34,12 @@
             this.gymKing_dbDataSet = new gymKing.gymKing_dbDataSet();
             this.gymKingdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.textBoxSifre = new System.Windows.Forms.TextBox();
+            this.textBoxKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.dateTimePickerDogum = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerBitis = new System.Windows.Forms.DateTimePicker();
@@ -54,12 +60,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.textBoxSifre = new System.Windows.Forms.TextBox();
-            this.textBoxKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymKing_dbDataSet)).BeginInit();
@@ -71,7 +71,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::gymKing.kaynaklar.save;
-            this.pictureBox3.Location = new System.Drawing.Point(1109, 650);
+            this.pictureBox3.Location = new System.Drawing.Point(1198, 650);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(70, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -84,7 +84,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::gymKing.kaynaklar.arrow_left;
-            this.pictureBox1.Location = new System.Drawing.Point(1208, 650);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 650);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,12 +133,69 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1256, 586);
             this.groupBox1.TabIndex = 72;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Üyelik Bilgileri";
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.SlateGray;
+            this.label11.Location = new System.Drawing.Point(614, 520);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 28);
+            this.label11.TabIndex = 99;
+            this.label11.Text = "ID :";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(878, 522);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(289, 29);
+            this.textBoxID.TabIndex = 97;
+            // 
+            // textBoxSifre
+            // 
+            this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSifre.Location = new System.Drawing.Point(878, 449);
+            this.textBoxSifre.Name = "textBoxSifre";
+            this.textBoxSifre.Size = new System.Drawing.Size(289, 29);
+            this.textBoxSifre.TabIndex = 98;
+            // 
+            // textBoxKullaniciAdi
+            // 
+            this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(878, 382);
+            this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
+            this.textBoxKullaniciAdi.Size = new System.Drawing.Size(289, 29);
+            this.textBoxKullaniciAdi.TabIndex = 96;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.SlateGray;
+            this.label12.Location = new System.Drawing.Point(614, 382);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(192, 28);
+            this.label12.TabIndex = 94;
+            this.label12.Text = "Kullanıcı Adı :";
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.SlateGray;
+            this.label13.Location = new System.Drawing.Point(614, 450);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(85, 28);
+            this.label13.TabIndex = 95;
+            this.label13.Text = "Sifre :";
             // 
             // dateTimePickerDogum
             // 
@@ -335,63 +392,6 @@
             this.label4.Size = new System.Drawing.Size(62, 28);
             this.label4.TabIndex = 33;
             this.label4.Text = "Ad :";
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.SlateGray;
-            this.label11.Location = new System.Drawing.Point(614, 520);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 28);
-            this.label11.TabIndex = 99;
-            this.label11.Text = "ID :";
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(878, 522);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(289, 29);
-            this.textBoxID.TabIndex = 97;
-            // 
-            // textBoxSifre
-            // 
-            this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSifre.Location = new System.Drawing.Point(878, 449);
-            this.textBoxSifre.Name = "textBoxSifre";
-            this.textBoxSifre.Size = new System.Drawing.Size(289, 29);
-            this.textBoxSifre.TabIndex = 98;
-            // 
-            // textBoxKullaniciAdi
-            // 
-            this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(878, 382);
-            this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
-            this.textBoxKullaniciAdi.Size = new System.Drawing.Size(289, 29);
-            this.textBoxKullaniciAdi.TabIndex = 96;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.SlateGray;
-            this.label12.Location = new System.Drawing.Point(614, 382);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(192, 28);
-            this.label12.TabIndex = 94;
-            this.label12.Text = "Kullanıcı Adı :";
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.SlateGray;
-            this.label13.Location = new System.Drawing.Point(614, 450);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(85, 28);
-            this.label13.TabIndex = 95;
-            this.label13.Text = "Sifre :";
             // 
             // K_uyelikBilgiEkle
             // 

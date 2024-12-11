@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gymKing.controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,8 @@ namespace gymKing.kasiyer_forms
             InitializeComponent();
         }
 
-        public string kasiyer_oturumSahibi = "";
+        Urunler urun = new Urunler();
+        
 
         private void urunSatis_Load(object sender, EventArgs e)
         {
@@ -31,6 +33,53 @@ namespace gymKing.kasiyer_forms
             kasiyer.Show();
         }
 
-       
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+           
+            
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Sepet sepet = new Sepet();
+            sepet.Show();
+   
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+            urun.urun1--;
+            label2.Text=urun.urun1.ToString();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            urun.urun1++;
+            label2.Text=urun.urun1.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            urun.urun2++;
+            label5.Text=urun.urun2.ToString();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            urun.urun2--;
+            label5.Text =urun.urun2.ToString();
+        }
     }
 }
