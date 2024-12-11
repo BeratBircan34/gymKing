@@ -188,6 +188,12 @@
     <Compile Include="yonetici_forms\persIslemleri.Designer.cs">
       <DependentUpon>persIslemleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\personelBilgiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\personelBilgiEkle.Designer.cs">
+      <DependentUpon>personelBilgiEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="yonetici_forms\personelEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,7 @@
     <Compile Include="yonetici_forms\personelSil.Designer.cs">
       <DependentUpon>personelSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\sifreUret.cs" />
     <Compile Include="yonetici_forms\yonetici.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\persIslemleri.resx">
       <DependentUpon>persIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\personelBilgiEkle.resx">
+      <DependentUpon>personelBilgiEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\personelEkle.resx">
       <DependentUpon>personelEkle.cs</DependentUpon>
