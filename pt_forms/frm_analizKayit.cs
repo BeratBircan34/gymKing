@@ -11,12 +11,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using gymKing.oto_Baglanti;
+using System.Collections;
 
 namespace gymKing.pt_forms
 {
     public partial class frm_analizKayit : Form
     {
-        public string bmh {  get; set; }
+        public string bmh { get; set; }
         public string gki { get; set; }
         public string vki { get; set; }
         public string vyo { get; set; }
@@ -63,11 +66,19 @@ namespace gymKing.pt_forms
             lbl_pi.Text = dnm.proteinIhtıyacı;
             lbl_yi.Text = dnm.yagIhtıyacı;
             lbl_ik.Text = dnm.idealKilo;
+            lbl_cinsiyet.Text = dnm.cinsiyet;
 
         }
+        public string egitmen = "";
         private void frm_analizKayit_Load(object sender, EventArgs e)
         {
+            lbl_egitmen.Text = egitmen;
             verileriYerlestir();
+            if (lbl_cinsiyet.Text == "Kadin")
+                lbl_cinsiyet.ForeColor = Color.IndianRed;
+            else
+                lbl_cinsiyet.ForeColor= Color.CadetBlue;
+        
             cmbbx_settings(3);
             /*void setLabelText(string yas, string boy, string kilo, string bel, string kalca, string boyun, string gki, string bmh, string msr, string si, string pi, string ki, string yi,
             string vyo, string bko, string bbo, string belBoyun, string vki, string vkm, string vym, string ik)
@@ -94,7 +105,7 @@ namespace gymKing.pt_forms
 
         }
 
-        
+
         private void cmbbx_settings(int tf)
         {
             switch (tf)
@@ -110,44 +121,181 @@ namespace gymKing.pt_forms
                     cmbbx_soyisim.Enabled = true;
                     break;
                 case 3:
-                    cmbbx_isim.Enabled= false   ;
-                    cmbbx_soyisim.Enabled = false ;
+                    cmbbx_isim.Enabled = false;
+                    cmbbx_soyisim.Enabled = false;
                     break;
             }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void rd_kayitliGuncelle_CheckedChanged(object sender, EventArgs e)
         {
+            cmbbx_isim.Items.Clear();
+            cmbbx_soyisim.Items.Clear();
             cmbbx_settings(2);
+            kayitliKisiCek();
         }
 
         private void rd_yeniKayit_CheckedChanged(object sender, EventArgs e)
         {
+            cmbbx_isim.Items.Clear();
+            cmbbx_soyisim.Items.Clear();
             cmbbx_settings(1);
+            yeniKisiCek();
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
-    }
-    public class deneme : pt_gecici_Bellek
-    {
-        public deneme()
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            verileriCevirVeYolla();
+        }
+        private void sql_komut(string komut,SqlConnection bglnti)
+        {
+            SqlCommand cmd = new SqlCommand(komut, bglnti);
+            cmd.Parameters.AddWithValue("@ad", cmbbx_isim.Text);
+            cmd.Parameters.AddWithValue("@soyad", cmbbx_soyisim.Text);
+            cmd.Parameters.AddWithValue("@bazalMetabolizma", decimal.Parse(lbl_bmhS.Text));
+            cmd.Parameters.AddWithValue("@gunlukKalori", decimal.Parse(lbl_gkiS.Text));
+            cmd.Parameters.AddWithValue("@metabolikSRisk", lbl_msr.Text.ToString());
+            cmd.Parameters.AddWithValue("@vki", decimal.Parse(lbl_vkiS.Text));
+            cmd.Parameters.AddWithValue("@vyo", decimal.Parse(lbl_vyoS.Text));
+            cmd.Parameters.AddWithValue("@vym", decimal.Parse(lbl_vymS.Text));
+            cmd.Parameters.AddWithValue("@ik", decimal.Parse(lbl_ik.Text));
+            cmd.Parameters.AddWithValue("@bko", decimal.Parse(lbl_bkoS.Text));
+            cmd.Parameters.AddWithValue("@bboy", decimal.Parse(lbl_bboS.Text));
+            cmd.Parameters.AddWithValue("@bboyun", decimal.Parse(lbl_boyun.Text));
+            cmd.Parameters.AddWithValue("@si", decimal.Parse(lbl_si.Text));
+            cmd.Parameters.AddWithValue("@pi", decimal.Parse(lbl_pi.Text));
+            cmd.Parameters.AddWithValue("@ki", decimal.Parse(lbl_ki.Text));
+            cmd.Parameters.AddWithValue("@yi", decimal.Parse((lbl_ki.Text)));
+            cmd.Parameters.AddWithValue("@kilo", int.Parse(txt_kiloS.Text));
+            cmd.Parameters.AddWithValue("@bel", int.Parse(txt_belS.Text));
+            cmd.Parameters.AddWithValue("@boyun", int.Parse(txt_boyunS.Text));
+            cmd.Parameters.AddWithValue("@kalca", int.Parse(txt_kalcaS.Text));
+            cmd.Parameters.AddWithValue("@boy", int.Parse(txt_boyS.Text));
+            cmd.Parameters.AddWithValue("@yas", int.Parse(txt_yasS.Text));
+            cmd.Parameters.AddWithValue("@tarih", DateTime.Now.Date);
+            cmd.Parameters.AddWithValue("@egitmen", lbl_egitmen.Text);
+            cmd.ExecuteNonQuery();
+
+        }
+        private void verileriCevirVeYolla()
+        {
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            string komut_yeniKisi = ("insert into tbl_guncelkayitlar (ad, soyad, bazalMetabolizma, gunlukKalori, metabolikSRisk, vki, vyo, vym, ik, bko, bboy, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen,tarih)" +
+                "values (@ad, @soyad, @bazalMetabolizma, @gunlukKalori, @metabolikSRisk, @vki, @vyo, @vym, @ik, @bko, @bboy, @bboyun, @si, @pi, @ki, @yi, @kilo, @bel, @boyun, @kalca, @boy, @yas ,egitmen,tarih)");
+            string komut_Kayitlikisi =  "UPDATE tbl_guncelkayitlar SET ad = @ad, soyad = @soyad, bazalMetabolizma = @bazalMetabolizma, gunlukKalori = @gunlukKalori, metabolikSRisk = @metabolikSRisk, vki = @vki, vyo = @vyo, vym = @vym, ik = @ik, bko = @bko, bboy = @bboy, bboyun = @bboyun, si = @si, pi = @pi, ki = @ki, yi = @yi, kilo = @kilo, bel = @bel, boyun = @boyun, kalca = @kalca, boy = @boy, yas = @yas , egitmen = @egitmen, tarih = @tarih";
+            baglanti.Open();
+            if (rd_yeniKayit.Checked)
+            {
+                sql_komut(komut_yeniKisi, baglanti);
+            }
+            else if (rd_kayitliGuncelle.Checked)
+            {
+                sql_komut(komut_Kayitlikisi, baglanti);
+            }
+            MessageBox.Show("Veriler başarıyla işlendi");
+            baglanti.Close();
+
+        }
+
+        private void kayitliKisiCek()
         {
             
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand kmt = new SqlCommand("select distinct ad from tbl_guncelKayitlar where cinsiyet = @p1", baglanti);
+            kmt.Parameters.AddWithValue("@p1", lbl_cinsiyet.Text);
+            SqlDataReader dr = kmt.ExecuteReader();
+            while (dr.Read())
+            {
+                cmbbx_isim.Items.Add(dr["ad"].ToString());
+                
+            }
+            dr.Close();
+            baglanti.Close();
+        }
+        private void yeniKisiCek()
+        {
+            
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand kmt = new SqlCommand("select distinct m_ad from tbl_musteriler where cinsiyet = @p1", baglanti);
+            kmt.Parameters.AddWithValue("@p1", lbl_cinsiyet.Text);
+            SqlDataReader dr = kmt.ExecuteReader();
+            while (dr.Read())
+            {
+                cmbbx_isim.Items.Add(dr["m_Ad"].ToString());
+                
+            }
+        }
+
+        private void soyadCek(string islemTuru_)
+        {
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            switch (islemTuru)
+            {
+
+                case "Yeni Kayit":
+                    
+                    SqlCommand kmt = new SqlCommand("select distinct m_soyad from tbl_musteriler where m_ad = @p1 ", baglanti);
+                    kmt.Parameters.AddWithValue("@p1", cmbbx_isim.Text);
+                    SqlDataReader dr = kmt.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        cmbbx_soyisim.Items.Add(dr["m_soyad"].ToString());
+                        
+                    }
+                    break;
+                case "Kayitli Güncelleme":
+                    
+                    SqlCommand kmt2 = new SqlCommand("select distinct soyad from tbl_guncelKayitlar where ad = @p1", baglanti);
+                    kmt2.Parameters.AddWithValue("@p1", cmbbx_isim.Text);
+                    SqlDataReader dr2 = kmt2.ExecuteReader();
+                    while (dr2.Read())
+                    {
+                        cmbbx_soyisim.Items.Add(dr2["soyad"].ToString());
+                       
+                    }
+                    break;
+
+            }
+
+
+        }
+        public class deneme : pt_gecici_Bellek
+        {
+            public deneme()
+            {
+
+            }
+        }
+
+        private void cmbbx_isim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            soyadCek(islemTuru);
+        }
+
+        private void cmbbx_soyisim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
-
-    
-        
-
-    }
+}
 
 
 

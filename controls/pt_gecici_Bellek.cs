@@ -36,6 +36,8 @@ namespace gymKing.controls
 
         public string kalca { get; set; } //
 
+        public string cinsiyet {  get; set; }//
+
         public pt_gecici_Bellek()
         {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
@@ -65,6 +67,7 @@ namespace gymKing.controls
                 belBoyOrani_ = dr["bbo"].ToString() ;
                 belBoyunOrani = dr["bboyun"].ToString ( );
                 vucutKasMiktari = dr["vkm"].ToString( );
+                cinsiyet = dr["cinsiyet"].ToString().ToLower () ;
             }
 
         }

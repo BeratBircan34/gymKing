@@ -79,20 +79,20 @@ namespace gymKing.pt_forms
             float vucutYagMiktari, float vucutKasMiktari, string metabolikSendromRiski, float vucutYagOrani, float belKalcaOrani,
             float belBoyunOrani,float belBoyOrani)
         {
-            lbl_si.Text = suİhtiyaci.ToString("00.00")+" Litre/Gün";
-            lbl_pi.Text = proteinİhtiyaci.ToString("00.00")+" Gram/Gün";
-            lbl_yi.Text = yağİhtiyaci.ToString("00.00")+" Gram/Gün";
-            lbl_ki.Text = karbonhidratİhtiyaci.ToString("00.00")+" Gram/Gün";
-            lbl_bmh.Text = bazalMetabolizmaHizi.ToString("00.00") + " Kalori";
-            lbl_gki.Text = gunlukKaloriİhtiyaci.ToString("00.00") + " Kalori/Gün";
+            lbl_si.Text = suİhtiyaci.ToString("00.00");
+            lbl_pi.Text = proteinİhtiyaci.ToString("00.00");
+            lbl_yi.Text = yağİhtiyaci.ToString("00.00");
+            lbl_ki.Text = karbonhidratİhtiyaci.ToString("00.00");
+            lbl_bmh.Text = bazalMetabolizmaHizi.ToString("00.00");
+            lbl_gki.Text = gunlukKaloriİhtiyaci.ToString("00.00") ;
             lbl_vke.Text = vucutKitleEndeksi.ToString("00.00");
-            lbl_ik.Text = idealKilo.ToString("00.00") + " KG";
+            lbl_ik.Text = idealKilo.ToString("00.00") ;
             lbl_msr.Text = metabolikSendromRiski;
             if (chkbox_sadeceKalori.Checked == false)
             {
-                lbl_vym.Text = vucutYagMiktari.ToString("00.00") + " KG";
-                lbl_vkm.Text = vucutKasMiktari.ToString("00.00") + " KG";
-                lbl_vyo.Text = "% " + vucutYagOrani.ToString("00.00");
+                lbl_vym.Text = vucutYagMiktari.ToString("00.00") ;
+                lbl_vkm.Text = vucutKasMiktari.ToString("00.00") ;
+                lbl_vyo.Text = vucutYagOrani.ToString("00.00");
                 lbl_bko.Text = belKalcaOrani.ToString("00.00");
                 lbl_belboyun.Text = belBoyunOrani.ToString("00.00");
                 lbl_belboy.Text = belBoyOrani.ToString("00.00");
@@ -173,7 +173,7 @@ namespace gymKing.pt_forms
             SqlCommand kmt = new SqlCommand(
                 "UPDATE tbl_gecicibellek " +
                 "SET yas = @pyas, kilo = @pkilo, boy = @boy, bel = @bel, kalca = @kalca, boyun = @boyun, gki = @gki, bmh = @bmh, msr = @msr, si = @si, pi = @pi, ki = @ki, yi = @yi, vkm = @vkm, vym = @vym, vki = @vki, ik = @ik ," +
-                "vyo = @vyo ,bbo = @bbo , bko = @bko , bboyun = @bboyun" ,baglanti
+                "vyo = @vyo ,bbo = @bbo , bko = @bko , bboyun = @bboyun ,cinsiyet = @cins" ,baglanti
             );
             kmt.Parameters.AddWithValue("@pyas", txt_yas.Text);
             kmt.Parameters.AddWithValue("@pkilo",txt_kilo.Text);
@@ -196,6 +196,7 @@ namespace gymKing.pt_forms
             kmt.Parameters.AddWithValue("@bbo",lbl_belboy.Text);
             kmt.Parameters.AddWithValue("@bko",lbl_bko.Text);
             kmt.Parameters.AddWithValue("@bboyun",lbl_belboyun.Text);
+            kmt.Parameters.AddWithValue("@cins", cinsiyetAl() );
             kmt.ExecuteNonQuery();
 
             baglanti.Close();

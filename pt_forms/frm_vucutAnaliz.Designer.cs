@@ -47,6 +47,7 @@
             this.txt_kilo = new System.Windows.Forms.TextBox();
             this.txt_yas = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btntemizle = new System.Windows.Forms.Button();
             this.chkbox_sadeceKalori = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -88,9 +89,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btntemizle = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -328,6 +328,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hesaplama Ayarları";
             // 
+            // btntemizle
+            // 
+            this.btntemizle.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntemizle.ForeColor = System.Drawing.Color.Crimson;
+            this.btntemizle.Location = new System.Drawing.Point(88, 72);
+            this.btntemizle.Name = "btntemizle";
+            this.btntemizle.Size = new System.Drawing.Size(194, 40);
+            this.btntemizle.TabIndex = 17;
+            this.btntemizle.Text = "Kutucukları Temizle";
+            this.btntemizle.UseVisualStyleBackColor = true;
+            this.btntemizle.Click += new System.EventHandler(this.btntemizle_Click);
+            // 
             // chkbox_sadeceKalori
             // 
             this.chkbox_sadeceKalori.AutoSize = true;
@@ -379,9 +391,9 @@
             this.panel4.Controls.Add(this.label26);
             this.panel4.Controls.Add(this.label27);
             this.panel4.Controls.Add(this.label28);
-            this.panel4.Location = new System.Drawing.Point(6, 250);
+            this.panel4.Location = new System.Drawing.Point(0, 250);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(427, 178);
+            this.panel4.Size = new System.Drawing.Size(433, 178);
             this.panel4.TabIndex = 25;
             // 
             // lbl_ik
@@ -438,27 +450,27 @@
             this.label25.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(254, 107);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(112, 26);
+            this.label25.Size = new System.Drawing.Size(152, 26);
             this.label25.TabIndex = 22;
-            this.label25.Text = "İdeal Kilo ";
+            this.label25.Text = "İdeal Kilo(KG) ";
             // 
             // label26
             // 
             this.label26.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(212, 42);
+            this.label26.Location = new System.Drawing.Point(202, 42);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(186, 32);
+            this.label26.Size = new System.Drawing.Size(228, 32);
             this.label26.TabIndex = 21;
-            this.label26.Text = "Vücut Yağ Miktarı ";
+            this.label26.Text = "Vücut Yağ Miktarı(KG) ";
             // 
             // label27
             // 
-            this.label27.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(3, 42);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(188, 32);
+            this.label27.Size = new System.Drawing.Size(214, 32);
             this.label27.TabIndex = 20;
-            this.label27.Text = "Vücut Kas Miktarı :";
+            this.label27.Text = "Vücut Kas Miktarı(KG) :";
             // 
             // label28
             // 
@@ -485,7 +497,7 @@
             this.panel3.Controls.Add(this.label23);
             this.panel3.Location = new System.Drawing.Point(432, 73);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(337, 178);
+            this.panel3.Size = new System.Drawing.Size(345, 178);
             this.panel3.TabIndex = 24;
             // 
             // lbl_belboy
@@ -522,7 +534,7 @@
             // 
             this.lbl_vyo.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_vyo.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_vyo.Location = new System.Drawing.Point(181, 41);
+            this.lbl_vyo.Location = new System.Drawing.Point(184, 42);
             this.lbl_vyo.Name = "lbl_vyo";
             this.lbl_vyo.Size = new System.Drawing.Size(150, 32);
             this.lbl_vyo.TabIndex = 24;
@@ -549,7 +561,7 @@
             // label21
             // 
             this.label21.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(4, 73);
+            this.label21.Location = new System.Drawing.Point(4, 70);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(179, 45);
             this.label21.TabIndex = 21;
@@ -557,12 +569,12 @@
             // 
             // label22
             // 
-            this.label22.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(4, 38);
+            this.label22.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(3, 44);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(188, 32);
+            this.label22.Size = new System.Drawing.Size(215, 30);
             this.label22.TabIndex = 20;
-            this.label22.Text = "Vücut Yağ Oranı :";
+            this.label22.Text = "Vücut Yağ Oranı (%):";
             // 
             // label23
             // 
@@ -570,7 +582,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label23.Location = new System.Drawing.Point(41, 9);
+            this.label23.Location = new System.Drawing.Point(39, 2);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(246, 29);
             this.label23.TabIndex = 19;
@@ -589,16 +601,16 @@
             this.panel2.Controls.Add(this.label15);
             this.panel2.Location = new System.Drawing.Point(432, 250);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(337, 178);
+            this.panel2.Size = new System.Drawing.Size(345, 178);
             this.panel2.TabIndex = 22;
             // 
             // lbl_yi
             // 
             this.lbl_yi.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_yi.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_yi.Location = new System.Drawing.Point(63, 137);
+            this.lbl_yi.Location = new System.Drawing.Point(112, 137);
             this.lbl_yi.Name = "lbl_yi";
-            this.lbl_yi.Size = new System.Drawing.Size(203, 32);
+            this.lbl_yi.Size = new System.Drawing.Size(154, 32);
             this.lbl_yi.TabIndex = 27;
             this.lbl_yi.Text = "Hesaplanmadı";
             // 
@@ -606,9 +618,9 @@
             // 
             this.lbl_ki.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ki.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_ki.Location = new System.Drawing.Point(147, 105);
+            this.lbl_ki.Location = new System.Drawing.Point(187, 105);
             this.lbl_ki.Name = "lbl_ki";
-            this.lbl_ki.Size = new System.Drawing.Size(187, 32);
+            this.lbl_ki.Size = new System.Drawing.Size(150, 32);
             this.lbl_ki.TabIndex = 26;
             this.lbl_ki.Text = "Hesaplanmadı";
             // 
@@ -616,9 +628,9 @@
             // 
             this.lbl_pi.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_pi.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_pi.Location = new System.Drawing.Point(111, 76);
+            this.lbl_pi.Location = new System.Drawing.Point(144, 73);
             this.lbl_pi.Name = "lbl_pi";
-            this.lbl_pi.Size = new System.Drawing.Size(207, 32);
+            this.lbl_pi.Size = new System.Drawing.Size(187, 32);
             this.lbl_pi.TabIndex = 25;
             this.lbl_pi.Text = "Hesaplanmadı";
             // 
@@ -626,9 +638,9 @@
             // 
             this.lbl_si.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_si.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_si.Location = new System.Drawing.Point(75, 47);
+            this.lbl_si.Location = new System.Drawing.Point(124, 47);
             this.lbl_si.Name = "lbl_si";
-            this.lbl_si.Size = new System.Drawing.Size(243, 32);
+            this.lbl_si.Size = new System.Drawing.Size(210, 32);
             this.lbl_si.TabIndex = 24;
             this.lbl_si.Text = "Hesaplanmadı";
             // 
@@ -637,27 +649,27 @@
             this.label17.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(3, 105);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(157, 32);
+            this.label17.Size = new System.Drawing.Size(232, 35);
             this.label17.TabIndex = 23;
-            this.label17.Text = "Karbonhidrat :";
+            this.label17.Text = "Karbonhidrat(Gr) :";
             // 
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(3, 74);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(101, 31);
+            this.label16.Size = new System.Drawing.Size(138, 31);
             this.label16.TabIndex = 22;
-            this.label16.Text = "Protein :";
+            this.label16.Text = "Protein(Gr) :";
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(4, 137);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 32);
+            this.label13.Size = new System.Drawing.Size(111, 32);
             this.label13.TabIndex = 21;
-            this.label13.Text = "Yağ :";
+            this.label13.Text = "Yağ (Gr) :";
             // 
             // label14
             // 
@@ -665,9 +677,9 @@
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(3, 47);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 27);
+            this.label14.Size = new System.Drawing.Size(112, 27);
             this.label14.TabIndex = 20;
-            this.label14.Text = "Su :";
+            this.label14.Text = "Su(Litre) :";
             // 
             // label15
             // 
@@ -690,9 +702,9 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(6, 73);
+            this.panel1.Location = new System.Drawing.Point(0, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 178);
+            this.panel1.Size = new System.Drawing.Size(436, 178);
             this.panel1.TabIndex = 0;
             // 
             // lbl_msr
@@ -737,11 +749,11 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(18, 87);
+            this.label12.Location = new System.Drawing.Point(18, 74);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(251, 39);
+            this.label12.Size = new System.Drawing.Size(251, 57);
             this.label12.TabIndex = 21;
-            this.label12.Text = "Bazal Metabolizma Hızı :";
+            this.label12.Text = "Bazal Metabolizma Hızı (Kalori):";
             // 
             // label11
             // 
@@ -764,18 +776,6 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Metabolik Hesaplamalar";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.Location = new System.Drawing.Point(580, 595);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 38);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Hesapla";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -788,17 +788,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btntemizle
+            // button1
             // 
-            this.btntemizle.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntemizle.ForeColor = System.Drawing.Color.Crimson;
-            this.btntemizle.Location = new System.Drawing.Point(88, 72);
-            this.btntemizle.Name = "btntemizle";
-            this.btntemizle.Size = new System.Drawing.Size(194, 40);
-            this.btntemizle.TabIndex = 17;
-            this.btntemizle.Text = "Kutucukları Temizle";
-            this.btntemizle.UseVisualStyleBackColor = true;
-            this.btntemizle.Click += new System.EventHandler(this.btntemizle_Click);
+            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.button1.Location = new System.Drawing.Point(580, 595);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 38);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Hesapla";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frm_vucutAnaliz
             // 

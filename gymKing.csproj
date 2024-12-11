@@ -51,6 +51,7 @@
     <Compile Include="controls\otoform_ayarla.cs" />
     <Compile Include="controls\perBilgiAl.cs" />
     <Compile Include="controls\Pt_analizHesaplama.cs" />
+    <Compile Include="controls\pt_islemKayit.cs" />
     <Compile Include="controls\pt_islemKontrol.cs" />
     <Compile Include="diyetisyen_forms\beslenmeprg.cs">
       <SubType>Form</SubType>
@@ -156,6 +157,12 @@
     <Compile Include="oto_Baglanti\sqlOtoBaglanti.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pt_forms\frm_pt_guncelKayitlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt_forms\frm_pt_guncelKayitlar.Designer.cs">
+      <DependentUpon>frm_pt_guncelKayitlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="pt_forms\frm_sonucYazdir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +257,9 @@
     <EmbeddedResource Include="pt_forms\frm_analizKayit.resx">
       <DependentUpon>frm_analizKayit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pt_forms\frm_kisiselBilgiler.resx">
+      <DependentUpon>frm_kisiselBilgiler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pt_forms\frm_pt.resx">
       <DependentUpon>frm_pt.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +272,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="pt_forms\frm_pt_guncelKayitlar.resx">
+      <DependentUpon>frm_pt_guncelKayitlar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pt_forms\frm_vucutAnaliz.resx">
       <DependentUpon>frm_vucutAnaliz.cs</DependentUpon>
     </EmbeddedResource>

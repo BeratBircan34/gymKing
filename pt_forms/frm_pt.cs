@@ -74,6 +74,7 @@ namespace gymKing
                 frm_vucutAnaliz drm = new frm_vucutAnaliz();
                 frm_analizKayit analiz_kayit = new frm_analizKayit();
                 otoform_ayarla c_analiz_kayit = new otoform_ayarla(analiz_kayit);
+                analiz_kayit.egitmen = lbl_oturumSahibi.Text;
                 c_analiz_kayit.formAc(analiz_kayit, this);
 
             }
@@ -98,7 +99,9 @@ namespace gymKing
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-
+            frm_pt_guncelKayitlar frmptgk = new frm_pt_guncelKayitlar();
+            otoform_ayarla frmptgk_c = new otoform_ayarla(frmptgk);
+            frmptgk_c.formAc(frmptgk,this);
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
@@ -115,6 +118,9 @@ namespace gymKing
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
+            frm_kisiselBilgiler frmkb = new frm_kisiselBilgiler();
+            otoform_ayarla frmkb_c = new otoform_ayarla(frmkb);
+            frmkb_c.formAc(frmkb,this);
 
         }
 
