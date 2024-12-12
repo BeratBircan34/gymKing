@@ -95,5 +95,10 @@ namespace gymKing.kasiyer_forms
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
