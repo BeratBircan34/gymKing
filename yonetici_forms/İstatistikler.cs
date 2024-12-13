@@ -19,9 +19,9 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            yonetici yoneticii = new yonetici();
+            //yonetici yoneticii = new yonetici();
             this.Close();
-            yoneticii.Show();
+            //yoneticii.Show();
         }
     }
 }

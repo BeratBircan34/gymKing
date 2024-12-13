@@ -1,5 +1,6 @@
 ﻿using gymKing.controls;
 using gymKing.kasiyer_forms;
+using gymKing.Üye_forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace gymKing.yonetici_forms
         public string yonetici_oturumSahibi = "";
         private void yonetici_Load(object sender, EventArgs e)
         {
+            otoform_ayarla.renkAyarla(this,Color.Gainsboro);
             timer1.Start();
             lbl_oturumSahibi.Text = yonetici_oturumSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
@@ -65,8 +67,15 @@ namespace gymKing.yonetici_forms
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             İstatistikler istatik = new İstatistikler();
-            istatik.Show();
-            this.Close();
+            otoform_ayarla istatistik_c = new otoform_ayarla(istatik);
+            istatistik_c.formAc(istatik, this);
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            üyePaneli uyepanel = new üyePaneli("2014"); 
+            otoform_ayarla uyepanel_ = new otoform_ayarla(uyepanel);
+            uyepanel_.formAc(uyepanel, this);
         }
     }
 }

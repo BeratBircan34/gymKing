@@ -160,6 +160,18 @@ namespace gymKing.pt_forms
         private void sql_komut(string komut,SqlConnection bglnti)
         {
             SqlCommand cmd = new SqlCommand(komut, bglnti);
+            parametrelereDegerVer(cmd);
+            cmd.ExecuteNonQuery();
+
+        }
+        private void sql_komut_gecmis(string komut, SqlConnection bglnti)
+        {
+            SqlCommand cmd = new SqlCommand(komut, bglnti);
+            parametrelereDegerVer(cmd,"gecmis");
+            cmd.ExecuteNonQuery();
+        }
+        private void parametrelereDegerVer(SqlCommand cmd)
+        {
             cmd.Parameters.AddWithValue("@ad", cmbbx_isim.Text);
             cmd.Parameters.AddWithValue("@soyad", cmbbx_soyisim.Text);
             cmd.Parameters.AddWithValue("@bazalMetabolizma", decimal.Parse(lbl_bmhS.Text));
@@ -184,28 +196,80 @@ namespace gymKing.pt_forms
             cmd.Parameters.AddWithValue("@yas", int.Parse(txt_yasS.Text));
             cmd.Parameters.AddWithValue("@tarih", DateTime.Now.Date);
             cmd.Parameters.AddWithValue("@egitmen", lbl_egitmen.Text);
-            cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@cinsiyet",lbl_cinsiyet.Text);
+            
+        }
+        private void parametrelereDegerVer(SqlCommand cmd,string islemTuru)
+        {
+            cmd.Parameters.AddWithValue("@ad", cmbbx_isim.Text);
+            cmd.Parameters.AddWithValue("@soyad", cmbbx_soyisim.Text);
+            cmd.Parameters.AddWithValue("@islemTarihi",DateTime.Now.Date);
+            cmd.Parameters.AddWithValue("@islemGunu", DateTime.Now.ToString("dddd"));
+            cmd.Parameters.AddWithValue("@islemSaati", DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString("00"));
+            cmd.Parameters.AddWithValue("@bazalMetabolizma", (lbl_bmhS.Text));
+            cmd.Parameters.AddWithValue("@gunlukKalori", (lbl_gkiS.Text));
+            cmd.Parameters.AddWithValue("@metabolikSRisk", lbl_msr.Text.ToString());
+            cmd.Parameters.AddWithValue("@vki", (lbl_vkiS.Text));
+            cmd.Parameters.AddWithValue("@vyo", (lbl_vyoS.Text));
+            cmd.Parameters.AddWithValue("@vym", (lbl_vymS.Text));
+            cmd.Parameters.AddWithValue("@ik", (lbl_ik.Text));
+            cmd.Parameters.AddWithValue("@bko", (lbl_bkoS.Text));
+            cmd.Parameters.AddWithValue("@bboy", (lbl_bboS.Text));
+            cmd.Parameters.AddWithValue("@bboyun", (lbl_boyun.Text));
+            cmd.Parameters.AddWithValue("@si", (lbl_si.Text));
+            cmd.Parameters.AddWithValue("@pi", (lbl_pi.Text));
+            cmd.Parameters.AddWithValue("@ki", (lbl_ki.Text));
+            cmd.Parameters.AddWithValue("@yi", ((lbl_ki.Text)));
+            cmd.Parameters.AddWithValue("@kilo", (txt_kiloS.Text));
+            cmd.Parameters.AddWithValue("@bel", (txt_belS.Text));
+            cmd.Parameters.AddWithValue("@boyun", (txt_boyunS.Text));
+            cmd.Parameters.AddWithValue("@kalca", (txt_kalcaS.Text));
+            cmd.Parameters.AddWithValue("@boy", (txt_boyS.Text));
+            cmd.Parameters.AddWithValue("@yas", (txt_yasS.Text));
+            cmd.Parameters.AddWithValue("@tarih", DateTime.Now.Date);
+            cmd.Parameters.AddWithValue("@egitmen", lbl_egitmen.Text);
 
         }
+        private void gecmiseYolla()
+        {
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            string araKomut = "";
+            if (rd_yeniKayit.Checked)
+                araKomut = "Yeni kisi kayit";
+            if (rd_kayitliGuncelle.Checked)
+                araKomut = "Kayitli Guncelleme";
+            string komut_yeniKisi = ($"insert into tbl_gecmis_islemler (ad, soyad, islem_tarihi,islem_gunu,islem_saati,islem_turu,bmh, gki, msr, vki, vyo, vym, ik, bko, bbo, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen)" +
+                ($"values (@ad, @soyad, @islemTarihi,@islemGunu,@islemSaati,'{araKomut}',@bazalMetabolizma, @gunlukKalori, @metabolikSRisk, @vki, @vyo, @vym, @ik, @bko, @bboy, @bboyun, @si, @pi, @ki, @yi, @kilo, @bel, @boyun, @kalca, @boy, @yas ,@egitmen)"));
+            baglanti.Open();
+            sql_komut_gecmis(komut_yeniKisi, baglanti);
+            baglanti.Close();
+
+
+        }
+
         private void verileriCevirVeYolla()
         {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            string komut_yeniKisi = ("insert into tbl_guncelkayitlar (ad, soyad, bazalMetabolizma, gunlukKalori, metabolikSRisk, vki, vyo, vym, ik, bko, bboy, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen,tarih)" +
-                "values (@ad, @soyad, @bazalMetabolizma, @gunlukKalori, @metabolikSRisk, @vki, @vyo, @vym, @ik, @bko, @bboy, @bboyun, @si, @pi, @ki, @yi, @kilo, @bel, @boyun, @kalca, @boy, @yas ,egitmen,tarih)");
+            string komut_yeniKisi = ("insert into tbl_guncelkayitlar (ad, soyad, bazalMetabolizma, gunlukKalori, metabolikSRisk, vki, vyo, vym, ik, bko, bboy, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen,tarih,cinsiyet)" +
+                "values (@ad, @soyad, @bazalMetabolizma, @gunlukKalori, @metabolikSRisk, @vki, @vyo, @vym, @ik, @bko, @bboy, @bboyun, @si, @pi, @ki, @yi, @kilo, @bel, @boyun, @kalca, @boy, @yas ,@egitmen,@tarih,@cinsiyet)");
             string komut_Kayitlikisi =  "UPDATE tbl_guncelkayitlar SET ad = @ad, soyad = @soyad, bazalMetabolizma = @bazalMetabolizma, gunlukKalori = @gunlukKalori, metabolikSRisk = @metabolikSRisk, vki = @vki, vyo = @vyo, vym = @vym, ik = @ik, bko = @bko, bboy = @bboy, bboyun = @bboyun, si = @si, pi = @pi, ki = @ki, yi = @yi, kilo = @kilo, bel = @bel, boyun = @boyun, kalca = @kalca, boy = @boy, yas = @yas , egitmen = @egitmen, tarih = @tarih";
             baglanti.Open();
             if (rd_yeniKayit.Checked)
             {
                 sql_komut(komut_yeniKisi, baglanti);
+                gecmiseYolla();
             }
             else if (rd_kayitliGuncelle.Checked)
             {
                 sql_komut(komut_Kayitlikisi, baglanti);
+                gecmiseYolla();
             }
             MessageBox.Show("Veriler başarıyla işlendi");
             baglanti.Close();
 
         }
+
+        
 
         private void kayitliKisiCek()
         {

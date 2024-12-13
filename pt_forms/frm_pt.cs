@@ -128,5 +128,10 @@ namespace gymKing
         {
 
         }
+
+        private void lbl_saat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
