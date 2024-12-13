@@ -195,6 +195,7 @@
     <Compile Include="yonetici_forms\gelirGider.Designer.cs">
       <DependentUpon>gelirGider.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\GrafikCizici.cs" />
     <Compile Include="yonetici_forms\persIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +449,8 @@
     <Content Include="Resources\edit.png" />
     <None Include="Resources\gymkingg11.png" />
     <None Include="Resources\employeAdd.png" />
+    <None Include="Resources\Gelir Gider Ekle TRANSPARENT.png" />
+    <None Include="Resources\gelir gider transparent 2.png" />
     <Content Include="Resources\member_add.png" />
     <Content Include="Resources\next.png" />
     <Content Include="Resources\protein.png" />
