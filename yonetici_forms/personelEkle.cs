@@ -29,7 +29,7 @@ namespace gymKing.yonetici_forms
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
             SqlCommand personelEkle = new SqlCommand("insert into tbl_giris_Bilgileri(rol,kullaniciAdi,sifre) values (@rol,@kullaniciAdi,@sifre)", baglanti);
-            personelEkle.Parameters.AddWithValue("@rol", "Üye");
+            personelEkle.Parameters.AddWithValue("@rol", "Yönetici");
             personelEkle.Parameters.AddWithValue("@kullaniciAdi", textBoxAd.Text + "." + textBoxSoyad.Text);
             personelEkle.Parameters.AddWithValue("@sifre", sifre);
             personelEkle.ExecuteNonQuery();
@@ -53,6 +53,11 @@ namespace gymKing.yonetici_forms
             personelBilgiEkle perBilgiEkle = new personelBilgiEkle();
             this.Hide();
             perBilgiEkle.Show();
+        }
+
+        private void personelEkle_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

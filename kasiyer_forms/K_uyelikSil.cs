@@ -15,10 +15,12 @@ namespace gymKing.kasiyer_forms
 {
     public partial class K_uyelikSil : Form
     {
-        public K_uyelikSil()
+        public K_uyelikSil(string id_)
         {
             InitializeComponent();
+            this.id_ = id_;
         }
+        public string id_ = "";
 
         private void K_uyelikSil_Load(object sender, EventArgs e)
         {
@@ -32,12 +34,29 @@ namespace gymKing.kasiyer_forms
 
             }
             dr.Close();
+
+            SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
+            SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
+            while (adgetir.Read())
+            {
+                label11.Text = adgetir["kullaniciAdi"].ToString();
+            }
+            adgetir.Close();
+
+            SqlCommand getir = new SqlCommand("select neden from tbl_silinme_nedeni",baglanti);
+            SqlDataReader getir2 = getir.ExecuteReader();
+            while (getir2.Read())
+            {
+                comboBoxNeden.Items.Add(getir2["neden"].ToString());
+            }
+            getir2.Close();
+
             baglanti.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            K_Uyelik uyelik = new K_Uyelik();
+            K_Uyelik uyelik = new K_Uyelik(id_);
             this.Close();
             uyelik.Show();
         }
@@ -86,9 +105,23 @@ namespace gymKing.kasiyer_forms
             SqlCommand sil = new SqlCommand("delete from tbl_musteriler where m_id = "+textBoxID.Text,baglanti);
             SqlCommand sil2 = new SqlCommand("delete from tbl_giris_Bilgileri where KullaniciID = " + textBoxID.Text, baglanti);
 
+            SqlCommand raporla = new SqlCommand("insert into tbl_kasiyer_log(yapilan_islem,islemi_yapan,islem_tarihi,islem_yapilan_id)values(@islem,@yapan,@tarih,@id)", baglanti);
+            raporla.Parameters.AddWithValue("@islem", ("Üyelik Silindi"+"/"+comboBoxNeden.Text));
+            raporla.Parameters.AddWithValue("@yapan", label11.Text);
+            raporla.Parameters.AddWithValue("@tarih", DateTime.Today);
+            raporla.Parameters.AddWithValue("@id", textBoxID.Text);
+
+            raporla.ExecuteNonQuery();
+
+
             sil.ExecuteNonQuery();
             sil2.ExecuteNonQuery();
+
+
+
             baglanti.Close() ;
+
+
 
             MessageBox.Show("Silme İşlemi Tamamlandı");
         }

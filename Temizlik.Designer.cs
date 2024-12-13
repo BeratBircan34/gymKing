@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Temizlik));
             this.chkbx_GenelAlanlarinTemizligi = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtbx_Notlar = new System.Windows.Forms.TextBox();
-            this.btn_Gonder = new System.Windows.Forms.Button();
             this.lbl_Notlar = new System.Windows.Forms.Label();
             this.lbl_SoyunmaOdalariDuslarinTemizligi = new System.Windows.Forms.Label();
             this.lbl_HijyenMalzemelerininStoklanmasi = new System.Windows.Forms.Label();
@@ -50,8 +48,9 @@
             this.chkbx_EkGorevler = new System.Windows.Forms.CheckBox();
             this.chkbx_HavalandirmaKokuKontrolu = new System.Windows.Forms.CheckBox();
             this.chkbx_HijyenMalzemelerininStoklanmasi = new System.Windows.Forms.CheckBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // chkbx_GenelAlanlarinTemizligi
@@ -68,7 +67,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtbx_Notlar);
-            this.groupBox1.Controls.Add(this.btn_Gonder);
             this.groupBox1.Controls.Add(this.lbl_Notlar);
             this.groupBox1.Controls.Add(this.lbl_SoyunmaOdalariDuslarinTemizligi);
             this.groupBox1.Controls.Add(this.lbl_HijyenMalzemelerininStoklanmasi);
@@ -89,10 +87,11 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1019, 557);
+            this.groupBox1.Size = new System.Drawing.Size(1256, 632);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Görevler";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtbx_Notlar
             // 
@@ -100,15 +99,6 @@
             this.txtbx_Notlar.Name = "txtbx_Notlar";
             this.txtbx_Notlar.Size = new System.Drawing.Size(907, 21);
             this.txtbx_Notlar.TabIndex = 4;
-            // 
-            // btn_Gonder
-            // 
-            this.btn_Gonder.Location = new System.Drawing.Point(905, 516);
-            this.btn_Gonder.Name = "btn_Gonder";
-            this.btn_Gonder.Size = new System.Drawing.Size(102, 35);
-            this.btn_Gonder.TabIndex = 3;
-            this.btn_Gonder.Text = "Gönder";
-            this.btn_Gonder.UseVisualStyleBackColor = true;
             // 
             // lbl_Notlar
             // 
@@ -284,18 +274,26 @@
             this.chkbx_HijyenMalzemelerininStoklanmasi.Text = "Hijyen Malzemelerinin Stoklanması:";
             this.chkbx_HijyenMalzemelerininStoklanmasi.UseVisualStyleBackColor = true;
             // 
-            // contextMenuStrip1
+            // pictureBox3
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::gymKing.kaynaklar.save;
+            this.pictureBox3.Location = new System.Drawing.Point(1198, 650);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 70;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Temizlik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 581);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Temizlik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -303,6 +301,7 @@
             this.Load += new System.EventHandler(this.Temizlik_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -322,13 +321,12 @@
         private System.Windows.Forms.CheckBox chkbx_ZeminleriTemizligi;
         private System.Windows.Forms.CheckBox chkbx_CopAtikYonetimi;
         private System.Windows.Forms.CheckBox chkbx_HijyenMalzemelerininStoklanmasi;
-        private System.Windows.Forms.Button btn_Gonder;
         private System.Windows.Forms.Label lbl_Notlar;
         private System.Windows.Forms.Label lbl_HavalandirmaKokuKontrolu;
         private System.Windows.Forms.CheckBox chkbx_EkGorevler;
         private System.Windows.Forms.CheckBox chkbx_HavalandirmaKokuKontrolu;
         private System.Windows.Forms.Label lbl_HijyenMalzemelerininStoklanmasi;
         private System.Windows.Forms.TextBox txtbx_Notlar;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

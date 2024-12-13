@@ -1,42 +1,72 @@
 ﻿using gymKing.oto_Baglanti;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gymKing.kasiyer_forms
 {
     public partial class K_uyelikBilgiEkle : Form
     {
-        public K_uyelikBilgiEkle()
+        public K_uyelikBilgiEkle(string id)
         {
             InitializeComponent();
+            this.id_ = id;
         }
+
+        public string id_ = "";
+
 
         private void K_uyelikBilgiEkle_Load(object sender, EventArgs e)
         {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
 
+
+            SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
+            SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
+            while (adgetir.Read())
+            {
+                label14.Text = adgetir["kullaniciAdi"].ToString();
+            }
+            adgetir.Close();
+
+
             SqlCommand getir = new SqlCommand("select top 1 * from tbl_giris_Bilgileri order by KullaniciID desc", baglanti);
             SqlDataReader dr = getir.ExecuteReader();
-            dr.Read();
-            textBoxKullaniciAdi.Text = dr["kullaniciAdi"].ToString();
-            textBoxSifre.Text = dr["sifre"].ToString();
-            textBoxID.Text = dr["KullaniciID"].ToString();
+            while (dr.Read())
+            {
+                textBoxKullaniciAdi.Text = dr["kullaniciAdi"].ToString();
+                textBoxSifre.Text = dr["sifre"].ToString();
+                textBoxID.Text = dr["KullaniciID"].ToString();
+            }
+            dr.Close();
+
+
+            SqlCommand getir2 = new SqlCommand("select ad,soyad from tbl_per_bilgiler where rol = 'Pt'", baglanti);
+            SqlDataReader dr2 = getir2.ExecuteReader();
+            comboBoxPt.Items.Clear();
+            while (dr2.Read())
+            {
+                comboBoxPt.Items.Add(dr2["ad"].ToString());
+            }
+            dr2.Close();
+
+
+            SqlCommand getir3 = new SqlCommand("select ad,soyad from tbl_per_bilgiler where rol = 'Diyetisyen'", baglanti);
+            SqlDataReader dr3 = getir3.ExecuteReader();
+            comboBoxDiyetisyen.Items.Clear();
+            while (dr3.Read())
+            {
+                comboBoxDiyetisyen.Items.Add(dr3["ad"].ToString());
+            }
+            dr3.Close();
             baglanti.Close();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            K_uyelikEkle uyelikEkle = new K_uyelikEkle();
+            K_uyelikEkle uyelikEkle = new K_uyelikEkle(id_);
             this.Hide();
             uyelikEkle.Show();
         }
@@ -54,7 +84,6 @@ namespace gymKing.kasiyer_forms
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
 
-            // SQL sorgusu (parametreli)
             string güncelle = @"
              UPDATE tbl_musteriler 
              SET 
@@ -68,7 +97,7 @@ namespace gymKing.kasiyer_forms
                  m_uyelikBitis = @mUyelikBitis, 
                  m_personalTrainer = @mPersonalTrainer, 
                  m_diyetisyen = @mDiyetisyen
-             WHERE m_id = @id"; 
+             WHERE m_id = @id";
 
             SqlCommand ekle = new SqlCommand(güncelle, baglanti);
 
@@ -85,6 +114,17 @@ namespace gymKing.kasiyer_forms
             ekle.Parameters.AddWithValue("@id", textBoxID.Text);
 
             ekle.ExecuteNonQuery();
+
+
+            SqlCommand raporla = new SqlCommand("insert into tbl_kasiyer_log(yapilan_islem,islemi_yapan,islem_tarihi,islem_yapilan_id)values(@islem,@yapan,@tarih,@id)", baglanti);
+            raporla.Parameters.AddWithValue("@islem", "Yeni Üyenin Bilgileri Eklendi");
+            raporla.Parameters.AddWithValue("@yapan",label14.Text);
+            raporla.Parameters.AddWithValue("@tarih", DateTime.Today);
+            raporla.Parameters.AddWithValue("@id",textBoxID.Text);
+
+            raporla.ExecuteNonQuery();
+
+
             baglanti.Close();
 
             MessageBox.Show("Bilgi Ekleme İşlemi Tamamlandı");
@@ -92,6 +132,11 @@ namespace gymKing.kasiyer_forms
         }
 
         private void gymKingdbDataSetBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxPt_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

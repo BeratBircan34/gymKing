@@ -14,14 +14,17 @@ namespace gymKing.kasiyer_forms
 {
     public partial class K_Uyelik : Form
     {
-        public K_Uyelik()
+        public K_Uyelik(string id_)
         {
             InitializeComponent();
+            this.id_ = id_; 
         }
+
+        public string id_ = "";
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Kasiyer kasiyer = new Kasiyer();
+            Kasiyer kasiyer = new Kasiyer(id_);
             this.Close();
             kasiyer.Show();
 
@@ -29,7 +32,7 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            K_uyelikSil uyelikSil = new K_uyelikSil();  
+            K_uyelikSil uyelikSil = new K_uyelikSil(id_);  
             this.Close();
             uyelikSil.Show();
         }
@@ -43,14 +46,14 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            K_uyelikEkle uyelikEkle = new K_uyelikEkle();
+            K_uyelikEkle uyelikEkle = new K_uyelikEkle(id_);
             this.Close();
             uyelikEkle.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            K_uyelikDuzenle uyelikduzenle = new K_uyelikDuzenle();
+            K_uyelikDuzenle uyelikduzenle = new K_uyelikDuzenle(id_);
             this.Close();
             uyelikduzenle.Show();
         }

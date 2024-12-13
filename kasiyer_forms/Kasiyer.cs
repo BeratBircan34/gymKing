@@ -16,11 +16,13 @@ namespace gymKing.kasiyer_forms
     public partial class Kasiyer : Form
     {
        
-        public Kasiyer()
+        public Kasiyer(string id)
         {
             InitializeComponent();
+            this.id_ = id;
         }
         public string kasiyer_oturumSahibi = "";
+        public string id_ = "";
 
        
 
@@ -59,14 +61,14 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            K_Uyelik uyelik = new K_Uyelik();
+            K_Uyelik uyelik = new K_Uyelik(id_);
             uyelik.Show();
             this.Hide();
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-            urunSatis urun = new urunSatis();
+            urunSatis urun = new urunSatis(id_);
             urun.Show();
             this.Hide();
         }

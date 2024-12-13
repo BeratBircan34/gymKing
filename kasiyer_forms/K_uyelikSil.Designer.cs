@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBoxNeden = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxPt = new System.Windows.Forms.TextBox();
+            this.textBoxDiyetisyen = new System.Windows.Forms.TextBox();
+            this.textBoxDogum = new System.Windows.Forms.TextBox();
+            this.textBoxBaslangic = new System.Windows.Forms.TextBox();
+            this.textBoxBitis = new System.Windows.Forms.TextBox();
             this.textBoxSifre = new System.Windows.Forms.TextBox();
             this.textBoxKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,26 +61,22 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBoxBitis = new System.Windows.Forms.TextBox();
-            this.textBoxBaslangic = new System.Windows.Forms.TextBox();
-            this.textBoxDogum = new System.Windows.Forms.TextBox();
-            this.textBoxDiyetisyen = new System.Windows.Forms.TextBox();
-            this.textBoxPt = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox4
+            // comboBoxNeden
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.ItemHeight = 21;
-            this.comboBox4.Location = new System.Drawing.Point(895, 652);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(244, 29);
-            this.comboBox4.TabIndex = 59;
+            this.comboBoxNeden.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNeden.FormattingEnabled = true;
+            this.comboBoxNeden.ItemHeight = 21;
+            this.comboBoxNeden.Location = new System.Drawing.Point(895, 652);
+            this.comboBoxNeden.Name = "comboBoxNeden";
+            this.comboBoxNeden.Size = new System.Drawing.Size(244, 29);
+            this.comboBoxNeden.TabIndex = 59;
             // 
             // pictureBox3
             // 
@@ -132,6 +133,51 @@
             this.groupBox1.TabIndex = 74;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Üyelik Bilgileri";
+            // 
+            // textBoxPt
+            // 
+            this.textBoxPt.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPt.Location = new System.Drawing.Point(910, 44);
+            this.textBoxPt.Name = "textBoxPt";
+            this.textBoxPt.ReadOnly = true;
+            this.textBoxPt.Size = new System.Drawing.Size(288, 29);
+            this.textBoxPt.TabIndex = 103;
+            // 
+            // textBoxDiyetisyen
+            // 
+            this.textBoxDiyetisyen.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDiyetisyen.Location = new System.Drawing.Point(910, 116);
+            this.textBoxDiyetisyen.Name = "textBoxDiyetisyen";
+            this.textBoxDiyetisyen.ReadOnly = true;
+            this.textBoxDiyetisyen.Size = new System.Drawing.Size(288, 29);
+            this.textBoxDiyetisyen.TabIndex = 102;
+            // 
+            // textBoxDogum
+            // 
+            this.textBoxDogum.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDogum.Location = new System.Drawing.Point(296, 41);
+            this.textBoxDogum.Name = "textBoxDogum";
+            this.textBoxDogum.ReadOnly = true;
+            this.textBoxDogum.Size = new System.Drawing.Size(288, 29);
+            this.textBoxDogum.TabIndex = 101;
+            // 
+            // textBoxBaslangic
+            // 
+            this.textBoxBaslangic.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBaslangic.Location = new System.Drawing.Point(296, 113);
+            this.textBoxBaslangic.Name = "textBoxBaslangic";
+            this.textBoxBaslangic.ReadOnly = true;
+            this.textBoxBaslangic.Size = new System.Drawing.Size(288, 29);
+            this.textBoxBaslangic.TabIndex = 100;
+            // 
+            // textBoxBitis
+            // 
+            this.textBoxBitis.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBitis.Location = new System.Drawing.Point(296, 170);
+            this.textBoxBitis.Name = "textBoxBitis";
+            this.textBoxBitis.ReadOnly = true;
+            this.textBoxBitis.Size = new System.Drawing.Size(288, 29);
+            this.textBoxBitis.TabIndex = 99;
             // 
             // textBoxSifre
             // 
@@ -385,50 +431,16 @@
             this.label13.TabIndex = 56;
             this.label13.Text = "Silinme Nedeni :";
             // 
-            // textBoxBitis
+            // label11
             // 
-            this.textBoxBitis.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBitis.Location = new System.Drawing.Point(296, 170);
-            this.textBoxBitis.Name = "textBoxBitis";
-            this.textBoxBitis.ReadOnly = true;
-            this.textBoxBitis.Size = new System.Drawing.Size(288, 29);
-            this.textBoxBitis.TabIndex = 99;
-            // 
-            // textBoxBaslangic
-            // 
-            this.textBoxBaslangic.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBaslangic.Location = new System.Drawing.Point(296, 113);
-            this.textBoxBaslangic.Name = "textBoxBaslangic";
-            this.textBoxBaslangic.ReadOnly = true;
-            this.textBoxBaslangic.Size = new System.Drawing.Size(288, 29);
-            this.textBoxBaslangic.TabIndex = 100;
-            // 
-            // textBoxDogum
-            // 
-            this.textBoxDogum.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDogum.Location = new System.Drawing.Point(296, 41);
-            this.textBoxDogum.Name = "textBoxDogum";
-            this.textBoxDogum.ReadOnly = true;
-            this.textBoxDogum.Size = new System.Drawing.Size(288, 29);
-            this.textBoxDogum.TabIndex = 101;
-            // 
-            // textBoxDiyetisyen
-            // 
-            this.textBoxDiyetisyen.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiyetisyen.Location = new System.Drawing.Point(910, 116);
-            this.textBoxDiyetisyen.Name = "textBoxDiyetisyen";
-            this.textBoxDiyetisyen.ReadOnly = true;
-            this.textBoxDiyetisyen.Size = new System.Drawing.Size(288, 29);
-            this.textBoxDiyetisyen.TabIndex = 102;
-            // 
-            // textBoxPt
-            // 
-            this.textBoxPt.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPt.Location = new System.Drawing.Point(910, 44);
-            this.textBoxPt.Name = "textBoxPt";
-            this.textBoxPt.ReadOnly = true;
-            this.textBoxPt.Size = new System.Drawing.Size(288, 29);
-            this.textBoxPt.TabIndex = 103;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.Location = new System.Drawing.Point(9, 624);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 112;
+            this.label11.Text = "label11";
             // 
             // K_uyelikSil
             // 
@@ -436,12 +448,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBoxSoyad);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.comboBoxAd);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBoxNeden);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label15);
@@ -467,7 +480,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBoxNeden;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxSifre;
@@ -499,5 +512,6 @@
         private System.Windows.Forms.TextBox textBoxDogum;
         private System.Windows.Forms.TextBox textBoxBaslangic;
         private System.Windows.Forms.TextBox textBoxBitis;
+        private System.Windows.Forms.Label label11;
     }
 }

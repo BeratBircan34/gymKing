@@ -16,11 +16,12 @@ namespace gymKing.kasiyer_forms
 {
     public partial class K_uyelikDuzenle : Form
     {
-        public K_uyelikDuzenle()
+        public K_uyelikDuzenle(string id_)
         {
             InitializeComponent();
+            this.id_ = id_;
         }
-
+        public string id_ = "";
         private void K_uyelikDuzenle_Load(object sender, EventArgs e)
         {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
@@ -33,13 +34,44 @@ namespace gymKing.kasiyer_forms
 
             }
             dr.Close();
+
+            SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
+            SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
+            while (adgetir.Read())
+            {
+                label15.Text = adgetir["kullaniciAdi"].ToString();
+            }
+            adgetir.Close();
+
+
+            SqlCommand getir2 = new SqlCommand("select ad,soyad from tbl_per_bilgiler where rol = 'Pt'", baglanti);
+            SqlDataReader dr2 = getir2.ExecuteReader();
+            comboBoxPt.Items.Clear();
+            while (dr2.Read())
+            {
+                comboBoxPt.Items.Add(dr2["ad"].ToString());
+            }
+            dr2.Close();
+
+
+            SqlCommand getir3 = new SqlCommand("select ad,soyad from tbl_per_bilgiler where rol = 'Diyetisyen'", baglanti);
+            SqlDataReader dr3 = getir3.ExecuteReader();
+            comboBoxDiyetisyen.Items.Clear();
+            while (dr3.Read())
+            {
+                comboBoxDiyetisyen.Items.Add(dr3["ad"].ToString());
+            }
+            dr3.Close();
+            baglanti.Close();
+
+
             baglanti.Close();
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            K_Uyelik uyelik = new K_Uyelik();
+            K_Uyelik uyelik = new K_Uyelik(id_);
             this.Close();
             uyelik.Show();
         }
@@ -127,6 +159,17 @@ namespace gymKing.kasiyer_forms
             ekle.Parameters.AddWithValue("@id", textBoxID.Text);
 
             ekle.ExecuteNonQuery();
+
+            SqlCommand raporla = new SqlCommand("insert into tbl_kasiyer_log(yapilan_islem,islemi_yapan,islem_tarihi,islem_yapilan_id)values(@islem,@yapan,@tarih,@id)", baglanti);
+            raporla.Parameters.AddWithValue("@islem", "Üyelik Bilgileri Düzenlendi");
+            raporla.Parameters.AddWithValue("@yapan", label15.Text);
+            raporla.Parameters.AddWithValue("@tarih", DateTime.Today);
+            raporla.Parameters.AddWithValue("@id", textBoxID.Text);
+
+            raporla.ExecuteNonQuery();
+
+
+
             baglanti.Close();
 
             MessageBox.Show("Düzenleme İşlemi Tamamlandı");
