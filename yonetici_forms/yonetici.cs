@@ -79,9 +79,9 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            Kasiyer kasiyerr = new Kasiyer();
-            otoform_ayarla kasiyerrr = new otoform_ayarla(kasiyerr);
-            kasiyerrr.formAc(kasiyerr, this);
+            //Kasiyer kasiyerr = new Kasiyer();
+            //otoform_ayarla kasiyerrr = new otoform_ayarla(kasiyerr);
+            //kasiyerrr.formAc(kasiyerr, this);
 
             //Kasiyer kasiyerr = new Kasiyer();
             //kasiyerr.Show();
