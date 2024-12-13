@@ -139,7 +139,6 @@
             this.lbl_saat.Size = new System.Drawing.Size(81, 36);
             this.lbl_saat.TabIndex = 15;
             this.lbl_saat.Text = "Saat";
-            this.lbl_saat.Click += new System.EventHandler(this.lbl_saat_Click);
             // 
             // timer1
             // 

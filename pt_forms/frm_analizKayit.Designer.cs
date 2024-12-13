@@ -30,8 +30,6 @@
         {
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl_egitmen = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.lbl_cinsiyet = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.txt_boyS = new System.Windows.Forms.TextBox();
@@ -89,6 +87,8 @@
             this.lbl_pi = new System.Windows.Forms.Label();
             this.lbl_yi = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.lbl_egitmen = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -138,28 +138,6 @@
             this.groupBox1.Text = "Kişisel Bilgiler";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // lbl_egitmen
-            // 
-            this.lbl_egitmen.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_egitmen.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_egitmen.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_egitmen.Location = new System.Drawing.Point(220, 375);
-            this.lbl_egitmen.Name = "lbl_egitmen";
-            this.lbl_egitmen.Size = new System.Drawing.Size(111, 26);
-            this.lbl_egitmen.TabIndex = 28;
-            this.lbl_egitmen.Text = "-";
-            // 
-            // label31
-            // 
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.DimGray;
-            this.label31.Location = new System.Drawing.Point(114, 372);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(119, 24);
-            this.label31.TabIndex = 27;
-            this.label31.Text = "Eğitmen :";
-            // 
             // lbl_cinsiyet
             // 
             this.lbl_cinsiyet.BackColor = System.Drawing.Color.Transparent;
@@ -167,7 +145,7 @@
             this.lbl_cinsiyet.ForeColor = System.Drawing.Color.DimGray;
             this.lbl_cinsiyet.Location = new System.Drawing.Point(220, 340);
             this.lbl_cinsiyet.Name = "lbl_cinsiyet";
-            this.lbl_cinsiyet.Size = new System.Drawing.Size(111, 27);
+            this.lbl_cinsiyet.Size = new System.Drawing.Size(39, 27);
             this.lbl_cinsiyet.TabIndex = 26;
             this.lbl_cinsiyet.Text = "-";
             // 
@@ -732,6 +710,28 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 52;
             this.pictureBox9.TabStop = false;
+            // 
+            // label31
+            // 
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.DimGray;
+            this.label31.Location = new System.Drawing.Point(114, 372);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(119, 24);
+            this.label31.TabIndex = 27;
+            this.label31.Text = "Eğitmen :";
+            // 
+            // lbl_egitmen
+            // 
+            this.lbl_egitmen.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_egitmen.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_egitmen.ForeColor = System.Drawing.Color.DimGray;
+            this.lbl_egitmen.Location = new System.Drawing.Point(220, 375);
+            this.lbl_egitmen.Name = "lbl_egitmen";
+            this.lbl_egitmen.Size = new System.Drawing.Size(20, 26);
+            this.lbl_egitmen.TabIndex = 28;
+            this.lbl_egitmen.Text = "-";
             // 
             // frm_analizKayit
             // 

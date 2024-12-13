@@ -64,6 +64,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox9);
+            this.IsMdiContainer = true;
             this.Name = "İstatistikler";
             this.Text = "İstatistikler";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();

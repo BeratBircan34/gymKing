@@ -458,7 +458,10 @@ namespace gymKing.pt_forms
 
         private void chkbx_ik_CheckedChanged(object sender, EventArgs e)
         {
-            
+            if (chkbx_ik.Checked)
+                degerler.Add("ik as 'İdeal Kilo (KG)'");
+            else
+                degerler.Remove("ik as 'İdeal Kilo (KG)'");
         }
 
         private void degerCheckboxlariniAyarla(GroupBox grp)
