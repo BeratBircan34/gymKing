@@ -30,7 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBoxRol = new System.Windows.Forms.TextBox();
             this.textBoxTC = new System.Windows.Forms.TextBox();
             this.dateTimePickerDogum = new System.Windows.Forms.DateTimePicker();
             this.textBoxTelefon = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxPerKullaniciAd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxRol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -80,14 +80,6 @@
             this.label9.Size = new System.Drawing.Size(99, 28);
             this.label9.TabIndex = 153;
             this.label9.Text = "Rol : ";
-            // 
-            // textBoxRol
-            // 
-            this.textBoxRol.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRol.Location = new System.Drawing.Point(229, 412);
-            this.textBoxRol.Name = "textBoxRol";
-            this.textBoxRol.Size = new System.Drawing.Size(220, 29);
-            this.textBoxRol.TabIndex = 152;
             // 
             // textBoxTC
             // 
@@ -336,11 +328,25 @@
             this.label4.TabIndex = 163;
             this.label4.Text = "Personel Kullanıcı \r\n            Adı :";
             // 
+            // comboBoxRol
+            // 
+            this.comboBoxRol.FormattingEnabled = true;
+            this.comboBoxRol.Items.AddRange(new object[] {
+            "Yönetici",
+            "Pt",
+            "Temizlikçi",
+            "Kasiyer"});
+            this.comboBoxRol.Location = new System.Drawing.Point(229, 420);
+            this.comboBoxRol.Name = "comboBoxRol";
+            this.comboBoxRol.Size = new System.Drawing.Size(141, 21);
+            this.comboBoxRol.TabIndex = 165;
+            // 
             // personelBilgiEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.comboBoxRol);
             this.Controls.Add(this.textBoxPerKullaniciAd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePickerİseGiris);
@@ -352,7 +358,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBoxRol);
             this.Controls.Add(this.textBoxTC);
             this.Controls.Add(this.dateTimePickerDogum);
             this.Controls.Add(this.textBoxTelefon);
@@ -387,7 +392,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBoxRol;
         private System.Windows.Forms.TextBox textBoxTC;
         private System.Windows.Forms.DateTimePicker dateTimePickerDogum;
         private System.Windows.Forms.TextBox textBoxTelefon;
@@ -412,5 +416,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxPerKullaniciAd;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxRol;
     }
 }
