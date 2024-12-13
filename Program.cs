@@ -17,7 +17,7 @@ namespace gymKing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_pt_gecmisİslemler());
+            Application.Run(new Form1());
         }
     }
 }
