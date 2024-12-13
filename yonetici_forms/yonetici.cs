@@ -1,5 +1,6 @@
 ﻿using gymKing.controls;
 using gymKing.kasiyer_forms;
+using gymKing.pt_forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,14 +60,47 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            
+            frm_pt formpt = new frm_pt();
+            formpt.Show();
+            this.Close();
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            İstatistikler istatik = new İstatistikler();
-            istatik.Show();
-            this.Close();
+            İstatistikler istatistik = new İstatistikler();
+            otoform_ayarla istatistikk = new otoform_ayarla(istatistik);
+            istatistikk.formAc(istatistik, this);
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Kasiyer kasiyerr = new Kasiyer();
+            otoform_ayarla kasiyerrr = new otoform_ayarla(kasiyerr);
+            kasiyerrr.formAc(kasiyerr, this);
+
+            //Kasiyer kasiyerr = new Kasiyer();
+            //kasiyerr.Show();
+            //this.Close();
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Temizlik temizlikk = new Temizlik();
+            otoform_ayarla temizlikkk = new otoform_ayarla(temizlikk);
+            temizlikkk.formAc(temizlikk, this);
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            gelirGider gelir_gider = new gelirGider();
+            otoform_ayarla gelir__gider = new otoform_ayarla(gelir_gider);
+            gelir__gider.formAc(gelir_gider, this);
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.textBoxSifre = new System.Windows.Forms.TextBox();
@@ -45,6 +46,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,6 +58,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.comboBoxRol);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.textBoxID);
             this.groupBox2.Controls.Add(this.textBoxSifre);
@@ -69,12 +73,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
+            // comboBoxRol
+            // 
+            this.comboBoxRol.FormattingEnabled = true;
+            this.comboBoxRol.Items.AddRange(new object[] {
+            "Yönetici",
+            "Pt",
+            "Temizlikçi",
+            "Kasiyer"});
+            this.comboBoxRol.Location = new System.Drawing.Point(223, 213);
+            this.comboBoxRol.Name = "comboBoxRol";
+            this.comboBoxRol.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxRol.TabIndex = 94;
+            this.comboBoxRol.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SlateGray;
-            this.label5.Location = new System.Drawing.Point(27, 204);
+            this.label5.Location = new System.Drawing.Point(25, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 28);
             this.label5.TabIndex = 93;
@@ -83,7 +101,7 @@
             // textBoxID
             // 
             this.textBoxID.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(225, 206);
+            this.textBoxID.Location = new System.Drawing.Point(223, 151);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(303, 29);
             this.textBoxID.TabIndex = 92;
@@ -91,7 +109,7 @@
             // textBoxSifre
             // 
             this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSifre.Location = new System.Drawing.Point(225, 133);
+            this.textBoxSifre.Location = new System.Drawing.Point(223, 87);
             this.textBoxSifre.Name = "textBoxSifre";
             this.textBoxSifre.Size = new System.Drawing.Size(303, 29);
             this.textBoxSifre.TabIndex = 92;
@@ -99,7 +117,7 @@
             // textBoxKullaniciAdi
             // 
             this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(225, 66);
+            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(223, 30);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(303, 29);
             this.textBoxKullaniciAdi.TabIndex = 91;
@@ -109,7 +127,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SlateGray;
-            this.label2.Location = new System.Drawing.Point(27, 66);
+            this.label2.Location = new System.Drawing.Point(25, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(192, 28);
             this.label2.TabIndex = 88;
@@ -120,7 +138,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SlateGray;
-            this.label3.Location = new System.Drawing.Point(27, 134);
+            this.label3.Location = new System.Drawing.Point(25, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 28);
             this.label3.TabIndex = 89;
@@ -239,6 +257,17 @@
             this.pictureBox1.TabIndex = 104;
             this.pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.SlateGray;
+            this.label6.Location = new System.Drawing.Point(25, 206);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 28);
+            this.label6.TabIndex = 95;
+            this.label6.Text = "Rol :";
+            // 
             // personelEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,5 +313,7 @@
         private System.Windows.Forms.TextBox textBoxSoyad;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBoxRol;
+        private System.Windows.Forms.Label label6;
     }
 }

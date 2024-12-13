@@ -136,7 +136,7 @@ namespace gymKing.kasiyer_forms
 
         }
 
-        private void comboBoxPt_SelectedIndexChanged(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

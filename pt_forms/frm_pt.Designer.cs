@@ -182,7 +182,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Bauhaus 93", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.SlateGray;
-            this.label7.Location = new System.Drawing.Point(805, 318);
+            this.label7.Location = new System.Drawing.Point(745, 334);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 90);
             this.label7.TabIndex = 26;
@@ -292,7 +292,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::gymKing.kaynaklar.discover;
-            this.pictureBox8.Location = new System.Drawing.Point(834, 235);
+            this.pictureBox8.Location = new System.Drawing.Point(774, 235);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(85, 80);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

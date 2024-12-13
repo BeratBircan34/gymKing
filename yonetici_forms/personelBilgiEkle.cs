@@ -21,6 +21,16 @@ namespace gymKing.yonetici_forms
             InitializeComponent();
         }
 
+        public personelBilgiEkle(string gelenVeri, string gelenVeri2, string gelenVeri3)
+        {
+            InitializeComponent();
+
+            // Form2'deki TextBox'a gelen veriyi aktarıyoruz
+            textBoxAd.Text = gelenVeri;  // textBoxAd, personelBilgiEkle formundaki TextBox'ın adı
+            textBoxSoyad.Text = gelenVeri2;
+            comboBoxRol.Text = gelenVeri3;
+        }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -71,15 +81,15 @@ namespace gymKing.yonetici_forms
             ekle.Parameters.AddWithValue("@pDogumTarihi", dateTimePickerDogum.Value);
             ekle.Parameters.AddWithValue("@pTelNo", textBoxTelefon.Text);
             ekle.Parameters.AddWithValue("@pEmail", textBoxMail.Text);
-            ekle.Parameters.AddWithValue("@pRol", textBoxRol.Text);
+            ekle.Parameters.AddWithValue("@pRol", comboBoxRol.Text);
             ekle.Parameters.AddWithValue("@pAdres", textBoxAdres.Text);
             //ekle.Parameters.AddWithValue("@pisegiris", dateTimePickerİseGiris.Value);
             ekle.Parameters.AddWithValue("@perId", textBoxID.Text);
 
-            ekle.ExecuteNonQuery();
+            SqlDataReader dr = ekle.ExecuteReader();
                    
 
-            int etkilenenSatir = ekle.ExecuteNonQuery();
+            /*int etkilenenSatir = ekle.ExecuteNonQuery();
             if (etkilenenSatir > 0)
             {
                 MessageBox.Show("Personel Bilgileri Başarıyla Güncellendi!");
@@ -89,9 +99,11 @@ namespace gymKing.yonetici_forms
                 MessageBox.Show("Güncelleme işlemi başarısız oldu. Hiçbir satır güncellenmedi.");
           
             }
-
+            */
             baglanti.Close();
 
         }
+
+        
     }
 }
