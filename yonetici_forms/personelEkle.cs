@@ -69,9 +69,6 @@ namespace gymKing.yonetici_forms
 
         }
 
-        private void personelEkle_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

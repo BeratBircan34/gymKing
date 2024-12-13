@@ -174,5 +174,10 @@ namespace gymKing.kasiyer_forms
 
             MessageBox.Show("Düzenleme İşlemi Tamamlandı");
         }
+
+        private void comboBoxPt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
