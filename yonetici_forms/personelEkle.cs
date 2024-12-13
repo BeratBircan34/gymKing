@@ -29,7 +29,7 @@ namespace gymKing.yonetici_forms
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
             SqlCommand personelEkle = new SqlCommand("insert into tbl_giris_Bilgileri(rol,kullaniciAdi,sifre) values (@rol,@kullaniciAdi,@sifre)", baglanti);
-            personelEkle.Parameters.AddWithValue("@rol", comboBox1.Text);
+            personelEkle.Parameters.AddWithValue("@rol", comboBoxRol.Text);
             personelEkle.Parameters.AddWithValue("@kullaniciAdi", textBoxAd.Text + "." + textBoxSoyad.Text);
             personelEkle.Parameters.AddWithValue("@sifre", sifre);
             personelEkle.ExecuteNonQuery();
@@ -50,12 +50,21 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            personelBilgiEkle perBilgiEkle = new personelBilgiEkle();
+            string gelenVeri = textBoxAd.Text;
+            string gelenVeri2 = textBoxSoyad.Text;
+            string gelenVeri3 = comboBoxRol.Text;
+            personelBilgiEkle perBilgiEkle = new personelBilgiEkle(gelenVeri, gelenVeri2, gelenVeri3);
             this.Hide();
             perBilgiEkle.Show();
+
         }
 
         private void personelEkle_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

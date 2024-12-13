@@ -10,23 +10,11 @@ using System.Windows.Forms;
 
 namespace gymKing.yonetici_forms
 {
-    public partial class İstatistikler : Form
+    public partial class gelirGider : Form
     {
-        public İstatistikler()
+        public gelirGider()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-           
-            this.Close();
-            
-        }
-
-        private void İstatistikler_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

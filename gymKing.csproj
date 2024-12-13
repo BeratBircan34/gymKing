@@ -189,6 +189,12 @@
     <Compile Include="Temizlik.Designer.cs">
       <DependentUpon>Temizlik.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\gelirGider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\gelirGider.Designer.cs">
+      <DependentUpon>gelirGider.cs</DependentUpon>
+    </Compile>
     <Compile Include="yonetici_forms\persIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Temizlik.resx">
       <DependentUpon>Temizlik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\gelirGider.resx">
+      <DependentUpon>gelirGider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\persIslemleri.resx">
       <DependentUpon>persIslemleri.cs</DependentUpon>
