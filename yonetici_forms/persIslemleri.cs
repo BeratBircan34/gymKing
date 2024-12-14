@@ -1,4 +1,5 @@
-﻿using gymKing.kasiyer_forms;
+﻿using gymKing.controls;
+using gymKing.kasiyer_forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,14 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            personelEkle pers_ekle = new personelEkle();
-            pers_ekle.Show();
-            this.Close();
+
+            personelEkle personel_Ekle = new personelEkle();
+            otoform_ayarla perrsonelEkle = new otoform_ayarla(personel_Ekle);
+            perrsonelEkle.formAc(personel_Ekle, this);
+
+            //personelEkle pers_ekle = new personelEkle();
+            //pers_ekle.Show();
+            //this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -41,9 +47,9 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            yonetici yoneticii = new yonetici();
+            
             this.Close();
-            yoneticii.Show();
+            
         }
     }
 }

@@ -86,10 +86,10 @@ namespace gymKing.yonetici_forms
             //ekle.Parameters.AddWithValue("@pisegiris", dateTimePickerİseGiris.Value);
             ekle.Parameters.AddWithValue("@perId", textBoxID.Text);
 
-            SqlDataReader dr = ekle.ExecuteReader();
-                   
+            ekle.ExecuteNonQuery();
 
-            /*int etkilenenSatir = ekle.ExecuteNonQuery();
+
+            int etkilenenSatir = ekle.ExecuteNonQuery();
             if (etkilenenSatir > 0)
             {
                 MessageBox.Show("Personel Bilgileri Başarıyla Güncellendi!");
@@ -97,9 +97,9 @@ namespace gymKing.yonetici_forms
             else
             {
                 MessageBox.Show("Güncelleme işlemi başarısız oldu. Hiçbir satır güncellenmedi.");
-          
+
             }
-            */
+
             baglanti.Close();
 
         }

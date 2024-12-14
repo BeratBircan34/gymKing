@@ -75,6 +75,7 @@ namespace gymKing.yonetici_forms
             decimal toplamGelir = 0;
             decimal toplamGider = 0;
 
+
             foreach (DataRow row in dt.Rows)
             {
                 decimal tutar = Convert.ToDecimal(row["Tutar"]);
@@ -88,6 +89,9 @@ namespace gymKing.yonetici_forms
             lblToplamGelir.Text = "Toplam Gelir: " + toplamGelir.ToString("C");
             lblToplamGider.Text = "Toplam Gider: " + toplamGider.ToString("C");
             lblKarZarar.Text = "Kar/Zarar: " + (toplamGelir - toplamGider).ToString("C");
+
+
+
             baglanti.Close();
         }
 
@@ -109,6 +113,12 @@ namespace gymKing.yonetici_forms
 
         private void gelirGider_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            
             
         }
     }

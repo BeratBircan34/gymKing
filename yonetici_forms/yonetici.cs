@@ -26,7 +26,8 @@ namespace gymKing.yonetici_forms
             lbl_oturumSahibi.Text = yonetici_oturumSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
-            
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -53,9 +54,14 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox10_Click_1(object sender, EventArgs e)
         {
-            persIslemleri persislem = new persIslemleri();
-            persislem.Show();
-            this.Close();
+
+            persIslemleri personelislem = new persIslemleri();
+            otoform_ayarla personel_islem = new otoform_ayarla(personelislem);
+            personel_islem.formAc(personelislem, this);
+
+            //persIslemleri persislem = new persIslemleri();
+            //persislem.Show(); 
+            //this.Close();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

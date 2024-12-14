@@ -151,7 +151,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox9);
-            this.IsMdiContainer = true;
             this.Name = "persIslemleri";
             this.Text = "persIslemleri";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
