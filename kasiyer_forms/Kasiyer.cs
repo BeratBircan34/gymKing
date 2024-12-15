@@ -47,6 +47,7 @@ namespace gymKing.kasiyer_forms
             lbl_oturumSahibi.Text = kasiyer_oturumSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
             
         }
 
@@ -54,21 +55,24 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Close();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             K_Uyelik uyelik = new K_Uyelik();
+            this.Close();
             uyelik.Show();
-            this.Hide();
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             urunSatis urun = new urunSatis();
+            this.Close();   
             urun.Show();
-            this.Hide();
         }
 
        

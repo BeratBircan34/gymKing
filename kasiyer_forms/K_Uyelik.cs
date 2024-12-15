@@ -29,30 +29,30 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            K_uyelikSil uyelikSil = new K_uyelikSil();  
-            this.Close();
-            uyelikSil.Show();
+            K_uyelikSil uyelikSil = new K_uyelikSil();
+            otoform_ayarla uyelikSil_c = new otoform_ayarla(uyelikSil);
+            uyelikSil_c.formAc(uyelikSil, this);
         }
 
        
 
         private void K_Uyelik_Load_1(object sender, EventArgs e)
         {
-            
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             K_uyelikEkle uyelikEkle = new K_uyelikEkle();
-            this.Close();
-            uyelikEkle.Show();
+            otoform_ayarla uyelikEkle_c = new otoform_ayarla(uyelikEkle);
+            uyelikEkle_c.formAc(uyelikEkle, this);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            K_uyelikDuzenle uyelikduzenle = new K_uyelikDuzenle();
-            this.Close();
-            uyelikduzenle.Show();
+           K_uyelikDuzenle uyelikDuzenle_ = new K_uyelikDuzenle();
+            otoform_ayarla uyelikDuzenle_c = new otoform_ayarla(uyelikDuzenle_); 
+            uyelikDuzenle_c.formAc(uyelikDuzenle_, this);
         }
     }
 }

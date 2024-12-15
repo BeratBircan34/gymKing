@@ -57,14 +57,9 @@ namespace gymKing
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            if(pt_islemKontrol.islemYapildiMi == true)
-            {
-                MessageBox.Show("Form ayarlanınca açılabilecek");
-            }
-            else
-            {
-                MessageBox.Show("Önce İşlem Yap");
-            }
+            frm_sonucYazdir fsy = new frm_sonucYazdir();
+            otoform_ayarla fsy_ = new otoform_ayarla(fsy);
+            fsy_.formAc(fsy, this);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -118,15 +113,17 @@ namespace gymKing
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            frm_kisiselBilgiler frmkb = new frm_kisiselBilgiler();
+            /*frm_kisiselBilgiler frmkb = new frm_kisiselBilgiler();
             otoform_ayarla frmkb_c = new otoform_ayarla(frmkb);
-            frmkb_c.formAc(frmkb,this);
+            frmkb_c.formAc(frmkb,this);*/
 
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-
+            frm_pt_gecmisİslemler frmgi = new frm_pt_gecmisİslemler();
+            otoform_ayarla frmgi_ = new otoform_ayarla(frmgi);
+            frmgi_.formAc(frmgi,this);
         }
     }
 }

@@ -22,6 +22,7 @@ namespace gymKing.pt_forms
 
         private void frm_pt_gecmisİslemler_Load(object sender, EventArgs e)
         {
+            //imer1.Start();
             chkbx_all.Checked = true;
             cmbbx_isim.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbbx_soyisim.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -38,7 +39,7 @@ namespace gymKing.pt_forms
         {
             try
             {
-                string arakomut = "ad as 'İsim', soyad as 'Soyisim', ";
+                string arakomut = "ad as 'İsim', soyad as 'Soyisim' , ";
 
                 //Değer Filtreleri
                 foreach (string a in degerler)
@@ -54,11 +55,18 @@ namespace gymKing.pt_forms
                 //  Kişi Filtreleri
                 if (chkbx_cinsiyet_k.Checked)
                 {
-                    komut += " where cinsiyet = 'kadın'";
+                    komut += " where cinsiyet = 'kadın' ";
                 }
                 if (chkbx_cinsiyet_e.Checked)
                 {
-                    komut += " where cinsiyet = 'erkek' ";
+                    komut += " where cinsiyet = 'erkek'  ";
+                }
+                if(cmbbx_islemTuru.Text != "")
+                {
+                    if (chkbx_cinsiyet_e.Checked || chkbx_cinsiyet_k.Checked)
+                        komut += ($" and islem_turu = '{cmbbx_islemTuru.Text}'");
+                    else
+                        komut += ($" where islem_turu = '{cmbbx_islemTuru.Text}'");
                 }
 
                 if (chkbx_isimSira_az.Checked || chkbx_isimSira_za.Checked || chkbx_islemTarihi_ey.Checked || chkbx_islemTarihi_ye.Checked)
@@ -71,16 +79,16 @@ namespace gymKing.pt_forms
                     if (chkbx_isimSira_az.Checked == false && chkbx_isimSira_za.Checked == false)
                     {
                         if (chkbx_islemTarihi_ey.Checked)
-                            komut += " tarih asc";
+                            komut += " islem_tarihi asc";
                         if (chkbx_islemTarihi_ye.Checked)
-                            komut += " tarih desc";
+                            komut += " islem_tarihi desc";
                     }
                     else
                     {
                         if (chkbx_islemTarihi_ey.Checked)
-                            komut += ", tarih asc";
+                            komut += ", islem_tarihi asc";
                         if (chkbx_islemTarihi_ye.Checked)
-                            komut += ", tarih desc";
+                            komut += ", islem_tarihi desc";
                     }
 
                 }
@@ -117,7 +125,7 @@ namespace gymKing.pt_forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Filtre girmeyi unutmayın!", "Filtre girilmedi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bir hata oluştu : "+ex, "Filtre girilmedi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -171,8 +179,14 @@ namespace gymKing.pt_forms
             {
                 if (control is CheckBox checkBox && checkBox.Checked)
                 {
-                    groupBox2.Enabled = false; // Eğer bir CheckBox tikliyse, GroupBox2 devre dışı
-                    return; // Şarta uyulmuşsa döngüyü bitir
+                    if(cmbbx_islemTuru.Text != ""){
+                        groupBox2.Enabled = false; // Eğer bir CheckBox tikliyse, GroupBox2 devre dışı
+                        cmbbx_isim.SelectedIndex = -1;
+                        cmbbx_egitmen.SelectedIndex = -1;
+                        cmbbx_soyisim.SelectedIndex = -1 ;
+                        return; // Şarta uyulmuşsa döngüyü bitir
+                    }
+                   
                 }
             }
             // Eğer hiçbiri tikli değilse GroupBox2 aktif
@@ -186,6 +200,8 @@ namespace gymKing.pt_forms
                 if (control is ComboBox cmbbx && !string.IsNullOrWhiteSpace(cmbbx.Text))
                 {
                     groupBox1.Enabled = false; // Eğer bir CheckBox tikliyse, GroupBox2 devre dışı
+                    cmbbx_islemTuru.SelectedIndex = -1;
+                   
                     return; // Şarta uyulmuşsa döngüyü bitir
                 }
             }
@@ -570,6 +586,77 @@ namespace gymKing.pt_forms
                 degerler.Add("ik as 'İdeal Kilo (KG)'");
             else
                 degerler.Remove("ik as 'İdeal Kilo (KG)'");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbx_islemGunu.Checked)
+                degerler.Add("islem_gunu as 'İşlem Yapılan Gün'");           
+            else
+                degerler.Remove("islem_gunu as 'İşlem Yapılan Gün'");
+        }
+
+        private void chkbx_islemSaati_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbx_islemSaati.Checked)           
+                degerler.Add("islem_saati as 'İşlemin Yapıldığı Saat'");  
+            else
+                degerler.Remove("islem_saati as 'İşlemin Yapıldığı Saat'");
+        }
+
+        private void chkbx_islemTarihi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbx_islemTarihi.Checked)
+                degerler.Add("islem_tarihi as 'İşlemin Yapıldığı Tarih'");
+            else
+                degerler.Remove("islem_tarihi as 'İslemin Yapıldığı Tarih'");
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            if (groupBox1.Enabled == false)
+                cmbbx_islemTuru.Text = "";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (groupBox1.Enabled == false)
+                cmbbx_islemTuru.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            chkbx_all.Checked = false;
+            cmbbx_islemTuru.SelectedIndex = -1;
+            cmbbx_isim.SelectedIndex = -1;
+            cmbbx_soyisim.SelectedIndex = -1;
+            cmbbx_egitmen.SelectedIndex = -1;
+            chkbx_isimSira_za.Checked = false;
+            chkbx_isimSira_az.Checked = false;
+            chkbx_islemTarihi_ey.Checked = false;
+            chkbx_islemTarihi_ye.Checked = false;
+            chkbx_cinsiyet_e.Checked = false;
+            chkbx_cinsiyet_k.Checked = false;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

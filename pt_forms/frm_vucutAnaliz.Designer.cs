@@ -217,7 +217,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(25, 85);
+            this.groupBox1.Location = new System.Drawing.Point(28, 117);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(402, 365);
             this.groupBox1.TabIndex = 9;
@@ -321,7 +321,7 @@
             this.groupBox2.Controls.Add(this.chkbox_sadeceKalori);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox2.Location = new System.Drawing.Point(25, 456);
+            this.groupBox2.Location = new System.Drawing.Point(28, 488);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(402, 130);
             this.groupBox2.TabIndex = 19;
@@ -358,7 +358,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Bauhaus 93", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(408, 22);
+            this.label9.Location = new System.Drawing.Point(385, 39);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(498, 60);
             this.label9.TabIndex = 20;
@@ -373,9 +373,9 @@
             this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.groupBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox3.Location = new System.Drawing.Point(460, 85);
+            this.groupBox3.Location = new System.Drawing.Point(463, 117);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(783, 504);
+            this.groupBox3.Size = new System.Drawing.Size(817, 504);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hesaplama Sonuçları";
@@ -792,7 +792,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.Location = new System.Drawing.Point(580, 595);
+            this.button1.Location = new System.Drawing.Point(609, 639);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 38);
             this.button1.TabIndex = 21;

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using gymKing.controls;
-using gymKing.diyetisyen_forms;
+
 using gymKing.kasiyer_forms;
 using gymKing.yonetici_forms;
 using gymKing.Üye_forms;
@@ -61,14 +61,7 @@ namespace gymKing
                         this.Hide();
                         MessageBox.Show(id);
                         MessageBox.Show("Hoşgeldiniz! "+per.ad+" "+per.soyad);
-                        break;
-                    case "Diyetisyen":
-                        frm_diyetisyen frmdiyet = new frm_diyetisyen();
-                        perBilgiAl perBilgi = new perBilgiAl(id);
-                        frmdiyet.diyetisyen_oturumSahibi = perBilgi.ad+" "+ perBilgi.soyad;
-                        frmdiyet.Show();
-                        this.Hide();
-                        break;
+                        break;                  
                     case "Kasiyer":
                         Kasiyer kasiyer = new Kasiyer();
                         perBilgiAl K_bilgi = new perBilgiAl(id);
