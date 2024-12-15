@@ -17,18 +17,17 @@ namespace gymKing.yonetici_forms
         public persIslemleri()
         {
             InitializeComponent();
+            this.id_ = id_;
         }
 
+        public string id_ = "";
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-            personelEkle personel_Ekle = new personelEkle();
-            otoform_ayarla perrsonelEkle = new otoform_ayarla(personel_Ekle);
-            perrsonelEkle.formAc(personel_Ekle, this);
 
-            //personelEkle pers_ekle = new personelEkle();
-            //pers_ekle.Show();
-            //this.Close();
+            personelEkle pers_ekle = new personelEkle();
+            pers_ekle.Show();
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -40,16 +39,22 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            personelGüncelle pers_güncelle = new personelGüncelle();
+            personelGüncelle pers_güncelle = new personelGüncelle(id_);
             pers_güncelle.Show();
             this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            yonetici yoneticipanel = new yonetici();
+            //yoneticipanel.Show();
             this.Close();
             
+        }
+
+        private void persIslemleri_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

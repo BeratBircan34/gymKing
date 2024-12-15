@@ -338,7 +338,7 @@
             "Kasiyer"});
             this.comboBoxRol.Location = new System.Drawing.Point(229, 420);
             this.comboBoxRol.Name = "comboBoxRol";
-            this.comboBoxRol.Size = new System.Drawing.Size(141, 21);
+            this.comboBoxRol.Size = new System.Drawing.Size(218, 21);
             this.comboBoxRol.TabIndex = 165;
             // 
             // personelBilgiEkle

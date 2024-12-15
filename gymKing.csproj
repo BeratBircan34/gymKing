@@ -202,6 +202,7 @@
       <DependentUpon>gelirGider.cs</DependentUpon>
     </Compile>
     <Compile Include="yonetici_forms\GrafikCizici.cs" />
+    <Compile Include="yonetici_forms\perBilgiCek.cs" />
     <Compile Include="yonetici_forms\persIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -437,6 +438,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\1291754_notes_todo_notepad_notebook_icon.png" />
+    <None Include="Resources\TELIF TELIF2 GYM.png" />
+    <None Include="Resources\TELIF GYM2.png" />
     <None Include="Resources\1291754_notes_todo_notepad_notebook_icon1.png" />
     <Content Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon.png" />
     <None Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon1.png" />
@@ -452,6 +455,9 @@
     <None Include="Resources\body1.png" />
     <Content Include="Resources\cashier_icon.ico" />
     <None Include="Resources\cleanerPNG.png" />
+    <None Include="Resources\copyrght.png" />
+    <None Include="Resources\copyrrygymm.png" />
+    <None Include="Resources\copyright-logo-png-clipart-best-5.png" />
     <Content Include="Resources\create.png" />
     <Content Include="Resources\delete.png" />
     <None Include="Resources\dietpng.png" />
@@ -460,6 +466,8 @@
     <None Include="Resources\employeAdd.png" />
     <None Include="Resources\Gelir Gider Ekle TRANSPARENT.png" />
     <None Include="Resources\gelir gider transparent 2.png" />
+    <None Include="Resources\GYM TELIF 2.png" />
+    <None Include="Resources\GY TELIF2.png" />
     <Content Include="Resources\member_add.png" />
     <Content Include="Resources\next.png" />
     <Content Include="Resources\protein.png" />

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.comboBoxIslemTuru = new System.Windows.Forms.ComboBox();
             this.textAciklama = new System.Windows.Forms.TextBox();
             this.numTutar = new System.Windows.Forms.NumericUpDown();
@@ -47,7 +47,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblFinansalYorum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numTutar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRapor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGelirGider)).BeginInit();
@@ -159,18 +158,18 @@
             // 
             this.chartGelirGider.BackColor = System.Drawing.SystemColors.Control;
             this.chartGelirGider.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chartGelirGider.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartGelirGider.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chartGelirGider.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGelirGider.Legends.Add(legend1);
             this.chartGelirGider.Location = new System.Drawing.Point(842, 137);
             this.chartGelirGider.Name = "chartGelirGider";
             this.chartGelirGider.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.YValuesPerPoint = 4;
-            this.chartGelirGider.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 4;
+            this.chartGelirGider.Series.Add(series1);
             this.chartGelirGider.Size = new System.Drawing.Size(410, 293);
             this.chartGelirGider.TabIndex = 12;
             this.chartGelirGider.Text = "chart1";
@@ -228,21 +227,11 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // lblFinansalYorum
-            // 
-            this.lblFinansalYorum.AutoSize = true;
-            this.lblFinansalYorum.Location = new System.Drawing.Point(908, 534);
-            this.lblFinansalYorum.Name = "lblFinansalYorum";
-            this.lblFinansalYorum.Size = new System.Drawing.Size(35, 13);
-            this.lblFinansalYorum.TabIndex = 55;
-            this.lblFinansalYorum.Text = "label1";
-            // 
             // gelirGider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.lblFinansalYorum);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
@@ -293,6 +282,5 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label lblFinansalYorum;
     }
 }

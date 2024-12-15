@@ -108,5 +108,17 @@ namespace gymKing.yonetici_forms
             otoform_ayarla gelir__gider = new otoform_ayarla(gelir_gider);
             gelir__gider.formAc(gelir_gider, this);
         }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            isletmeBilgileri isletmebilgi = new isletmeBilgileri();
+            otoform_ayarla isletmebilgii = new otoform_ayarla(isletmebilgi);
+            isletmebilgii.formAc(isletmebilgi, this);
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

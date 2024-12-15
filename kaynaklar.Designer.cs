@@ -213,6 +213,36 @@ namespace gymKing {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap copyrght {
+            get {
+                object obj = ResourceManager.GetObject("copyrght", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap copyright_logo_png_clipart_best_5 {
+            get {
+                object obj = ResourceManager.GetObject("copyright-logo-png-clipart-best-5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap copyrrygymm {
+            get {
+                object obj = ResourceManager.GetObject("copyrrygymm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap create {
             get {
                 object obj = ResourceManager.GetObject("create", resourceCulture);
@@ -296,6 +326,26 @@ namespace gymKing {
         internal static System.Drawing.Bitmap gelir_gider_transparent_2 {
             get {
                 object obj = ResourceManager.GetObject("gelir gider transparent 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GY_TELIF2 {
+            get {
+                object obj = ResourceManager.GetObject("GY TELIF2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GYM_TELIF_2 {
+            get {
+                object obj = ResourceManager.GetObject("GYM TELIF 2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -456,6 +506,26 @@ namespace gymKing {
         internal static System.Drawing.Bitmap statisticsPNG {
             get {
                 object obj = ResourceManager.GetObject("statisticsPNG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TELIF_GYM2 {
+            get {
+                object obj = ResourceManager.GetObject("TELIF GYM2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TELIF_TELIF2_GYM {
+            get {
+                object obj = ResourceManager.GetObject("TELIF TELIF2 GYM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
