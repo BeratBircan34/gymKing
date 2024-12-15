@@ -147,7 +147,7 @@ namespace gymKing.kasiyer_forms
 
             SqlCommand ekle = new SqlCommand(güncelle, baglanti);
 
-            
+
             ekle.Parameters.AddWithValue("@mDogumTarihi", dateTimePickerDogum.Value);
             ekle.Parameters.AddWithValue("@mTelNo", textBoxTelefon.Text);
             ekle.Parameters.AddWithValue("@mEmail", textBoxMail.Text);
@@ -173,11 +173,6 @@ namespace gymKing.kasiyer_forms
             baglanti.Close();
 
             MessageBox.Show("Düzenleme İşlemi Tamamlandı");
-        }
-
-        private void comboBoxPt_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

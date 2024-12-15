@@ -196,7 +196,6 @@
             this.comboBoxPt.Name = "comboBoxPt";
             this.comboBoxPt.Size = new System.Drawing.Size(288, 29);
             this.comboBoxPt.TabIndex = 9;
-            this.comboBoxPt.SelectedIndexChanged += new System.EventHandler(this.comboBoxPt_SelectedIndexChanged);
             // 
             // comboBoxDiyetisyen
             // 
