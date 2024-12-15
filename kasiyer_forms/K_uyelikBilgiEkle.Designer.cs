@@ -60,6 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymKing_dbDataSet)).BeginInit();
@@ -233,6 +234,7 @@
             this.comboBoxPt.Name = "comboBoxPt";
             this.comboBoxPt.Size = new System.Drawing.Size(288, 29);
             this.comboBoxPt.TabIndex = 9;
+
             // 
             // comboBoxDiyetisyen
             // 
@@ -394,12 +396,24 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "Ad :";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label14.Location = new System.Drawing.Point(12, 622);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 13);
+            this.label14.TabIndex = 73;
+            this.label14.Text = "label14";
+            // 
             // K_uyelikBilgiEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
@@ -415,6 +429,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -451,5 +466,6 @@
         private System.Windows.Forms.TextBox textBoxKullaniciAdi;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

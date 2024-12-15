@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,6 +72,17 @@
             this.groupBox2.TabIndex = 107;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.SlateGray;
+            this.label6.Location = new System.Drawing.Point(25, 206);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 28);
+            this.label6.TabIndex = 95;
+            this.label6.Text = "Rol :";
             // 
             // comboBoxRol
             // 
@@ -256,17 +267,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 104;
             this.pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SlateGray;
-            this.label6.Location = new System.Drawing.Point(25, 206);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 28);
-            this.label6.TabIndex = 95;
-            this.label6.Text = "Rol :";
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // personelEkle
             // 
@@ -278,7 +279,6 @@
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.IsMdiContainer = true;
             this.Name = "personelEkle";
             this.Text = "personelEkle";
             this.Load += new System.EventHandler(this.personelEkle_Load);

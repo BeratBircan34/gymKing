@@ -25,7 +25,7 @@ namespace gymKing.yonetici_forms
         {
             InitializeComponent();
 
-            // Form2'deki TextBox'a gelen veriyi aktarıyoruz
+            // önceki formdaki verileri TextBox'a gelen veriyi aktarıyoruz
             textBoxAd.Text = gelenVeri;  // textBoxAd, personelBilgiEkle formundaki TextBox'ın adı
             textBoxSoyad.Text = gelenVeri2;
             comboBoxRol.Text = gelenVeri3;
@@ -64,8 +64,9 @@ namespace gymKing.yonetici_forms
              UPDATE tbl_per_bilgiler
              SET 
                 ad = @pAd, 
-                soyad = @pSoyad,               
-                tcNo = @pTCNo,
+                soyad = @pSoyad, 
+                isegiris =@pisegiris
+                TCNO = @ptcno,
                 DogumTarihi = @pDogumTarihi,
                 telNo = @pTelNo, 
                 email = @pEmail,
@@ -77,19 +78,19 @@ namespace gymKing.yonetici_forms
 
             ekle.Parameters.AddWithValue("@pAd", textBoxAd.Text);
             ekle.Parameters.AddWithValue("@pSoyad", textBoxSoyad.Text);
-            ekle.Parameters.AddWithValue("@pTCNo", textBoxTC.Text);
+            ekle.Parameters.AddWithValue("@ptcno", textBoxTC.Text);
             ekle.Parameters.AddWithValue("@pDogumTarihi", dateTimePickerDogum.Value);
             ekle.Parameters.AddWithValue("@pTelNo", textBoxTelefon.Text);
             ekle.Parameters.AddWithValue("@pEmail", textBoxMail.Text);
             ekle.Parameters.AddWithValue("@pRol", comboBoxRol.Text);
             ekle.Parameters.AddWithValue("@pAdres", textBoxAdres.Text);
-            //ekle.Parameters.AddWithValue("@pisegiris", dateTimePickerİseGiris.Value);
+            ekle.Parameters.AddWithValue("@pisegiris", dateTimePickerİseGiris.Value);
             ekle.Parameters.AddWithValue("@perId", textBoxID.Text);
 
-            SqlDataReader dr = ekle.ExecuteReader();
-                   
+            ekle.ExecuteNonQuery();
 
-            /*int etkilenenSatir = ekle.ExecuteNonQuery();
+
+            int etkilenenSatir = ekle.ExecuteNonQuery();
             if (etkilenenSatir > 0)
             {
                 MessageBox.Show("Personel Bilgileri Başarıyla Güncellendi!");
@@ -97,9 +98,9 @@ namespace gymKing.yonetici_forms
             else
             {
                 MessageBox.Show("Güncelleme işlemi başarısız oldu. Hiçbir satır güncellenmedi.");
-          
+
             }
-            */
+
             baglanti.Close();
 
         }

@@ -31,14 +31,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxRol = new System.Windows.Forms.TextBox();
-            this.textBoxTC = new System.Windows.Forms.TextBox();
-            this.dateTimePickerDogum = new System.Windows.Forms.DateTimePicker();
-            this.textBoxTelefon = new System.Windows.Forms.TextBox();
-            this.textBoxAdres = new System.Windows.Forms.TextBox();
-            this.textBoxMail = new System.Windows.Forms.TextBox();
-            this.textBoxSoyad = new System.Windows.Forms.TextBox();
-            this.textBoxAd = new System.Windows.Forms.TextBox();
+            this.txtrol = new System.Windows.Forms.TextBox();
+            this.txttc = new System.Windows.Forms.TextBox();
+            this.txttel = new System.Windows.Forms.TextBox();
+            this.txtadres = new System.Windows.Forms.TextBox();
+            this.txtmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,10 +45,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.txtad = new System.Windows.Forms.TextBox();
+            this.txtsoyad = new System.Windows.Forms.TextBox();
+            this.txtdogum = new System.Windows.Forms.TextBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -61,6 +65,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(486, 305);
             this.dataGridView1.TabIndex = 137;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -85,70 +90,46 @@
             this.label7.TabIndex = 135;
             this.label7.Text = "Rol : ";
             // 
-            // textBoxRol
+            // txtrol
             // 
-            this.textBoxRol.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRol.Location = new System.Drawing.Point(242, 384);
-            this.textBoxRol.Name = "textBoxRol";
-            this.textBoxRol.Size = new System.Drawing.Size(214, 29);
-            this.textBoxRol.TabIndex = 134;
+            this.txtrol.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrol.Location = new System.Drawing.Point(242, 384);
+            this.txtrol.Name = "txtrol";
+            this.txtrol.Size = new System.Drawing.Size(214, 29);
+            this.txtrol.TabIndex = 134;
             // 
-            // textBoxTC
+            // txttc
             // 
-            this.textBoxTC.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTC.Location = new System.Drawing.Point(244, 241);
-            this.textBoxTC.Name = "textBoxTC";
-            this.textBoxTC.Size = new System.Drawing.Size(212, 29);
-            this.textBoxTC.TabIndex = 133;
+            this.txttc.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttc.Location = new System.Drawing.Point(244, 241);
+            this.txttc.Name = "txttc";
+            this.txttc.Size = new System.Drawing.Size(212, 29);
+            this.txttc.TabIndex = 133;
             // 
-            // dateTimePickerDogum
+            // txttel
             // 
-            this.dateTimePickerDogum.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDogum.Location = new System.Drawing.Point(242, 276);
-            this.dateTimePickerDogum.Name = "dateTimePickerDogum";
-            this.dateTimePickerDogum.Size = new System.Drawing.Size(214, 32);
-            this.dateTimePickerDogum.TabIndex = 122;
+            this.txttel.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttel.Location = new System.Drawing.Point(242, 314);
+            this.txttel.Name = "txttel";
+            this.txttel.Size = new System.Drawing.Size(214, 29);
+            this.txttel.TabIndex = 125;
             // 
-            // textBoxTelefon
+            // txtadres
             // 
-            this.textBoxTelefon.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTelefon.Location = new System.Drawing.Point(242, 314);
-            this.textBoxTelefon.Name = "textBoxTelefon";
-            this.textBoxTelefon.Size = new System.Drawing.Size(214, 29);
-            this.textBoxTelefon.TabIndex = 125;
+            this.txtadres.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtadres.Location = new System.Drawing.Point(242, 448);
+            this.txtadres.Multiline = true;
+            this.txtadres.Name = "txtadres";
+            this.txtadres.Size = new System.Drawing.Size(214, 164);
+            this.txtadres.TabIndex = 124;
             // 
-            // textBoxAdres
+            // txtmail
             // 
-            this.textBoxAdres.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAdres.Location = new System.Drawing.Point(242, 448);
-            this.textBoxAdres.Multiline = true;
-            this.textBoxAdres.Name = "textBoxAdres";
-            this.textBoxAdres.Size = new System.Drawing.Size(214, 164);
-            this.textBoxAdres.TabIndex = 124;
-            // 
-            // textBoxMail
-            // 
-            this.textBoxMail.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMail.Location = new System.Drawing.Point(242, 349);
-            this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(214, 29);
-            this.textBoxMail.TabIndex = 123;
-            // 
-            // textBoxSoyad
-            // 
-            this.textBoxSoyad.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSoyad.Location = new System.Drawing.Point(242, 206);
-            this.textBoxSoyad.Name = "textBoxSoyad";
-            this.textBoxSoyad.Size = new System.Drawing.Size(214, 29);
-            this.textBoxSoyad.TabIndex = 121;
-            // 
-            // textBoxAd
-            // 
-            this.textBoxAd.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAd.Location = new System.Drawing.Point(242, 171);
-            this.textBoxAd.Name = "textBoxAd";
-            this.textBoxAd.Size = new System.Drawing.Size(214, 29);
-            this.textBoxAd.TabIndex = 120;
+            this.txtmail.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmail.Location = new System.Drawing.Point(242, 349);
+            this.txtmail.Name = "txtmail";
+            this.txtmail.Size = new System.Drawing.Size(214, 29);
+            this.txtmail.TabIndex = 123;
             // 
             // label8
             // 
@@ -238,6 +219,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 119;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox9
             // 
@@ -250,22 +232,71 @@
             this.pictureBox9.TabIndex = 118;
             this.pictureBox9.TabStop = false;
             // 
+            // txtad
+            // 
+            this.txtad.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.txtad.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtad.Location = new System.Drawing.Point(244, 171);
+            this.txtad.Name = "txtad";
+            this.txtad.Size = new System.Drawing.Size(212, 29);
+            this.txtad.TabIndex = 139;
+            // 
+            // txtsoyad
+            // 
+            this.txtsoyad.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsoyad.Location = new System.Drawing.Point(244, 206);
+            this.txtsoyad.Name = "txtsoyad";
+            this.txtsoyad.Size = new System.Drawing.Size(212, 29);
+            this.txtsoyad.TabIndex = 140;
+            // 
+            // txtdogum
+            // 
+            this.txtdogum.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdogum.Location = new System.Drawing.Point(244, 276);
+            this.txtdogum.Name = "txtdogum";
+            this.txtdogum.Size = new System.Drawing.Size(212, 29);
+            this.txtdogum.TabIndex = 141;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.Image = global::gymKing.kaynaklar.GY_TELIF2;
+            this.pictureBox15.Location = new System.Drawing.Point(78, 576);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(158, 79);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 144;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Image = global::gymKing.kaynaklar.copyright_logo_png_clipart_best_5;
+            this.pictureBox14.Location = new System.Drawing.Point(5, 592);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(76, 48);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 143;
+            this.pictureBox14.TabStop = false;
+            // 
             // personelSil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.txtdogum);
+            this.Controls.Add(this.txtsoyad);
+            this.Controls.Add(this.txtad);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxRol);
-            this.Controls.Add(this.textBoxTC);
-            this.Controls.Add(this.dateTimePickerDogum);
-            this.Controls.Add(this.textBoxTelefon);
-            this.Controls.Add(this.textBoxAdres);
-            this.Controls.Add(this.textBoxMail);
-            this.Controls.Add(this.textBoxSoyad);
-            this.Controls.Add(this.textBoxAd);
+            this.Controls.Add(this.txtrol);
+            this.Controls.Add(this.txttc);
+            this.Controls.Add(this.txttel);
+            this.Controls.Add(this.txtadres);
+            this.Controls.Add(this.txtmail);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -278,10 +309,14 @@
             this.IsMdiContainer = true;
             this.Name = "personelSil";
             this.Text = "personelSil";
+            this.Load += new System.EventHandler(this.personelSil_Load);
+            this.Click += new System.EventHandler(this.personelSil_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,14 +327,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxRol;
-        private System.Windows.Forms.TextBox textBoxTC;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDogum;
-        private System.Windows.Forms.TextBox textBoxTelefon;
-        private System.Windows.Forms.TextBox textBoxAdres;
-        private System.Windows.Forms.TextBox textBoxMail;
-        private System.Windows.Forms.TextBox textBoxSoyad;
-        private System.Windows.Forms.TextBox textBoxAd;
+        private System.Windows.Forms.TextBox txtrol;
+        private System.Windows.Forms.TextBox txttc;
+        private System.Windows.Forms.TextBox txttel;
+        private System.Windows.Forms.TextBox txtadres;
+        private System.Windows.Forms.TextBox txtmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -309,5 +341,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.TextBox txtad;
+        private System.Windows.Forms.TextBox txtsoyad;
+        private System.Windows.Forms.TextBox txtdogum;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox14;
     }
 }

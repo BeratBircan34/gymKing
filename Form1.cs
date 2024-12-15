@@ -29,7 +29,6 @@ namespace gymKing
             sqlOtoBaglanti.pcAdiAl();
         }
         public string id_ = "";
-
        
 
         private void girisKontrol(string kullaniciAdi,string sifre)
@@ -63,8 +62,9 @@ namespace gymKing
                         MessageBox.Show("Hoşgeldiniz! "+per.ad+" "+per.soyad);
                         break;                  
                     case "Kasiyer":
-                        Kasiyer kasiyer = new Kasiyer();
+                        Kasiyer kasiyer = new Kasiyer(id);
                         perBilgiAl K_bilgi = new perBilgiAl(id);
+                        kasiyer.id_ = id;
                         kasiyer.kasiyer_oturumSahibi = K_bilgi.ad + " " + K_bilgi.soyad;
                         kasiyer.Show();
                         this.Hide();
@@ -72,7 +72,7 @@ namespace gymKing
                         break;
                     case "Yönetici":
                         yonetici yonetici = new yonetici();
-                        perBilgiAl perrbilgi = new perBilgiAl(id);
+                        perBilgiAl perrbilgi = new perBilgiAl(id);                   
                         yonetici.yonetici_oturumSahibi = perrbilgi.ad + " " + perrbilgi.soyad;
                         yonetici.Show();
                         this.Hide();

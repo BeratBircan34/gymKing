@@ -13,10 +13,13 @@ namespace gymKing.kasiyer_forms
 {
     public partial class urunSatis : Form
     {
-        public urunSatis()
+        public urunSatis(string id)
         {
             InitializeComponent();
+            this.id_ = id;
         }
+
+        public string id_ = "";
 
         Urunler urun = new Urunler();
         
@@ -28,7 +31,7 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            Kasiyer kasiyer = new Kasiyer();
+            Kasiyer kasiyer = new Kasiyer(id_);
             this.Close();
             kasiyer.Show();
         }
@@ -42,7 +45,7 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Sepet sepet = new Sepet();
+            Sepet sepet = new Sepet(id_);
             sepet.Show();
    
         }

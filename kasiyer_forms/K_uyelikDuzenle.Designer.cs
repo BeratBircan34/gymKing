@@ -59,6 +59,7 @@
             this.comboBoxAd = new System.Windows.Forms.ComboBox();
             this.comboBoxSoyad = new System.Windows.Forms.ComboBox();
             this.textBoxID = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -195,6 +196,7 @@
             this.comboBoxPt.Name = "comboBoxPt";
             this.comboBoxPt.Size = new System.Drawing.Size(288, 29);
             this.comboBoxPt.TabIndex = 9;
+            this.comboBoxPt.SelectedIndexChanged += new System.EventHandler(this.comboBoxPt_SelectedIndexChanged);
             // 
             // comboBoxDiyetisyen
             // 
@@ -401,12 +403,24 @@
             this.textBoxID.Size = new System.Drawing.Size(87, 29);
             this.textBoxID.TabIndex = 99;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label15.Location = new System.Drawing.Point(14, 632);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(41, 13);
+            this.label15.TabIndex = 104;
+            this.label15.Text = "label15";
+            // 
             // K_uyelikDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.comboBoxSoyad);
             this.Controls.Add(this.comboBoxAd);
@@ -466,5 +480,6 @@
         private System.Windows.Forms.ComboBox comboBoxAd;
         private System.Windows.Forms.ComboBox comboBoxSoyad;
         private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label label15;
     }
 }

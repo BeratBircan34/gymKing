@@ -26,7 +26,8 @@ namespace gymKing.yonetici_forms
             lbl_oturumSahibi.Text = yonetici_oturumSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
-            
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -53,9 +54,14 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox10_Click_1(object sender, EventArgs e)
         {
-            persIslemleri persislem = new persIslemleri();
-            persislem.Show();
-            this.Close();
+
+            persIslemleri personelislem = new persIslemleri();
+            otoform_ayarla personel_islem = new otoform_ayarla(personelislem);
+            personel_islem.formAc(personelislem, this);
+
+            //persIslemleri persislem = new persIslemleri();
+            //persislem.Show(); 
+            //this.Close();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -67,9 +73,13 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            İstatistikler istatistik = new İstatistikler();
-            otoform_ayarla istatistikk = new otoform_ayarla(istatistik);
-            istatistikk.formAc(istatistik, this);
+            personelilan persilan = new personelilan();
+            otoform_ayarla persilann = new otoform_ayarla(persilan);
+            persilann.formAc(persilan, this);
+
+            //İstatistikler istatistik = new İstatistikler();
+            //otoform_ayarla istatistikk = new otoform_ayarla(istatistik);
+            //istatistikk.formAc(istatistik, this);
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -79,9 +89,9 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            Kasiyer kasiyerr = new Kasiyer();
-            otoform_ayarla kasiyerrr = new otoform_ayarla(kasiyerr);
-            kasiyerrr.formAc(kasiyerr, this);
+            //Kasiyer kasiyerr = new Kasiyer();
+            //otoform_ayarla kasiyerrr = new otoform_ayarla(kasiyerr);
+            //kasiyerrr.formAc(kasiyerr, this);
 
             //Kasiyer kasiyerr = new Kasiyer();
             //kasiyerr.Show();
@@ -101,6 +111,18 @@ namespace gymKing.yonetici_forms
             gelirGider gelir_gider = new gelirGider();
             otoform_ayarla gelir__gider = new otoform_ayarla(gelir_gider);
             gelir__gider.formAc(gelir_gider, this);
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox13_Click_1(object sender, EventArgs e)
+        {
+            gorevVer gorev = new gorevVer();
+            otoform_ayarla gorevV = new otoform_ayarla(gorev);
+            gorevV.formAc(gorev, this);
         }
     }
 }

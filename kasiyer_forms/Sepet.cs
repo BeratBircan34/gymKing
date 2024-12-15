@@ -13,12 +13,14 @@ namespace gymKing.kasiyer_forms
 {
     public partial class Sepet : Form
     {
-        public Sepet()
+        public Sepet(string id_)
         {
             InitializeComponent();
-            
+            this.id_ = id_;
         }
         Urunler urun = new Urunler();
+
+        public string id_ = "";
         private void Sepet_Load(object sender, EventArgs e)
         {
             if(urun.urun1 >= 1)
@@ -29,7 +31,7 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            urunSatis satis = new urunSatis();
+            urunSatis satis = new urunSatis(id_);
             this.Close();
             satis.Show();
         }

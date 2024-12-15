@@ -275,6 +275,14 @@
     <Compile Include="yonetici_forms\gelirGider.Designer.cs">
       <DependentUpon>gelirGider.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\gorevVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\gorevVer.Designer.cs">
+      <DependentUpon>gorevVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici_forms\GrafikCizici.cs" />
+    <Compile Include="yonetici_forms\perBilgiCek.cs" />
     <Compile Include="yonetici_forms\persIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +306,12 @@
     </Compile>
     <Compile Include="yonetici_forms\personelGüncelle.Designer.cs">
       <DependentUpon>personelGüncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici_forms\personelilan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\personelilan.Designer.cs">
+      <DependentUpon>personelilan.cs</DependentUpon>
     </Compile>
     <Compile Include="yonetici_forms\personelSil.cs">
       <SubType>Form</SubType>
@@ -400,6 +414,9 @@
     <EmbeddedResource Include="yonetici_forms\gelirGider.resx">
       <DependentUpon>gelirGider.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\gorevVer.resx">
+      <DependentUpon>gorevVer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\persIslemleri.resx">
       <DependentUpon>persIslemleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\personelGüncelle.resx">
       <DependentUpon>personelGüncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\personelilan.resx">
+      <DependentUpon>personelilan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\personelSil.resx">
       <DependentUpon>personelSil.cs</DependentUpon>
@@ -502,6 +522,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\1291754_notes_todo_notepad_notebook_icon.png" />
+    <None Include="Resources\temzlk panel gorev son.png" />
+    <None Include="Resources\TELIF TELIF2 GYM.png" />
+    <None Include="Resources\TELIF GYM2.png" />
     <None Include="Resources\1291754_notes_todo_notepad_notebook_icon1.png" />
     <Content Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon.png" />
     <None Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon1.png" />
@@ -512,19 +535,30 @@
     <None Include="Resources\statisticsPNG.png" />
     <None Include="Resources\transparentGYMKING.png" />
     <None Include="Resources\cashierpnl.png" />
+    <None Include="Resources\AKTİF_PERSONELLER_TXT son.png" />
     <Content Include="Resources\basket.png" />
     <Content Include="Resources\body.png" />
     <None Include="Resources\body1.png" />
     <Content Include="Resources\cashier_icon.ico" />
     <None Include="Resources\cleanerPNG.png" />
+    <None Include="Resources\copyrght.png" />
+    <None Include="Resources\copyrrygymm.png" />
+    <None Include="Resources\copyright-logo-png-clipart-best-5.png" />
     <Content Include="Resources\create.png" />
     <Content Include="Resources\delete.png" />
     <None Include="Resources\dietpng.png" />
     <Content Include="Resources\edit.png" />
     <None Include="Resources\gymkingg11.png" />
     <None Include="Resources\employeAdd.png" />
+    <None Include="Resources\Gelir Gider Ekle TRANSPARENT.png" />
+    <None Include="Resources\gelir gider transparent 2.png" />
+    <None Include="Resources\GYM TELIF 2.png" />
+    <None Include="Resources\GY TELIF2.png" />
+    <None Include="Resources\ekle personel %281%29 son.png" />
     <Content Include="Resources\member_add.png" />
     <Content Include="Resources\next.png" />
+    <None Include="Resources\PERSONEL ILANLARI TXT son.png" />
+    <None Include="Resources\pers ekle i.png" />
     <Content Include="Resources\protein.png" />
     <Content Include="Resources\protein2.png" />
     <Content Include="Resources\proteinpng.png" />

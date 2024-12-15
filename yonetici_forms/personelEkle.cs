@@ -54,7 +54,7 @@ namespace gymKing.yonetici_forms
             string gelenVeri2 = textBoxSoyad.Text;
             string gelenVeri3 = comboBoxRol.Text;
             personelBilgiEkle perBilgiEkle = new personelBilgiEkle(gelenVeri, gelenVeri2, gelenVeri3);
-            this.Hide();
+            this.Close();
             perBilgiEkle.Show();
 
         }
@@ -67,6 +67,11 @@ namespace gymKing.yonetici_forms
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
