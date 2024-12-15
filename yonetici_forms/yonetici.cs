@@ -113,14 +113,16 @@ namespace gymKing.yonetici_forms
             gelir__gider.formAc(gelir_gider, this);
         }
 
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void pictureBox15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox13_Click_1(object sender, EventArgs e)
+        {
+            gorevVer gorev = new gorevVer();
+            otoform_ayarla gorevV = new otoform_ayarla(gorev);
+            gorevV.formAc(gorev, this);
         }
     }
 }

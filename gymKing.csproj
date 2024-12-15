@@ -201,6 +201,12 @@
     <Compile Include="yonetici_forms\gelirGider.Designer.cs">
       <DependentUpon>gelirGider.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\gorevVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\gorevVer.Designer.cs">
+      <DependentUpon>gorevVer.cs</DependentUpon>
+    </Compile>
     <Compile Include="yonetici_forms\GrafikCizici.cs" />
     <Compile Include="yonetici_forms\perBilgiCek.cs" />
     <Compile Include="yonetici_forms\persIslemleri.cs">
@@ -343,6 +349,9 @@
     <EmbeddedResource Include="yonetici_forms\gelirGider.resx">
       <DependentUpon>gelirGider.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\gorevVer.resx">
+      <DependentUpon>gorevVer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\persIslemleri.resx">
       <DependentUpon>persIslemleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -447,6 +456,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\1291754_notes_todo_notepad_notebook_icon.png" />
+    <None Include="Resources\temzlk panel gorev son.png" />
     <None Include="Resources\TELIF TELIF2 GYM.png" />
     <None Include="Resources\TELIF GYM2.png" />
     <None Include="Resources\1291754_notes_todo_notepad_notebook_icon1.png" />

@@ -573,6 +573,16 @@ namespace gymKing {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap temzlk_panel_gorev_son {
+            get {
+                object obj = ResourceManager.GetObject("temzlk panel gorev son", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap time_past {
             get {
                 object obj = ResourceManager.GetObject("time_past", resourceCulture);

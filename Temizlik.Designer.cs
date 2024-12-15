@@ -48,9 +48,13 @@
             this.chkbx_EkGorevler = new System.Windows.Forms.CheckBox();
             this.chkbx_HavalandirmaKokuKontrolu = new System.Windows.Forms.CheckBox();
             this.chkbx_HijyenMalzemelerininStoklanmasi = new System.Windows.Forms.CheckBox();
+            this.listBoxGorevler = new System.Windows.Forms.ListBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // chkbx_GenelAlanlarinTemizligi
@@ -66,6 +70,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txtbx_Notlar);
             this.groupBox1.Controls.Add(this.lbl_Notlar);
             this.groupBox1.Controls.Add(this.lbl_SoyunmaOdalariDuslarinTemizligi);
@@ -274,6 +280,15 @@
             this.chkbx_HijyenMalzemelerininStoklanmasi.Text = "Hijyen Malzemelerinin Stoklanması:";
             this.chkbx_HijyenMalzemelerininStoklanmasi.UseVisualStyleBackColor = true;
             // 
+            // listBoxGorevler
+            // 
+            this.listBoxGorevler.FormattingEnabled = true;
+            this.listBoxGorevler.Location = new System.Drawing.Point(111, 530);
+            this.listBoxGorevler.Name = "listBoxGorevler";
+            this.listBoxGorevler.Size = new System.Drawing.Size(908, 108);
+            this.listBoxGorevler.TabIndex = 5;
+            this.listBoxGorevler.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -286,11 +301,33 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::gymKing.kaynaklar.delete;
+            this.pictureBox1.Location = new System.Drawing.Point(1021, 518);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 14F);
+            this.label1.Location = new System.Drawing.Point(1029, 571);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 21);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Görev Sil";
+            // 
             // Temizlik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.listBoxGorevler);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -302,6 +339,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,5 +366,8 @@
         private System.Windows.Forms.Label lbl_HijyenMalzemelerininStoklanmasi;
         private System.Windows.Forms.TextBox txtbx_Notlar;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ListBox listBoxGorevler;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
