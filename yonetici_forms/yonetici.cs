@@ -73,9 +73,13 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            İstatistikler istatistik = new İstatistikler();
-            otoform_ayarla istatistikk = new otoform_ayarla(istatistik);
-            istatistikk.formAc(istatistik, this);
+            personelilan persilan = new personelilan();
+            otoform_ayarla persilann = new otoform_ayarla(persilan);
+            persilann.formAc(persilan, this);
+
+            //İstatistikler istatistik = new İstatistikler();
+            //otoform_ayarla istatistikk = new otoform_ayarla(istatistik);
+            //istatistikk.formAc(istatistik, this);
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -111,9 +115,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            isletmeBilgileri isletmebilgi = new isletmeBilgileri();
-            otoform_ayarla isletmebilgii = new otoform_ayarla(isletmebilgi);
-            isletmebilgii.formAc(isletmebilgi, this);
+           
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)

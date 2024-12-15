@@ -227,6 +227,12 @@
     <Compile Include="yonetici_forms\personelGüncelle.Designer.cs">
       <DependentUpon>personelGüncelle.cs</DependentUpon>
     </Compile>
+    <Compile Include="yonetici_forms\personelilan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici_forms\personelilan.Designer.cs">
+      <DependentUpon>personelilan.cs</DependentUpon>
+    </Compile>
     <Compile Include="yonetici_forms\personelSil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     <EmbeddedResource Include="yonetici_forms\personelGüncelle.resx">
       <DependentUpon>personelGüncelle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="yonetici_forms\personelilan.resx">
+      <DependentUpon>personelilan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\personelSil.resx">
       <DependentUpon>personelSil.cs</DependentUpon>
     </EmbeddedResource>
@@ -450,6 +459,7 @@
     <None Include="Resources\statisticsPNG.png" />
     <None Include="Resources\transparentGYMKING.png" />
     <None Include="Resources\cashierpnl.png" />
+    <None Include="Resources\AKTİF_PERSONELLER_TXT son.png" />
     <Content Include="Resources\basket.png" />
     <Content Include="Resources\body.png" />
     <None Include="Resources\body1.png" />
@@ -468,8 +478,11 @@
     <None Include="Resources\gelir gider transparent 2.png" />
     <None Include="Resources\GYM TELIF 2.png" />
     <None Include="Resources\GY TELIF2.png" />
+    <None Include="Resources\ekle personel %281%29 son.png" />
     <Content Include="Resources\member_add.png" />
     <Content Include="Resources\next.png" />
+    <None Include="Resources\PERSONEL ILANLARI TXT son.png" />
+    <None Include="Resources\pers ekle i.png" />
     <Content Include="Resources\protein.png" />
     <Content Include="Resources\protein2.png" />
     <Content Include="Resources\proteinpng.png" />

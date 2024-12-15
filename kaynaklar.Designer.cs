@@ -123,6 +123,16 @@ namespace gymKing {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AKTİF_PERSONELLER_TXT_son {
+            get {
+                object obj = ResourceManager.GetObject("AKTİF_PERSONELLER_TXT son", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_left {
             get {
                 object obj = ResourceManager.GetObject("arrow_left", resourceCulture);
@@ -303,6 +313,16 @@ namespace gymKing {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ekle_personel__1__son {
+            get {
+                object obj = ResourceManager.GetObject("ekle personel (1) son", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap employeAdd {
             get {
                 object obj = ResourceManager.GetObject("employeAdd", resourceCulture);
@@ -376,6 +396,26 @@ namespace gymKing {
         internal static System.Drawing.Bitmap next {
             get {
                 object obj = ResourceManager.GetObject("next", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pers_ekle_i {
+            get {
+                object obj = ResourceManager.GetObject("pers ekle i", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PERSONEL_ILANLARI_TXT_son {
+            get {
+                object obj = ResourceManager.GetObject("PERSONEL ILANLARI TXT son", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

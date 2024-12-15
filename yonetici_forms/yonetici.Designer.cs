@@ -199,9 +199,9 @@
             this.label7.ForeColor = System.Drawing.Color.SlateGray;
             this.label7.Location = new System.Drawing.Point(623, 518);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 27);
+            this.label7.Size = new System.Drawing.Size(171, 27);
             this.label7.TabIndex = 56;
-            this.label7.Text = "Istatistikler";
+            this.label7.Text = "Personel Ilan";
             // 
             // label8
             // 
@@ -219,9 +219,9 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::gymKing.kaynaklar.GY_TELIF2;
-            this.pictureBox15.Location = new System.Drawing.Point(157, 462);
+            this.pictureBox15.Location = new System.Drawing.Point(109, 530);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(293, 165);
+            this.pictureBox15.Size = new System.Drawing.Size(208, 63);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 64;
             this.pictureBox15.TabStop = false;
@@ -231,9 +231,9 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::gymKing.kaynaklar.copyright_logo_png_clipart_best_5;
-            this.pictureBox14.Location = new System.Drawing.Point(36, 513);
+            this.pictureBox14.Location = new System.Drawing.Point(51, 530);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(115, 68);
+            this.pictureBox14.Size = new System.Drawing.Size(52, 51);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 63;
             this.pictureBox14.TabStop = false;
@@ -253,7 +253,7 @@
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = global::gymKing.kaynaklar.statisticsPNG;
+            this.pictureBox11.Image = global::gymKing.kaynaklar.users_alt;
             this.pictureBox11.Location = new System.Drawing.Point(628, 417);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(142, 75);

@@ -121,6 +121,16 @@ namespace gymKing.yonetici_forms
             
             
         }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
         
