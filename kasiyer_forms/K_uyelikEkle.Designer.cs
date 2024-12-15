@@ -94,7 +94,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label1);
@@ -106,7 +106,7 @@
             this.groupBox1.Size = new System.Drawing.Size(519, 286);
             this.groupBox1.TabIndex = 77;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label7
             // 
@@ -133,6 +133,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::gymKing.kaynaklar.transparentGYMKING;
             this.pictureBox7.Location = new System.Drawing.Point(320, 12);
             this.pictureBox7.Name = "pictureBox7";
@@ -156,7 +157,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.textBoxID);
             this.groupBox2.Controls.Add(this.textBoxSifre);
@@ -168,7 +169,6 @@
             this.groupBox2.Size = new System.Drawing.Size(567, 280);
             this.groupBox2.TabIndex = 89;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
             // label5
             // 
@@ -186,6 +186,7 @@
             this.textBoxID.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxID.Location = new System.Drawing.Point(225, 206);
             this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(303, 29);
             this.textBoxID.TabIndex = 92;
             // 
@@ -194,6 +195,7 @@
             this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSifre.Location = new System.Drawing.Point(225, 133);
             this.textBoxSifre.Name = "textBoxSifre";
+            this.textBoxSifre.ReadOnly = true;
             this.textBoxSifre.Size = new System.Drawing.Size(303, 29);
             this.textBoxSifre.TabIndex = 92;
             // 
@@ -202,6 +204,7 @@
             this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKullaniciAdi.Location = new System.Drawing.Point(225, 66);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
+            this.textBoxKullaniciAdi.ReadOnly = true;
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(303, 29);
             this.textBoxKullaniciAdi.TabIndex = 91;
             // 
@@ -229,6 +232,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::gymKing.kaynaklar.next;
             this.pictureBox2.Location = new System.Drawing.Point(1196, 650);
@@ -242,8 +246,9 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.ForeColor = System.Drawing.Color.DarkGray;
             this.label11.Location = new System.Drawing.Point(12, 634);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 13);

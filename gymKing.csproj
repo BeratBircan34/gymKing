@@ -143,6 +143,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controls\bilgiAl.cs" />
     <Compile Include="controls\PDFExporter.cs" />
     <Compile Include="controls\pt_gecici_Bellek.cs" />
     <Compile Include="controls\otoform_ayarla.cs" />
@@ -168,12 +169,6 @@
     </Compile>
     <Compile Include="kasiyer_forms\Kasiyer.Designer.cs">
       <DependentUpon>Kasiyer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kasiyer_forms\K_Uyelik.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kasiyer_forms\K_Uyelik.Designer.cs">
-      <DependentUpon>K_Uyelik.cs</DependentUpon>
     </Compile>
     <Compile Include="kasiyer_forms\K_uyelikBilgiEkle.cs">
       <SubType>Form</SubType>
@@ -355,9 +350,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="kasiyer_forms\Kasiyer.resx">
       <DependentUpon>Kasiyer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="kasiyer_forms\K_Uyelik.resx">
-      <DependentUpon>K_Uyelik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kasiyer_forms\K_uyelikBilgiEkle.resx">
       <DependentUpon>K_uyelikBilgiEkle.cs</DependentUpon>

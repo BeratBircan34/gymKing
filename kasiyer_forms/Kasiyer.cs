@@ -30,17 +30,7 @@ namespace gymKing.kasiyer_forms
             lbl_saat.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString("00");
         }
 
-        private void SetMdiContainerBackColor(Color color)
-        {
-            foreach (Control control in this.Controls)
-            {
-                control.BackColor = Color.Gainsboro;
-                if (control is MdiClient mdiClient)
-                {
-                    mdiClient.BackColor = color; // Arka plan rengini ayarla
-                }
-            }
-        }
+       
 
         private void KASİYER_Load(object sender, EventArgs e)
         {
@@ -49,7 +39,6 @@ namespace gymKing.kasiyer_forms
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
             otoform_ayarla.renkAyarla(this, Color.Gainsboro);
-            
         }
 
       
@@ -64,19 +53,37 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            K_Uyelik uyelik = new K_Uyelik(id_);
-
-            this.Close();
-            uyelik.Show();
+            Kasiyer uyelik = new Kasiyer(id_);
+            otoform_ayarla uyelikk = new otoform_ayarla(uyelik);
+            uyelikk.formAc(uyelik, this);
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             urunSatis urun = new urunSatis(id_);
-            this.Close();   
-            urun.Show();
+            otoform_ayarla urunn = new otoform_ayarla(urun);
+            urunn.formAc(urun, this);
         }
 
-       
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            K_uyelikEkle uyelikEkle = new K_uyelikEkle(id_);
+            otoform_ayarla uyelikEklee = new otoform_ayarla(uyelikEkle);
+            uyelikEklee.formAc(uyelikEkle, this);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            K_uyelikSil uyelikSil = new K_uyelikSil(id_);
+            otoform_ayarla uyelikSill = new otoform_ayarla(uyelikSil);
+            uyelikSill.formAc(uyelikSil, this);
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            K_uyelikDuzenle uyelikduzenle = new K_uyelikDuzenle(id_);
+            otoform_ayarla uyelikduzenlee = new otoform_ayarla(uyelikduzenle);
+            uyelikduzenlee.formAc(uyelikduzenle, this);
+        }
     }   
 }

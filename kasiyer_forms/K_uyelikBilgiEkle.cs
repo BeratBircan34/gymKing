@@ -1,6 +1,8 @@
-﻿using gymKing.oto_Baglanti;
+﻿using gymKing.controls;
+using gymKing.oto_Baglanti;
 using System;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace gymKing.kasiyer_forms
@@ -15,12 +17,22 @@ namespace gymKing.kasiyer_forms
 
         public string id_ = "";
 
-
+        public int kontrol = 0;
         private void K_uyelikBilgiEkle_Load(object sender, EventArgs e)
         {
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
 
+
+            SqlCommand getir4 = new SqlCommand("select cinsiyet from tbl_cinsiyet", baglanti);
+            SqlDataReader cinsiyet = getir4.ExecuteReader();
+            while (cinsiyet.Read())
+            {
+                comboBox1.Items.Add(cinsiyet["cinsiyet"].ToString());
+            }
+            cinsiyet.Close();
 
             SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
             SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
@@ -66,9 +78,17 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            K_uyelikEkle uyelikEkle = new K_uyelikEkle(id_);
-            this.Hide();
-            uyelikEkle.Show();
+            if (kontrol == 1)
+            {
+                this.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("Ad Soyad Girmeden Çıkış Yapamazsınız");
+            }
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -79,55 +99,66 @@ namespace gymKing.kasiyer_forms
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+            if (!string.IsNullOrEmpty(textBoxAd.Text) && !string.IsNullOrEmpty(textBoxSoyad.Text))
+            {
+                SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+                baglanti.Open();
 
-
-            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            baglanti.Open();
-
-            string güncelle = @"
-             UPDATE tbl_musteriler 
-             SET 
+                string güncelle = @"
+            UPDATE tbl_musteriler 
+            SET 
                 m_ad = @mAd, 
                 m_soyad = @mSoyad, 
                 m_DogumTarihi = @mDogumTarihi, 
                 m_telNo = @mTelNo, 
-                 m_eMail = @mEmail, 
-                 m_adres = @mAdres, 
-                 m_uyelikBaslangic = @mUyelikBaslangic, 
-                 m_uyelikBitis = @mUyelikBitis, 
-                 m_personalTrainer = @mPersonalTrainer, 
-                 m_diyetisyen = @mDiyetisyen
-             WHERE m_id = @id";
+                m_eMail = @mEmail, 
+                m_adres = @mAdres, 
+                m_uyelikBaslangic = @mUyelikBaslangic, 
+                m_uyelikBitis = @mUyelikBitis, 
+                m_personalTrainer = @mPersonalTrainer, 
+                m_diyetisyen = @mDiyetisyen,
+                m_cinsiyet = @mcinsiyet
+            WHERE m_id = @id";
 
-            SqlCommand ekle = new SqlCommand(güncelle, baglanti);
+                SqlCommand ekle = new SqlCommand(güncelle, baglanti);
 
-            ekle.Parameters.AddWithValue("@mAd", textBoxAd.Text);
-            ekle.Parameters.AddWithValue("@mSoyad", textBoxSoyad.Text);
-            ekle.Parameters.AddWithValue("@mDogumTarihi", dateTimePickerDogum.Value);
-            ekle.Parameters.AddWithValue("@mTelNo", textBoxTelefon.Text);
-            ekle.Parameters.AddWithValue("@mEmail", textBoxMail.Text);
-            ekle.Parameters.AddWithValue("@mAdres", textBoxAdres.Text);
-            ekle.Parameters.AddWithValue("@mUyelikBaslangic", dateTimePickerBaslangic.Value);
-            ekle.Parameters.AddWithValue("@mUyelikBitis", dateTimePickerBitis.Value);
-            ekle.Parameters.AddWithValue("@mPersonalTrainer", comboBoxPt.Text);
-            ekle.Parameters.AddWithValue("@mDiyetisyen", comboBoxDiyetisyen.Text);
-            ekle.Parameters.AddWithValue("@id", textBoxID.Text);
+                ekle.Parameters.AddWithValue("@mAd", textBoxAd.Text);
+                ekle.Parameters.AddWithValue("@mSoyad", textBoxSoyad.Text);
+                ekle.Parameters.AddWithValue("@mDogumTarihi", dateTimePickerDogum.Value);
+                ekle.Parameters.AddWithValue("@mTelNo", textBoxTelefon.Text);
+                ekle.Parameters.AddWithValue("@mEmail", textBoxMail.Text);
+                ekle.Parameters.AddWithValue("@mAdres", textBoxAdres.Text);
+                ekle.Parameters.AddWithValue("@mUyelikBaslangic", dateTimePickerBaslangic.Value);
+                ekle.Parameters.AddWithValue("@mUyelikBitis", dateTimePickerBitis.Value);
+                ekle.Parameters.AddWithValue("@mPersonalTrainer", comboBoxPt.Text);
+                ekle.Parameters.AddWithValue("@mDiyetisyen", comboBoxDiyetisyen.Text);
+                ekle.Parameters.AddWithValue("@mcinsiyet", comboBox1.Text);
+                ekle.Parameters.AddWithValue("@id", textBoxID.Text);
 
-            ekle.ExecuteNonQuery();
-
-
-            SqlCommand raporla = new SqlCommand("insert into tbl_kasiyer_log(yapilan_islem,islemi_yapan,islem_tarihi,islem_yapilan_id)values(@islem,@yapan,@tarih,@id)", baglanti);
-            raporla.Parameters.AddWithValue("@islem", "Yeni Üyenin Bilgileri Eklendi");
-            raporla.Parameters.AddWithValue("@yapan",label14.Text);
-            raporla.Parameters.AddWithValue("@tarih", DateTime.Today);
-            raporla.Parameters.AddWithValue("@id",textBoxID.Text);
-
-            raporla.ExecuteNonQuery();
+                ekle.ExecuteNonQuery();
 
 
-            baglanti.Close();
+                SqlCommand raporla = new SqlCommand("insert into tbl_kasiyer_log(yapilan_islem,islemi_yapan,islem_tarihi,islem_yapilan_id)values(@islem,@yapan,@tarih,@id)", baglanti);
+                raporla.Parameters.AddWithValue("@islem", "Yeni Üyenin Bilgileri Eklendi");
+                raporla.Parameters.AddWithValue("@yapan", label14.Text);
+                raporla.Parameters.AddWithValue("@tarih", DateTime.Today);
+                raporla.Parameters.AddWithValue("@id", textBoxID.Text);
 
-            MessageBox.Show("Bilgi Ekleme İşlemi Tamamlandı");
+                raporla.ExecuteNonQuery();
+
+
+                baglanti.Close();
+
+                MessageBox.Show("Bilgi Ekleme İşlemi Tamamlandı");
+
+                kontrol = +1;
+            }
+
+            else
+            {
+                MessageBox.Show("Ad Soyad Girmeden Kayıt Yapamazsınız!");
+            }
+            
 
         }
 

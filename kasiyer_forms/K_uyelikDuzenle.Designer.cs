@@ -60,6 +60,8 @@
             this.comboBoxSoyad = new System.Windows.Forms.ComboBox();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -81,6 +83,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::gymKing.kaynaklar.save;
             this.pictureBox3.Location = new System.Drawing.Point(1198, 650);
@@ -93,7 +96,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.textBoxSifre);
             this.groupBox1.Controls.Add(this.textBoxKullaniciAdi);
             this.groupBox1.Controls.Add(this.label12);
@@ -354,6 +359,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::gymKing.kaynaklar.show;
             this.pictureBox2.Location = new System.Drawing.Point(1198, 25);
@@ -393,6 +399,7 @@
             this.comboBoxSoyad.Name = "comboBoxSoyad";
             this.comboBoxSoyad.Size = new System.Drawing.Size(288, 29);
             this.comboBoxSoyad.TabIndex = 103;
+            this.comboBoxSoyad.SelectedIndexChanged += new System.EventHandler(this.comboBoxSoyad_SelectedIndexChanged);
             // 
             // textBoxID
             // 
@@ -405,13 +412,34 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label15.ForeColor = System.Drawing.Color.DarkGray;
             this.label15.Location = new System.Drawing.Point(14, 632);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 13);
             this.label15.TabIndex = 104;
             this.label15.Text = "label15";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(911, 362);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(288, 29);
+            this.comboBox1.TabIndex = 103;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.SlateGray;
+            this.label16.Location = new System.Drawing.Point(646, 360);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(130, 28);
+            this.label16.TabIndex = 102;
+            this.label16.Text = "Cinsiyet :";
             // 
             // K_uyelikDuzenle
             // 
@@ -480,5 +508,7 @@
         private System.Windows.Forms.ComboBox comboBoxSoyad;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label16;
     }
 }

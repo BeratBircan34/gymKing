@@ -1,4 +1,5 @@
-﻿using gymKing.oto_Baglanti;
+﻿using gymKing.controls;
+using gymKing.oto_Baglanti;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,14 +25,12 @@ namespace gymKing.Üye_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            uyeHesapAyarlari ayarlar = new uyeHesapAyarlari(id_);
             this.Close();
-            ayarlar.Show();
         }
 
         private void uyeSifreDegistirme_Load(object sender, EventArgs e)
         {
-
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -75,9 +74,7 @@ namespace gymKing.Üye_forms
             dr.Close();
             baglanti.Close();
 
-            uyeHesapAyarlari ayarlar = new uyeHesapAyarlari(id_);
             this.Close();
-            ayarlar.Show();
         }
     }
 }

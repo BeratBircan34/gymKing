@@ -32,6 +32,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxCins = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.textBoxPt = new System.Windows.Forms.TextBox();
             this.textBoxDiyetisyen = new System.Windows.Forms.TextBox();
             this.textBoxDogum = new System.Windows.Forms.TextBox();
@@ -80,6 +82,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::gymKing.kaynaklar.delete;
             this.pictureBox3.Location = new System.Drawing.Point(1193, 650);
@@ -105,7 +108,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.textBoxCins);
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.textBoxPt);
             this.groupBox1.Controls.Add(this.textBoxDiyetisyen);
             this.groupBox1.Controls.Add(this.textBoxDogum);
@@ -133,6 +138,26 @@
             this.groupBox1.TabIndex = 74;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Üyelik Bilgileri";
+            // 
+            // textBoxCins
+            // 
+            this.textBoxCins.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCins.Location = new System.Drawing.Point(910, 368);
+            this.textBoxCins.Name = "textBoxCins";
+            this.textBoxCins.ReadOnly = true;
+            this.textBoxCins.Size = new System.Drawing.Size(289, 29);
+            this.textBoxCins.TabIndex = 105;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.SlateGray;
+            this.label12.Location = new System.Drawing.Point(646, 369);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 28);
+            this.label12.TabIndex = 104;
+            this.label12.Text = "Cinsiyet :";
             // 
             // textBoxPt
             // 
@@ -377,6 +402,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::gymKing.kaynaklar.show;
             this.pictureBox4.Location = new System.Drawing.Point(1193, 15);
@@ -434,6 +460,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gainsboro;
             this.label11.Location = new System.Drawing.Point(9, 624);
@@ -513,5 +540,7 @@
         private System.Windows.Forms.TextBox textBoxBaslangic;
         private System.Windows.Forms.TextBox textBoxBitis;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxCins;
+        private System.Windows.Forms.Label label12;
     }
 }

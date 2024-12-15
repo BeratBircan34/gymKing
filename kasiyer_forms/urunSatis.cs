@@ -26,14 +26,12 @@ namespace gymKing.kasiyer_forms
 
         private void urunSatis_Load(object sender, EventArgs e)
         {
-           
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            Kasiyer kasiyer = new Kasiyer(id_);
             this.Close();
-            kasiyer.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

@@ -18,22 +18,16 @@ namespace gymKing.kasiyer_forms
             InitializeComponent();
             this.id_ = id_;
         }
-        Urunler urun = new Urunler();
 
         public string id_ = "";
         private void Sepet_Load(object sender, EventArgs e)
         {
-            if(urun.urun1 >= 1)
-            {
-                listBox1.Items.Add(urun.urun1);
-            }
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            urunSatis satis = new urunSatis(id_);
             this.Close();
-            satis.Show();
         }
     }
 }

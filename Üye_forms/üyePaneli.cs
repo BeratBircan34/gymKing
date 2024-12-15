@@ -1,4 +1,5 @@
-﻿using gymKing.oto_Baglanti;
+﻿using gymKing.controls;
+using gymKing.oto_Baglanti;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,8 @@ namespace gymKing.Üye_forms
             lbl_oturumSahibi.Text = uyeOturumSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
-            
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+
 
 
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
@@ -43,8 +45,6 @@ namespace gymKing.Üye_forms
             }
             dr.Close();
             baglanti.Close();
-
-
 
         }
 
@@ -61,8 +61,8 @@ namespace gymKing.Üye_forms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             uyeHesapAyarlari ayarlar = new uyeHesapAyarlari(lbl_id.Text);
-            this.Hide();
-            ayarlar.Show();
+            otoform_ayarla ayarlarr = new otoform_ayarla(ayarlar);
+            ayarlarr.formAc(ayarlar,this);
         }
 
         private void lbl_id_Click(object sender, EventArgs e)

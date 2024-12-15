@@ -24,6 +24,8 @@ namespace gymKing.kasiyer_forms
 
         private void K_uyelikSil_Load(object sender, EventArgs e)
         {
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
             SqlCommand ad = new SqlCommand("select m_ad from tbl_musteriler", baglanti);
@@ -56,9 +58,7 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            K_Uyelik uyelik = new K_Uyelik(id_);
             this.Close();
-            uyelik.Show();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace gymKing.kasiyer_forms
         {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
-            SqlCommand getir = new SqlCommand("select * from tbl_musteriler", baglanti);
+            SqlCommand getir = new SqlCommand("select * from tbl_musteriler where m_id = "+textBoxID.Text, baglanti);
             SqlDataReader getir2 = getir.ExecuteReader();
             while (getir2.Read())
             {
@@ -82,15 +82,15 @@ namespace gymKing.kasiyer_forms
                 textBoxPt.Text = getir2["m_personalTrainer"].ToString();
                 textBoxDiyetisyen.Text = getir2["m_diyetisyen"].ToString();
                 textBoxTelefon.Text = getir2["m_telNo"].ToString();
+                textBoxCins.Text = getir2["m_cinsiyet"].ToString();
             }
             getir2.Close();
 
 
-            SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri", baglanti);
+            SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID = "+textBoxID.Text, baglanti);
             SqlDataReader getir4 = getir3.ExecuteReader();
             while (getir4.Read())
             {
-                textBoxID.Text = getir4["KullaniciID"].ToString();
                 textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
                 textBoxSifre.Text = getir4["sifre"].ToString();
             }
@@ -128,7 +128,14 @@ namespace gymKing.kasiyer_forms
 
         private void comboBoxSoyad_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand id = new SqlCommand("select m_id from tbl_musteriler where m_ad ='" + comboBoxAd.Text + "' and m_soyad = '" + comboBoxSoyad.Text + "'", baglanti);
+            SqlDataReader reader = id.ExecuteReader();
+            while (reader.Read())
+            {
+                textBoxID.Text = reader["m_id"].ToString();
+            }
         }
 
         private void comboBoxAd_SelectedIndexChanged(object sender, EventArgs e)

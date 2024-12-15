@@ -32,9 +32,10 @@ namespace gymKing.Üye_forms
 
         private void uyeHesapAyarlari_Load(object sender, EventArgs e)
         {
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
 
-        textBoxId.Text = id_;
-        SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            textBoxId.Text = id_;
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
             SqlCommand getir = new SqlCommand("select * from tbl_musteriler where m_id = "+textBoxId.Text, baglanti);
             SqlDataReader dr = getir.ExecuteReader();
@@ -63,9 +64,7 @@ namespace gymKing.Üye_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            üyePaneli üye = new üyePaneli(textBoxId.Text);
             this.Close();
-            üye.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

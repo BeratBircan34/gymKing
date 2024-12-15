@@ -189,6 +189,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::gymKing.kaynaklar.settings;
             this.pictureBox1.Location = new System.Drawing.Point(858, 428);
             this.pictureBox1.Name = "pictureBox1";
@@ -246,6 +247,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::gymKing.kaynaklar.transparentGYMKING;
             this.pictureBox7.Location = new System.Drawing.Point(556, 12);
             this.pictureBox7.Name = "pictureBox7";
@@ -278,6 +280,7 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "üyePaneli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "üyePaneli";

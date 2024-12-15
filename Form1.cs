@@ -54,41 +54,45 @@ namespace gymKing
                         break;
                     case "Pt":
                         frm_pt frmpt = new frm_pt();
-                        perBilgiAl per = new perBilgiAl(id);
-                        frmpt.oturmSahibi = per.ad +" "+ per.soyad;
+                        bilgiAl per = new perBilgiAl(id);
+                        per.bilgi(id);
+                        frmpt.oturmSahibi = per.Ad + " " + per.Soyad;
                         frmpt.Show();
                         this.Hide();
                         MessageBox.Show(id);
-                        MessageBox.Show("Hoşgeldiniz! "+per.ad+" "+per.soyad);
-                        break;                  
+                        MessageBox.Show("Hoşgeldiniz! " + per.Ad + " " + per.Soyad);
+                        break;
                     case "Kasiyer":
                         Kasiyer kasiyer = new Kasiyer(id);
-                        perBilgiAl K_bilgi = new perBilgiAl(id);
+                        bilgiAl bilgiAl = new perBilgiAl(id);
+                        bilgiAl.bilgi(id);
                         kasiyer.id_ = id;
-                        kasiyer.kasiyer_oturumSahibi = K_bilgi.ad + " " + K_bilgi.soyad;
+                        kasiyer.kasiyer_oturumSahibi = bilgiAl.Ad + " " + bilgiAl.Soyad;
                         kasiyer.Show();
                         this.Hide();
-                        MessageBox.Show("Hoşgeldiniz! " + K_bilgi.ad + " " +K_bilgi.soyad);
+                        MessageBox.Show("Hoşgeldiniz! " + bilgiAl.Ad + " " + bilgiAl.Soyad);
                         break;
                     case "Yönetici":
                         yonetici yonetici = new yonetici();
-                        perBilgiAl perrbilgi = new perBilgiAl(id);                   
-                        yonetici.yonetici_oturumSahibi = perrbilgi.ad + " " + perrbilgi.soyad;
+                        bilgiAl perrbilgi = new perBilgiAl(id);
+                        perrbilgi.bilgi(id);
+                        yonetici.yonetici_oturumSahibi = perrbilgi.Ad + " " + perrbilgi.Soyad;
                         yonetici.Show();
                         this.Hide();
-                        MessageBox.Show("Hoşgeldiniz! " + perrbilgi.ad + " " + perrbilgi.soyad);
+                        MessageBox.Show("Hoşgeldiniz! " + perrbilgi.Ad + " " + perrbilgi.Soyad);
                         break;
                     case "Üye":
                         üyePaneli üyelik = new üyePaneli(id);
-                        uyeBilgiAl uyebilgi = new uyeBilgiAl(id);
+                        bilgiAl uyebilgi = new uyeBilgiAl(id);
+                        uyebilgi.bilgi(id);
                         üyelik.id_ = id;
-                        üyelik.uyeOturumSahibi = uyebilgi.ad+" "+uyebilgi.soyad;
+                        üyelik.uyeOturumSahibi = uyebilgi.Ad + " " + uyebilgi.Soyad;
                         üyelik.Show();
                         this.Hide();
-                        MessageBox.Show("Hoşgeldiniz! " + uyebilgi.ad + " " + uyebilgi.soyad);
-                        
+                        MessageBox.Show("Hoşgeldiniz! " + uyebilgi.Ad + " " + uyebilgi.Soyad);
+
                         break;
- 
+
                     default:
                         MessageBox.Show("Rolünüzün giriş ekranı yapım aşamasında");
                         break;
