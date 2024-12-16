@@ -18,11 +18,12 @@ namespace gymKing.yonetici_forms
        
         private object ID;
 
-        public personelilan()
+        public personelilan(string id)
         {
             InitializeComponent();
+            this.id_ = id;
         }
-
+        public string id_ = "";
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            
@@ -155,7 +156,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            yonetici yoneticipanel = new yonetici();
+            yonetici yoneticipanel = new yonetici(id_);
             //yoneticipanel.Show();
             this.Close();
         }

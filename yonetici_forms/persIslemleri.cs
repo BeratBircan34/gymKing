@@ -14,10 +14,10 @@ namespace gymKing.yonetici_forms
 {
     public partial class persIslemleri : Form
     {
-        public persIslemleri()
+        public persIslemleri(string id)
         {
             InitializeComponent();
-            this.id_ = id_;
+            this.id_ = id;
         }
 
         public string id_ = "";
@@ -25,14 +25,14 @@ namespace gymKing.yonetici_forms
         {
 
 
-            personelEkle pers_ekle = new personelEkle();
+            personelEkle pers_ekle = new personelEkle(id_);
             pers_ekle.Show();
             this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            personelSil pers_sil = new personelSil();
+            personelSil pers_sil = new personelSil(id_);
             pers_sil.Show();
             this.Close();
         }
@@ -46,7 +46,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            yonetici yoneticipanel = new yonetici();
+            yonetici yoneticipanel = new yonetici(id_);
             //yoneticipanel.Show();
             this.Close();
             

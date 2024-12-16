@@ -16,22 +16,22 @@ namespace gymKing.yonetici_forms
 {
     public partial class personelGüncelle : Form
     {
-        public personelGüncelle(string id_)
+        public personelGüncelle(string id)
         {
             InitializeComponent();
-            this.id_ = id_;
+            this.id_ = id;
         }
         public string id_ = "";
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri();
+            persIslemleri pers_islem = new persIslemleri(id_);
             this.Close();
             pers_islem.Show();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri();
+            persIslemleri pers_islem = new persIslemleri(id_);
             this.Close();
             pers_islem.Show();
         }
@@ -163,7 +163,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri();
+            persIslemleri pers_islem = new persIslemleri(id_);
             this.Close();
             pers_islem.Show();
         }

@@ -1,4 +1,5 @@
 ﻿using gymKing.oto_Baglanti;
+using iText.Kernel.Crypto.Securityhandler;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,24 +16,26 @@ namespace gymKing.yonetici_forms
 {
     public partial class personelSil : Form
     {
-        public personelSil()
+        public personelSil(string id)
         {
             InitializeComponent();
+            this.id_=id;
 
             //// DataGridView SelectionChanged olayına abone ol
             //dataGridView1.SelectionChanged += new EventHandler(dataGridView1_SelectionChanged);
         }
+        public string id_ = "";
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri();
+            persIslemleri pers_islem = new persIslemleri(id_);
             this.Close();
             pers_islem.Show();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri();
+            persIslemleri pers_islem = new persIslemleri(id_);
             this.Close();
             pers_islem.Show();
         }

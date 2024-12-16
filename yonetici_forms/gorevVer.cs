@@ -12,11 +12,12 @@ namespace gymKing.yonetici_forms
 {
     public partial class gorevVer : Form
     {
-        public gorevVer()
+        public gorevVer(string id)
         {
             InitializeComponent();
+            this.id_=id;
         }
-
+        public string id_ = "";
         public void pictureBox1_Click(object sender, EventArgs e)
         {
             string gorev = txtGorev.Text;
@@ -39,7 +40,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            yonetici yoneticipanel = new yonetici();
+            yonetici yoneticipanel = new yonetici(id_);
             //yoneticipanel.Show();
             this.Close();
         }

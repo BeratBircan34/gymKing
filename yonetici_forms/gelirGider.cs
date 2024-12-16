@@ -15,11 +15,12 @@ namespace gymKing.yonetici_forms
 {
     public partial class gelirGider : Form
     {
-        public gelirGider()
+        public gelirGider(string id)
         {
             InitializeComponent();
+            this.id_=id;
         }
-
+        public string id_ = "";
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             // SQL Bağlantısı

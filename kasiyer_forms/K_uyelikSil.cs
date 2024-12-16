@@ -45,13 +45,6 @@ namespace gymKing.kasiyer_forms
             }
             adgetir.Close();
 
-            SqlCommand getir = new SqlCommand("select neden from tbl_silinme_nedeni",baglanti);
-            SqlDataReader getir2 = getir.ExecuteReader();
-            while (getir2.Read())
-            {
-                comboBoxNeden.Items.Add(getir2["neden"].ToString());
-            }
-            getir2.Close();
 
             baglanti.Close();
         }

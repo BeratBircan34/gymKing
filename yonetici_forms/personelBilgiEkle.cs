@@ -16,11 +16,12 @@ namespace gymKing.yonetici_forms
 {
     public partial class personelBilgiEkle : Form
     {
-        public personelBilgiEkle()
+        public personelBilgiEkle(string id)
         {
             InitializeComponent();
+            this.id_=id;
         }
-
+        public string id_ = "";
         public personelBilgiEkle(string gelenVeri, string gelenVeri2, string gelenVeri3)
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            personelEkle perEkle = new personelEkle();
+            personelEkle perEkle = new personelEkle(id_);
             this.Hide();
             perEkle.Show();
         }
