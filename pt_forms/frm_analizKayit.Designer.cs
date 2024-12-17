@@ -30,6 +30,8 @@
         {
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_egitmen = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.lbl_cinsiyet = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.txt_boyS = new System.Windows.Forms.TextBox();
@@ -87,11 +89,11 @@
             this.lbl_pi = new System.Windows.Forms.Label();
             this.lbl_yi = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.lbl_egitmen = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -130,13 +132,35 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(843, 175);
+            this.groupBox1.Location = new System.Drawing.Point(831, 150);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(389, 404);
+            this.groupBox1.Size = new System.Drawing.Size(389, 408);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kişisel Bilgiler";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lbl_egitmen
+            // 
+            this.lbl_egitmen.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_egitmen.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_egitmen.ForeColor = System.Drawing.Color.DimGray;
+            this.lbl_egitmen.Location = new System.Drawing.Point(220, 375);
+            this.lbl_egitmen.Name = "lbl_egitmen";
+            this.lbl_egitmen.Size = new System.Drawing.Size(95, 26);
+            this.lbl_egitmen.TabIndex = 28;
+            this.lbl_egitmen.Text = "-";
+            // 
+            // label31
+            // 
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.DimGray;
+            this.label31.Location = new System.Drawing.Point(114, 372);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(119, 24);
+            this.label31.TabIndex = 27;
+            this.label31.Text = "Eğitmen :";
             // 
             // lbl_cinsiyet
             // 
@@ -145,7 +169,7 @@
             this.lbl_cinsiyet.ForeColor = System.Drawing.Color.DimGray;
             this.lbl_cinsiyet.Location = new System.Drawing.Point(220, 340);
             this.lbl_cinsiyet.Name = "lbl_cinsiyet";
-            this.lbl_cinsiyet.Size = new System.Drawing.Size(39, 27);
+            this.lbl_cinsiyet.Size = new System.Drawing.Size(95, 27);
             this.lbl_cinsiyet.TabIndex = 26;
             this.lbl_cinsiyet.Text = "-";
             // 
@@ -350,7 +374,7 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.rd_yeniKayit);
             this.panel1.Controls.Add(this.rd_kayitliGuncelle);
-            this.panel1.Location = new System.Drawing.Point(843, 30);
+            this.panel1.Location = new System.Drawing.Point(879, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(298, 125);
             this.panel1.TabIndex = 58;
@@ -370,7 +394,7 @@
             // 
             this.lbl_bboS.AutoSize = true;
             this.lbl_bboS.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_bboS.Location = new System.Drawing.Point(230, 552);
+            this.lbl_bboS.Location = new System.Drawing.Point(250, 552);
             this.lbl_bboS.Name = "lbl_bboS";
             this.lbl_bboS.Size = new System.Drawing.Size(69, 19);
             this.lbl_bboS.TabIndex = 43;
@@ -380,7 +404,7 @@
             // 
             this.lbl_bkoS.AutoSize = true;
             this.lbl_bkoS.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_bkoS.Location = new System.Drawing.Point(247, 507);
+            this.lbl_bkoS.Location = new System.Drawing.Point(250, 504);
             this.lbl_bkoS.Name = "lbl_bkoS";
             this.lbl_bkoS.Size = new System.Drawing.Size(69, 19);
             this.lbl_bkoS.TabIndex = 42;
@@ -518,12 +542,15 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(938, 585);
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.Location = new System.Drawing.Point(938, 569);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 34);
             this.button1.TabIndex = 59;
             this.button1.Text = "KİŞİYİ KAYDET";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label19
@@ -583,7 +610,7 @@
             // 
             this.lbl_boyun.AutoSize = true;
             this.lbl_boyun.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_boyun.Location = new System.Drawing.Point(247, 603);
+            this.lbl_boyun.Location = new System.Drawing.Point(250, 600);
             this.lbl_boyun.Name = "lbl_boyun";
             this.lbl_boyun.Size = new System.Drawing.Size(98, 19);
             this.lbl_boyun.TabIndex = 65;
@@ -711,27 +738,16 @@
             this.pictureBox9.TabIndex = 52;
             this.pictureBox9.TabStop = false;
             // 
-            // label31
+            // pictureBox1
             // 
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.DimGray;
-            this.label31.Location = new System.Drawing.Point(114, 372);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(119, 24);
-            this.label31.TabIndex = 27;
-            this.label31.Text = "Eğitmen :";
-            // 
-            // lbl_egitmen
-            // 
-            this.lbl_egitmen.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_egitmen.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_egitmen.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_egitmen.Location = new System.Drawing.Point(220, 375);
-            this.lbl_egitmen.Name = "lbl_egitmen";
-            this.lbl_egitmen.Size = new System.Drawing.Size(20, 26);
-            this.lbl_egitmen.TabIndex = 28;
-            this.lbl_egitmen.Text = "-";
+            this.pictureBox1.Image = global::gymKing.kaynaklar.arrow_left;
+            this.pictureBox1.Location = new System.Drawing.Point(1194, 600);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 77;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frm_analizKayit
             // 
@@ -739,6 +755,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_yi);
             this.Controls.Add(this.lbl_pi);
             this.Controls.Add(this.lbl_ki);
@@ -786,6 +803,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -854,5 +872,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label lbl_egitmen;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

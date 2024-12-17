@@ -231,7 +231,11 @@
             this.cmbbx_aktivite.ForeColor = System.Drawing.Color.SteelBlue;
             this.cmbbx_aktivite.FormattingEnabled = true;
             this.cmbbx_aktivite.Items.AddRange(new object[] {
-            "1"});
+            "Spor Yapmıyor",
+            "Haftada 1-3 Gün Spor",
+            "Haftada 3-5 Gün Spor",
+            "Haftada 5\'den  fazla Spor",
+            "Günde 2 kez antrenman"});
             this.cmbbx_aktivite.Location = new System.Drawing.Point(247, 111);
             this.cmbbx_aktivite.Name = "cmbbx_aktivite";
             this.cmbbx_aktivite.Size = new System.Drawing.Size(121, 31);

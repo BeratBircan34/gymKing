@@ -39,14 +39,17 @@ namespace gymKing.pt_forms
         {
             try
             {
-                string arakomut = "ad as 'İsim', soyad as 'Soyisim' , ";
+                string arakomut = "ad as 'İsim', soyad as 'Soyisim'  ";
 
                 //Değer Filtreleri
+                if (degerler.Count >= 1)
+                    arakomut += " ,";
                 foreach (string a in degerler)
                 {
 
                     if (degerler.IndexOf(a) == degerler.Count - 1)
                         arakomut += a + " ";
+                    
                     else
                         arakomut += a + " ,";
                 }
@@ -406,6 +409,18 @@ namespace gymKing.pt_forms
             }
         }
 
+        void setCheckedFalse()
+        {
+            cmbbx_soyisim.Enabled = true;
+            chkbx_isimSira_az.Checked = false;
+            chkbx_isimSira_za.Checked = false;
+            chkbx_cinsiyet_e.Checked = false;
+            chkbx_cinsiyet_k.Checked = false;
+            chkbx_islemTarihi_ye.Checked = false;
+            chkbx_islemTarihi_ey.Checked = false;
+            cmbbx_islemTuru.SelectedIndex = -1;
+
+        }
         private void cmbbx_isim_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             CheckGroupBox2ComboBox();
@@ -413,7 +428,7 @@ namespace gymKing.pt_forms
                 cmbbx_soyisim.Enabled = false;
             else
             {
-                cmbbx_soyisim.Enabled = true;
+                setCheckedFalse();
                 bilgiGetir("soyisim");
             }
         }
@@ -426,6 +441,7 @@ namespace gymKing.pt_forms
         private void cmbbx_egitmen_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             CheckGroupBox2ComboBox();
+            setCheckedFalse();
         }
 
         private void chkbx_si_CheckedChanged_1(object sender, EventArgs e)

@@ -226,7 +226,6 @@ namespace gymKing.pt_forms
             cmd.Parameters.AddWithValue("@kalca", (txt_kalcaS.Text));
             cmd.Parameters.AddWithValue("@boy", (txt_boyS.Text));
             cmd.Parameters.AddWithValue("@yas", (txt_yasS.Text));
-            cmd.Parameters.AddWithValue("@tarih", DateTime.Now.Date);
             cmd.Parameters.AddWithValue("@egitmen", lbl_egitmen.Text);
             cmd.Parameters.AddWithValue("@cinsiyet",lbl_cinsiyet.Text);
 
@@ -251,8 +250,8 @@ namespace gymKing.pt_forms
         private void verileriCevirVeYolla()
         {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            string komut_yeniKisi = ("insert into tbl_guncelkayitlar (ad, soyad, bazalMetabolizma, gunlukKalori, metabolikSRisk, vki, vyo, vym, ik, bko, bboy, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen,tarih)" +
-                "values (@ad, @soyad, @bazalMetabolizma, @gunlukKalori, @metabolikSRisk, @vki, @vyo, @vym, @ik, @bko, @bboy, @bboyun, @si, @pi, @ki, @yi, @kilo, @bel, @boyun, @kalca, @boy, @yas ,egitmen,tarih)");
+            string komut_yeniKisi = ("insert into tbl_guncelkayitlar (ad, soyad, bazalMetabolizma, gunlukKalori, metabolikSRisk, vki, vyo, vym, ik, bko, bboy, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen,tarih,cinsiyet)" +
+                "values (@ad, @soyad, @bazalMetabolizma, @gunlukKalori, @metabolikSRisk, @vki, @vyo, @vym, @ik, @bko, @bboy, @bboyun, @si, @pi, @ki, @yi, @kilo, @bel, @boyun, @kalca, @boy, @yas ,@egitmen,@tarih,@cinsiyet)");
             string komut_Kayitlikisi =  "UPDATE tbl_guncelkayitlar SET ad = @ad, soyad = @soyad, bazalMetabolizma = @bazalMetabolizma, gunlukKalori = @gunlukKalori, metabolikSRisk = @metabolikSRisk, vki = @vki, vyo = @vyo, vym = @vym, ik = @ik, bko = @bko, bboy = @bboy, bboyun = @bboyun, si = @si, pi = @pi, ki = @ki, yi = @yi, kilo = @kilo, bel = @bel, boyun = @boyun, kalca = @kalca, boy = @boy, yas = @yas , egitmen = @egitmen, tarih = @tarih";
             baglanti.Open();
             if (rd_yeniKayit.Checked)
@@ -344,6 +343,7 @@ namespace gymKing.pt_forms
 
         private void cmbbx_isim_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cmbbx_soyisim.Items.Clear();
             soyadCek(islemTuru);
         }
 
@@ -355,6 +355,11 @@ namespace gymKing.pt_forms
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

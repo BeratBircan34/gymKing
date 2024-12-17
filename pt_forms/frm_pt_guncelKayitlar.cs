@@ -23,10 +23,12 @@ namespace gymKing.pt_forms
        private void filtreleVeGetir()
         {
             try { 
-            string arakomut = "ad as 'İsim', soyad as 'Soyisim', ";
-           
-            //Değer Filtreleri
-            foreach(string a in degerler)
+            string arakomut = "ad as 'İsim', soyad as 'Soyisim' ";
+
+                //Değer Filtreleri
+                if (degerler.Count >= 1)
+                    arakomut += " ,";
+                foreach (string a in degerler)
             {
                 
                 if (degerler.IndexOf(a) == degerler.Count-1)
@@ -522,6 +524,19 @@ namespace gymKing.pt_forms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            chkbx_isimSira_az.Checked = false;
+            chkbx_isimSira_za.Checked = false;
+            chkbx_cinsiyet_e.Checked = false;
+            chkbx_cinsiyet_k.Checked = false;
+            chkbx_islemTarihi_ey.Checked = false;
+            chkbx_islemTarihi_ye.Checked = false;
+            cmbbx_isim.SelectedIndex = -1;
+            cmbbx_egitmen.SelectedIndex = -1;
+            cmbbx_soyisim.Items.Clear();
         }
     }
     }

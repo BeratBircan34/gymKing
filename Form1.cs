@@ -110,7 +110,7 @@ namespace gymKing
         private void button1_Click(object sender, EventArgs e)
         {
             
-            girisKontrol(txtK_adi.Text, txt_Sifre.Text);
+            
             
         }
 
@@ -123,6 +123,43 @@ namespace gymKing
         {
             personelEkle prs = new personelEkle();
             prs.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; // Formu küçült
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            girisKontrol(txtK_adi.Text, txt_Sifre.Text);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txt_Sifre.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_Sifre.PasswordChar = '*';
+            }
         }
     }
 }

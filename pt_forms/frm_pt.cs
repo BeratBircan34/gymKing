@@ -125,5 +125,45 @@ namespace gymKing
             otoform_ayarla frmgi_ = new otoform_ayarla(frmgi);
             frmgi_.formAc(frmgi,this);
         }
+
+        private void pictureBox7_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox10_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; // Formu küçült
+        }
+
+        private void pictureBox7_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox7.BackColor = Color.IndianRed;
+        }
+
+        private void pictureBox7_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox7.BackColor = Color.Gainsboro;
+        }
+
+        private void pictureBox10_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor = Color.SkyBlue;
+        }
+
+        private void pictureBox10_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor= Color.Gainsboro;
+        }
     }
 }
