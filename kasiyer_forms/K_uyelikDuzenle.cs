@@ -31,13 +31,7 @@ namespace gymKing.kasiyer_forms
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
 
-            SqlCommand getir = new SqlCommand("select cinsiyet from tbl_cinsiyet",baglanti);
-            SqlDataReader cinsiyet = getir.ExecuteReader();
-            while (cinsiyet.Read())
-            {
-                comboBox1.Items.Add(cinsiyet["cinsiyet"].ToString());
-            }
-            cinsiyet.Close();
+
 
             SqlCommand ad = new SqlCommand("select m_ad from tbl_musteriler", baglanti);
             SqlDataReader dr = ad.ExecuteReader();
@@ -203,6 +197,16 @@ namespace gymKing.kasiyer_forms
             {
                 textBoxID.Text = reader["m_id"].ToString();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

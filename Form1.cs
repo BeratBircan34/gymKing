@@ -73,9 +73,10 @@ namespace gymKing
                         MessageBox.Show("Hoşgeldiniz! " + bilgiAl.Ad + " " + bilgiAl.Soyad);
                         break;
                     case "Yönetici":
-                        yonetici yonetici = new yonetici();
+                        yonetici yonetici = new yonetici(id);
                         bilgiAl perrbilgi = new perBilgiAl(id);
                         perrbilgi.bilgi(id);
+                        yonetici.id_ = id;
                         yonetici.yonetici_oturumSahibi = perrbilgi.Ad + " " + perrbilgi.Soyad;
                         yonetici.Show();
                         this.Hide();
@@ -121,7 +122,7 @@ namespace gymKing
 
         private void button2_Click(object sender, EventArgs e)
         {
-            personelEkle prs = new personelEkle();
+            personelEkle prs = new personelEkle(id_);
             prs.Show();
         }
 

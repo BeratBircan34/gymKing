@@ -16,11 +16,12 @@ namespace gymKing.yonetici_forms
 {
     public partial class personelEkle : Form
     {
-        public personelEkle()
+        public personelEkle(string id)
         {
             InitializeComponent();
+            this.id_=id;
         }
-
+        public string id_ = "";
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 

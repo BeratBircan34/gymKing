@@ -15,11 +15,13 @@ namespace gymKing.yonetici_forms
 {
     public partial class yonetici : Form
     {
-        public yonetici()
+        public yonetici(string id)
         {
             InitializeComponent();
+            this.id_ = id;
         }
         public string yonetici_oturumSahibi = "";
+        public string id_ = "";
         private void yonetici_Load(object sender, EventArgs e)
         {
             timer1.Start();
@@ -55,7 +57,7 @@ namespace gymKing.yonetici_forms
         private void pictureBox10_Click_1(object sender, EventArgs e)
         {
 
-            persIslemleri personelislem = new persIslemleri();
+            persIslemleri personelislem = new persIslemleri(id_);
             otoform_ayarla personel_islem = new otoform_ayarla(personelislem);
             personel_islem.formAc(personelislem, this);
 
@@ -73,7 +75,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            personelilan persilan = new personelilan();
+            personelilan persilan = new personelilan(id_);
             otoform_ayarla persilann = new otoform_ayarla(persilan);
             persilann.formAc(persilan, this);
 
@@ -108,7 +110,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            gelirGider gelir_gider = new gelirGider();
+            gelirGider gelir_gider = new gelirGider(id_);
             otoform_ayarla gelir__gider = new otoform_ayarla(gelir_gider);
             gelir__gider.formAc(gelir_gider, this);
         }
@@ -120,7 +122,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox13_Click_1(object sender, EventArgs e)
         {
-            gorevVer gorev = new gorevVer();
+            gorevVer gorev = new gorevVer(id_);
             otoform_ayarla gorevV = new otoform_ayarla(gorev);
             gorevV.formAc(gorev, this);
         }

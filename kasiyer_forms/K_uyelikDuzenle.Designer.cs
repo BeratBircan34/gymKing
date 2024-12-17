@@ -31,6 +31,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.textBoxSifre = new System.Windows.Forms.TextBox();
             this.textBoxKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.comboBoxSoyad = new System.Windows.Forms.ComboBox();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -126,6 +126,31 @@
             this.groupBox1.TabIndex = 73;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Üyelik Bilgileri";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ERKEK",
+            "kadın"});
+            this.comboBox1.Location = new System.Drawing.Point(911, 362);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(288, 29);
+            this.comboBox1.TabIndex = 103;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.SlateGray;
+            this.label16.Location = new System.Drawing.Point(646, 360);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(130, 28);
+            this.label16.TabIndex = 102;
+            this.label16.Text = "Cinsiyet :";
             // 
             // textBoxSifre
             // 
@@ -420,26 +445,6 @@
             this.label15.Size = new System.Drawing.Size(41, 13);
             this.label15.TabIndex = 104;
             this.label15.Text = "label15";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(911, 362);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(288, 29);
-            this.comboBox1.TabIndex = 103;
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.SlateGray;
-            this.label16.Location = new System.Drawing.Point(646, 360);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(130, 28);
-            this.label16.TabIndex = 102;
-            this.label16.Text = "Cinsiyet :";
             // 
             // K_uyelikDuzenle
             // 

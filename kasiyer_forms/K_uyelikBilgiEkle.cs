@@ -26,13 +26,7 @@ namespace gymKing.kasiyer_forms
             baglanti.Open();
 
 
-            SqlCommand getir4 = new SqlCommand("select cinsiyet from tbl_cinsiyet", baglanti);
-            SqlDataReader cinsiyet = getir4.ExecuteReader();
-            while (cinsiyet.Read())
-            {
-                comboBox1.Items.Add(cinsiyet["cinsiyet"].ToString());
-            }
-            cinsiyet.Close();
+
 
             SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
             SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
