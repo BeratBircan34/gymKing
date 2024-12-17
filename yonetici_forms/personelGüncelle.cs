@@ -24,16 +24,12 @@ namespace gymKing.yonetici_forms
         public string id_ = "";
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri(id_);
-            this.Close();
-            pers_islem.Show();
+           
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri(id_);
-            this.Close();
-            pers_islem.Show();
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -78,8 +74,15 @@ namespace gymKing.yonetici_forms
 
         private void comboBoxSoyad_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-     }
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand id = new SqlCommand("select perId from tbl_per_bilgiler where ad ='" + comboBoxAd.Text + "' and soyad = '" + comboBoxSoyad.Text + "'", baglanti);
+            SqlDataReader reader = id.ExecuteReader();
+            while (reader.Read())
+            {
+                textBoxID.Text = reader["perId"].ToString();
+            }
+        }
 
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -87,12 +90,12 @@ namespace gymKing.yonetici_forms
 
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
-            SqlCommand getir = new SqlCommand("select * from tbl_per_bilgiler", baglanti);
+            SqlCommand getir = new SqlCommand("select * from tbl_per_bilgiler where perId =" + textBoxID.Text, baglanti);
             SqlDataReader getir2 = getir.ExecuteReader();
             while (getir2.Read())
             {
-                dateTimePickerDogum.Text = getir2["DogumTarihi"].ToString();
-                dateTimePickerIsegiris.Text = getir2["isegiris"].ToString();              
+                dateTimePickerDogum.Text = getir2["dogumTarihi"].ToString();             
+                dateTimePickerIsegiris.Text = getir2["isegiris"].ToString();
                 textBoxMail.Text = getir2["email"].ToString();
                 textBoxAdres.Text = getir2["adres"].ToString();
                 textBoxTelefon.Text = getir2["telNo"].ToString();
@@ -100,11 +103,10 @@ namespace gymKing.yonetici_forms
             getir2.Close();
 
 
-            SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri", baglanti);
+            SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID =" + textBoxID.Text, baglanti);
             SqlDataReader getir4 = getir3.ExecuteReader();
             while (getir4.Read())
             {
-                textBoxID.Text = getir4["KullaniciID"].ToString();
                 textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
                 textBoxSifre.Text = getir4["sifre"].ToString();
             }
@@ -163,9 +165,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri(id_);
-            this.Close();
-            pers_islem.Show();
+            this.Close();   
         }
     }
 }

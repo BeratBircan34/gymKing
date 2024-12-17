@@ -1,4 +1,5 @@
-﻿using gymKing.oto_Baglanti;
+﻿using gymKing.controls;
+using gymKing.oto_Baglanti;
 using iText.Kernel.Crypto.Securityhandler;
 using System;
 using System.Collections.Generic;
@@ -28,129 +29,131 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri(id_);
-            this.Close();
-            pers_islem.Show();
+           
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            persIslemleri pers_islem = new persIslemleri(id_);
             this.Close();
-            pers_islem.Show();
         }
 
         private void personelSil_Load(object sender, EventArgs e)
         {
-            // VeriYonetimi sınıfından bir örnek oluştur
-            perBilgiCek cek = new perBilgiCek();
+            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
 
-            // GetVeri metodunu çağırarak verileri al
-            DataTable veri = cek.VeriCek();
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand ad = new SqlCommand("select ad from tbl_per_bilgiler", baglanti);
+            SqlDataReader dr = ad.ExecuteReader();
+            while (dr.Read())
+            {
+                comboBoxAd.Items.Add(dr["ad"].ToString());
 
-            // Alınan verileri DataGridView'e yükle
-            dataGridView1.DataSource = veri;
+            }
+            dr.Close();
+
+            SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
+            SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
+            while (adgetir.Read())
+            {
+                label11.Text = adgetir["kullaniciAdi"].ToString();
+            }
+            adgetir.Close();
+
+
+            baglanti.Close();
+
+
+
+
+            //// VeriYonetimi sınıfından bir örnek oluştur
+            //perBilgiCek cek = new perBilgiCek();
+
+            //// GetVeri metodunu çağırarak verileri al
+            //DataTable veri = cek.VeriCek();
+
+            //// Alınan verileri DataGridView'e yükle
+            //dataGridView1.DataSource = veri;
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Seçilen satırdaki hücrelere erişim
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                DataGridViewRow secilenSatir = dataGridView1.SelectedRows[0];
+            //// Seçilen satırdaki hücrelere erişim
+            //if (dataGridView1.SelectedRows.Count > 0)
+            //{
+            //    DataGridViewRow secilenSatir = dataGridView1.SelectedRows[0];
 
-                // TextBox'lara verileri aktar
-                txtad.Text = secilenSatir.Cells["ad"].Value.ToString();
-                txtsoyad.Text = secilenSatir.Cells["soyad"].Value.ToString();
-                txttc.Text = secilenSatir.Cells["tcno"].Value.ToString();
-                txtdogum.Text = secilenSatir.Cells["dogumTarihi"].Value.ToString();
-                txttel.Text = secilenSatir.Cells["telNo"].Value.ToString();
-                txtmail.Text = secilenSatir.Cells["email"].Value.ToString();
-                txtrol.Text = secilenSatir.Cells["rol"].Value.ToString();
-                txtadres.Text = secilenSatir.Cells["adres"].Value.ToString();
+            //    // TextBox'lara verileri aktar
+            //    txtad.Text = secilenSatir.Cells["ad"].Value.ToString();
+            //    txtsoyad.Text = secilenSatir.Cells["soyad"].Value.ToString();
+            //    txttc.Text = secilenSatir.Cells["tcno"].Value.ToString();
+            //    txtdogum.Text = secilenSatir.Cells["dogumTarihi"].Value.ToString();
+            //    txttel.Text = secilenSatir.Cells["telNo"].Value.ToString();
+            //    txtmail.Text = secilenSatir.Cells["email"].Value.ToString();
+            //    txtrol.Text = secilenSatir.Cells["rol"].Value.ToString();
+            //    txtadres.Text = secilenSatir.Cells["adres"].Value.ToString();
 
             }
-        }
 
-        private void personelSil_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            // TextBox'lardaki değerleri almak
-            string ad = txtad.Text;
-            string soyad = txtsoyad.Text;
-            string tc = txttc.Text;
-            string dogum = txtdogum.Text;
-            string telefon = txttel.Text;
-            string email = txtmail.Text;
-            string rol = txtrol.Text;
-            string adres = txtadres.Text;
-
-            // Veritabanı bağlantısını açma
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-
-            try
+            baglanti.Open();
+            SqlCommand getir = new SqlCommand("select * from tbl_per_bilgiler where perId = " + textBoxID.Text, baglanti);
+            SqlDataReader getir2 = getir.ExecuteReader();
+            while (getir2.Read())
             {
-                baglanti.Open();
-
-                // Tarih formatını kontrol et ve uygun şekilde dönüşüm yap
-                DateTime dogumTarihi;
-                if (!DateTime.TryParse(dogum, out dogumTarihi))
-                {
-                    MessageBox.Show("Geçersiz tarih formatı.");
-                    return;
-                }
-
-                // SQL sorgusunu oluşturma (sadece WHERE şartında kullanılacak)
-                string silme = @"
-            DELETE FROM tbl_per_bilgiler
-            WHERE 
-                ad = @ad AND
-                soyad = @soyad AND
-                TCNO = @TCNO AND
-                dogumTarihi = @dogumTarihi AND
-                rol = @rol AND
-                adres = @adres AND
-                telNo = @telefon AND
-                email = @email";
-
-                SqlCommand sil = new SqlCommand(silme, baglanti);
-
-                // Parametreleri ekleme
-                sil.Parameters.AddWithValue("@ad", ad);
-                sil.Parameters.AddWithValue("@soyad", soyad);
-                sil.Parameters.AddWithValue("@TCNO", tc);
-                sil.Parameters.AddWithValue("@dogumTarihi", dogumTarihi.ToString("yyyy-MM-dd"));  // Tarihi ISO formatına zorla
-                sil.Parameters.AddWithValue("@rol", rol);
-                sil.Parameters.AddWithValue("@adres", adres);
-                sil.Parameters.AddWithValue("@telefon", telefon);
-                sil.Parameters.AddWithValue("@email", email);
-
-                // Silme işlemi
-                int sonuc = sil.ExecuteNonQuery(); // SQL komutunu çalıştırma
-
-                // Sonuç kontrolü
-                if (sonuc > 0)
-                {
-                    MessageBox.Show("Kayıt başarıyla silindi.");
-                }
-                else
-                {
-                    MessageBox.Show("Kayıt bulunamadı veya silinemedi.");
-                }
+                dateTimePickerDogum.Text = getir2["dogumTarihi"].ToString();
+                dateTimePickerIsegiris.Text = getir2["isegiris"].ToString();
+                textBoxMail.Text = getir2["email"].ToString();
+                textBoxAdres.Text = getir2["adres"].ToString();
+                textBoxTelefon.Text = getir2["telNo"].ToString();
             }
-            catch (Exception ex)
+            getir2.Close();
+
+
+            SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID = " + textBoxID.Text, baglanti);
+            SqlDataReader getir4 = getir3.ExecuteReader();
+            while (getir4.Read())
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
+                textBoxSifre.Text = getir4["sifre"].ToString();
             }
-            finally
+            getir4.Close();
+            baglanti.Close();
+        }
+
+        private void comboBoxSoyad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand id = new SqlCommand("select perId from tbl_per_bilgiler where ad ='" + comboBoxAd.Text + "' and soyad = '" + comboBoxSoyad.Text + "'", baglanti);
+            SqlDataReader reader = id.ExecuteReader();
+            while (reader.Read())
             {
-                baglanti.Close(); // Bağlantıyı kapatma
+                textBoxID.Text = reader["perId"].ToString();
             }
+        }
+
+        private void comboBoxAd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            string sorgu = "SELECT soyad FROM tbl_per_bilgiler WHERE ad = @Ad";
+            SqlCommand soyad = new SqlCommand(sorgu, baglanti);
+            soyad.Parameters.AddWithValue("@Ad", comboBoxAd.Text);
+            SqlDataReader dr = soyad.ExecuteReader();
+            comboBoxSoyad.Items.Clear();
+            while (dr.Read())
+            {
+                comboBoxSoyad.Items.Add(dr["soyad"].ToString());
+            }
+            dr.Close();
+            baglanti.Close();
         }
     }
-}
+
+       
+        }
+   

@@ -36,7 +36,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,12 +51,21 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.comboBoxPT = new System.Windows.Forms.ComboBox();
+            this.buttonGirisYap = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxKasiyer = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -67,12 +75,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_saat
@@ -143,29 +153,18 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 124);
+            this.label2.Location = new System.Drawing.Point(131, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 24);
             this.label2.TabIndex = 44;
             this.label2.Text = "PT PANEL";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(106, 437);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 24);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "ÜYE PANEL";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(106, 227);
+            this.label4.Location = new System.Drawing.Point(131, 257);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(195, 24);
             this.label4.TabIndex = 48;
@@ -176,7 +175,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(106, 331);
+            this.label6.Location = new System.Drawing.Point(131, 418);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(211, 24);
             this.label6.TabIndex = 50;
@@ -246,7 +245,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::gymKing.kaynaklar.GY_TELIF2;
-            this.pictureBox15.Location = new System.Drawing.Point(109, 530);
+            this.pictureBox15.Location = new System.Drawing.Point(106, 513);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(208, 63);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -258,7 +257,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::gymKing.kaynaklar.copyright_logo_png_clipart_best_5;
-            this.pictureBox14.Location = new System.Drawing.Point(51, 530);
+            this.pictureBox14.Location = new System.Drawing.Point(48, 513);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(52, 51);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -305,7 +304,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::gymKing.kaynaklar.transparentGYMKING;
-            this.pictureBox9.Location = new System.Drawing.Point(415, 3);
+            this.pictureBox9.Location = new System.Drawing.Point(385, 12);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(385, 161);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -316,7 +315,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::gymKing.kaynaklar.cleanerPNG;
-            this.pictureBox8.Location = new System.Drawing.Point(110, 264);
+            this.pictureBox8.Location = new System.Drawing.Point(135, 345);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(116, 64);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -328,7 +327,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::gymKing.kaynaklar.cashierpnl;
-            this.pictureBox7.Location = new System.Drawing.Point(110, 160);
+            this.pictureBox7.Location = new System.Drawing.Point(135, 190);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(116, 64);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -336,23 +335,11 @@
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = global::gymKing.kaynaklar.users_alt;
-            this.pictureBox6.Location = new System.Drawing.Point(110, 370);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(116, 64);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 45;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::gymKing.kaynaklar.PT_PANEL_PNG;
-            this.pictureBox5.Location = new System.Drawing.Point(110, 57);
+            this.pictureBox5.Location = new System.Drawing.Point(135, 39);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(116, 64);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -406,11 +393,133 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Cooper Black", 13F);
+            this.label10.ForeColor = System.Drawing.Color.SlateGray;
+            this.label10.Location = new System.Drawing.Point(1117, 347);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(123, 57);
+            this.label10.TabIndex = 74;
+            this.label10.Text = "Personel Güncelle";
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Cooper Black", 14F);
+            this.label11.ForeColor = System.Drawing.Color.SlateGray;
+            this.label11.Location = new System.Drawing.Point(1004, 347);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 44);
+            this.label11.TabIndex = 73;
+            this.label11.Text = "Personel Silme";
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Cooper Black", 13F);
+            this.label12.ForeColor = System.Drawing.Color.SlateGray;
+            this.label12.Location = new System.Drawing.Point(896, 347);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(102, 44);
+            this.label12.TabIndex = 72;
+            this.label12.Text = "Personel Ekleme";
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox16.Image = global::gymKing.kaynaklar.edit;
+            this.pictureBox16.Location = new System.Drawing.Point(1138, 280);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(65, 59);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 71;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox17.Image = global::gymKing.kaynaklar.remove;
+            this.pictureBox17.Location = new System.Drawing.Point(1028, 280);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(63, 59);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 70;
+            this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox18.Image = global::gymKing.kaynaklar.add;
+            this.pictureBox18.Location = new System.Drawing.Point(916, 280);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(71, 59);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 69;
+            this.pictureBox18.TabStop = false;
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
+            // 
+            // comboBoxPT
+            // 
+            this.comboBoxPT.FormattingEnabled = true;
+            this.comboBoxPT.Location = new System.Drawing.Point(135, 133);
+            this.comboBoxPT.Name = "comboBoxPT";
+            this.comboBoxPT.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPT.TabIndex = 76;
+            // 
+            // buttonGirisYap
+            // 
+            this.buttonGirisYap.BackColor = System.Drawing.Color.Transparent;
+            this.buttonGirisYap.Font = new System.Drawing.Font("Britannic Bold", 13.25F);
+            this.buttonGirisYap.Location = new System.Drawing.Point(149, 160);
+            this.buttonGirisYap.Name = "buttonGirisYap";
+            this.buttonGirisYap.Size = new System.Drawing.Size(75, 24);
+            this.buttonGirisYap.TabIndex = 77;
+            this.buttonGirisYap.Text = "Geçiş";
+            this.buttonGirisYap.UseVisualStyleBackColor = false;
+            this.buttonGirisYap.Click += new System.EventHandler(this.buttonGirisYap_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Font = new System.Drawing.Font("Britannic Bold", 13.25F);
+            this.button1.Location = new System.Drawing.Point(149, 311);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 28);
+            this.button1.TabIndex = 79;
+            this.button1.Text = "Geçiş";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBoxKasiyer
+            // 
+            this.comboBoxKasiyer.FormattingEnabled = true;
+            this.comboBoxKasiyer.Location = new System.Drawing.Point(135, 284);
+            this.comboBoxKasiyer.Name = "comboBoxKasiyer";
+            this.comboBoxKasiyer.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxKasiyer.TabIndex = 78;
+            // 
             // yonetici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 605);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBoxKasiyer);
+            this.Controls.Add(this.buttonGirisYap);
+            this.Controls.Add(this.comboBoxPT);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox15);
@@ -426,8 +535,6 @@
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label5);
@@ -452,12 +559,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -477,8 +586,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -494,5 +601,15 @@
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.ComboBox comboBoxPT;
+        private System.Windows.Forms.Button buttonGirisYap;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxKasiyer;
     }
 }

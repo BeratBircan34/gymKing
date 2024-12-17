@@ -1,15 +1,19 @@
 ﻿using gymKing.controls;
 using gymKing.kasiyer_forms;
+using gymKing.oto_Baglanti;
 using gymKing.pt_forms;
+using gymKing.Üye_forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gymKing.yonetici_forms
 {
@@ -29,6 +33,61 @@ namespace gymKing.yonetici_forms
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
             otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+
+            // ComboBox'ları temizliyoruz
+            comboBoxPT.Items.Clear();
+            comboBoxKasiyer.Items.Clear();
+            comboBoxTemizlik.Items.Clear();
+
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+
+            // "Pt" rolündeki kullanıcıları getiren SQL sorgusu
+            SqlCommand kmt = new SqlCommand("SELECT KullaniciID, kullaniciAdi FROM tbl_giris_bilgileri WHERE rol = 'Pt'", baglanti);
+            SqlDataReader dr = kmt.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string kullaniciAdi = dr["kullaniciAdi"].ToString();
+                string kullaniciID = dr["KullaniciID"].ToString();
+
+                // UserItem nesnesi oluşturup ComboBox'a ekliyoruz
+                comboBoxPT.Items.Add(new UserItem { Ad = kullaniciAdi, ID = kullaniciID });
+            }
+
+            dr.Close();
+
+            // "Kasiyer" rolündeki kullanıcıları getiren SQL sorgusu
+            SqlCommand kmt2 = new SqlCommand("SELECT KullaniciID, kullaniciAdi FROM tbl_giris_bilgileri WHERE rol = 'Kasiyer'", baglanti);
+            SqlDataReader dr2 = kmt2.ExecuteReader();
+
+            while (dr2.Read())
+            {
+                string kullaniciAdi = dr2["kullaniciAdi"].ToString();
+                string kullaniciID = dr2["KullaniciID"].ToString();
+
+                // UserItem nesnesi oluşturup ComboBox2'ye ekliyoruz
+                comboBoxKasiyer.Items.Add(new UserItem { Ad = kullaniciAdi, ID = kullaniciID });
+            }
+
+            dr2.Close();
+
+            //// "Temizlikçi" rolündeki kullanıcıları getiren SQL sorgusu
+            //SqlCommand kmt3 = new SqlCommand("SELECT KullaniciID, kullaniciAdi FROM tbl_giris_bilgileri WHERE rol = 'Temizlikçi'", baglanti);
+            //SqlDataReader dr3 = kmt3.ExecuteReader();
+
+            //while (dr3.Read())
+            //{
+            //    string kullaniciAdi = dr3["kullaniciAdi"].ToString();
+            //    string kullaniciID = dr3["KullaniciID"].ToString();
+
+            //    // UserItem nesnesi oluşturup ComboBoxTemizlik'e ekliyoruz
+            //    comboBoxTemizlik.Items.Add(new UserItem { Ad = kullaniciAdi, ID = kullaniciID });
+            //}
+
+            //dr3.Close();
+            baglanti.Close();
+
 
         }
 
@@ -57,13 +116,9 @@ namespace gymKing.yonetici_forms
         private void pictureBox10_Click_1(object sender, EventArgs e)
         {
 
-            persIslemleri personelislem = new persIslemleri(id_);
-            otoform_ayarla personel_islem = new otoform_ayarla(personelislem);
-            personel_islem.formAc(personelislem, this);
+           
 
-            //persIslemleri persislem = new persIslemleri();
-            //persislem.Show(); 
-            //this.Close();
+            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -79,9 +134,7 @@ namespace gymKing.yonetici_forms
             otoform_ayarla persilann = new otoform_ayarla(persilan);
             persilann.formAc(persilan, this);
 
-            //İstatistikler istatistik = new İstatistikler();
-            //otoform_ayarla istatistikk = new otoform_ayarla(istatistik);
-            //istatistikk.formAc(istatistik, this);
+            
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -95,17 +148,22 @@ namespace gymKing.yonetici_forms
             //otoform_ayarla kasiyerrr = new otoform_ayarla(kasiyerr);
             //kasiyerrr.formAc(kasiyerr, this);
 
-            //Kasiyer kasiyerr = new Kasiyer();
-            //kasiyerr.Show();
-            //this.Close();
+            Kasiyer kasiyerr = new Kasiyer(id_);
+            kasiyerr.Show();
+            this.Close();
 
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Temizlik temizlikk = new Temizlik();
-            otoform_ayarla temizlikkk = new otoform_ayarla(temizlikk);
-            temizlikkk.formAc(temizlikk, this);
+            Temizlik temizlikfrm =new Temizlik();
+            temizlikfrm.Show();
+            this.Close();
+
+            //Temizlik temizlikk = new Temizlik();
+            //otoform_ayarla temizlikkk = new otoform_ayarla(temizlikk);
+            //temizlikkk.formAc(temizlikk, this);
+            
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
@@ -125,6 +183,147 @@ namespace gymKing.yonetici_forms
             gorevVer gorev = new gorevVer(id_);
             otoform_ayarla gorevV = new otoform_ayarla(gorev);
             gorevV.formAc(gorev, this);
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            personelEkle pers_ekle = new personelEkle(id_);
+            otoform_ayarla pers_ekle2 = new otoform_ayarla(pers_ekle);
+            pers_ekle2.formAc(pers_ekle, this);
+            
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            personelSil pers_sil = new personelSil(id_);
+            otoform_ayarla pers_sil2 = new otoform_ayarla(pers_sil);
+            pers_sil2.formAc(pers_sil, this);
+
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            personelGüncelle pers_güncelle = new personelGüncelle(id_);
+            otoform_ayarla pers_güncelle2 = new otoform_ayarla(pers_güncelle);
+            pers_güncelle2.formAc(pers_güncelle, this);
+
+        }
+
+        private string getUserRole(string kullaniciID)
+        {
+            string rol = "";
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand kmt = new SqlCommand("SELECT rol FROM tbl_giris_bilgileri WHERE KullaniciID = @KullaniciID", baglanti);
+            kmt.Parameters.AddWithValue("@KullaniciID", kullaniciID);
+            SqlDataReader dr = kmt.ExecuteReader();
+            if (dr.Read())
+            {
+                rol = dr["rol"].ToString();
+            }
+            dr.Close();
+            baglanti.Close();
+            return rol;
+        }
+
+        private string getUserName(string kullaniciID)
+        {
+            string adSoyad = "";
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand kmt = new SqlCommand("SELECT kullaniciAdi FROM tbl_giris_bilgileri WHERE KullaniciID = @KullaniciID", baglanti);
+            kmt.Parameters.AddWithValue("@KullaniciID", kullaniciID);
+            SqlDataReader dr = kmt.ExecuteReader();
+            if (dr.Read())
+            {
+                adSoyad = dr["kullaniciAdi"].ToString(); // Kullanıcı adı burada alınabilir
+            }
+            dr.Close();
+            baglanti.Close();
+            return adSoyad;
+        }      
+
+        public class UserItem
+        {
+            public string Ad { get; set; }
+            public string ID { get; set; }
+
+            // ComboBox'ta sadece kullanıcı adını gösterebilmek için ToString() metodunu override ediyoruz
+            public override string ToString()
+            {
+                return Ad;  // ComboBox'ta sadece kullanıcı adını gösterecek
+            }
+        }
+
+
+        private void buttonGirisYap_Click(object sender, EventArgs e)
+        {
+            if (comboBoxPT.SelectedItem != null)
+            {
+                // Seçilen öğeyi UserItem türünde alıyoruz
+                UserItem selectedItem = comboBoxPT.SelectedItem as UserItem;
+                string kullaniciAdi = selectedItem.Ad;
+                string kullaniciID = selectedItem.ID;
+
+                // Kullanıcı ID'sine göre rolü ve diğer bilgileri almak için
+                string rol = getUserRole(kullaniciID);
+
+                switch (rol)
+                {
+                    case "Pt":
+                        frm_pt frmpt = new frm_pt();
+                        frmpt.oturmSahibi = getUserName(kullaniciID);
+                        frmpt.Show();
+                        break;
+                    case "Kasiyer":
+                        Kasiyer kasiyer = new Kasiyer(kullaniciID);
+                        kasiyer.kasiyer_oturumSahibi = getUserName(kullaniciID);
+                        kasiyer.Show();
+                        break;
+                    default:
+                        MessageBox.Show("Seçilen kullanıcının rolü geçerli değil.");
+                        break;
+                }
+            }
+        }
+
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (comboBoxKasiyer.SelectedItem != null)
+            {
+                // Seçilen öğeyi UserItem türünde alıyoruz
+                UserItem selectedKasiyerItem = comboBoxKasiyer.SelectedItem as UserItem;
+                string kullaniciAdiKasiyer = selectedKasiyerItem.Ad;
+                string kullaniciIDKasiyer = selectedKasiyerItem.ID;
+
+                // Kullanıcı ID'sine göre rolü ve diğer bilgileri almak için
+                string rolKasiyer = getUserRole(kullaniciIDKasiyer);
+
+                switch (rolKasiyer)
+                {
+                    case "Pt":
+                        frm_pt frmptKasiyer = new frm_pt();
+                        frmptKasiyer.oturmSahibi = getUserName(kullaniciIDKasiyer);
+                        frmptKasiyer.Show();
+                        break;
+                    case "Kasiyer":
+                        Kasiyer kasiyer = new Kasiyer(kullaniciIDKasiyer);
+                        kasiyer.kasiyer_oturumSahibi = getUserName(kullaniciIDKasiyer);
+                        kasiyer.Show();
+                        break;
+                    default:
+                        MessageBox.Show("Seçilen kullanıcının rolü geçerli değil.");
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen bir kullanıcı seçin.");
+            }
+
         }
     }
 }

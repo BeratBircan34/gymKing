@@ -62,36 +62,35 @@ namespace gymKing.yonetici_forms
 
             // SQL sorgusu (parametreli.)
             string güncelle = @"
-             UPDATE tbl_per_bilgiler
-             SET 
-                ad = @pAd, 
-                soyad = @pSoyad, 
-                isegiris =@pisegiris
-                TCNO = @ptcno,
-                DogumTarihi = @pDogumTarihi,
-                telNo = @pTelNo, 
-                email = @pEmail,
-                adres = @pAdres, 
-                rol = @pRol                         
-             WHERE perId = @perId";
+                 UPDATE tbl_per_bilgiler
+                 SET
+             ad = @pad, 
+             soyad = @psoyad, 
+             isegiris = @pisegiris,
+             TCNO = @ptcno,
+             dogumTarihi = @pDogumTarihi,
+             telNo = @pTelNo, 
+             email = @pEmail,
+             adres = @pAdres, 
+             rol = @pRol
+                 WHERE perId = @perId;";  // perId için geçerli bir değer ekleyin
 
-            SqlCommand ekle = new SqlCommand(güncelle, baglanti);
+            SqlCommand komut = new SqlCommand(güncelle, baglanti);
 
-            ekle.Parameters.AddWithValue("@pAd", textBoxAd.Text);
-            ekle.Parameters.AddWithValue("@pSoyad", textBoxSoyad.Text);
-            ekle.Parameters.AddWithValue("@ptcno", textBoxTC.Text);
-            ekle.Parameters.AddWithValue("@pDogumTarihi", dateTimePickerDogum.Value);
-            ekle.Parameters.AddWithValue("@pTelNo", textBoxTelefon.Text);
-            ekle.Parameters.AddWithValue("@pEmail", textBoxMail.Text);
-            ekle.Parameters.AddWithValue("@pRol", comboBoxRol.Text);
-            ekle.Parameters.AddWithValue("@pAdres", textBoxAdres.Text);
-            ekle.Parameters.AddWithValue("@pisegiris", dateTimePickerİseGiris.Value);
-            ekle.Parameters.AddWithValue("@perId", textBoxID.Text);
+            komut.Parameters.AddWithValue("@pad", textBoxAd.Text);
+            komut.Parameters.AddWithValue("@psoyad", textBoxSoyad.Text);
+            komut.Parameters.AddWithValue("@ptcno", textBoxTC.Text);
+            komut.Parameters.AddWithValue("@pDogumTarihi", dateTimePickerDogum.Value);
+            komut.Parameters.AddWithValue("@pTelNo", textBoxTelefon.Text);
+            komut.Parameters.AddWithValue("@pEmail", textBoxMail.Text);
+            komut.Parameters.AddWithValue("@pRol", comboBoxRol.Text);
+            komut.Parameters.AddWithValue("@pAdres", textBoxAdres.Text);
+            komut.Parameters.AddWithValue("@pisegiris", dateTimePickerİseGiris.Value);
+            komut.Parameters.AddWithValue("@perId", textBoxID.Text); // perId için geçerli bir değer ekleyin
 
-            ekle.ExecuteNonQuery();
+            // Execute the update command
+            int etkilenenSatir = komut.ExecuteNonQuery();
 
-
-            int etkilenenSatir = ekle.ExecuteNonQuery();
             if (etkilenenSatir > 0)
             {
                 MessageBox.Show("Personel Bilgileri Başarıyla Güncellendi!");
@@ -99,11 +98,9 @@ namespace gymKing.yonetici_forms
             else
             {
                 MessageBox.Show("Güncelleme işlemi başarısız oldu. Hiçbir satır güncellenmedi.");
-
             }
 
             baglanti.Close();
-
         }
 
         

@@ -418,7 +418,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.SlateGray;
-            this.label15.Location = new System.Drawing.Point(847, 27);
+            this.label15.Location = new System.Drawing.Point(847, 26);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(60, 28);
             this.label15.TabIndex = 108;
