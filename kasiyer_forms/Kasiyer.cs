@@ -46,7 +46,7 @@ namespace gymKing.kasiyer_forms
             }
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
         }
 
       
@@ -68,9 +68,7 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-            urunSatis urun = new urunSatis(id_);
-            otoform_ayarla urunn = new otoform_ayarla(urun);
-            urunn.formAc(urun, this);
+
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)

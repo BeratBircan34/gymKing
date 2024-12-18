@@ -75,6 +75,9 @@
             this.comboBoxNeden.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNeden.FormattingEnabled = true;
             this.comboBoxNeden.ItemHeight = 21;
+            this.comboBoxNeden.Items.AddRange(new object[] {
+            "Üyelik Süresinin Dolması",
+            "Kurallara Uymamak"});
             this.comboBoxNeden.Location = new System.Drawing.Point(895, 652);
             this.comboBoxNeden.Name = "comboBoxNeden";
             this.comboBoxNeden.Size = new System.Drawing.Size(244, 29);
@@ -468,6 +471,7 @@
             this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 112;
             this.label11.Text = "label11";
+            this.label11.Visible = false;
             // 
             // K_uyelikSil
             // 

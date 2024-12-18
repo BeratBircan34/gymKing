@@ -194,20 +194,8 @@
     <Compile Include="kasiyer_forms\K_uyelikSil.Designer.cs">
       <DependentUpon>K_uyelikSil.cs</DependentUpon>
     </Compile>
-    <Compile Include="kasiyer_forms\Sepet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kasiyer_forms\Sepet.Designer.cs">
-      <DependentUpon>Sepet.cs</DependentUpon>
-    </Compile>
     <Compile Include="kasiyer_forms\sifreUretme.cs" />
     <Compile Include="kasiyer_forms\Urunler.cs" />
-    <Compile Include="kasiyer_forms\urunSatis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kasiyer_forms\urunSatis.Designer.cs">
-      <DependentUpon>urunSatis.cs</DependentUpon>
-    </Compile>
     <Compile Include="kaynaklar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -344,12 +332,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="kasiyer_forms\K_uyelikSil.resx">
       <DependentUpon>K_uyelikSil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="kasiyer_forms\Sepet.resx">
-      <DependentUpon>Sepet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="kasiyer_forms\urunSatis.resx">
-      <DependentUpon>urunSatis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kaynaklar.resx">
       <Generator>ResXFileCodeGenerator</Generator>

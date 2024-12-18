@@ -37,12 +37,46 @@ namespace gymKing.yonetici_forms
                 MessageBox.Show("Görev alanı boş olamaz!");
             }
         }
-
+        void ShowParentControls()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (!(control is MdiClient)) // MDI alanını gösterme
+                {
+                    control.Visible = true; // Kontrolleri tekrar görünür yap
+                }
+            }
+        }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            yonetici yoneticipanel = new yonetici(id_);
+            //yonetici yoneticipanel = new yonetici(id_);
             //yoneticipanel.Show();
+            Form parentForm = this.MdiParent;
+            if (parentForm != null)
+            {
+                // Parent formdaki kontrolleri görünür yap
+                foreach (Control control in parentForm.Controls)
+                {
+                    control.Visible = true;
+                }
+            }
             this.Close();
+            /*this.FormClosed += (s, args) => ShowParentControls();
+            foreach (Control control in this.Controls)
+            {
+                if (!control.Visible) // Eğer kontrol gizli ise
+                {
+                    control.Visible = true; // Görünür yap
+                    
+                }
+            }*/
+
+        }
+
+        private void gorevVer_Load(object sender, EventArgs e)
+        {
+            
+            //this.Size = new System.Drawing.Size(800,800);
         }
     }
 }

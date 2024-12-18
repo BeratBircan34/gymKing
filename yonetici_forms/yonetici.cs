@@ -156,7 +156,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Temizlik temizlikfrm =new Temizlik();
+            Temizlik temizlikfrm =new Temizlik(id_);
             temizlikfrm.Show();
             this.Close();
 
@@ -180,9 +180,27 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox13_Click_1(object sender, EventArgs e)
         {
-            gorevVer gorev = new gorevVer(id_);
-            otoform_ayarla gorevV = new otoform_ayarla(gorev);
-            gorevV.formAc(gorev, this);
+            
+            foreach (Control control in this.Controls)
+            {
+                if (control is MdiClient mdiClient)
+                {
+                    // mdiClient.BackColor = Color.White; // Arka planı beyaza ayarla veya istediğiniz bir renge
+                }
+                else
+                {
+                    control.Visible = false; // Diğer kontrolleri gizle
+                }
+            }
+            gorevVer gorev = new gorevVer(id_)
+            {
+                MdiParent = this, // Parent formu belirt
+                Text = "Child Form",             
+                StartPosition = FormStartPosition.CenterScreen // Ortada açılması için
+            };
+            gorev.Show();
+            gorev.BringToFront();
+
         }
 
         private void pictureBox18_Click(object sender, EventArgs e)

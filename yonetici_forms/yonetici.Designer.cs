@@ -184,7 +184,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.SlateGray;
-            this.label7.Location = new System.Drawing.Point(743, 543);
+            this.label7.Location = new System.Drawing.Point(822, 518);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 27);
             this.label7.TabIndex = 56;
@@ -196,7 +196,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.SlateGray;
-            this.label8.Location = new System.Drawing.Point(913, 543);
+            this.label8.Location = new System.Drawing.Point(451, 519);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(164, 27);
             this.label8.TabIndex = 59;
@@ -208,7 +208,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.SlateGray;
-            this.label9.Location = new System.Drawing.Point(551, 543);
+            this.label9.Location = new System.Drawing.Point(623, 519);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(173, 27);
             this.label9.TabIndex = 67;
@@ -218,7 +218,7 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Image = global::gymKing.kaynaklar.users_alt;
-            this.pictureBox13.Location = new System.Drawing.Point(556, 442);
+            this.pictureBox13.Location = new System.Drawing.Point(628, 418);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(142, 75);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -253,7 +253,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::gymKing.kaynaklar.statisticsPNG;
-            this.pictureBox12.Location = new System.Drawing.Point(918, 442);
+            this.pictureBox12.Location = new System.Drawing.Point(456, 418);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(142, 75);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -265,7 +265,7 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = global::gymKing.kaynaklar.users_alt;
-            this.pictureBox11.Location = new System.Drawing.Point(748, 442);
+            this.pictureBox11.Location = new System.Drawing.Point(827, 417);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(142, 75);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -371,7 +371,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Cooper Black", 18.25F);
             this.label10.ForeColor = System.Drawing.Color.SlateGray;
-            this.label10.Location = new System.Drawing.Point(937, 344);
+            this.label10.Location = new System.Drawing.Point(822, 337);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(140, 65);
             this.label10.TabIndex = 74;
@@ -382,7 +382,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Cooper Black", 18.25F);
             this.label11.ForeColor = System.Drawing.Color.SlateGray;
-            this.label11.Location = new System.Drawing.Point(752, 335);
+            this.label11.Location = new System.Drawing.Point(640, 328);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(138, 59);
             this.label11.TabIndex = 73;
@@ -393,7 +393,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Cooper Black", 18.25F);
             this.label12.ForeColor = System.Drawing.Color.SlateGray;
-            this.label12.Location = new System.Drawing.Point(554, 344);
+            this.label12.Location = new System.Drawing.Point(451, 337);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(131, 65);
             this.label12.TabIndex = 72;
@@ -404,7 +404,7 @@
             this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox16.Image = global::gymKing.kaynaklar.edit;
-            this.pictureBox16.Location = new System.Drawing.Point(939, 239);
+            this.pictureBox16.Location = new System.Drawing.Point(824, 232);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(121, 93);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -417,7 +417,7 @@
             this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox17.Image = global::gymKing.kaynaklar.remove;
-            this.pictureBox17.Location = new System.Drawing.Point(748, 239);
+            this.pictureBox17.Location = new System.Drawing.Point(636, 232);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(121, 93);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -430,7 +430,7 @@
             this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox18.Image = global::gymKing.kaynaklar.add;
-            this.pictureBox18.Location = new System.Drawing.Point(559, 239);
+            this.pictureBox18.Location = new System.Drawing.Point(456, 232);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(121, 93);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -517,8 +517,10 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "yonetici";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "yonetici";
             this.Load += new System.EventHandler(this.yonetici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();

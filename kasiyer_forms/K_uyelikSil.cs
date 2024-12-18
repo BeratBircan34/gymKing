@@ -12,7 +12,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace gymKing.kasiyer_forms
-{
+{       
+                // Tablolardan Gerekli Verileri Çeker, Seçilen Kullanıcının Verilerini Tablolardan Siler
+                // İşlemi Yapan Kişiyi, İşlem Yapılan Kişiyi... Raporlar
     public partial class K_uyelikSil : Form
     {
         public K_uyelikSil(string id_)
@@ -24,7 +26,7 @@ namespace gymKing.kasiyer_forms
 
         private void K_uyelikSil_Load(object sender, EventArgs e)
         {
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
 
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();

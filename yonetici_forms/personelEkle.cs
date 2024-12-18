@@ -1,4 +1,5 @@
-﻿using gymKing.kasiyer_forms;
+﻿using gymKing.controls;
+using gymKing.kasiyer_forms;
 using gymKing.oto_Baglanti;
 using System;
 using System.Collections.Generic;
@@ -81,8 +82,11 @@ namespace gymKing.yonetici_forms
             string gelenVeri2 = textBoxSoyad.Text;
             string gelenVeri3 = comboBoxRol.Text;
             personelBilgiEkle perBilgiEkle = new personelBilgiEkle(gelenVeri, gelenVeri2, gelenVeri3);
-            this.Close();
+            perBilgiEkle.BringToFront();
             perBilgiEkle.Show();
+            //otoform_ayarla perbilgiekle_C = new otoform_ayarla(perBilgiEkle);
+           // perbilgiekle_C.formAc(perBilgiEkle, this);
+
 
         }
 

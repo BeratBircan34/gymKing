@@ -133,8 +133,8 @@
             this.comboBox1.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "ERKEK",
-            "kadın"});
+            "Erkek",
+            "Kadın"});
             this.comboBox1.Location = new System.Drawing.Point(911, 362);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(288, 29);
@@ -445,6 +445,7 @@
             this.label15.Size = new System.Drawing.Size(41, 13);
             this.label15.TabIndex = 104;
             this.label15.Text = "label15";
+            this.label15.Visible = false;
             // 
             // K_uyelikDuzenle
             // 

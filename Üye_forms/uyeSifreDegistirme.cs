@@ -30,7 +30,7 @@ namespace gymKing.Üye_forms
 
         private void uyeSifreDegistirme_Load(object sender, EventArgs e)
         {
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

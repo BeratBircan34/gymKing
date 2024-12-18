@@ -27,13 +27,13 @@ namespace gymKing.kasiyer_forms
         public int kontrol = 0;
         private void K_uyelikEkle_Load(object sender, EventArgs e)
         {
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
 
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
             SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
             SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
-            while (adgetir.Read())
+            while (adgetir.Read())                                          //tbl_giriş_bilgileri Tablosundan Giriş Yapan Kişinin Kullanıcı Adı Verisini Alır ve Görünmez Label'a Yazdırır
             {
                 label11.Text = adgetir["kullaniciAdi"].ToString();
             }
@@ -43,7 +43,15 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(kontrol == 1)
+            {                                                   // Kontrol Değişkenine Atanan Değeri Kontrol Ederek Sayfadan Çıkış Yapılıp Yapılamayacağını Belirler
+                MessageBox.Show("Bilgileri Girmeden Çıkış Yapamazsınız!");                
+            }
+            else
+            {
+                this.Close();
+            }
+
         }
 
        
@@ -51,7 +59,8 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         { 
-            
+            // Girilen İsim ve Soyisimden Kullanıcı Adı Oluşturur, 6 Haneli Şifre Oluşturur ve tbl_giris_bilgileri Tablosuna Aktarır
+
             if(!string.IsNullOrEmpty(textBoxAd.Text) && !string.IsNullOrEmpty(textBoxSoyad.Text))
             {
 

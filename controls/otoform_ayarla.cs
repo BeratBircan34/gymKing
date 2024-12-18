@@ -19,7 +19,7 @@ namespace gymKing.controls
         {
             foreach (Control control in frm.Controls)
             {
-                control.BackColor = Color.Gainsboro;
+                control.BackColor = Color.WhiteSmoke;
                 if (control is MdiClient mdiClient)
                 {
                     mdiClient.BackColor = color; // Arka plan rengini ayarla

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxTC = new System.Windows.Forms.TextBox();
             this.dateTimePickerDogum = new System.Windows.Forms.DateTimePicker();
@@ -58,7 +57,6 @@
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -66,17 +64,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(939, 153);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(313, 305);
-            this.dataGridView1.TabIndex = 155;
-            // 
             // label9
             // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label9.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.SlateGray;
             this.label9.Location = new System.Drawing.Point(25, 413);
@@ -144,7 +134,7 @@
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label10.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.SlateGray;
             this.label10.Location = new System.Drawing.Point(23, 226);
@@ -155,7 +145,7 @@
             // 
             // label11
             // 
-            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.SlateGray;
             this.label11.Location = new System.Drawing.Point(25, 343);
@@ -166,7 +156,7 @@
             // 
             // label12
             // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label12.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.SlateGray;
             this.label12.Location = new System.Drawing.Point(23, 459);
@@ -177,7 +167,7 @@
             // 
             // label13
             // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label13.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.SlateGray;
             this.label13.Location = new System.Drawing.Point(25, 378);
@@ -188,7 +178,7 @@
             // 
             // label14
             // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label14.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.SlateGray;
             this.label14.Location = new System.Drawing.Point(23, 263);
@@ -199,7 +189,7 @@
             // 
             // label15
             // 
-            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label15.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.SlateGray;
             this.label15.Location = new System.Drawing.Point(23, 188);
@@ -210,7 +200,7 @@
             // 
             // label16
             // 
-            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label16.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.SlateGray;
             this.label16.Location = new System.Drawing.Point(25, 153);
@@ -221,7 +211,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox1.Image = global::gymKing.kaynaklar.arrow_left;
             this.pictureBox1.Location = new System.Drawing.Point(1098, 542);
             this.pictureBox1.Name = "pictureBox1";
@@ -233,7 +223,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::gymKing.kaynaklar.save;
             this.pictureBox3.Location = new System.Drawing.Point(489, 484);
@@ -246,7 +236,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox9.Image = global::gymKing.kaynaklar.transparentGYMKING;
             this.pictureBox9.Location = new System.Drawing.Point(366, 1);
             this.pictureBox9.Name = "pictureBox9";
@@ -265,7 +255,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 15F);
             this.label1.ForeColor = System.Drawing.Color.SlateGray;
             this.label1.Location = new System.Drawing.Point(504, 211);
@@ -284,7 +274,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 15F);
             this.label2.ForeColor = System.Drawing.Color.SlateGray;
             this.label2.Location = new System.Drawing.Point(504, 250);
@@ -304,7 +294,7 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SlateGray;
             this.label3.Location = new System.Drawing.Point(25, 305);
@@ -323,7 +313,7 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SlateGray;
             this.label4.Location = new System.Drawing.Point(504, 153);
@@ -347,7 +337,7 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox15.Image = global::gymKing.kaynaklar.GY_TELIF2;
             this.pictureBox15.Location = new System.Drawing.Point(94, 564);
             this.pictureBox15.Name = "pictureBox15";
@@ -371,6 +361,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
@@ -383,7 +374,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBoxTC);
@@ -402,11 +392,11 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox9);
-            this.IsMdiContainer = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "personelBilgiEkle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "personelBilgiEkle";
             this.Load += new System.EventHandler(this.personelBilgiEkle_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -418,8 +408,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxTC;
