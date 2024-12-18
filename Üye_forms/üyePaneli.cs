@@ -40,8 +40,8 @@ namespace gymKing.Üye_forms
             SqlDataReader dr = getir.ExecuteReader();
             while (dr.Read())
             {
-                labelBaslangic.Text = dr["m_uyelikBaslangic"].ToString();
-                labelBitis.Text = dr["m_uyelikBitis"].ToString();
+                labelBaslangic.Text = dr["m_uyelikBaslangic"] != DBNull.Value ? Convert.ToDateTime(dr["m_uyelikBaslangic"]).ToString("dd.MM.yyyy") : "Tarih bilgisi yok";
+                labelBitis.Text = dr["m_uyelikBitis"] != DBNull.Value ? Convert.ToDateTime(dr["m_uyelikBitis"]).ToString("dd.MM.yyyy") : "Tarih bilgisi yok";
             }
             dr.Close();
             baglanti.Close();
@@ -66,6 +66,36 @@ namespace gymKing.Üye_forms
         }
 
         private void lbl_id_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void lbl_tarih_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelBaslangic_Click(object sender, EventArgs e)
         {
 
         }

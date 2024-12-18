@@ -48,6 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -57,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_saat
@@ -65,7 +69,7 @@
             this.lbl_saat.BackColor = System.Drawing.Color.Transparent;
             this.lbl_saat.Font = new System.Drawing.Font("Franklin Gothic Heavy", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_saat.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbl_saat.Location = new System.Drawing.Point(101, 467);
+            this.lbl_saat.Location = new System.Drawing.Point(94, 524);
             this.lbl_saat.Name = "lbl_saat";
             this.lbl_saat.Size = new System.Drawing.Size(94, 41);
             this.lbl_saat.TabIndex = 29;
@@ -77,7 +81,7 @@
             this.lbl_gun.BackColor = System.Drawing.Color.Transparent;
             this.lbl_gun.Font = new System.Drawing.Font("Franklin Gothic Heavy", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gun.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbl_gun.Location = new System.Drawing.Point(294, 392);
+            this.lbl_gun.Location = new System.Drawing.Point(287, 444);
             this.lbl_gun.Name = "lbl_gun";
             this.lbl_gun.Size = new System.Drawing.Size(83, 41);
             this.lbl_gun.TabIndex = 28;
@@ -89,7 +93,7 @@
             this.lbl_tarih.BackColor = System.Drawing.Color.Transparent;
             this.lbl_tarih.Font = new System.Drawing.Font("Franklin Gothic Heavy", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tarih.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbl_tarih.Location = new System.Drawing.Point(101, 392);
+            this.lbl_tarih.Location = new System.Drawing.Point(94, 444);
             this.lbl_tarih.Name = "lbl_tarih";
             this.lbl_tarih.Size = new System.Drawing.Size(99, 41);
             this.lbl_tarih.TabIndex = 27;
@@ -100,7 +104,7 @@
             this.lbl_oturumSahibi.BackColor = System.Drawing.Color.Transparent;
             this.lbl_oturumSahibi.Font = new System.Drawing.Font("Franklin Gothic Heavy", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_oturumSahibi.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbl_oturumSahibi.Location = new System.Drawing.Point(110, 297);
+            this.lbl_oturumSahibi.Location = new System.Drawing.Point(103, 349);
             this.lbl_oturumSahibi.Name = "lbl_oturumSahibi";
             this.lbl_oturumSahibi.Size = new System.Drawing.Size(402, 75);
             this.lbl_oturumSahibi.TabIndex = 26;
@@ -111,7 +115,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(1011, 574);
+            this.label5.Location = new System.Drawing.Point(1049, 580);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 37);
             this.label5.TabIndex = 35;
@@ -137,7 +141,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::gymKing.kaynaklar.power;
-            this.pictureBox3.Location = new System.Drawing.Point(1031, 481);
+            this.pictureBox3.Location = new System.Drawing.Point(1067, 490);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(87, 75);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -149,7 +153,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::gymKing.kaynaklar.clock;
-            this.pictureBox4.Location = new System.Drawing.Point(36, 456);
+            this.pictureBox4.Location = new System.Drawing.Point(29, 508);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 57);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +164,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::gymKing.kaynaklar.calendar;
-            this.pictureBox5.Location = new System.Drawing.Point(36, 376);
+            this.pictureBox5.Location = new System.Drawing.Point(29, 428);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(58, 57);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,7 +175,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::gymKing.kaynaklar.user;
-            this.pictureBox6.Location = new System.Drawing.Point(35, 297);
+            this.pictureBox6.Location = new System.Drawing.Point(28, 349);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(59, 57);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -183,7 +187,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(733, 403);
+            this.label1.Location = new System.Drawing.Point(732, 428);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 33);
             this.label1.TabIndex = 39;
@@ -194,7 +198,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::gymKing.kaynaklar.add;
-            this.pictureBox8.Location = new System.Drawing.Point(793, 309);
+            this.pictureBox8.Location = new System.Drawing.Point(785, 331);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(87, 75);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,7 +211,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(744, 574);
+            this.label2.Location = new System.Drawing.Point(743, 580);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 37);
             this.label2.TabIndex = 41;
@@ -218,7 +222,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::gymKing.kaynaklar.remove;
-            this.pictureBox1.Location = new System.Drawing.Point(793, 481);
+            this.pictureBox1.Location = new System.Drawing.Point(785, 490);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(87, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -231,7 +235,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(961, 403);
+            this.label4.Location = new System.Drawing.Point(989, 427);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(249, 34);
             this.label4.TabIndex = 43;
@@ -242,7 +246,7 @@
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Image = global::gymKing.kaynaklar.edit;
-            this.pictureBox9.Location = new System.Drawing.Point(1041, 309);
+            this.pictureBox9.Location = new System.Drawing.Point(1065, 331);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(89, 75);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -253,14 +257,41 @@
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox10.Image = global::gymKing.kaynaklar.arrow_left;
-            this.pictureBox10.Location = new System.Drawing.Point(35, 578);
+            this.pictureBox10.Location = new System.Drawing.Point(12, 636);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(100, 105);
+            this.pictureBox10.Size = new System.Drawing.Size(75, 72);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 51;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::gymKing.kaynaklar.cross;
+            this.pictureBox2.Location = new System.Drawing.Point(1238, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 119;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox11.Image = global::gymKing.kaynaklar.window_minimize;
+            this.pictureBox11.Location = new System.Drawing.Point(1202, 12);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(30, 35);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 118;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // Kasiyer
             // 
@@ -268,6 +299,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox9);
@@ -302,6 +335,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +361,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }

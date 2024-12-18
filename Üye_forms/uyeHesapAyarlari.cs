@@ -120,5 +120,25 @@ namespace gymKing.Üye_forms
             uyeSifreDegistirme sifreDegistirme = new uyeSifreDegistirme(textBoxId.Text);
             sifreDegistirme.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+              "Uygulamadan çıkış yapmak istiyor musunuz?",
+              "Çıkış Onayı",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

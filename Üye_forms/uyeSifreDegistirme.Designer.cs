@@ -43,58 +43,58 @@
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.SlateGray;
+            this.label13.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label13.Location = new System.Drawing.Point(46, 64);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(151, 28);
+            this.label13.Size = new System.Drawing.Size(151, 31);
             this.label13.TabIndex = 96;
-            this.label13.Text = "Eski Sifre :";
+            this.label13.Text = "Eski Şifre :";
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SlateGray;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(46, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 28);
+            this.label1.Size = new System.Drawing.Size(159, 39);
             this.label1.TabIndex = 97;
-            this.label1.Text = "Yeni Sifre :";
+            this.label1.Text = "Yeni Şifre :";
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SlateGray;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(46, 258);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 28);
+            this.label2.Size = new System.Drawing.Size(245, 37);
             this.label2.TabIndex = 98;
-            this.label2.Text = "Yeni Sifre Tekrar :";
+            this.label2.Text = "Yeni Şifre Tekrar :";
             // 
             // textBoxEski
             // 
-            this.textBoxEski.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEski.Font = new System.Drawing.Font("Franklin Gothic Heavy", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEski.Location = new System.Drawing.Point(420, 76);
             this.textBoxEski.Name = "textBoxEski";
-            this.textBoxEski.Size = new System.Drawing.Size(288, 29);
+            this.textBoxEski.Size = new System.Drawing.Size(288, 35);
             this.textBoxEski.TabIndex = 99;
             // 
             // textBoxYeni
             // 
-            this.textBoxYeni.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxYeni.Font = new System.Drawing.Font("Franklin Gothic Heavy", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxYeni.Location = new System.Drawing.Point(420, 161);
             this.textBoxYeni.Name = "textBoxYeni";
-            this.textBoxYeni.Size = new System.Drawing.Size(288, 29);
+            this.textBoxYeni.Size = new System.Drawing.Size(288, 35);
             this.textBoxYeni.TabIndex = 100;
             // 
             // textBoxTekrar
             // 
-            this.textBoxTekrar.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTekrar.Font = new System.Drawing.Font("Franklin Gothic Heavy", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTekrar.Location = new System.Drawing.Point(420, 260);
             this.textBoxTekrar.Name = "textBoxTekrar";
-            this.textBoxTekrar.Size = new System.Drawing.Size(288, 29);
+            this.textBoxTekrar.Size = new System.Drawing.Size(288, 35);
             this.textBoxTekrar.TabIndex = 101;
             // 
             // pictureBox1
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);

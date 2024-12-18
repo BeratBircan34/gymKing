@@ -192,5 +192,68 @@ namespace gymKing.kasiyer_forms
         {
 
         }
+
+        private void dateTimePickerBaslangic_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerBitis_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxPt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxDiyetisyen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTelefon_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxKullaniciAdi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if(kontrol == 1)
+            {
+                DialogResult result = MessageBox.Show(
+                               "Uygulamadan çıkış yapmak istiyor musunuz?",
+                               "Çıkış Onayı",
+                               MessageBoxButtons.YesNo,
+                               MessageBoxIcon.Question);
+
+                // Kullanıcı "Evet" derse uygulamayı kapat
+                if (result == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+            else
+            {
+
+            }
+            
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace gymKing.kasiyer_forms
 
         private void K_uyelikSil_Load(object sender, EventArgs e)
         {
+
             otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
 
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
@@ -148,6 +149,31 @@ namespace gymKing.kasiyer_forms
             }
             dr.Close();
             baglanti.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+              "Uygulamadan çıkış yapmak istiyor musunuz?",
+              "Çıkış Onayı",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

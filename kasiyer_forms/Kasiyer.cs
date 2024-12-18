@@ -28,12 +28,17 @@ namespace gymKing.kasiyer_forms
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbl_saat.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString("00");
+            if (kasiyer_oturumSahibi.Contains("_Admin") && this.Text == "frm_pt")
+                pictureBox10.Visible = true;
+            else
+                pictureBox10.Visible = false;
         }
 
        
 
         private void KASİYER_Load(object sender, EventArgs e)
         {
+            
             timer1.Start();
             lbl_oturumSahibi.Text = kasiyer_oturumSahibi;
             if (kasiyer_oturumSahibi.Contains("_Admin"))
@@ -95,6 +100,26 @@ namespace gymKing.kasiyer_forms
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+              "Uygulamadan çıkış yapmak istiyor musunuz?",
+              "Çıkış Onayı",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }   
 }
