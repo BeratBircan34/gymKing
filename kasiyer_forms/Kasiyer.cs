@@ -28,7 +28,7 @@ namespace gymKing.kasiyer_forms
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbl_saat.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString("00");
-            if (kasiyer_oturumSahibi.Contains("_Admin") && this.Text == "frm_pt")
+            if (kasiyer_oturumSahibi.Contains("_Admin") && this.Text == "Kasiyer")
                 pictureBox10.Visible = true;
             else
                 pictureBox10.Visible = false;

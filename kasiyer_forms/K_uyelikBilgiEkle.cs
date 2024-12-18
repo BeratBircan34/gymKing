@@ -143,6 +143,7 @@ namespace gymKing.kasiyer_forms
                 MessageBox.Show("Bilgi Ekleme İşlemi Tamamlandı");
 
                 kontrol = +1;
+                this.Close();
             }
 
             else
@@ -150,7 +151,7 @@ namespace gymKing.kasiyer_forms
                 MessageBox.Show("Ad Soyad Girmeden Kayıt Yapamazsınız!");      // Ad Soyad textBoxlarının Boş Olduğunu ve İşlem Yapılamayacağını Belirtir
             }
             
-            this.Close();
+
         }
 
         private void gymKingdbDataSetBindingSource_CurrentChanged(object sender, EventArgs e)
