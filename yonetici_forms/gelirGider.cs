@@ -23,14 +23,60 @@ namespace gymKing.yonetici_forms
         public string id_ = "";
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gelirGider_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void labelKaydet_Click(object sender, EventArgs e)
+        {
             // SQL Bağlantısı
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
 
             // SQL sorgusu (parametreli)
             string query = @"
-    INSERT INTO tbl_GelirGider (IslemTuru, Aciklama, Tutar, Tarih) 
-    VALUES (@IslemTuru, @Aciklama, @Tutar, @Tarih)";
+                 INSERT INTO tbl_GelirGider (IslemTuru, Aciklama, Tutar, Tarih) 
+                 VALUES (@IslemTuru, @Aciklama, @Tutar, @Tarih)";
 
             SqlCommand ekle = new SqlCommand(query, baglanti);
 
@@ -49,7 +95,7 @@ namespace gymKing.yonetici_forms
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void labelKaydet2_Click(object sender, EventArgs e)
         {
             // SQL sorgusu
             string query = "SELECT * FROM tbl_GelirGider WHERE Tarih BETWEEN @Baslangic AND @Bitis";
@@ -96,12 +142,7 @@ namespace gymKing.yonetici_forms
             baglanti.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
             // GrafikCizici sınıfını çağırma
@@ -109,33 +150,26 @@ namespace gymKing.yonetici_forms
 
             // Grafik çizme işlemi
             grafikCizici.GrafikCiz(chartGelirGider); // chartGelirGider, formunuzdaki Chart nesnesidir
-
         }
 
-        private void gelirGider_Load(object sender, EventArgs e)
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
 
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox10_Click(object sender, EventArgs e)
         {
-            
-            
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.WindowState = FormWindowState.Minimized; // Formu küçült
         }
     }
 }

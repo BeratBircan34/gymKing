@@ -52,16 +52,16 @@ namespace gymKing.yonetici_forms
             }
             dr.Close();
 
-            SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
-            SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
-            while (adgetir.Read())
-            {
-                label11.Text = adgetir["kullaniciAdi"].ToString();
-            }
-            adgetir.Close();
+            //SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
+            //SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
+            //while (adgetir.Read())
+            //{
+            //    label11.Text = adgetir["kullaniciAdi"].ToString();
+            //}
+            //adgetir.Close();
 
 
-            baglanti.Close();
+            //baglanti.Close();
 
 
 
@@ -104,11 +104,12 @@ namespace gymKing.yonetici_forms
             SqlDataReader getir2 = getir.ExecuteReader();
             while (getir2.Read())
             {
-                dateTimePickerDogum.Text = getir2["dogumTarihi"].ToString();
-                dateTimePickerIsegiris.Text = getir2["isegiris"].ToString();
+                textBoxDogum.Text = getir2["dogumTarihi"].ToString();
+                textBoxisegiris.Text = getir2["isegiris"].ToString();
                 textBoxMail.Text = getir2["email"].ToString();
                 textBoxAdres.Text = getir2["adres"].ToString();
                 textBoxTelefon.Text = getir2["telNo"].ToString();
+               comboBoxRol.Text = getir2["rol"].ToString();
             }
             getir2.Close();
 
@@ -140,9 +141,9 @@ namespace gymKing.yonetici_forms
         {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
-            string sorgu = "SELECT soyad FROM tbl_per_bilgiler WHERE ad = @Ad";
+            string sorgu = "SELECT soyad FROM tbl_per_bilgiler WHERE ad = @pAd";
             SqlCommand soyad = new SqlCommand(sorgu, baglanti);
-            soyad.Parameters.AddWithValue("@Ad", comboBoxAd.Text);
+            soyad.Parameters.AddWithValue("@pAd", comboBoxAd.Text);
             SqlDataReader dr = soyad.ExecuteReader();
             comboBoxSoyad.Items.Clear();
             while (dr.Read())
@@ -152,8 +153,57 @@ namespace gymKing.yonetici_forms
             dr.Close();
             baglanti.Close();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand sil = new SqlCommand("delete from tbl_per_bilgiler where perId = " + textBoxID.Text, baglanti);
+            SqlCommand sil2 = new SqlCommand("delete from tbl_giris_Bilgileri where KullaniciID = " + textBoxID.Text, baglanti);
+
+            sil.ExecuteNonQuery();
+            sil2.ExecuteNonQuery();
+
+
+
+            baglanti.Close();
+
+
+
+            MessageBox.Show("Silme İşlemi Tamamlandı");
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; // Formu küçült
+        }
     }
 
        
-        }
+}
    

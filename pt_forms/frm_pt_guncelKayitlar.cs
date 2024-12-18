@@ -42,11 +42,11 @@ namespace gymKing.pt_forms
             //  Kişi Filtreleri
             if (chkbx_cinsiyet_k.Checked)
             {
-                komut += " where cinsiyet = 'kadın'";
+                komut += " where k_cinsiyet != 'erkek'";
             }
             if (chkbx_cinsiyet_e.Checked)
             {
-                komut += " where cinsiyet = 'erkek' ";
+                komut += " where k_cinsiyet = 'erkek' ";
             }
 
             if(chkbx_isimSira_az.Checked || chkbx_isimSira_za.Checked || chkbx_islemTarihi_ey.Checked || chkbx_islemTarihi_ye.Checked)

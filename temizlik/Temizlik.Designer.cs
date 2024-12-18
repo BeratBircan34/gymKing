@@ -105,7 +105,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1256, 632);
+            this.groupBox1.Size = new System.Drawing.Size(1256, 610);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Görevler";
@@ -155,7 +155,7 @@
             // 
             // txtbx_Notlar
             // 
-            this.txtbx_Notlar.Location = new System.Drawing.Point(147, 543);
+            this.txtbx_Notlar.Location = new System.Drawing.Point(144, 547);
             this.txtbx_Notlar.Multiline = true;
             this.txtbx_Notlar.Name = "txtbx_Notlar";
             this.txtbx_Notlar.Size = new System.Drawing.Size(949, 61);
@@ -359,7 +359,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::gymKing.kaynaklar.power;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 650);
+            this.pictureBox4.Location = new System.Drawing.Point(563, 650);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 58);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
