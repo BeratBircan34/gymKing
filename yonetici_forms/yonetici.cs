@@ -156,7 +156,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Temizlik temizlikfrm =new Temizlik();
+            Temizlik temizlikfrm =new Temizlik(id_);
             temizlikfrm.Show();
             this.Close();
 
@@ -195,10 +195,11 @@ namespace gymKing.yonetici_forms
             gorevVer gorev = new gorevVer(id_)
             {
                 MdiParent = this, // Parent formu belirt
-                Text = "Child Form",
-                Size = new Size(this.ClientSize.Width / 2, this.ClientSize.Height / 2), // Boyut belirle
+                Text = "Child Form",             
                 StartPosition = FormStartPosition.CenterScreen // Ortada açılması için
             };
+            gorev.Show();
+            gorev.BringToFront();
 
         }
 
