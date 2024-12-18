@@ -32,7 +32,7 @@ namespace gymKing.yonetici_forms
             lbl_oturumSahibi.Text = yonetici_oturumSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
 
             // ComboBox'ları temizliyoruz
             comboBoxPT.Items.Clear();
@@ -113,14 +113,6 @@ namespace gymKing.yonetici_forms
             
         }
 
-        private void pictureBox10_Click_1(object sender, EventArgs e)
-        {
-
-           
-
-            
-        }
-
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             frm_pt formpt = new frm_pt();
@@ -154,17 +146,6 @@ namespace gymKing.yonetici_forms
 
         }
 
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-            Temizlik temizlikfrm =new Temizlik(id_);
-            temizlikfrm.Show();
-            this.Close();
-
-            //Temizlik temizlikk = new Temizlik();
-            //otoform_ayarla temizlikkk = new otoform_ayarla(temizlikk);
-            //temizlikkk.formAc(temizlikk, this);
-            
-        }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
@@ -343,6 +324,26 @@ namespace gymKing.yonetici_forms
                 MessageBox.Show("Lütfen bir kullanıcı seçin.");
             }
 
+        }
+
+        private void pictureBox10_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; // Formu küçült
+        }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

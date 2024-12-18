@@ -1,4 +1,5 @@
-﻿using gymKing.oto_Baglanti;
+﻿using gymKing.kasiyer_forms;
+using gymKing.oto_Baglanti;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace gymKing.yonetici_forms
 {
     public partial class personelilan : Form
     {
-       
+
         private object ID;
 
         public personelilan(string id)
@@ -26,7 +27,7 @@ namespace gymKing.yonetici_forms
         public string id_ = "";
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void dataGridViewPersonelIlani_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -35,67 +36,20 @@ namespace gymKing.yonetici_forms
             {
                 DataGridViewRow row = dataGridViewPersonelIlani.Rows[e.RowIndex];
 
-                // Satırdaki verileri TextBox'lara yansıt
-                textBoxID.Text = row.Cells["ID"].Value.ToString();
+                // Satırdaki verileri TextBox'lara yansıt             
                 textBoxAd.Text = row.Cells["Ad"].Value.ToString();
-                textBoxSoyad.Text = row.Cells["Soyad"].Value.ToString();              
+                textBoxSoyad.Text = row.Cells["Soyad"].Value.ToString();
                 textBoxTelefon.Text = row.Cells["Telefon"].Value.ToString();
                 textBoxPozisyon.Text = row.Cells["Pozisyon"].Value.ToString();
                 textBoxAdres.Text = row.Cells["Adres"].Value.ToString();
+           
             }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            string ad = textBoxAd.Text;
-            string soyad = textBoxSoyad.Text;
-            string telNo = textBoxTelefon.Text;
-            string pozisyon = textBoxPozisyon.Text;
-            string adres = textBoxAdres.Text;
-
-            // Seçilen satırdan ID'yi al
-            string ID = dataGridViewPersonelIlani.SelectedRows[0].Cells["ID"].Value.ToString(); // 'ID' yerine uygun kolon adı kullanmalısınız
-
-            // Veritabanına ekleme sorgusu
-            string sorgu = @"
-                INSERT INTO tbl_per_bilgiler (Ad, Soyad, telNo, rol, Adres)
-                VALUES (@ad, @soyad, @telNo, @rol, @adres)";
-
-            using (SqlConnection connection = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize()))
-            {
-                SqlCommand ekle = new SqlCommand(sorgu, connection);
-                ekle.Parameters.AddWithValue("@ad", ad);
-                ekle.Parameters.AddWithValue("@soyad", soyad);
-                ekle.Parameters.AddWithValue("@telNo", telNo);
-                ekle.Parameters.AddWithValue("@rol", pozisyon);
-                ekle.Parameters.AddWithValue("@adres", adres);
-
-                try
-                {
-                    connection.Open();
-                    ekle.ExecuteNonQuery(); // Personel bilgilerini tbl_per_bilgiler tablosuna ekle
-
-                    // Personel ilanını tbl_per_ilan tablosundan silme
-                    string sorguSil = "DELETE FROM tbl_personel_ilani WHERE ID = @ID";
-                    SqlCommand silmekomutu = new SqlCommand(sorguSil, connection);
-                    silmekomutu.Parameters.AddWithValue("@ID", ID);
-                    silmekomutu.ExecuteNonQuery(); // İlanı veritabanından sil
-
-                    // DataGridView'dan ilgili satırı kaldır
-                    dataGridViewPersonelIlani.Rows.RemoveAt(dataGridViewPersonelIlani.SelectedRows[0].Index);
-
-                    MessageBox.Show("Personel bilgileri başarıyla kaydedildi ve ilan silindi.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Hata: " + ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-            }
+            
 
         }
 
@@ -109,11 +63,11 @@ namespace gymKing.yonetici_forms
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
                 dataGridViewPersonelIlani.DataSource = dataTable;
-            }           
+            }
         }
         private void VerileriGetir()
         {
-            string sorgu = "SELECT * FROM tbl_per_bilgiler"; 
+            string sorgu = "SELECT * FROM tbl_per_bilgiler";
 
             using (SqlConnection connection = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize()))
             {
@@ -142,7 +96,7 @@ namespace gymKing.yonetici_forms
         {
 
         }
-       
+
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -151,7 +105,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            VerileriGetir(); // DataGridView'i yenile
+           
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -160,5 +114,115 @@ namespace gymKing.yonetici_forms
             //yoneticipanel.Show();
             this.Close();
         }
+
+        private void pictureBoxolus_Click(object sender, EventArgs e)
+        {        
+
+        }
+
+        private void pictureBoxo_Click(object sender, EventArgs e)
+        {           
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            string sifre = sifreUretme.GenerateRandomPassword();
+
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            SqlCommand uyelikEkle = new SqlCommand("insert into tbl_giris_Bilgileri(rol,kullaniciAdi,sifre) values (@rol,@kullaniciAdi,@sifre)", baglanti);
+            uyelikEkle.Parameters.AddWithValue("@rol", textBoxPozisyon.Text);
+            uyelikEkle.Parameters.AddWithValue("@kullaniciAdi", textBoxAd.Text + "." + textBoxSoyad.Text);
+            uyelikEkle.Parameters.AddWithValue("@sifre", sifre);
+            uyelikEkle.ExecuteNonQuery();
+
+            SqlCommand getir = new SqlCommand("select top 1 KullaniciID,kullaniciAdi,sifre from tbl_giris_Bilgileri order by KullaniciID desc", baglanti);
+            SqlDataReader dr = getir.ExecuteReader();
+            while (dr.Read())
+            {
+                textBoxKullaniciAdi.Text = dr["kullaniciAdi"].ToString();
+                textBoxSifre.Text = dr["sifre"].ToString();
+                textBoxID.Text = dr["KullaniciID"].ToString();
+            }
+            dr.Close();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+
+            string güncelle = @"
+            UPDATE tbl_per_bilgiler
+            SET 
+                ad = @Ad, 
+                soyad = @Soyad, 
+                telNo = @TelNo,                                 
+                adres = @Adres,
+                rol = @Rol
+            WHERE perId = @id";
+
+            SqlCommand ekle = new SqlCommand(güncelle, baglanti);
+
+            ekle.Parameters.AddWithValue("@Ad", textBoxAd.Text);
+            ekle.Parameters.AddWithValue("@Soyad", textBoxSoyad.Text);
+            ekle.Parameters.AddWithValue("@TelNo", textBoxTelefon.Text);
+            ekle.Parameters.AddWithValue("@Adres", textBoxAdres.Text);
+            ekle.Parameters.AddWithValue("@Rol", textBoxPozisyon.Text);
+            ekle.Parameters.AddWithValue("@id", textBoxID.Text);
+
+            ekle.ExecuteNonQuery();
+            MessageBox.Show("Aktif Personellere Kayıt Eklendi!");
+            baglanti.Close();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            VerileriGetir(); // DataGridView'i yenile
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; // Formu küçült
+        }
     }
 }
+         
+            
+         
+        
+    
+
+    
+

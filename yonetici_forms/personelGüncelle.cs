@@ -109,6 +109,7 @@ namespace gymKing.yonetici_forms
             {
                 textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
                 textBoxSifre.Text = getir4["sifre"].ToString();
+                comboBoxRol.Text = getir4["rol"].ToString();
             }
             getir4.Close();
             baglanti.Close();
@@ -133,6 +134,16 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
             string güncelle = @"
@@ -153,7 +164,7 @@ namespace gymKing.yonetici_forms
             ekle.Parameters.AddWithValue("@ptelNo", textBoxTelefon.Text);
             ekle.Parameters.AddWithValue("@pemail", textBoxMail.Text);
             ekle.Parameters.AddWithValue("@padres", textBoxAdres.Text);
-            ekle.Parameters.AddWithValue("@pisegiris", dateTimePickerIsegiris.Value);        
+            ekle.Parameters.AddWithValue("@pisegiris", dateTimePickerIsegiris.Value);
             ekle.Parameters.AddWithValue("@id", textBoxID.Text);
             ekle.Parameters.AddWithValue("@prol", comboBoxRol.SelectedItem.ToString());
 
@@ -163,9 +174,25 @@ namespace gymKing.yonetici_forms
             MessageBox.Show("Düzenleme İşlemi Tamamlandı");
         }
 
-        private void pictureBox1_Click_2(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
-            this.Close();   
+
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; // Formu küçült
         }
     }
 }

@@ -57,6 +57,11 @@ namespace gymKing.yonetici_forms
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
 
@@ -103,6 +108,24 @@ namespace gymKing.yonetici_forms
             baglanti.Close();
         }
 
-        
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+              "Uygulamadan çıkış yapmak istiyor musunuz?",
+              "Çıkış Onayı",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; // Formu küçült
+        }
     }
 }

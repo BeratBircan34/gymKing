@@ -472,6 +472,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\1291754_notes_todo_notepad_notebook_icon.png" />
+    <None Include="Resources\task.png" />
     <None Include="Resources\window-minimize.png" />
     <None Include="Resources\temzlk panel gorev son.png" />
     <None Include="Resources\TELIF TELIF2 GYM.png" />
@@ -479,6 +480,7 @@
     <None Include="Resources\1291754_notes_todo_notepad_notebook_icon1.png" />
     <Content Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon.png" />
     <None Include="Resources\2620529_checklist_employee_job_seeker_unemployee_icon1.png" />
+    <None Include="Resources\3669129_assignment_in_turned_ic_icon.png" />
     <Content Include="Resources\4042258_dairy_diet_eating_food_fresh_icon.png" />
     <None Include="Resources\4042258_dairy_diet_eating_food_fresh_icon1.png" />
     <Content Include="Resources\accept.png" />
@@ -508,6 +510,7 @@
     <None Include="Resources\GY TELIF2.png" />
     <None Include="Resources\ekle personel %281%29 son.png" />
     <None Include="Resources\login.png" />
+    <None Include="Resources\list.png" />
     <Content Include="Resources\member_add.png" />
     <Content Include="Resources\next.png" />
     <None Include="Resources\PERSONEL ILANLARI TXT son.png" />
