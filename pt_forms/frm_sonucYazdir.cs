@@ -41,7 +41,8 @@ namespace gymKing.pt_forms
         {
             
             con.Open();
-            SqlDataAdapter da = new SqlDataAdapter($"select kilo,bel,boyun,kalca,boy from tbl_guncelKayitlar where ad = '{ad}' and soyad = '{soyad}' ", con);
+            SqlDataAdapter da = new SqlDataAdapter($"SELECT kilo, bel, boyun, kalca, boy FROM tbl_guncelKayitlar WHERE LTRIM(RTRIM(ad)) = '{ad.Trim()}' AND LTRIM(RTRIM(soyad)) = '{soyad.Trim()}'", con);
+
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
             dgv_vucut.DataSource = dataTable;
@@ -163,86 +164,144 @@ namespace gymKing.pt_forms
             {
                 if (dr["vyo"] != DBNull.Value)
                 {
+                    double vyo = Convert.ToDouble(dr["vyo"]);
                     richtxt_yorumlama.AppendText(
-                        $"Vücut Yağ Oranınız {dr["vyo"]}% olarak hesaplanmıştır. " +
+                        $"Vücut Yağ Oranınız %{vyo} olarak hesaplanmıştır. " +
                         $"Bu oran, vücudunuzdaki yağ dokusunun toplam vücut ağırlığınıza oranını temsil eder. " +
-                        $"İdeal bir yağ oranı, sağlıklı bir metabolizma ve hormonal denge için önemlidir. " +
-                        $"Yağ oranınız yüksekse, düzenli egzersiz ve dengeli beslenme ile bu oranı düşürmeye çalışabilirsiniz.\n\n");
+                        $"İdeal bir yağ oranı, sağlıklı bir metabolizma ve hormonal denge için önemlidir. ");
+
+                    // Kullanıcının yağ oranına göre yorum yap
+                    if (vyo < 15)
+                        richtxt_yorumlama.AppendText("Yağ oranınız oldukça düşük. Kas kütlenizi artırmaya odaklanabilirsiniz.\n\n");
+                    else if (vyo >= 15 && vyo <= 25)
+                        richtxt_yorumlama.AppendText("Yağ oranınız ideal aralıkta. Mevcut sağlıklı yaşam tarzınızı sürdürmeye devam edin.\n\n");
+                    else
+                        richtxt_yorumlama.AppendText("Yağ oranınız yüksek seviyede. Egzersiz ve beslenme düzeninizi gözden geçirmelisiniz.\n\n");
                 }
 
                 if (dr["bko"] != DBNull.Value)
                 {
+                    double bko = Convert.ToDouble(dr["bko"]);
                     richtxt_yorumlama.AppendText(
-                        $"Bel-Kalça Oranınız {dr["bko"]} olarak hesaplanmıştır. " +
-                        $"Bu oran, özellikle kardiyovasküler hastalık riski için önemli bir göstergedir. " +
-                        $"Erkekler için ideal bel-kalça oranı genelde 0.90'ın altında, kadınlar için ise 0.85'in altında olmalıdır. " +
-                        $"Oranınız yüksekse, bel bölgesindeki yağlanmayı azaltmaya odaklanabilirsiniz.\n\n");
+                        $"Bel-Kalça Oranınız {bko} olarak hesaplanmıştır. " +
+                        $"Bu oran, özellikle kardiyovasküler hastalık riski için önemli bir göstergedir. ");
+
+                    // Kullanıcının bel-kalça oranına göre yorum yap
+                    if (bko < 0.85)
+                        richtxt_yorumlama.AppendText("Oranınız sağlıklı kabul edilmektedir.\n\n");
+                    else if (bko >= 0.85 && bko < 1.0)
+                        richtxt_yorumlama.AppendText("Oranınız hafifçe yüksek. Yağlanmayı azaltmaya odaklanabilirsiniz.\n\n");
+                    else
+                        richtxt_yorumlama.AppendText("Oranınız yüksek seviyede. Özellikle bel bölgesindeki yağlanmayı azaltmanız gerekiyor.\n\n");
                 }
 
                 if (dr["bboy"] != DBNull.Value)
                 {
+                    double bboy = Convert.ToDouble(dr["bboy"]);
                     richtxt_yorumlama.AppendText(
-                        $"Bel-Boy Oranınız {dr["bboy"]} olarak hesaplanmıştır. " +
-                        $"Bu oran, karın bölgesindeki yağlanmayı ve genel sağlık risklerini değerlendirmenize yardımcı olur. " +
-                        $"0.50'nin altında bir oran genellikle sağlıklı kabul edilir. " +
-                        $"Eğer oranınız yüksekse, düzenli fiziksel aktivite ve sağlıklı beslenme alışkanlıklarını benimsemelisiniz.\n\n");
+                        $"Bel-Boy Oranınız {bboy} olarak hesaplanmıştır. " +
+                        $"Bu oran, karın bölgesindeki yağlanmayı ve genel sağlık risklerini değerlendirmenize yardımcı olur. ");
+
+                    // Kullanıcının bel-boy oranına göre yorum yap
+                    if (bboy < 0.50)
+                        richtxt_yorumlama.AppendText("Oranınız sağlıklı bir aralıkta.\n\n");
+                    else
+                        richtxt_yorumlama.AppendText("Oranınız yüksek. Fiziksel aktivite ve diyet ile bu oranı iyileştirmeye çalışmalısınız.\n\n");
                 }
 
                 if (dr["bboyun"] != DBNull.Value)
                 {
+                    double bboyun = Convert.ToDouble(dr["bboyun"]);
                     richtxt_yorumlama.AppendText(
-                        $"Bel-Boyun Oranınız {dr["bboyun"]} olarak hesaplanmıştır. " +
-                        $"Bu ölçüm, özellikle obezite riskini değerlendirmek için kullanılan bir yöntemdir. " +
-                        $"Oranınız ideal aralıkta değilse, kilo kontrolü ve egzersiz ile bu oranı iyileştirebilirsiniz.\n\n");
+                        $"Bel-Boyun Oranınız {bboyun} olarak hesaplanmıştır. " +
+                        $"Bu ölçüm, özellikle obezite riskini değerlendirmek için kullanılan bir yöntemdir. ");
+
+                    // Kullanıcının bel-boyun oranına göre yorum yap
+                    if (bboyun < 0.40)
+                        richtxt_yorumlama.AppendText("Oranınız ideal aralıkta. Sağlıklı yaşam tarzınızı koruyun.\n\n");
+                    else
+                        richtxt_yorumlama.AppendText("Oranınız yüksek. Egzersiz ve kilo kontrolüne odaklanmalısınız.\n\n");
                 }
+
             }
             con.Close();
 
         }
         private void hesaplamalarıYorumla(string ad, string soyad)
         {
-            con.Open();
-            SqlCommand cmd = new SqlCommand($"SELECT vyo, bko, bboy, bboyun FROM tbl_guncelKayitlar WHERE ad = '{ad}' AND soyad = '{soyad}'", con);
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            while (dr.Read()) // Veritabanındaki sonuçları okuyor
-            {
-                if (dr["vyo"] != DBNull.Value)
+            string query = "SELECT vki AS 'Vücut Kitle Endeksi', vym AS 'Vücut Yağ Miktarı', ik AS 'İdeal Kilo', metabolikSRisk AS 'Metabolik Sendrom Riski' " +
+               "FROM tbl_guncelKayitlar WHERE ad = @ad AND soyad = @soyad";
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    richtxt_yorumlama.AppendText(
-                        $"Vücut Yağ Oranınız {dr["vyo"]}% olarak hesaplanmıştır. " +
-                        $"Bu oran, vücudunuzdaki yağ dokusunun toplam vücut ağırlığınıza oranını temsil eder. " +
-                        $"İdeal bir yağ oranı, sağlıklı bir metabolizma ve hormonal denge için önemlidir. " +
-                        $"Yağ oranınız yüksekse, düzenli egzersiz ve dengeli beslenme ile bu oranı düşürmeye çalışabilirsiniz.\n\n");
-                }
+                    // Parametreleri ekle
+                    cmd.Parameters.AddWithValue("@ad", ad);
+                    cmd.Parameters.AddWithValue("@soyad", soyad);
 
-                if (dr["bko"] != DBNull.Value)
-                {
-                    richtxt_yorumlama.AppendText(
-                        $"Bel-Kalça Oranınız {dr["bko"]} olarak hesaplanmıştır. " +
-                        $"Bu oran, özellikle kardiyovasküler hastalık riski için önemli bir göstergedir. " +
-                        $"Erkekler için ideal bel-kalça oranı genelde 0.90'ın altında, kadınlar için ise 0.85'in altında olmalıdır. " +
-                        $"Oranınız yüksekse, bel bölgesindeki yağlanmayı azaltmaya odaklanabilirsiniz.\n\n");
-                }
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read()) // Birden fazla satırı okuma döngüsü
+                        {
+                            // Vücut Kitle Endeksi kontrolü
+                            if (dr["Vücut Kitle Endeksi"] != DBNull.Value)
+                            {
+                                double vki = Convert.ToDouble(dr["Vücut Kitle Endeksi"]);
+                                richtxt_yorumlama.AppendText(
+                                    $"Vücut Kitle Endeksiniz {vki} olarak hesaplanmıştır. ");
 
-                if (dr["bboy"] != DBNull.Value)
-                {
-                    richtxt_yorumlama.AppendText(
-                        $"Bel-Boy Oranınız {dr["bboy"]} olarak hesaplanmıştır. " +
-                        $"Bu oran, karın bölgesindeki yağlanmayı ve genel sağlık risklerini değerlendirmenize yardımcı olur. " +
-                        $"0.50'nin altında bir oran genellikle sağlıklı kabul edilir. " +
-                        $"Eğer oranınız yüksekse, düzenli fiziksel aktivite ve sağlıklı beslenme alışkanlıklarını benimsemelisiniz.\n\n");
-                }
+                                if (vki < 18.5)
+                                    richtxt_yorumlama.AppendText("Zayıf kategorisindesiniz. Kilo almanız önerilir.\n\n");
+                                else if (vki >= 18.5 && vki < 25)
+                                    richtxt_yorumlama.AppendText("Normal kilodasınız. Sağlıklı yaşam tarzınızı sürdürün.\n\n");
+                                else if (vki >= 25 && vki < 30)
+                                    richtxt_yorumlama.AppendText("Fazla kilolusunuz. Egzersiz ve beslenme düzenine dikkat etmelisiniz.\n\n");
+                                else
+                                    richtxt_yorumlama.AppendText("Obezite seviyesindesiniz. Kilo vermeye yönelik adımlar atmalısınız.\n\n");
+                            }
 
-                if (dr["bboyun"] != DBNull.Value)
-                {
-                    richtxt_yorumlama.AppendText(
-                        $"Bel-Boyun Oranınız {dr["bboyun"]} olarak hesaplanmıştır. " +
-                        $"Bu ölçüm, özellikle obezite riskini değerlendirmek için kullanılan bir yöntemdir. " +
-                        $"Oranınız ideal aralıkta değilse, kilo kontrolü ve egzersiz ile bu oranı iyileştirebilirsiniz.\n\n");
+                            // Vücut Yağ Miktarı kontrolü
+                            if (dr["Vücut Yağ Miktarı"] != DBNull.Value)
+                            {
+                                double vym = Convert.ToDouble(dr["Vücut Yağ Miktarı"]);
+                                richtxt_yorumlama.AppendText(
+                                    $"Vücut Yağ Miktarınız {vym} kg olarak hesaplanmıştır. ");
+
+                                if (vym < 10)
+                                    richtxt_yorumlama.AppendText("Yağ miktarınız düşük seviyede.\n\n");
+                                else if (vym >= 10 && vym <= 20)
+                                    richtxt_yorumlama.AppendText("Yağ miktarınız ideal aralıkta.\n\n");
+                                else
+                                    richtxt_yorumlama.AppendText("Yağ miktarınız yüksek. Yağ oranınızı düşürmeye çalışmalısınız.\n\n");
+                            }
+
+                            // İdeal Kilo kontrolü
+                            if (dr["İdeal Kilo"] != DBNull.Value)
+                            {
+                                double ik = Convert.ToDouble(dr["İdeal Kilo"]);
+                                richtxt_yorumlama.AppendText(
+                                    $"İdeal Kilonuz {ik} kg olarak hesaplanmıştır.\n\n");
+                            }
+
+                            // Metabolik Sendrom Riski kontrolü
+                            if (dr["Metabolik Sendrom Riski"] != DBNull.Value)
+                            {
+                                string metabolikSRisk = dr["Metabolik Sendrom Riski"].ToString();
+                                richtxt_yorumlama.AppendText(
+                                    $"Metabolik Sendrom Riskiniz: {metabolikSRisk}. ");
+
+                                if (metabolikSRisk.ToLower() == "yüksek")
+                                    richtxt_yorumlama.AppendText("Sağlığınızı korumak için acil önlemler almalısınız.\n\n");
+                                else if (metabolikSRisk.ToLower() == "orta")
+                                    richtxt_yorumlama.AppendText("Risk seviyeniz orta. Sağlıklı yaşam alışkanlıklarına odaklanın.\n\n");
+                                else
+                                    richtxt_yorumlama.AppendText("Risk seviyeniz düşük. Mevcut durumunuzu koruyun.\n\n");
+                            }
+                        }
+                    }
+                con.Close();
                 }
-            }
-            con.Close();
+            
+
 
         }
 
@@ -257,6 +316,68 @@ namespace gymKing.pt_forms
                 WordExport we = new WordExport();
                 we.CreateDocument(this);
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+              "Uygulamadan çıkış yapmak istiyor musunuz?",
+              "Çıkış Onayı",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Form mdiparentForm = this.MdiParent;
+            mdiparentForm.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox10_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor = Color.SkyBlue;
+        }
+
+        private void pictureBox10_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor = Color.Gainsboro;
+
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.IndianRed;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Gainsboro;
+        }
+
+        private void dgv_vucut_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_oranlar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_hesaplamalar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

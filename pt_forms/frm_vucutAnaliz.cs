@@ -56,12 +56,50 @@ namespace gymKing.pt_forms
                 }
             }
         }
-
+        SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
         private void frm_vucutAnaliz_Load(object sender, EventArgs e)
         {
             ApplyNumericValidationToTextBoxes();
-            //pt_islemKontrol dnm = new pt_islemKontrol(false);
+            //  pt_islemKontrol dnm = new pt_islemKontrol(false);
             btn_metin();
+            if(btntemizle.Text == "Belleği Temizle")
+            {
+                baglanti.Open();
+                SqlCommand cmd = new SqlCommand("select * from tbl_geciciBellek",baglanti);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    txt_yas.Text = dr[0].ToString();
+                    txt_kilo.Text = dr[1].ToString();
+                    txt_boy.Text = dr[2].ToString();
+                    txt_belcevre.Text = dr[3].ToString();
+                    txt_kalcacevre.Text = dr[4].ToString();
+                    txt_boyun.Text = dr[5].ToString();
+                    lbl_gki.Text = dr[6].ToString();
+                    lbl_bmh.Text = dr[7].ToString();
+                    lbl_msr.Text = dr[8].ToString();
+                    lbl_si.Text = dr[9].ToString();
+                    lbl_pi.Text = dr[10].ToString();
+                    lbl_ki.Text = dr[11].ToString();
+                    lbl_yi.Text = dr[12].ToString();
+                    lbl_vkm.Text = dr[13].ToString();
+                    lbl_vym.Text = dr[14].ToString();
+                    lbl_vke.Text = dr[15].ToString();
+                    lbl_ik.Text = dr[16].ToString();
+                    lbl_vyo.Text = dr[17].ToString();
+                    lbl_belboy.Text = dr[18].ToString();
+                    lbl_bko.Text = dr[19].ToString();
+                    lbl_belboyun.Text = dr[20].ToString();
+                    cmbbx_aktivite.SelectedIndex = int.Parse(dr["aktiviyeSeviyesi"].ToString());
+                    chkbox_sadeceKalori.Checked = bool.Parse(dr["sadeceKalori"].ToString());
+                    string cinsiyet = dr["cinsiyet"].ToString();
+                    if(cinsiyet.ToLower() == "erkek")
+                        rd_erkek.Checked = true;
+                    else
+                        rd_kadin.Checked = true;
+                }
+                baglanti.Close();
+            }
             
         }
         
@@ -71,7 +109,7 @@ namespace gymKing.pt_forms
             if(rd_erkek.Checked)
                 cinsiyet = rd_erkek.Text;
             if(rd_kadin.Checked)
-                cinsiyet = rd_kadin.Text;
+                cinsiyet = rd_kadin.Text.ToLower();
             return cinsiyet;
         }
         private void sonucYerlestir(float suİhtiyaci,float proteinİhtiyaci,float karbonhidratİhtiyaci, float yağİhtiyaci,
@@ -173,7 +211,7 @@ namespace gymKing.pt_forms
             SqlCommand kmt = new SqlCommand(
                 "UPDATE tbl_gecicibellek " +
                 "SET yas = @pyas, kilo = @pkilo, boy = @boy, bel = @bel, kalca = @kalca, boyun = @boyun, gki = @gki, bmh = @bmh, msr = @msr, si = @si, pi = @pi, ki = @ki, yi = @yi, vkm = @vkm, vym = @vym, vki = @vki, ik = @ik ," +
-                "vyo = @vyo ,bbo = @bbo , bko = @bko , bboyun = @bboyun ,cinsiyet = @cins" ,baglanti
+                "vyo = @vyo ,bbo = @bbo , bko = @bko , bboyun = @bboyun ,cinsiyet = @cins, aktiviyeSeviyesi = @p1,sadeceKalori = @p2" ,baglanti
             );
             kmt.Parameters.AddWithValue("@pyas", txt_yas.Text);
             kmt.Parameters.AddWithValue("@pkilo",txt_kilo.Text);
@@ -197,6 +235,8 @@ namespace gymKing.pt_forms
             kmt.Parameters.AddWithValue("@bko",lbl_bko.Text);
             kmt.Parameters.AddWithValue("@bboyun",lbl_belboyun.Text);
             kmt.Parameters.AddWithValue("@cins", cinsiyetAl() );
+            kmt.Parameters.AddWithValue("@p1", cmbbx_aktivite.SelectedIndex);
+            kmt.Parameters.AddWithValue("@p2", chkbox_sadeceKalori.Checked);
             kmt.ExecuteNonQuery();
 
             baglanti.Close();
@@ -244,17 +284,46 @@ namespace gymKing.pt_forms
 
         private void btntemizle_Click(object sender, EventArgs e)
         {
-      
+        
         islemKontrol(false);
         if(btntemizle.Text == "Belleği Temizle")
             {
-
                 btntemizle.Text = "Kutucukları Temizle";
+                
             }
-            
+            cmbbx_aktivite.SelectedIndex = -1;
+            rd_erkek.Checked = false;
+            rd_kadin.Checked = false;
+            txt_yas.Text = string.Empty;
+            txt_kilo.Text = string.Empty;
+            txt_kalcacevre.Text = string.Empty;
+            txt_boyun.Text = string.Empty;
+            txt_boy.Text = string.Empty;
+            txt_belcevre.Text = string.Empty; ;
+            chkbox_sadeceKalori.Checked = false;
+
         }
 
-        
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Form mdiParent = this.MdiParent;
+            mdiParent.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+              "Uygulamadan çıkış yapmak istiyor musunuz?",
+              "Çıkış Onayı",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
     }
 

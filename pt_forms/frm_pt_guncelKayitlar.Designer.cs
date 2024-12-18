@@ -80,6 +80,8 @@
             this.chkbx_si = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -89,6 +91,8 @@
             this.grobx_vucutBilgileri.SuspendLayout();
             this.grpbx_makrolar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -209,11 +213,11 @@
             // 
             // cmbbx_egitmen
             // 
-            this.cmbbx_egitmen.Font = new System.Drawing.Font("Javanese Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbbx_egitmen.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbbx_egitmen.FormattingEnabled = true;
             this.cmbbx_egitmen.Location = new System.Drawing.Point(125, 132);
             this.cmbbx_egitmen.Name = "cmbbx_egitmen";
-            this.cmbbx_egitmen.Size = new System.Drawing.Size(151, 37);
+            this.cmbbx_egitmen.Size = new System.Drawing.Size(151, 30);
             this.cmbbx_egitmen.TabIndex = 5;
             this.cmbbx_egitmen.SelectedIndexChanged += new System.EventHandler(this.cmbbx_egitmen_SelectedIndexChanged);
             // 
@@ -228,11 +232,11 @@
             // 
             // cmbbx_soyisim
             // 
-            this.cmbbx_soyisim.Font = new System.Drawing.Font("Javanese Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbbx_soyisim.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbbx_soyisim.FormattingEnabled = true;
             this.cmbbx_soyisim.Location = new System.Drawing.Point(125, 85);
             this.cmbbx_soyisim.Name = "cmbbx_soyisim";
-            this.cmbbx_soyisim.Size = new System.Drawing.Size(151, 37);
+            this.cmbbx_soyisim.Size = new System.Drawing.Size(151, 30);
             this.cmbbx_soyisim.TabIndex = 3;
             this.cmbbx_soyisim.SelectedIndexChanged += new System.EventHandler(this.cmbbx_soyisim_SelectedIndexChanged);
             // 
@@ -256,11 +260,11 @@
             // 
             // cmbbx_isim
             // 
-            this.cmbbx_isim.Font = new System.Drawing.Font("Javanese Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbbx_isim.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbbx_isim.FormattingEnabled = true;
             this.cmbbx_isim.Location = new System.Drawing.Point(125, 40);
             this.cmbbx_isim.Name = "cmbbx_isim";
-            this.cmbbx_isim.Size = new System.Drawing.Size(151, 37);
+            this.cmbbx_isim.Size = new System.Drawing.Size(151, 30);
             this.cmbbx_isim.TabIndex = 0;
             this.cmbbx_isim.SelectedIndexChanged += new System.EventHandler(this.cmbbx_isim_SelectedIndexChanged);
             // 
@@ -683,11 +687,43 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::gymKing.kaynaklar.cross;
+            this.pictureBox7.Location = new System.Drawing.Point(1222, 12);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(30, 35);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 39;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.pictureBox7.MouseLeave += new System.EventHandler(this.pictureBox7_MouseLeave);
+            this.pictureBox7.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox10.Image = global::gymKing.kaynaklar.window_minimize;
+            this.pictureBox10.Location = new System.Drawing.Point(1186, 12);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(30, 35);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 38;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            this.pictureBox10.MouseLeave += new System.EventHandler(this.pictureBox10_MouseLeave);
+            this.pictureBox10.MouseHover += new System.EventHandler(this.pictureBox10_MouseHover);
+            // 
             // frm_pt_guncelKayitlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView1);
@@ -695,6 +731,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_pt_guncelKayitlar";
             this.Text = "frm_pt_guncelKayitlar";
             this.Load += new System.EventHandler(this.frm_pt_guncelKayitlar_Load);
@@ -712,6 +749,8 @@
             this.grpbx_makrolar.ResumeLayout(false);
             this.grpbx_makrolar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -770,5 +809,7 @@
         private System.Windows.Forms.CheckBox chkbx_vki;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

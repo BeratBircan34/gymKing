@@ -59,7 +59,6 @@ namespace gymKing
                         frmpt.oturmSahibi = per.Ad + " " + per.Soyad;
                         frmpt.Show();
                         this.Hide();
-                        MessageBox.Show(id);
                         MessageBox.Show("Hoşgeldiniz! " + per.Ad + " " + per.Soyad);
                         break;
                     case "Kasiyer":

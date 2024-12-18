@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using gymKing.oto_Baglanti;
 using System.Collections;
+using System.Net;
 
 namespace gymKing.pt_forms
 {
@@ -60,7 +61,7 @@ namespace gymKing.pt_forms
             lbl_bboS.Text = dnm.belBoyOrani_;
             lbl_bkoS.Text = dnm.belKalcaOrani;
             lbl_msr.Text = dnm.metabolikSendromRiski;
-            lbl_boyun.Text = dnm.boyun;
+            lbl_boyun.Text = dnm.belBoyunOrani;
             lbl_si.Text = dnm.suIhtiyacı;
             lbl_ki.Text = dnm.karbIhtiyacı;
             lbl_pi.Text = dnm.proteinIhtıyacı;
@@ -74,7 +75,7 @@ namespace gymKing.pt_forms
         {
             lbl_egitmen.Text = egitmen;
             verileriYerlestir();
-            if (lbl_cinsiyet.Text == "Kadin")
+            if (lbl_cinsiyet.Text == "Kadın")
                 lbl_cinsiyet.ForeColor = Color.IndianRed;
             else
                 lbl_cinsiyet.ForeColor= Color.CadetBlue;
@@ -155,7 +156,16 @@ namespace gymKing.pt_forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            verileriCevirVeYolla();
+            try
+            {
+                verileriCevirVeYolla();
+            }
+            
+            catch {
+                MessageBox.Show("Hesaplama sonuçları rastgele girilmiş veriler. Kayıt yapılamıyor.");
+            
+            
+            }
         }
         private void sql_komut(string komut, SqlConnection bglnti)
         {
@@ -172,6 +182,7 @@ namespace gymKing.pt_forms
         }
         private void parametrelereDegerVer(SqlCommand cmd)
         {
+            deneme dnm = new deneme();
             cmd.Parameters.AddWithValue("@ad", cmbbx_isim.Text);
             cmd.Parameters.AddWithValue("@soyad", cmbbx_soyisim.Text);
             cmd.Parameters.AddWithValue("@bazalMetabolizma", decimal.Parse(lbl_bmhS.Text));
@@ -196,11 +207,12 @@ namespace gymKing.pt_forms
             cmd.Parameters.AddWithValue("@yas", int.Parse(txt_yasS.Text));
             cmd.Parameters.AddWithValue("@tarih", DateTime.Now.Date);
             cmd.Parameters.AddWithValue("@egitmen", lbl_egitmen.Text);
-            cmd.Parameters.AddWithValue("@cinsiyet", lbl_cinsiyet.Text);
+            cmd.Parameters.AddWithValue("@cinsiyet", dnm.cinsiyet.ToLower());
 
         }
         private void parametrelereDegerVer(SqlCommand cmd, string islemTuru)
         {
+            deneme dnm = new deneme();
             cmd.Parameters.AddWithValue("@ad", cmbbx_isim.Text);
             cmd.Parameters.AddWithValue("@soyad", cmbbx_soyisim.Text);
             cmd.Parameters.AddWithValue("@islemTarihi", DateTime.Now.Date);
@@ -227,7 +239,8 @@ namespace gymKing.pt_forms
             cmd.Parameters.AddWithValue("@boy", (txt_boyS.Text));
             cmd.Parameters.AddWithValue("@yas", (txt_yasS.Text));
             cmd.Parameters.AddWithValue("@egitmen", lbl_egitmen.Text);
-            cmd.Parameters.AddWithValue("@cinsiyet",lbl_cinsiyet.Text);
+            string a = lbl_cinsiyet.Text;
+            cmd.Parameters.AddWithValue("@cinsiyet", dnm.cinsiyet.ToLower());
 
         }
         private void gecmiseYolla()
@@ -238,7 +251,7 @@ namespace gymKing.pt_forms
                 araKomut = "Yeni kisi kayit";
             if (rd_kayitliGuncelle.Checked)
                 araKomut = "Kayitli Guncelleme";
-            string komut_yeniKisi = ($"insert into tbl_gecmis_islemler (ad, soyad, islem_tarihi,islem_gunu,islem_saati,islem_turu,bmh, gki, msr, vki, vyo, vym, ik, bko, bbo, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen,cinsiyet)" +
+            string komut_yeniKisi = ($"insert into tbl_gecmis_islemler (ad, soyad, islem_tarihi,islem_gunu,islem_saati,islem_turu,bmh, gki, msr, vki, vyo, vym, ik, bko, bbo, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen,k_cinsiyet)" +
                 ($"values (@ad, @soyad, @islemTarihi,@islemGunu,@islemSaati,'{araKomut}',@bazalMetabolizma, @gunlukKalori, @metabolikSRisk, @vki, @vyo, @vym, @ik, @bko, @bboy, @bboyun, @si, @pi, @ki, @yi, @kilo, @bel, @boyun, @kalca, @boy, @yas ,@egitmen,@cinsiyet)"));
             baglanti.Open();
             sql_komut_gecmis(komut_yeniKisi, baglanti);
@@ -250,9 +263,9 @@ namespace gymKing.pt_forms
         private void verileriCevirVeYolla()
         {
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            string komut_yeniKisi = ("insert into tbl_guncelkayitlar (ad, soyad, bazalMetabolizma, gunlukKalori, metabolikSRisk, vki, vyo, vym, ik, bko, bboy, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen,tarih,cinsiyet)" +
+            string komut_yeniKisi = ("insert into tbl_guncelkayitlar (ad, soyad, bazalMetabolizma, gunlukKalori, metabolikSRisk, vki, vyo, vym, ik, bko, bboy, bboyun, si, pi, ki, yi, kilo, bel, boyun, kalca, boy, yas,egitmen,tarih,k_cinsiyet)" +
                 "values (@ad, @soyad, @bazalMetabolizma, @gunlukKalori, @metabolikSRisk, @vki, @vyo, @vym, @ik, @bko, @bboy, @bboyun, @si, @pi, @ki, @yi, @kilo, @bel, @boyun, @kalca, @boy, @yas ,@egitmen,@tarih,@cinsiyet)");
-            string komut_Kayitlikisi =  "UPDATE tbl_guncelkayitlar SET ad = @ad, soyad = @soyad, bazalMetabolizma = @bazalMetabolizma, gunlukKalori = @gunlukKalori, metabolikSRisk = @metabolikSRisk, vki = @vki, vyo = @vyo, vym = @vym, ik = @ik, bko = @bko, bboy = @bboy, bboyun = @bboyun, si = @si, pi = @pi, ki = @ki, yi = @yi, kilo = @kilo, bel = @bel, boyun = @boyun, kalca = @kalca, boy = @boy, yas = @yas , egitmen = @egitmen, tarih = @tarih";
+            string komut_Kayitlikisi = "UPDATE tbl_guncelkayitlar SET  bazalMetabolizma = @bazalMetabolizma, gunlukKalori = @gunlukKalori, metabolikSRisk = @metabolikSRisk, vki = @vki, vyo = @vyo, vym = @vym, ik = @ik, bko = @bko, bboy = @bboy, bboyun = @bboyun, si = @si, pi = @pi, ki = @ki, yi = @yi, kilo = @kilo, bel = @bel, boyun = @boyun, kalca = @kalca, boy = @boy, yas = @yas , egitmen = @egitmen, tarih = @tarih where ad = @ad and soyad = @soyad";
             baglanti.Open();
             if (rd_yeniKayit.Checked)
             {
@@ -262,6 +275,7 @@ namespace gymKing.pt_forms
             else if (rd_kayitliGuncelle.Checked)
             {
                 sql_komut(komut_Kayitlikisi, baglanti);
+                gecmiseYolla();
             }
             MessageBox.Show("Veriler başarıyla işlendi");
             baglanti.Close();
@@ -273,7 +287,7 @@ namespace gymKing.pt_forms
             
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
-            SqlCommand kmt = new SqlCommand("select distinct ad from tbl_guncelKayitlar where cinsiyet = @p1", baglanti);
+            SqlCommand kmt = new SqlCommand("select distinct ad from tbl_guncelKayitlar where k_cinsiyet = @p1", baglanti);
             kmt.Parameters.AddWithValue("@p1", lbl_cinsiyet.Text);
             SqlDataReader dr = kmt.ExecuteReader();
             while (dr.Read())
@@ -289,7 +303,7 @@ namespace gymKing.pt_forms
             
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
-            SqlCommand kmt = new SqlCommand("select distinct m_ad from tbl_musteriler where cinsiyet = @p1", baglanti);
+            SqlCommand kmt = new SqlCommand("select distinct m_ad from tbl_musteriler where m_cinsiyet = @p1", baglanti);
             kmt.Parameters.AddWithValue("@p1", lbl_cinsiyet.Text);
             SqlDataReader dr = kmt.ExecuteReader();
             while (dr.Read())
@@ -360,6 +374,47 @@ namespace gymKing.pt_forms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+              "Uygulamadan çıkış yapmak istiyor musunuz?",
+              "Çıkış Onayı",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Form a = this.MdiParent;
+            a.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox7_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox7.BackColor = Color.IndianRed;
+        }
+
+        private void pictureBox7_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox7.BackColor = Color.Gainsboro;
+        }
+
+        private void pictureBox10_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor = Color.SkyBlue;
+        }
+
+        private void pictureBox10_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor = Color.Gainsboro;
         }
     }
 }

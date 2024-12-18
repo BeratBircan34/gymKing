@@ -58,11 +58,11 @@ namespace gymKing.pt_forms
                 //  Kişi Filtreleri
                 if (chkbx_cinsiyet_k.Checked)
                 {
-                    komut += " where cinsiyet = 'kadın' ";
+                    komut += " where k_cinsiyet = 'kadın' ";
                 }
                 if (chkbx_cinsiyet_e.Checked)
                 {
-                    komut += " where cinsiyet = 'erkek'  ";
+                    komut += " where k_cinsiyet = 'erkek'  ";
                 }
                 if(cmbbx_islemTuru.Text != "")
                 {
@@ -673,6 +673,48 @@ namespace gymKing.pt_forms
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void pictureBox7_MouseHover(object sender, EventArgs e)
+        {
+
+            pictureBox7.BackColor = Color.IndianRed;
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox10_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor = Color.SkyBlue;
+        }
+
+        private void pictureBox10_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor = Color.Gainsboro;
+        }
+
+        private void pictureBox7_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox7.BackColor = Color.Gainsboro;
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Form a = this.MdiParent;
+            a.WindowState = FormWindowState.Minimized;
         }
     }
 }

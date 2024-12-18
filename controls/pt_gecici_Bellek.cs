@@ -65,8 +65,8 @@ namespace gymKing.controls
                 vucutYagOrani = dr["vyo"].ToString ().ToLower () ;
                 belKalcaOrani = dr["bko"].ToString();
                 belBoyOrani_ = dr["bbo"].ToString() ;
-                belBoyunOrani = dr["bboyun"].ToString ( );
-                vucutKasMiktari = dr["vkm"].ToString( );
+                belBoyunOrani = dr["bboyun"].ToString ();
+                vucutKasMiktari = dr["vkm"].ToString();
                 cinsiyet = dr["cinsiyet"].ToString().ToLower () ;
             }
 

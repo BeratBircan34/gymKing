@@ -37,7 +37,8 @@ namespace gymKing.pt_forms
                     arakomut += a + " ,";
             }
 
-            string komut = $"select {arakomut} from tbl_guncelKayitlar";
+            string komut = $"select {arakomut} from tbl_guncelKayitlar" +
+                    $"";
             //  Kişi Filtreleri
             if (chkbx_cinsiyet_k.Checked)
             {
@@ -537,6 +538,48 @@ namespace gymKing.pt_forms
             cmbbx_isim.SelectedIndex = -1;
             cmbbx_egitmen.SelectedIndex = -1;
             cmbbx_soyisim.Items.Clear();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Uygulamadan çıkış yapmak istiyor musunuz?",
+               "Çıkış Onayı",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            // Kullanıcı "Evet" derse uygulamayı kapat
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox7_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox7.BackColor = Color.IndianRed;
+
+        }
+
+        private void pictureBox7_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox7.BackColor = Color.Gainsboro;
+        }
+
+        private void pictureBox10_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor = Color.SkyBlue;
+        }
+
+        private void pictureBox10_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox10.BackColor = Color.Gainsboro;
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Form A = this.MdiParent;
+            A.WindowState = FormWindowState.Minimized;
         }
     }
     }

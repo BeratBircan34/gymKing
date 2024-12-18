@@ -32,7 +32,7 @@ namespace gymKing.controls
             float bmh = 0;
             switch (cinsiyet)
             {
-                case "Kadın":
+                case "kadın":
                     bmh = 447.593f + (9.247f * kilo) + (3.098f * boy) - (4.330f * yas);
                     break;
                 case "Erkek":
@@ -47,7 +47,7 @@ namespace gymKing.controls
             float vyo = 0;
             switch(cinsiyet)
             {
-                case "Kadın":
+                case "kadın":
                     vyo = 495 / (1.29579f - 0.35004f * (float)Math.Log10(bel + kalca - boyun) + 0.22100f * (float)Math.Log10(boy)) - 450;
 
                     break;
@@ -80,7 +80,7 @@ namespace gymKing.controls
                     if(bel >= 102)
                         msr = true;
                     break;
-                case "Kadın":
+                case "kadın":
                     if(bel >= 88)
                         msr = true;
                     break;
@@ -103,7 +103,7 @@ namespace gymKing.controls
             float idealKilo = 0;
             switch(cinsiyet)
             {
-                case "Kadın":
+                case "kadın":
                     idealKilo = 45.5f + 2.3f * ((boy / 2.54f) - 60);
                     break;
                 case "Erkek":
@@ -118,7 +118,7 @@ namespace gymKing.controls
             float vki = 0;
             switch (cinsiyet)
             {
-                case "Kadın":
+                case "kadın":
                     vki = kilo / ((float)Math.Pow(boy / 100, 2));
                     break;
                 case "Erkek":
