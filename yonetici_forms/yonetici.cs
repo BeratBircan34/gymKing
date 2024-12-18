@@ -37,7 +37,6 @@ namespace gymKing.yonetici_forms
             // ComboBox'ları temizliyoruz
             comboBoxPT.Items.Clear();
             comboBoxKasiyer.Items.Clear();
-            comboBoxTemizlik.Items.Clear();
 
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
@@ -46,13 +45,14 @@ namespace gymKing.yonetici_forms
             SqlCommand kmt = new SqlCommand("SELECT KullaniciID, kullaniciAdi FROM tbl_giris_bilgileri WHERE rol = 'Pt'", baglanti);
             SqlDataReader dr = kmt.ExecuteReader();
 
-            while (dr.Read())
+            if (dr.Read())
             {
                 string kullaniciAdi = dr["kullaniciAdi"].ToString();
                 string kullaniciID = dr["KullaniciID"].ToString();
 
                 // UserItem nesnesi oluşturup ComboBox'a ekliyoruz
-                comboBoxPT.Items.Add(new UserItem { Ad = kullaniciAdi, ID = kullaniciID });
+                //comboBoxPT.Items.Add(new UserItem { Ad = kullaniciAdi, ID = kullaniciID });
+                comboBoxPT.Items.Add(new UserItem { Ad = getUserName(kullaniciID), ID = kullaniciID });
             }
 
             dr.Close();
@@ -67,7 +67,7 @@ namespace gymKing.yonetici_forms
                 string kullaniciID = dr2["KullaniciID"].ToString();
 
                 // UserItem nesnesi oluşturup ComboBox2'ye ekliyoruz
-                comboBoxKasiyer.Items.Add(new UserItem { Ad = kullaniciAdi, ID = kullaniciID });
+                comboBoxKasiyer.Items.Add(new UserItem { Ad = getUserName(kullaniciID), ID = kullaniciID });
             }
 
             dr2.Close();
@@ -231,12 +231,12 @@ namespace gymKing.yonetici_forms
             string adSoyad = "";
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
-            SqlCommand kmt = new SqlCommand("SELECT kullaniciAdi FROM tbl_giris_bilgileri WHERE KullaniciID = @KullaniciID", baglanti);
+            SqlCommand kmt = new SqlCommand("SELECT ad,soyad FROM tbl_per_bilgiler WHERE perId = @KullaniciID", baglanti);
             kmt.Parameters.AddWithValue("@KullaniciID", kullaniciID);
             SqlDataReader dr = kmt.ExecuteReader();
             if (dr.Read())
             {
-                adSoyad = dr["kullaniciAdi"].ToString(); // Kullanıcı adı burada alınabilir
+                adSoyad = dr[0].ToString()+" "+ dr[1].ToString(); // Kullanıcı adı burada alınabilir
             }
             dr.Close();
             baglanti.Close();
@@ -272,12 +272,13 @@ namespace gymKing.yonetici_forms
                 {
                     case "Pt":
                         frm_pt frmpt = new frm_pt();
-                        frmpt.oturmSahibi = getUserName(kullaniciID);
+                        frmpt.oturmSahibi = getUserName(kullaniciID)+"_Admin";
                         frmpt.Show();
                         break;
                     case "Kasiyer":
                         Kasiyer kasiyer = new Kasiyer(kullaniciID);
-                        kasiyer.kasiyer_oturumSahibi = getUserName(kullaniciID);
+                        kasiyer.kasiyer_oturumSahibi = getUserName(kullaniciID)+"_Admin";
+                        string deneme = getUserName(kullaniciID) ;
                         kasiyer.Show();
                         break;
                     default:
@@ -311,7 +312,7 @@ namespace gymKing.yonetici_forms
                         break;
                     case "Kasiyer":
                         Kasiyer kasiyer = new Kasiyer(kullaniciIDKasiyer);
-                        kasiyer.kasiyer_oturumSahibi = getUserName(kullaniciIDKasiyer);
+                        kasiyer.kasiyer_oturumSahibi = getUserName(kullaniciIDKasiyer) +"_Admin";
                         kasiyer.Show();
                         break;
                     default:
