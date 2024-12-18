@@ -208,7 +208,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::gymKing.kaynaklar.AKTİF_PERSONELLER_TXT_son;
-            this.pictureBox3.Location = new System.Drawing.Point(849, -3);
+            this.pictureBox3.Location = new System.Drawing.Point(849, -6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(341, 135);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
