@@ -30,7 +30,7 @@ namespace gymKing.Üye_forms
             lbl_oturumSahibi.Text = uyeOturumSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
 
 
 

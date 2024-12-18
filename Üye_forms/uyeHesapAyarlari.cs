@@ -32,7 +32,7 @@ namespace gymKing.Üye_forms
 
         private void uyeHesapAyarlari_Load(object sender, EventArgs e)
         {
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
 
             textBoxId.Text = id_;
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());

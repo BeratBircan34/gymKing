@@ -48,9 +48,13 @@ namespace gymKing
                 switch (rol)
                 {
                     case "Temizlikçi":
-                        Temizlik frm = new Temizlik();
+                        Temizlik frm = new Temizlik(id);
+                        bilgiAl tper = new perBilgiAl(id);
+                        tper.bilgi(id);
+                        frm.temizlikoturumsahibi = tper.Ad+" "+tper.Soyad;
                         frm.Show();
-                        
+                        this.Hide();
+                        MessageBox.Show("Hoşgeldiniz! "+tper.Ad + " "+tper.Soyad);
                         break;
                     case "Pt":
                         frm_pt frmpt = new frm_pt();

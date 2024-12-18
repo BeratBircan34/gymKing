@@ -156,7 +156,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Temizlik temizlikfrm =new Temizlik();
+            Temizlik temizlikfrm =new Temizlik(id_);
             temizlikfrm.Show();
             this.Close();
 
