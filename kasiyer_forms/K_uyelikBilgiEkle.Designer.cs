@@ -35,6 +35,7 @@
             this.gymKingdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.textBoxSifre = new System.Windows.Forms.TextBox();
             this.textBoxKullaniciAdi = new System.Windows.Forms.TextBox();
@@ -61,7 +62,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -137,7 +137,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1256, 622);
@@ -149,13 +149,24 @@
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.SlateGray;
             this.label11.Location = new System.Drawing.Point(614, 520);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 28);
             this.label11.TabIndex = 99;
             this.label11.Text = "ID :";
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.SlateGray;
+            this.label15.Location = new System.Drawing.Point(614, 585);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(139, 28);
+            this.label15.TabIndex = 100;
+            this.label15.Text = "Cinsiyet :";
             // 
             // textBoxID
             // 
@@ -185,7 +196,7 @@
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.SlateGray;
             this.label12.Location = new System.Drawing.Point(614, 382);
             this.label12.Name = "label12";
@@ -196,11 +207,11 @@
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.SlateGray;
             this.label13.Location = new System.Drawing.Point(614, 450);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(85, 28);
+            this.label13.Size = new System.Drawing.Size(97, 28);
             this.label13.TabIndex = 95;
             this.label13.Text = "Sifre :";
             // 
@@ -212,6 +223,7 @@
             this.dateTimePickerDogum.Name = "dateTimePickerDogum";
             this.dateTimePickerDogum.Size = new System.Drawing.Size(303, 32);
             this.dateTimePickerDogum.TabIndex = 4;
+            this.dateTimePickerDogum.ValueChanged += new System.EventHandler(this.dateTimePickerDogum_ValueChanged);
             // 
             // dateTimePickerBaslangic
             // 
@@ -265,6 +277,7 @@
             this.textBoxAdres.Name = "textBoxAdres";
             this.textBoxAdres.Size = new System.Drawing.Size(303, 203);
             this.textBoxAdres.TabIndex = 6;
+            this.textBoxAdres.TextChanged += new System.EventHandler(this.textBoxAdres_TextChanged);
             // 
             // textBoxMail
             // 
@@ -273,6 +286,7 @@
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(303, 29);
             this.textBoxMail.TabIndex = 5;
+            this.textBoxMail.TextChanged += new System.EventHandler(this.textBoxMail_TextChanged);
             // 
             // textBoxSoyad
             // 
@@ -281,6 +295,7 @@
             this.textBoxSoyad.Name = "textBoxSoyad";
             this.textBoxSoyad.Size = new System.Drawing.Size(303, 29);
             this.textBoxSoyad.TabIndex = 3;
+            this.textBoxSoyad.TextChanged += new System.EventHandler(this.textBoxSoyad_TextChanged);
             // 
             // textBoxAd
             // 
@@ -289,44 +304,45 @@
             this.textBoxAd.Name = "textBoxAd";
             this.textBoxAd.Size = new System.Drawing.Size(303, 29);
             this.textBoxAd.TabIndex = 2;
+            this.textBoxAd.TextChanged += new System.EventHandler(this.textBoxAd_TextChanged);
             // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.SlateGray;
             this.label10.Location = new System.Drawing.Point(614, 185);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(235, 28);
+            this.label10.Size = new System.Drawing.Size(245, 43);
             this.label10.TabIndex = 42;
             this.label10.Text = "Personal Trainer :";
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.SlateGray;
             this.label9.Location = new System.Drawing.Point(614, 35);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(244, 28);
+            this.label9.Size = new System.Drawing.Size(258, 41);
             this.label9.TabIndex = 41;
             this.label9.Text = "Üyelik Baslangıcı :";
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.SlateGray;
             this.label8.Location = new System.Drawing.Point(614, 260);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 28);
+            this.label8.Size = new System.Drawing.Size(169, 28);
             this.label8.TabIndex = 40;
             this.label8.Text = "Diyetisyen :";
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.SlateGray;
             this.label7.Location = new System.Drawing.Point(614, 110);
             this.label7.Name = "label7";
@@ -337,7 +353,7 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SlateGray;
             this.label6.Location = new System.Drawing.Point(614, 325);
             this.label6.Name = "label6";
@@ -348,29 +364,29 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SlateGray;
             this.label5.Location = new System.Drawing.Point(32, 325);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 28);
+            this.label5.Size = new System.Drawing.Size(109, 28);
             this.label5.TabIndex = 37;
             this.label5.Text = "Adres :";
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SlateGray;
             this.label3.Location = new System.Drawing.Point(32, 260);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 28);
+            this.label3.Size = new System.Drawing.Size(109, 28);
             this.label3.TabIndex = 36;
             this.label3.Text = "Email : ";
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SlateGray;
             this.label2.Location = new System.Drawing.Point(32, 185);
             this.label2.Name = "label2";
@@ -381,18 +397,18 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateGray;
             this.label1.Location = new System.Drawing.Point(32, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 28);
+            this.label1.Size = new System.Drawing.Size(109, 28);
             this.label1.TabIndex = 34;
             this.label1.Text = "Soyad :";
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Heavy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SlateGray;
             this.label4.Location = new System.Drawing.Point(32, 35);
             this.label4.Name = "label4";
@@ -411,26 +427,20 @@
             this.label14.Size = new System.Drawing.Size(41, 13);
             this.label14.TabIndex = 73;
             this.label14.Text = "label14";
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.SlateGray;
-            this.label15.Location = new System.Drawing.Point(614, 585);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(130, 28);
-            this.label15.TabIndex = 100;
-            this.label15.Text = "Cinsiyet :";
+            this.label14.Visible = false;
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın"});
             this.comboBox1.Location = new System.Drawing.Point(891, 606);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(288, 29);
             this.comboBox1.TabIndex = 101;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // K_uyelikBilgiEkle
             // 

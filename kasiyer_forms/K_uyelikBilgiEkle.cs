@@ -9,7 +9,7 @@ namespace gymKing.kasiyer_forms
 {
     public partial class K_uyelikBilgiEkle : Form
     {
-        public K_uyelikBilgiEkle(string id)
+        public K_uyelikBilgiEkle(string id)                 //Giriş Yapan Kişinin İD'sini Alır
         {
             InitializeComponent();
             this.id_ = id;
@@ -20,9 +20,9 @@ namespace gymKing.kasiyer_forms
         public int kontrol = 0;
         private void K_uyelikBilgiEkle_Load(object sender, EventArgs e)
         {
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
 
-            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());  //Sql bağlantısı Açma
             baglanti.Open();
 
 
@@ -31,8 +31,8 @@ namespace gymKing.kasiyer_forms
             SqlCommand kullaniciAdi = new SqlCommand("select kullaniciAdi from tbl_giris_Bilgileri where kullaniciID = " + id_, baglanti);
             SqlDataReader adgetir = kullaniciAdi.ExecuteReader();
             while (adgetir.Read())
-            {
-                label14.Text = adgetir["kullaniciAdi"].ToString();
+            {                                                           //tbl_giriş_bilgileri Tablosundan Giriş Yapan Kişinin Kullanıcı Adı Verisini Alır ve Görünmez Label'a Yazdırır
+                label14.Text = adgetir["kullaniciAdi"].ToString();                          
             }
             adgetir.Close();
 
@@ -42,8 +42,8 @@ namespace gymKing.kasiyer_forms
             while (dr.Read())
             {
                 textBoxKullaniciAdi.Text = dr["kullaniciAdi"].ToString();
-                textBoxSifre.Text = dr["sifre"].ToString();
-                textBoxID.Text = dr["KullaniciID"].ToString();
+                textBoxSifre.Text = dr["sifre"].ToString();                        //tbl_giriş_bilgileri Tablosundan Son Eklenen Veriyi Alıp
+                textBoxID.Text = dr["KullaniciID"].ToString();                     // Kullanıcı Adı, Şifre ve Kullanıcı İD Verilerini textBoxlara Yazdırır
             }
             dr.Close();
 
@@ -51,7 +51,7 @@ namespace gymKing.kasiyer_forms
             SqlCommand getir2 = new SqlCommand("select ad,soyad from tbl_per_bilgiler where rol = 'Pt'", baglanti);
             SqlDataReader dr2 = getir2.ExecuteReader();
             comboBoxPt.Items.Clear();
-            while (dr2.Read())
+            while (dr2.Read())                                  // tbl_per_bilgiler Tablosundan Rolü 'PT' Olanları comboBox'a Ekler
             {
                 comboBoxPt.Items.Add(dr2["ad"].ToString());
             }
@@ -61,7 +61,7 @@ namespace gymKing.kasiyer_forms
             SqlCommand getir3 = new SqlCommand("select ad,soyad from tbl_per_bilgiler where rol = 'Diyetisyen'", baglanti);
             SqlDataReader dr3 = getir3.ExecuteReader();
             comboBoxDiyetisyen.Items.Clear();
-            while (dr3.Read())
+            while (dr3.Read())                                         // tbl_per_bilgiler Tablosundan Rolü 'Diyetisyen' Olanları comboBox'a Ekler
             {
                 comboBoxDiyetisyen.Items.Add(dr3["ad"].ToString());
             }
@@ -74,9 +74,9 @@ namespace gymKing.kasiyer_forms
         {
             if (kontrol == 1)
             {
-                this.Close();
+                this.Close();       
             }
-
+                                    // Kontrol Değişkenine Atanan Değeri Kontrol Ederek Sayfadan Çıkış Yapılıp Yapılamayacağını Belirler
             else
             {
                 MessageBox.Show("Ad Soyad Girmeden Çıkış Yapamazsınız");
@@ -85,19 +85,16 @@ namespace gymKing.kasiyer_forms
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
             if (!string.IsNullOrEmpty(textBoxAd.Text) && !string.IsNullOrEmpty(textBoxSoyad.Text))
-            {
+            {                                                                                          // Ad Soyad textBoxlarının Boş Olmadığı durumda
                 SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
                 baglanti.Open();
-
+                                                       
                 string güncelle = @"
             UPDATE tbl_musteriler 
             SET 
@@ -105,7 +102,7 @@ namespace gymKing.kasiyer_forms
                 m_soyad = @mSoyad, 
                 m_DogumTarihi = @mDogumTarihi, 
                 m_telNo = @mTelNo, 
-                m_eMail = @mEmail, 
+                m_eMail = @mEmail,                                 
                 m_adres = @mAdres, 
                 m_uyelikBaslangic = @mUyelikBaslangic, 
                 m_uyelikBitis = @mUyelikBitis, 
@@ -115,12 +112,12 @@ namespace gymKing.kasiyer_forms
             WHERE m_id = @id";
 
                 SqlCommand ekle = new SqlCommand(güncelle, baglanti);
-
+                                                                                        // TextBoxlarda Yazan Verileri tbl_musteriler Tablosuna Aktarır
                 ekle.Parameters.AddWithValue("@mAd", textBoxAd.Text);
                 ekle.Parameters.AddWithValue("@mSoyad", textBoxSoyad.Text);
                 ekle.Parameters.AddWithValue("@mDogumTarihi", dateTimePickerDogum.Value);
                 ekle.Parameters.AddWithValue("@mTelNo", textBoxTelefon.Text);
-                ekle.Parameters.AddWithValue("@mEmail", textBoxMail.Text);
+                ekle.Parameters.AddWithValue("@mEmail", textBoxMail.Text);                              
                 ekle.Parameters.AddWithValue("@mAdres", textBoxAdres.Text);
                 ekle.Parameters.AddWithValue("@mUyelikBaslangic", dateTimePickerBaslangic.Value);
                 ekle.Parameters.AddWithValue("@mUyelikBitis", dateTimePickerBitis.Value);
@@ -135,8 +132,8 @@ namespace gymKing.kasiyer_forms
                 SqlCommand raporla = new SqlCommand("insert into tbl_kasiyer_log(yapilan_islem,islemi_yapan,islem_tarihi,islem_yapilan_id)values(@islem,@yapan,@tarih,@id)", baglanti);
                 raporla.Parameters.AddWithValue("@islem", "Yeni Üyenin Bilgileri Eklendi");
                 raporla.Parameters.AddWithValue("@yapan", label14.Text);
-                raporla.Parameters.AddWithValue("@tarih", DateTime.Today);
-                raporla.Parameters.AddWithValue("@id", textBoxID.Text);
+                raporla.Parameters.AddWithValue("@tarih", DateTime.Today);      // tbl_kasiyer_log Tablosuna Yapılan İşlemi, İşlemi Yapan Kişinin Kullanıcı Adını
+                raporla.Parameters.AddWithValue("@id", textBoxID.Text);         // ve İşlem Yapılan Kişinin İD'sini Kaydeder
 
                 raporla.ExecuteNonQuery();
 
@@ -150,10 +147,10 @@ namespace gymKing.kasiyer_forms
 
             else
             {
-                MessageBox.Show("Ad Soyad Girmeden Kayıt Yapamazsınız!");
+                MessageBox.Show("Ad Soyad Girmeden Kayıt Yapamazsınız!");      // Ad Soyad textBoxlarının Boş Olduğunu ve İşlem Yapılamayacağını Belirtir
             }
             
-
+            this.Close();
         }
 
         private void gymKingdbDataSetBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -162,6 +159,36 @@ namespace gymKing.kasiyer_forms
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerDogum_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSoyad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAdres_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMail_TextChanged(object sender, EventArgs e)
         {
 
         }

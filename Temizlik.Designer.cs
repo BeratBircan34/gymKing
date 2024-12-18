@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Temizlik));
             this.chkbx_GenelAlanlarinTemizligi = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBoxGorevler = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtbx_Notlar = new System.Windows.Forms.TextBox();
@@ -50,14 +51,14 @@
             this.chkbx_EkGorevler = new System.Windows.Forms.CheckBox();
             this.chkbx_HavalandirmaKokuKontrolu = new System.Windows.Forms.CheckBox();
             this.chkbx_HijyenMalzemelerininStoklanmasi = new System.Windows.Forms.CheckBox();
-            this.listBoxGorevler = new System.Windows.Forms.ListBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // chkbx_GenelAlanlarinTemizligi
@@ -73,8 +74,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.pictureBox4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.listBoxGorevler);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txtbx_Notlar);
@@ -102,13 +103,22 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Görevler";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // listBoxGorevler
+            // 
+            this.listBoxGorevler.FormattingEnabled = true;
+            this.listBoxGorevler.ItemHeight = 15;
+            this.listBoxGorevler.Location = new System.Drawing.Point(144, 414);
+            this.listBoxGorevler.Name = "listBoxGorevler";
+            this.listBoxGorevler.Size = new System.Drawing.Size(949, 109);
+            this.listBoxGorevler.TabIndex = 5;
+            this.listBoxGorevler.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 14F);
-            this.label1.Location = new System.Drawing.Point(1029, 571);
+            this.label1.Location = new System.Drawing.Point(1099, 471);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 21);
             this.label1.TabIndex = 6;
@@ -117,9 +127,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::gymKing.kaynaklar.delete;
-            this.pictureBox1.Location = new System.Drawing.Point(1021, 518);
+            this.pictureBox1.Location = new System.Drawing.Point(1099, 418);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(83, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -127,16 +137,17 @@
             // 
             // txtbx_Notlar
             // 
-            this.txtbx_Notlar.Location = new System.Drawing.Point(100, 473);
+            this.txtbx_Notlar.Location = new System.Drawing.Point(144, 547);
+            this.txtbx_Notlar.Multiline = true;
             this.txtbx_Notlar.Name = "txtbx_Notlar";
-            this.txtbx_Notlar.Size = new System.Drawing.Size(907, 21);
+            this.txtbx_Notlar.Size = new System.Drawing.Size(949, 61);
             this.txtbx_Notlar.TabIndex = 4;
             // 
             // lbl_Notlar
             // 
             this.lbl_Notlar.AutoSize = true;
             this.lbl_Notlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_Notlar.Location = new System.Drawing.Point(7, 473);
+            this.lbl_Notlar.Location = new System.Drawing.Point(7, 547);
             this.lbl_Notlar.Name = "lbl_Notlar";
             this.lbl_Notlar.Size = new System.Drawing.Size(62, 20);
             this.lbl_Notlar.TabIndex = 2;
@@ -306,14 +317,29 @@
             this.chkbx_HijyenMalzemelerininStoklanmasi.Text = "Hijyen Malzemelerinin Stoklanması:";
             this.chkbx_HijyenMalzemelerininStoklanmasi.UseVisualStyleBackColor = true;
             // 
-            // listBoxGorevler
+            // label5
             // 
-            this.listBoxGorevler.FormattingEnabled = true;
-            this.listBoxGorevler.Location = new System.Drawing.Point(111, 530);
-            this.listBoxGorevler.Name = "listBoxGorevler";
-            this.listBoxGorevler.Size = new System.Drawing.Size(908, 108);
-            this.listBoxGorevler.TabIndex = 5;
-            this.listBoxGorevler.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.SlateGray;
+            this.label5.Location = new System.Drawing.Point(82, 650);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 59);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Cıkıs Yap";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::gymKing.kaynaklar.power;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 650);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(64, 58);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 41;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -327,38 +353,24 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // label5
+            // label2
             // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.SlateGray;
-            this.label5.Location = new System.Drawing.Point(1147, 532);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 59);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Cıkıs Yap";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::gymKing.kaynaklar.power;
-            this.pictureBox4.Location = new System.Drawing.Point(1152, 443);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(90, 75);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 41;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1147, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
             // 
             // Temizlik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.listBoxGorevler);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Temizlik";
@@ -368,8 +380,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,5 +413,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label2;
     }
 }
