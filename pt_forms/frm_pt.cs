@@ -38,13 +38,17 @@ namespace gymKing
             lbl_oturumSahibi.Text = oturmSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
-            otoform_ayarla.renkAyarla(this, Color.Gainsboro);
+            otoform_ayarla.renkAyarla(this, Color.WhiteSmoke);
         }
       
 
-        private void timer1_Tick(object sender, EventArgs e)
+         void timer1_Tick(object sender, EventArgs e)
         {
             lbl_saat.Text = DateTime.Now.Hour.ToString()+":"+DateTime.Now.Minute.ToString()+":"+DateTime.Now.Second.ToString("00");
+            if (oturmSahibi.Contains("_Admin") && this.Text == "frm_pt")
+                pctrbx_geri.Visible = true;
+            else
+                pctrbx_geri.Visible = false;
         }
 
        

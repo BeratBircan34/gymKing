@@ -153,11 +153,11 @@
     <Compile Include="controls\pt_islemKontrol.cs" />
     <Compile Include="controls\uyeBilgiAl.cs" />
     <Compile Include="controls\WordExport.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="giris\frm_giris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="giris\frm_giris.Designer.cs">
+      <DependentUpon>frm_giris.cs</DependentUpon>
     </Compile>
     <Compile Include="gymKing_dbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -240,10 +240,10 @@
     <Compile Include="pt_forms\frm_vucutAnaliz.Designer.cs">
       <DependentUpon>frm_vucutAnaliz.cs</DependentUpon>
     </Compile>
-    <Compile Include="Temizlik.cs">
+    <Compile Include="temizlik\Temizlik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Temizlik.Designer.cs">
+    <Compile Include="temizlik\Temizlik.Designer.cs">
       <DependentUpon>Temizlik.cs</DependentUpon>
     </Compile>
     <Compile Include="yonetici_forms\gelirGider.cs">
@@ -315,8 +315,8 @@
     <Compile Include="Üye_forms\üyePaneli.Designer.cs">
       <DependentUpon>üyePaneli.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="giris\frm_giris.resx">
+      <DependentUpon>frm_giris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kasiyer_forms\Kasiyer.resx">
       <DependentUpon>Kasiyer.cs</DependentUpon>
@@ -364,7 +364,7 @@
     <EmbeddedResource Include="pt_forms\frm_vucutAnaliz.resx">
       <DependentUpon>frm_vucutAnaliz.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Temizlik.resx">
+    <EmbeddedResource Include="temizlik\Temizlik.resx">
       <DependentUpon>Temizlik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\gelirGider.resx">

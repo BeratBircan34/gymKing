@@ -25,7 +25,7 @@ namespace gymKing.pt_forms
         {
             SqlConnection con = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select ad as 'İsim',soyad as 'Soyisim',cinsiyet as 'Cinsiyet',egitmen as 'Eğitmen',tarih as 'İşlem Tarihi' from tbl_guncelKayitlar", con);
+            SqlDataAdapter da = new SqlDataAdapter("select ad as 'İsim',soyad as 'Soyisim',k_cinsiyet as 'Cinsiyet',egitmen as 'Eğitmen',tarih as 'İşlem Tarihi' from tbl_guncelKayitlar", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgv_kisiler.DataSource = dt;
