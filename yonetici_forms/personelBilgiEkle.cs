@@ -36,8 +36,8 @@ namespace gymKing.yonetici_forms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             personelEkle perEkle = new personelEkle(id_);
-            this.Hide();
-            perEkle.Show();
+            this.Close();
+
         }
 
         private void personelBilgiEkle_Load_1(object sender, EventArgs e)

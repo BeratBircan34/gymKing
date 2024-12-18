@@ -95,7 +95,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::gymKing.kaynaklar.GY_TELIF2;
-            this.pictureBox15.Location = new System.Drawing.Point(79, 552);
+            this.pictureBox15.Location = new System.Drawing.Point(88, 564);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(158, 79);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -106,7 +106,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::gymKing.kaynaklar.copyright_logo_png_clipart_best_5;
-            this.pictureBox14.Location = new System.Drawing.Point(6, 568);
+            this.pictureBox14.Location = new System.Drawing.Point(15, 580);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(76, 48);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -166,7 +166,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.comboBoxRol);
             this.groupBox1.Controls.Add(this.textBoxSifre);
             this.groupBox1.Controls.Add(this.textBoxKullaniciAdi);

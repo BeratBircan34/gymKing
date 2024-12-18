@@ -61,9 +61,9 @@
             // dataGridViewPersonelIlani
             // 
             this.dataGridViewPersonelIlani.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPersonelIlani.Location = new System.Drawing.Point(331, 158);
+            this.dataGridViewPersonelIlani.Location = new System.Drawing.Point(387, 168);
             this.dataGridViewPersonelIlani.Name = "dataGridViewPersonelIlani";
-            this.dataGridViewPersonelIlani.Size = new System.Drawing.Size(507, 323);
+            this.dataGridViewPersonelIlani.Size = new System.Drawing.Size(422, 323);
             this.dataGridViewPersonelIlani.TabIndex = 0;
             this.dataGridViewPersonelIlani.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPersonelIlani_CellClick);
             this.dataGridViewPersonelIlani.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -200,7 +200,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::gymKing.kaynaklar.AKTİF_PERSONELLER_TXT_son;
-            this.pictureBox3.Location = new System.Drawing.Point(881, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(874, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(341, 141);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -210,7 +210,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::gymKing.kaynaklar.PERSONEL_ILANLARI_TXT_son;
-            this.pictureBox2.Location = new System.Drawing.Point(459, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(429, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(323, 141);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -220,7 +220,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::gymKing.kaynaklar.save;
-            this.pictureBox1.Location = new System.Drawing.Point(194, 452);
+            this.pictureBox1.Location = new System.Drawing.Point(162, 441);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -231,7 +231,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::gymKing.kaynaklar.time_past;
-            this.pictureBox5.Location = new System.Drawing.Point(1152, 496);
+            this.pictureBox5.Location = new System.Drawing.Point(1152, 511);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(100, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -242,9 +242,9 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::gymKing.kaynaklar.arrow_left;
-            this.pictureBox6.Location = new System.Drawing.Point(1, 496);
+            this.pictureBox6.Location = new System.Drawing.Point(12, 511);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox6.Size = new System.Drawing.Size(100, 82);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;

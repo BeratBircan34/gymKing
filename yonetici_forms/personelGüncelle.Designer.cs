@@ -130,13 +130,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.comboBoxRol);
             this.groupBox1.Controls.Add(this.textBoxSifre);
             this.groupBox1.Controls.Add(this.textBoxKullaniciAdi);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.dateTimePickerDogum);
             this.groupBox1.Controls.Add(this.dateTimePickerIsegiris);
             this.groupBox1.Controls.Add(this.textBoxTelefon);
@@ -151,7 +150,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(4, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1256, 530);
+            this.groupBox1.Size = new System.Drawing.Size(1256, 422);
             this.groupBox1.TabIndex = 123;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Üyelik Bilgileri";
@@ -165,7 +164,7 @@
             "Pt",
             "Temizlikçi",
             "Kasiyer"});
-            this.comboBoxRol.Location = new System.Drawing.Point(916, 47);
+            this.comboBoxRol.Location = new System.Drawing.Point(929, 243);
             this.comboBoxRol.Name = "comboBoxRol";
             this.comboBoxRol.Size = new System.Drawing.Size(289, 23);
             this.comboBoxRol.TabIndex = 166;
@@ -173,7 +172,7 @@
             // textBoxSifre
             // 
             this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSifre.Location = new System.Drawing.Point(916, 165);
+            this.textBoxSifre.Location = new System.Drawing.Point(929, 361);
             this.textBoxSifre.Name = "textBoxSifre";
             this.textBoxSifre.Size = new System.Drawing.Size(289, 29);
             this.textBoxSifre.TabIndex = 98;
@@ -182,7 +181,7 @@
             // textBoxKullaniciAdi
             // 
             this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(916, 100);
+            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(929, 296);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(289, 29);
             this.textBoxKullaniciAdi.TabIndex = 96;
@@ -192,7 +191,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.SlateGray;
-            this.label12.Location = new System.Drawing.Point(652, 100);
+            this.label12.Location = new System.Drawing.Point(665, 296);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(192, 28);
             this.label12.TabIndex = 94;
@@ -203,7 +202,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.SlateGray;
-            this.label13.Location = new System.Drawing.Point(652, 166);
+            this.label13.Location = new System.Drawing.Point(665, 362);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 28);
             this.label13.TabIndex = 95;
@@ -213,7 +212,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::gymKing.kaynaklar.save;
-            this.pictureBox3.Location = new System.Drawing.Point(1135, 218);
+            this.pictureBox3.Location = new System.Drawing.Point(1016, 501);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(70, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -250,7 +249,7 @@
             // textBoxAdres
             // 
             this.textBoxAdres.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAdres.Location = new System.Drawing.Point(296, 297);
+            this.textBoxAdres.Location = new System.Drawing.Point(915, 20);
             this.textBoxAdres.Multiline = true;
             this.textBoxAdres.Name = "textBoxAdres";
             this.textBoxAdres.Size = new System.Drawing.Size(288, 203);
@@ -291,7 +290,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SlateGray;
-            this.label6.Location = new System.Drawing.Point(652, 44);
+            this.label6.Location = new System.Drawing.Point(665, 240);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 28);
             this.label6.TabIndex = 38;
@@ -302,7 +301,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SlateGray;
-            this.label5.Location = new System.Drawing.Point(32, 295);
+            this.label5.Location = new System.Drawing.Point(651, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 28);
             this.label5.TabIndex = 37;
@@ -346,9 +345,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::gymKing.kaynaklar.arrow_left;
-            this.pictureBox1.Location = new System.Drawing.Point(53, 606);
+            this.pictureBox1.Location = new System.Drawing.Point(610, 520);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 58);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 119;
             this.pictureBox1.TabStop = false;
@@ -380,7 +379,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::gymKing.kaynaklar.GY_TELIF2;
-            this.pictureBox15.Location = new System.Drawing.Point(1062, 606);
+            this.pictureBox15.Location = new System.Drawing.Point(91, 529);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(190, 51);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -391,7 +390,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::gymKing.kaynaklar.copyright_logo_png_clipart_best_5;
-            this.pictureBox14.Location = new System.Drawing.Point(982, 606);
+            this.pictureBox14.Location = new System.Drawing.Point(11, 529);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(76, 51);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -408,6 +407,7 @@
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.comboBoxSoyad);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.comboBoxAd);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox2);

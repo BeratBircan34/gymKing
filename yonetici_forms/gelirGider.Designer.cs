@@ -49,6 +49,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numTutar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRapor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGelirGider)).BeginInit();
@@ -59,6 +61,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxIslemTuru
@@ -182,7 +186,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::gymKing.kaynaklar.transparentGYMKING;
-            this.pictureBox9.Location = new System.Drawing.Point(570, -1);
+            this.pictureBox9.Location = new System.Drawing.Point(480, 12);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(238, 116);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,9 +196,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::gymKing.kaynaklar.gelir_gider_transparent_2;
-            this.pictureBox3.Location = new System.Drawing.Point(-85, -2);
+            this.pictureBox3.Location = new System.Drawing.Point(-113, -1);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(396, 202);
+            this.pictureBox3.Size = new System.Drawing.Size(402, 188);
             this.pictureBox3.TabIndex = 53;
             this.pictureBox3.TabStop = false;
             // 
@@ -235,7 +239,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::gymKing.kaynaklar.GY_TELIF2;
-            this.pictureBox15.Location = new System.Drawing.Point(77, 559);
+            this.pictureBox15.Location = new System.Drawing.Point(94, 488);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(190, 76);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -247,7 +251,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::gymKing.kaynaklar.copyright_logo_png_clipart_best_5;
-            this.pictureBox14.Location = new System.Drawing.Point(-5, 571);
+            this.pictureBox14.Location = new System.Drawing.Point(12, 500);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(76, 51);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -255,11 +259,32 @@
             this.pictureBox14.TabStop = false;
             this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox5.TabIndex = 67;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::gymKing.kaynaklar.arrow_left;
+            this.pictureBox6.Location = new System.Drawing.Point(1148, 488);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(81, 76);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 68;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // gelirGider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox9);
@@ -291,6 +316,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,5 +343,7 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

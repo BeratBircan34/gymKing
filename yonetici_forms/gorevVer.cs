@@ -41,8 +41,14 @@ namespace gymKing.yonetici_forms
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             yonetici yoneticipanel = new yonetici(id_);
-            //yoneticipanel.Show();
+            yoneticipanel.Show();
             this.Close();
+        }
+
+        private void gorevVer_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.CenterScreen;
+            //this.Size = new System.Drawing.Size(800,800);
         }
     }
 }
