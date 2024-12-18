@@ -40,6 +40,7 @@
             this.textBoxKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dateTimePickerDogum = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerIsegiris = new System.Windows.Forms.DateTimePicker();
             this.textBoxTelefon = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -209,6 +209,18 @@
             this.label13.TabIndex = 95;
             this.label13.Text = "Sifre :";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::gymKing.kaynaklar.save;
+            this.pictureBox3.Location = new System.Drawing.Point(1135, 218);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 122;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // dateTimePickerDogum
             // 
             this.dateTimePickerDogum.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -318,18 +330,6 @@
             this.label2.TabIndex = 35;
             this.label2.Text = "Dogum Tarihi :";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::gymKing.kaynaklar.save;
-            this.pictureBox3.Location = new System.Drawing.Point(1135, 218);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(70, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 122;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
@@ -416,7 +416,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.IsMdiContainer = true;
             this.Name = "personelGüncelle";
             this.Text = "personelGüncelle";
             this.Load += new System.EventHandler(this.personelGüncelle_Load);

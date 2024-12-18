@@ -36,6 +36,14 @@ namespace gymKing.kasiyer_forms
         {
             timer1.Start();
             lbl_oturumSahibi.Text = kasiyer_oturumSahibi;
+            if (kasiyer_oturumSahibi.Contains("_Admin"))
+            {
+                pictureBox10.Visible = true;
+            }
+            else
+            {
+                pictureBox10.Visible = false;
+            }
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
             lbl_gun.Text = DateTime.Now.ToString("dddd");
             otoform_ayarla.renkAyarla(this, Color.Gainsboro);
@@ -84,6 +92,11 @@ namespace gymKing.kasiyer_forms
             K_uyelikDuzenle uyelikduzenle = new K_uyelikDuzenle(id_);
             otoform_ayarla uyelikduzenlee = new otoform_ayarla(uyelikduzenle);
             uyelikduzenlee.formAc(uyelikduzenle, this);
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }   
 }

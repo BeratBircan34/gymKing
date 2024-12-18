@@ -50,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_saat
@@ -67,7 +69,7 @@
             this.lbl_saat.BackColor = System.Drawing.Color.Transparent;
             this.lbl_saat.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_saat.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl_saat.Location = new System.Drawing.Point(108, 540);
+            this.lbl_saat.Location = new System.Drawing.Point(101, 467);
             this.lbl_saat.Name = "lbl_saat";
             this.lbl_saat.Size = new System.Drawing.Size(87, 36);
             this.lbl_saat.TabIndex = 29;
@@ -79,7 +81,7 @@
             this.lbl_gun.BackColor = System.Drawing.Color.Transparent;
             this.lbl_gun.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gun.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl_gun.Location = new System.Drawing.Point(301, 465);
+            this.lbl_gun.Location = new System.Drawing.Point(294, 392);
             this.lbl_gun.Name = "lbl_gun";
             this.lbl_gun.Size = new System.Drawing.Size(83, 36);
             this.lbl_gun.TabIndex = 28;
@@ -91,7 +93,7 @@
             this.lbl_tarih.BackColor = System.Drawing.Color.Transparent;
             this.lbl_tarih.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tarih.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl_tarih.Location = new System.Drawing.Point(108, 465);
+            this.lbl_tarih.Location = new System.Drawing.Point(101, 392);
             this.lbl_tarih.Name = "lbl_tarih";
             this.lbl_tarih.Size = new System.Drawing.Size(105, 36);
             this.lbl_tarih.TabIndex = 27;
@@ -102,9 +104,9 @@
             this.lbl_oturumSahibi.BackColor = System.Drawing.Color.Transparent;
             this.lbl_oturumSahibi.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_oturumSahibi.ForeColor = System.Drawing.Color.SlateGray;
-            this.lbl_oturumSahibi.Location = new System.Drawing.Point(117, 370);
+            this.lbl_oturumSahibi.Location = new System.Drawing.Point(110, 297);
             this.lbl_oturumSahibi.Name = "lbl_oturumSahibi";
-            this.lbl_oturumSahibi.Size = new System.Drawing.Size(195, 75);
+            this.lbl_oturumSahibi.Size = new System.Drawing.Size(402, 75);
             this.lbl_oturumSahibi.TabIndex = 26;
             this.lbl_oturumSahibi.Text = "Oturum Sahibi";
             // 
@@ -175,7 +177,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::gymKing.kaynaklar.clock;
-            this.pictureBox4.Location = new System.Drawing.Point(43, 529);
+            this.pictureBox4.Location = new System.Drawing.Point(36, 456);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 57);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -186,7 +188,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::gymKing.kaynaklar.calendar;
-            this.pictureBox5.Location = new System.Drawing.Point(43, 449);
+            this.pictureBox5.Location = new System.Drawing.Point(36, 376);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(58, 57);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +199,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::gymKing.kaynaklar.user;
-            this.pictureBox6.Location = new System.Drawing.Point(42, 370);
+            this.pictureBox6.Location = new System.Drawing.Point(35, 297);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(59, 57);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -287,12 +289,25 @@
             this.label6.TabIndex = 49;
             this.label6.Text = "Üyeler";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Image = global::gymKing.kaynaklar.arrow_left;
+            this.pictureBox10.Location = new System.Drawing.Point(106, 586);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(100, 105);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 51;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
             // Kasiyer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox9);
@@ -329,6 +344,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +371,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

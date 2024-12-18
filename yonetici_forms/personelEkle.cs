@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,28 +26,53 @@ namespace gymKing.yonetici_forms
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
-            string sifre = sifreUret.GenerateRndPassword();
+            try
+            {
+                string sifre = sifreUret.GenerateRndPassword();
 
-            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            baglanti.Open();
-            SqlCommand personelEkle = new SqlCommand("insert into tbl_giris_Bilgileri(rol,kullaniciAdi,sifre) values (@rol,@kullaniciAdi,@sifre)", baglanti);
-            personelEkle.Parameters.AddWithValue("@rol", comboBoxRol.Text);
-            personelEkle.Parameters.AddWithValue("@kullaniciAdi", textBoxAd.Text + "." + textBoxSoyad.Text);
-            personelEkle.Parameters.AddWithValue("@sifre", sifre);
-            personelEkle.ExecuteNonQuery();
+            using (SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize()))
+            {
+             baglanti.Open();
 
+             // Kullanıcı Ekleme Sorgusu
+            using (SqlCommand Ekle = new SqlCommand("insert into tbl_giris_Bilgileri(rol, kullaniciAdi, sifre) values (@rol, @kullaniciAdi, @sifre)", baglanti))
+            {
+            if (string.IsNullOrWhiteSpace(textBoxAd.Text) || string.IsNullOrWhiteSpace(textBoxSoyad.Text))
+              {
+                MessageBox.Show("Ad ve Soyad boş olamaz.");
+              }
 
-            SqlCommand getir = new SqlCommand("select top 1 KullaniciID,kullaniciAdi,sifre from tbl_giris_Bilgileri order by KullaniciID desc", baglanti);
-            SqlDataReader dr = getir.ExecuteReader();
-            dr.Read();
-            textBoxKullaniciAdi.Text = dr["kullaniciAdi"].ToString();
-            textBoxSifre.Text = dr["sifre"].ToString();
-            textBoxID.Text = dr["KullaniciID"].ToString();
+             string kullaniciAdi = textBoxAd.Text + "." + textBoxSoyad.Text;
 
+             Ekle.Parameters.AddWithValue("@rol", "Yönetici");
+             Ekle.Parameters.AddWithValue("@kullaniciAdi", kullaniciAdi);
+             Ekle.Parameters.AddWithValue("@sifre", sifre);
 
-            baglanti.Close();
+             Ekle.ExecuteNonQuery();
+             }
 
-            MessageBox.Show("Personel Kullanıcı Adı ve Şifre Oluşturuldu !");
+             // Son Eklenen Kullanıcıyı Getirme Sorgusu
+             using (SqlCommand getir = new SqlCommand("SELECT TOP 1 KullaniciID, kullaniciAdi, sifre FROM tbl_giris_Bilgileri ORDER BY KullaniciID DESC", baglanti))
+             {
+             using (SqlDataReader dr = getir.ExecuteReader())
+             {
+             if (dr.Read())
+              {
+              textBoxKullaniciAdi.Text = dr["kullaniciAdi"].ToString();
+              textBoxSifre.Text = dr["sifre"].ToString();
+             textBoxID.Text = dr["KullaniciID"].ToString();
+                 }
+                }
+               }
+              }
+
+                MessageBox.Show("Kullanıcı bilgileri başarıyla eklendi.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata: {ex.Message}");
+            }
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -279,6 +279,7 @@
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "personelEkle";
             this.Text = "personelEkle";
             this.Load += new System.EventHandler(this.personelEkle_Load);

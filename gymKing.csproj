@@ -272,12 +272,6 @@
     </Compile>
     <Compile Include="yonetici_forms\GrafikCizici.cs" />
     <Compile Include="yonetici_forms\perBilgiCek.cs" />
-    <Compile Include="yonetici_forms\persIslemleri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="yonetici_forms\persIslemleri.Designer.cs">
-      <DependentUpon>persIslemleri.cs</DependentUpon>
-    </Compile>
     <Compile Include="yonetici_forms\personelBilgiEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,12 +308,6 @@
     </Compile>
     <Compile Include="yonetici_forms\yonetici.Designer.cs">
       <DependentUpon>yonetici.cs</DependentUpon>
-    </Compile>
-    <Compile Include="yonetici_forms\İstatistikler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="yonetici_forms\İstatistikler.Designer.cs">
-      <DependentUpon>İstatistikler.cs</DependentUpon>
     </Compile>
     <Compile Include="Üye_forms\uyeHesapAyarlari.cs">
       <SubType>Form</SubType>
@@ -403,9 +391,6 @@
     <EmbeddedResource Include="yonetici_forms\gorevVer.resx">
       <DependentUpon>gorevVer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="yonetici_forms\persIslemleri.resx">
-      <DependentUpon>persIslemleri.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\personelBilgiEkle.resx">
       <DependentUpon>personelBilgiEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,9 +408,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="yonetici_forms\yonetici.resx">
       <DependentUpon>yonetici.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="yonetici_forms\İstatistikler.resx">
-      <DependentUpon>İstatistikler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Üye_forms\uyeHesapAyarlari.resx">
       <DependentUpon>uyeHesapAyarlari.cs</DependentUpon>

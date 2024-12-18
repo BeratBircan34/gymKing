@@ -54,6 +54,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pctrbx_geri = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -65,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbx_geri)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -352,12 +354,25 @@
             this.pictureBox10.MouseLeave += new System.EventHandler(this.pictureBox10_MouseLeave);
             this.pictureBox10.MouseHover += new System.EventHandler(this.pictureBox10_MouseHover);
             // 
+            // pctrbx_geri
+            // 
+            this.pctrbx_geri.BackColor = System.Drawing.Color.Transparent;
+            this.pctrbx_geri.Image = global::gymKing.kaynaklar.arrow_left;
+            this.pctrbx_geri.Location = new System.Drawing.Point(48, 564);
+            this.pctrbx_geri.Name = "pctrbx_geri";
+            this.pctrbx_geri.Size = new System.Drawing.Size(84, 85);
+            this.pctrbx_geri.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrbx_geri.TabIndex = 39;
+            this.pctrbx_geri.TabStop = false;
+            this.pctrbx_geri.Click += new System.EventHandler(this.pctrbx_geri_Click);
+            // 
             // frm_pt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.ControlBox = false;
+            this.Controls.Add(this.pctrbx_geri);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.label11);
@@ -401,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbx_geri)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,5 +448,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pctrbx_geri;
     }
 }

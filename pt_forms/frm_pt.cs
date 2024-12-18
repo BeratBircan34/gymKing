@@ -24,7 +24,16 @@ namespace gymKing
         
         private void frm_pt_Load(object sender, EventArgs e)
         {
-
+            if (oturmSahibi.Contains("_Admin"))
+            {
+                // PictureBox nesnesini görünür yap
+                pctrbx_geri.Visible = true;
+            }
+            else
+            {
+                // Aksi halde görünürlüğünü kapat
+                pctrbx_geri.Visible = false;
+            }
             timer1.Start();
             lbl_oturumSahibi.Text = oturmSahibi;
             lbl_tarih.Text = DateTime.Now.ToString("dd.MM.yyyy");
@@ -164,6 +173,11 @@ namespace gymKing
         private void pictureBox10_MouseLeave(object sender, EventArgs e)
         {
             pictureBox10.BackColor= Color.Gainsboro;
+        }
+
+        private void pctrbx_geri_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

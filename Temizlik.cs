@@ -91,5 +91,12 @@ namespace gymKing
                 MessageBox.Show("Lütfen silmek için bir görev seçin.");
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 frm = new Form1();
+            frm.Show();
+        }
     }
 }
