@@ -58,7 +58,7 @@ namespace gymKing.pt_forms
                 //  Kişi Filtreleri
                 if (chkbx_cinsiyet_k.Checked)
                 {
-                    komut += " where k_cinsiyet = 'kadın' ";
+                    komut += " where k_cinsiyet != 'erkek' ";
                 }
                 if (chkbx_cinsiyet_e.Checked)
                 {
