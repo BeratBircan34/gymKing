@@ -194,9 +194,9 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(22, 111);
+            this.label8.Location = new System.Drawing.Point(22, 107);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(239, 40);
+            this.label8.Size = new System.Drawing.Size(201, 40);
             this.label8.TabIndex = 8;
             this.label8.Text = "Aktivite Seviyesi :";
             // 
@@ -757,7 +757,7 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(18, 74);
+            this.label12.Location = new System.Drawing.Point(18, 75);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(251, 57);
             this.label12.TabIndex = 21;

@@ -115,5 +115,10 @@ namespace gymKing
             Form1 frm = new Form1();
             frm.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
