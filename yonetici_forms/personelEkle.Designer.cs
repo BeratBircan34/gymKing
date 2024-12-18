@@ -118,6 +118,7 @@
             this.textBoxID.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxID.Location = new System.Drawing.Point(223, 180);
             this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(303, 29);
             this.textBoxID.TabIndex = 92;
             // 
@@ -126,6 +127,7 @@
             this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSifre.Location = new System.Drawing.Point(223, 116);
             this.textBoxSifre.Name = "textBoxSifre";
+            this.textBoxSifre.ReadOnly = true;
             this.textBoxSifre.Size = new System.Drawing.Size(303, 29);
             this.textBoxSifre.TabIndex = 92;
             // 
@@ -134,6 +136,7 @@
             this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKullaniciAdi.Location = new System.Drawing.Point(223, 59);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
+            this.textBoxKullaniciAdi.ReadOnly = true;
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(303, 29);
             this.textBoxKullaniciAdi.TabIndex = 91;
             // 

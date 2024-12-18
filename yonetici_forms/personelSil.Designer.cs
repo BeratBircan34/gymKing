@@ -229,6 +229,7 @@
             this.textBoxDogum.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDogum.Location = new System.Drawing.Point(296, 44);
             this.textBoxDogum.Name = "textBoxDogum";
+            this.textBoxDogum.ReadOnly = true;
             this.textBoxDogum.Size = new System.Drawing.Size(288, 29);
             this.textBoxDogum.TabIndex = 169;
             // 
@@ -237,6 +238,7 @@
             this.textBoxisegiris.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxisegiris.Location = new System.Drawing.Point(296, 111);
             this.textBoxisegiris.Name = "textBoxisegiris";
+            this.textBoxisegiris.ReadOnly = true;
             this.textBoxisegiris.Size = new System.Drawing.Size(288, 29);
             this.textBoxisegiris.TabIndex = 168;
             // 
@@ -258,6 +260,7 @@
             this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSifre.Location = new System.Drawing.Point(906, 106);
             this.textBoxSifre.Name = "textBoxSifre";
+            this.textBoxSifre.ReadOnly = true;
             this.textBoxSifre.Size = new System.Drawing.Size(289, 29);
             this.textBoxSifre.TabIndex = 98;
             this.textBoxSifre.UseSystemPasswordChar = true;
@@ -267,6 +270,7 @@
             this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKullaniciAdi.Location = new System.Drawing.Point(906, 48);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
+            this.textBoxKullaniciAdi.ReadOnly = true;
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(289, 29);
             this.textBoxKullaniciAdi.TabIndex = 96;
             // 
@@ -297,6 +301,7 @@
             this.textBoxTelefon.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefon.Location = new System.Drawing.Point(296, 173);
             this.textBoxTelefon.Name = "textBoxTelefon";
+            this.textBoxTelefon.ReadOnly = true;
             this.textBoxTelefon.Size = new System.Drawing.Size(288, 29);
             this.textBoxTelefon.TabIndex = 11;
             // 
@@ -306,6 +311,7 @@
             this.textBoxAdres.Location = new System.Drawing.Point(296, 297);
             this.textBoxAdres.Multiline = true;
             this.textBoxAdres.Name = "textBoxAdres";
+            this.textBoxAdres.ReadOnly = true;
             this.textBoxAdres.Size = new System.Drawing.Size(288, 203);
             this.textBoxAdres.TabIndex = 6;
             // 
@@ -314,6 +320,7 @@
             this.textBoxMail.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMail.Location = new System.Drawing.Point(296, 229);
             this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.ReadOnly = true;
             this.textBoxMail.Size = new System.Drawing.Size(288, 29);
             this.textBoxMail.TabIndex = 5;
             // 
