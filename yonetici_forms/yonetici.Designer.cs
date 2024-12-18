@@ -323,6 +323,7 @@
             // pictureBox13
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox13.Image = global::gymKing.kaynaklar._3669129_assignment_in_turned_ic_icon;
             this.pictureBox13.Location = new System.Drawing.Point(628, 418);
             this.pictureBox13.Name = "pictureBox13";
@@ -358,6 +359,7 @@
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox12.Image = global::gymKing.kaynaklar.statisticsPNG;
             this.pictureBox12.Location = new System.Drawing.Point(456, 418);
             this.pictureBox12.Name = "pictureBox12";
@@ -370,6 +372,7 @@
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox11.Image = global::gymKing.kaynaklar.users_alt;
             this.pictureBox11.Location = new System.Drawing.Point(804, 418);
             this.pictureBox11.Name = "pictureBox11";
