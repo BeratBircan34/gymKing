@@ -24,6 +24,8 @@ namespace gymKing.yonetici_forms
             this.id_=id;
         }
         public string id_ = "";
+        public int kontrol;
+
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
@@ -78,6 +80,7 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
             string gelenVeri = textBoxAd.Text;
             string gelenVeri2 = textBoxSoyad.Text;
             string gelenVeri3 = comboBoxRol.Text;
@@ -103,6 +106,7 @@ namespace gymKing.yonetici_forms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -122,7 +126,8 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized; // Formu küçült
+            Form a = this.MdiParent;
+            a.WindowState = FormWindowState.Minimized;
         }
     }
 }

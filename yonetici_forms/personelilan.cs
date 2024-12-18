@@ -214,7 +214,13 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized; // Formu küçült
+            Form a = this.MdiParent;
+            a.WindowState = FormWindowState.Minimized;
+        }
+
+        private void comboBoxRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

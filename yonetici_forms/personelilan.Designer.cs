@@ -45,8 +45,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.textBoxSifre = new System.Windows.Forms.TextBox();
@@ -247,36 +245,12 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Impact", 18F);
-            this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label9.Location = new System.Drawing.Point(376, 547);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 28);
-            this.label9.TabIndex = 103;
-            this.label9.Text = "Rol :";
-            // 
-            // comboBoxRol
-            // 
-            this.comboBoxRol.FormattingEnabled = true;
-            this.comboBoxRol.Items.AddRange(new object[] {
-            "Yönetici",
-            "Pt",
-            "Temizlikçi",
-            "Kasiyer"});
-            this.comboBoxRol.Location = new System.Drawing.Point(512, 566);
-            this.comboBoxRol.Name = "comboBoxRol";
-            this.comboBoxRol.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxRol.TabIndex = 102;
-            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Impact", 18F);
             this.label10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label10.Location = new System.Drawing.Point(376, 519);
+            this.label10.Location = new System.Drawing.Point(376, 532);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 28);
             this.label10.TabIndex = 101;
@@ -285,7 +259,7 @@
             // textBoxID
             // 
             this.textBoxID.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(512, 531);
+            this.textBoxID.Location = new System.Drawing.Point(512, 536);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(291, 29);
             this.textBoxID.TabIndex = 99;
@@ -294,7 +268,7 @@
             // textBoxSifre
             // 
             this.textBoxSifre.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSifre.Location = new System.Drawing.Point(512, 496);
+            this.textBoxSifre.Location = new System.Drawing.Point(512, 501);
             this.textBoxSifre.Name = "textBoxSifre";
             this.textBoxSifre.Size = new System.Drawing.Size(291, 29);
             this.textBoxSifre.TabIndex = 100;
@@ -302,7 +276,7 @@
             // textBoxKullaniciAdi
             // 
             this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(512, 460);
+            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(512, 465);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(291, 29);
             this.textBoxKullaniciAdi.TabIndex = 98;
@@ -312,7 +286,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Impact", 18F);
             this.label11.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label11.Location = new System.Drawing.Point(376, 461);
+            this.label11.Location = new System.Drawing.Point(376, 465);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(192, 28);
             this.label11.TabIndex = 96;
@@ -323,7 +297,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Impact", 18F);
             this.label12.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label12.Location = new System.Drawing.Point(376, 491);
+            this.label12.Location = new System.Drawing.Point(376, 497);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 28);
             this.label12.TabIndex = 97;
@@ -457,8 +431,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBoxRol);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.textBoxSifre);
@@ -525,8 +497,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBoxRol;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.TextBox textBoxSifre;

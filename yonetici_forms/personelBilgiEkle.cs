@@ -125,7 +125,15 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized; // Formu küçült
+            if (this.MdiParent is Form parentForm)
+            {
+                parentForm.WindowState = FormWindowState.Minimized;
+            }
+            else
+            {
+                MessageBox.Show("Bu formun bir MdiParent özelliği yok.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }
