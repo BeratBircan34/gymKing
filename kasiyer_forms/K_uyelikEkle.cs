@@ -131,7 +131,8 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            Form a = this.MdiParent;
+            a.WindowState = FormWindowState.Minimized;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
