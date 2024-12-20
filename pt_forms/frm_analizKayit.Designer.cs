@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_analizKayit));
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_egitmen = new System.Windows.Forms.Label();
@@ -831,6 +832,7 @@
             this.Controls.Add(this.lbl_bmhS);
             this.Controls.Add(this.label16);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_analizKayit";
             this.Text = "frm_analizKayit";
             this.Load += new System.EventHandler(this.frm_analizKayit_Load);

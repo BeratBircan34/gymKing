@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(personelilan));
             this.dataGridViewPersonelIlani = new System.Windows.Forms.DataGridView();
             this.textBoxAd = new System.Windows.Forms.TextBox();
             this.textBoxSoyad = new System.Windows.Forms.TextBox();
@@ -61,6 +62,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_ilanid = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonelIlani)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAktifPersoneller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -236,6 +239,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::gymKing.kaynaklar.arrow_left;
             this.pictureBox6.Location = new System.Drawing.Point(6, 493);
             this.pictureBox6.Name = "pictureBox6";
@@ -331,7 +335,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBoxolus);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(120, 407);
+            this.panel1.Location = new System.Drawing.Point(120, 423);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(186, 51);
             this.panel1.TabIndex = 106;
@@ -382,6 +386,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(68, 99);
             this.panel3.TabIndex = 108;
+            //this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label8
             // 
@@ -421,11 +426,32 @@
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label9.Location = new System.Drawing.Point(55, 380);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 29);
+            this.label9.TabIndex = 111;
+            this.label9.Text = "İlan İd :";
+            // 
+            // txt_ilanid
+            // 
+            this.txt_ilanid.Font = new System.Drawing.Font("Cooper Black", 12F);
+            this.txt_ilanid.Location = new System.Drawing.Point(154, 383);
+            this.txt_ilanid.Name = "txt_ilanid";
+            this.txt_ilanid.Size = new System.Drawing.Size(150, 26);
+            this.txt_ilanid.TabIndex = 112;
+            // 
             // personelilan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.txt_ilanid);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.panel3);
@@ -453,6 +479,7 @@
             this.Controls.Add(this.textBoxSoyad);
             this.Controls.Add(this.textBoxAd);
             this.Controls.Add(this.dataGridViewPersonelIlani);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "personelilan";
             this.Text = "personelilan";
             this.Load += new System.EventHandler(this.personelilan_Load);
@@ -513,5 +540,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_ilanid;
     }
 }

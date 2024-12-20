@@ -100,36 +100,44 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            baglanti.Open();
-            SqlCommand getir = new SqlCommand("select * from tbl_musteriler where m_id = "+textBoxID.Text, baglanti);
-            SqlDataReader getir2 = getir.ExecuteReader();
-            while (getir2.Read())
+            try
             {
-                dateTimePickerDogum.Text = getir2["m_DogumTarihi"].ToString();
-                dateTimePickerBaslangic.Text = getir2["m_uyelikBaslangic"].ToString();
-                dateTimePickerBitis.Text = getir2["m_uyelikBitis"].ToString();
-                textBoxMail.Text = getir2["m_eMail"].ToString();                        //Seçilen İD de Bulunan Kullanıcının Verilerini textBoxlara Aktarır
-                textBoxAdres.Text = getir2["m_adres"].ToString();
-                comboBoxPt.Text = getir2["m_personalTrainer"].ToString();
-                comboBoxDiyetisyen.Text = getir2["m_diyetisyen"].ToString();
-                textBoxTelefon.Text = getir2["m_telNo"].ToString();
-                comboBox1.Text = getir2["m_cinsiyet"].ToString() ;
+                SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+                baglanti.Open();
+                SqlCommand getir = new SqlCommand("select * from tbl_musteriler where m_id = " + textBoxID.Text, baglanti);
+                SqlDataReader getir2 = getir.ExecuteReader();
+                while (getir2.Read())
+                {
+                    dateTimePickerDogum.Text = getir2["m_DogumTarihi"].ToString();
+                    dateTimePickerBaslangic.Text = getir2["m_uyelikBaslangic"].ToString();
+                    dateTimePickerBitis.Text = getir2["m_uyelikBitis"].ToString();
+                    textBoxMail.Text = getir2["m_eMail"].ToString();                        //Seçilen İD de Bulunan Kullanıcının Verilerini textBoxlara Aktarır
+                    textBoxAdres.Text = getir2["m_adres"].ToString();
+                    comboBoxPt.Text = getir2["m_personalTrainer"].ToString();
+                    comboBoxDiyetisyen.Text = getir2["m_diyetisyen"].ToString();
+                    textBoxTelefon.Text = getir2["m_telNo"].ToString();
+                    comboBox1.Text = getir2["m_cinsiyet"].ToString();
+                }
+                getir2.Close();
+
+
+                SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID =" + textBoxID.Text, baglanti);
+                SqlDataReader getir4 = getir3.ExecuteReader();
+                while (getir4.Read())
+                {
+                    textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
+                    textBoxSifre.Text = getir4["sifre"].ToString();                     //Seçilen İD de Bulunan Kullanıcının Kullanıcı Adı ve Şifre Verilerini textBoxlara Aktarır
+                }
+                getir4.Close();
+                baglanti.Close();
+
+                groupBox1.Enabled = true;
             }
-            getir2.Close();
-
-
-            SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID ="+textBoxID.Text, baglanti);
-            SqlDataReader getir4 = getir3.ExecuteReader();
-            while (getir4.Read())
-            { 
-                textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
-                textBoxSifre.Text = getir4["sifre"].ToString();                     //Seçilen İD de Bulunan Kullanıcının Kullanıcı Adı ve Şifre Verilerini textBoxlara Aktarır
+            catch 
+            {
+                MessageBox.Show("Lütfen Kullanıcı Seçiniz!");
             }
-            getir4.Close();
-            baglanti.Close();
 
-            groupBox1.Enabled = true;
 
 
         }

@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gelirGider));
             this.comboBoxIslemTuru = new System.Windows.Forms.ComboBox();
             this.textAciklama = new System.Windows.Forms.TextBox();
             this.numTutar = new System.Windows.Forms.NumericUpDown();
@@ -191,18 +192,18 @@
             // 
             this.chartGelirGider.BackColor = System.Drawing.SystemColors.Control;
             this.chartGelirGider.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chartGelirGider.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartGelirGider.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartGelirGider.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGelirGider.Legends.Add(legend1);
             this.chartGelirGider.Location = new System.Drawing.Point(842, 137);
             this.chartGelirGider.Name = "chartGelirGider";
             this.chartGelirGider.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.YValuesPerPoint = 4;
-            this.chartGelirGider.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 4;
+            this.chartGelirGider.Series.Add(series1);
             this.chartGelirGider.Size = new System.Drawing.Size(410, 293);
             this.chartGelirGider.TabIndex = 12;
             this.chartGelirGider.Text = "chart1";
@@ -294,6 +295,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::gymKing.kaynaklar.arrow_left;
             this.pictureBox6.Location = new System.Drawing.Point(1171, 495);
             this.pictureBox6.Name = "pictureBox6";
@@ -470,6 +472,7 @@
             this.Controls.Add(this.numTutar);
             this.Controls.Add(this.textAciklama);
             this.Controls.Add(this.comboBoxIslemTuru);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "gelirGider";
             this.Text = "gelirGider";
             this.Load += new System.EventHandler(this.gelirGider_Load);

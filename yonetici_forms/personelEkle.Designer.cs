@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(personelEkle));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
@@ -75,7 +76,6 @@
             this.groupBox2.Size = new System.Drawing.Size(614, 286);
             this.groupBox2.TabIndex = 107;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
             // label6
             // 
@@ -176,7 +176,6 @@
             this.groupBox1.Size = new System.Drawing.Size(519, 286);
             this.groupBox1.TabIndex = 105;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // label4
             // 
@@ -315,6 +314,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "personelEkle";
             this.Text = "personelEkle";
             this.Load += new System.EventHandler(this.personelEkle_Load);

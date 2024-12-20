@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(personelSil));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -75,6 +76,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::gymKing.kaynaklar.arrow_left;
             this.pictureBox1.Location = new System.Drawing.Point(1113, 413);
             this.pictureBox1.Name = "pictureBox1";
@@ -263,7 +265,6 @@
             this.textBoxSifre.ReadOnly = true;
             this.textBoxSifre.Size = new System.Drawing.Size(289, 29);
             this.textBoxSifre.TabIndex = 98;
-            this.textBoxSifre.UseSystemPasswordChar = true;
             // 
             // textBoxKullaniciAdi
             // 
@@ -465,6 +466,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "personelSil";
             this.Text = "personelSil";
             this.Load += new System.EventHandler(this.personelSil_Load);

@@ -47,7 +47,7 @@ namespace gymKing.yonetici_forms
 
              string kullaniciAdi = textBoxAd.Text + "." + textBoxSoyad.Text;
 
-             Ekle.Parameters.AddWithValue("@rol", "Yönetici");
+             Ekle.Parameters.AddWithValue("@rol", comboBoxRol.Text);
              Ekle.Parameters.AddWithValue("@kullaniciAdi", kullaniciAdi);
              Ekle.Parameters.AddWithValue("@sifre", sifre);
 

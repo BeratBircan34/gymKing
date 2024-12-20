@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(personelBilgiEkle));
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxTC = new System.Windows.Forms.TextBox();
             this.dateTimePickerDogum = new System.Windows.Forms.DateTimePicker();
@@ -219,6 +220,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::gymKing.kaynaklar.arrow_left;
             this.pictureBox1.Location = new System.Drawing.Point(1110, 475);
             this.pictureBox1.Name = "pictureBox1";
@@ -451,6 +453,7 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.pictureBox9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "personelBilgiEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "personelBilgiEkle";

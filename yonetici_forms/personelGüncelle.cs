@@ -87,49 +87,57 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
-            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            baglanti.Open();
-            SqlCommand getir = new SqlCommand("select * from tbl_per_bilgiler where perId =" + textBoxID.Text, baglanti);
-            SqlDataReader getir2 = getir.ExecuteReader();
-            while (getir2.Read())
+            try
             {
-                dateTimePickerDogum.Text = getir2["dogumTarihi"].ToString();             
-                dateTimePickerIsegiris.Text = getir2["isegiris"].ToString();
-                textBoxMail.Text = getir2["email"].ToString();
-                textBoxAdres.Text = getir2["adres"].ToString();
-                textBoxTelefon.Text = getir2["telNo"].ToString();
+                SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+                baglanti.Open();
+                SqlCommand getir = new SqlCommand("select * from tbl_per_bilgiler where perId =" + textBoxID.Text, baglanti);
+                SqlDataReader getir2 = getir.ExecuteReader();
+                while (getir2.Read())
+                {
+                    dateTimePickerDogum.Text = getir2["dogumTarihi"].ToString();
+                    dateTimePickerIsegiris.Text = getir2["isegiris"].ToString();
+                    textBoxMail.Text = getir2["email"].ToString();
+                    textBoxAdres.Text = getir2["adres"].ToString();
+                    textBoxTelefon.Text = getir2["telNo"].ToString();
+                }
+                getir2.Close();
+
+
+                SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID =" + textBoxID.Text, baglanti);
+                SqlDataReader getir4 = getir3.ExecuteReader();
+                while (getir4.Read())
+                {
+                    textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
+                    textBoxSifre.Text = getir4["sifre"].ToString();
+                    comboBoxRol.Text = getir4["rol"].ToString();
+                }
+                getir4.Close();
+                baglanti.Close();
             }
-            getir2.Close();
 
-
-            SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID =" + textBoxID.Text, baglanti);
-            SqlDataReader getir4 = getir3.ExecuteReader();
-            while (getir4.Read())
+            catch
             {
-                textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
-                textBoxSifre.Text = getir4["sifre"].ToString();
-                comboBoxRol.Text = getir4["rol"].ToString();
+                MessageBox.Show("Lütfen Kullanıcı Seçiniz!");
             }
-            getir4.Close();
-            baglanti.Close();
+            
         }
 
         private void comboBoxAd_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            //baglanti.Open();
-            //string sorgu = "SELECT ad FROM tbl_musteriler WHERE ad = @pAd";
-            //SqlCommand soyad = new SqlCommand(sorgu, baglanti);
-            //soyad.Parameters.AddWithValue("@pAd", comboBoxAd.Text);
-            //SqlDataReader dr = soyad.ExecuteReader();
-            //comboBoxSoyad.Items.Clear();
-            //while (dr.Read())
-            //{
-            //    comboBoxSoyad.Items.Add(dr["ad"].ToString());
-            //}
-            //dr.Close();
-            //baglanti.Close();
+            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+            baglanti.Open();
+            string sorgu = "SELECT soyad FROM tbl_per_bilgiler WHERE ad = @pAd";
+            SqlCommand soyad = new SqlCommand(sorgu, baglanti);
+            soyad.Parameters.AddWithValue("@pAd", comboBoxAd.Text);
+            SqlDataReader dr = soyad.ExecuteReader();
+            comboBoxSoyad.Items.Clear();
+            while (dr.Read())
+            {
+                comboBoxSoyad.Items.Add(dr["soyad"].ToString());
+            }
+            dr.Close();
+            baglanti.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -144,9 +152,11 @@ namespace gymKing.yonetici_forms
 
         private void label8_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            baglanti.Open();
-            string güncelle = @"
+            try
+            {
+                SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+                baglanti.Open();
+                string güncelle = @"
              UPDATE tbl_per_bilgiler
              SET     
                  DogumTarihi = @pDogumTarihi, 
@@ -157,21 +167,39 @@ namespace gymKing.yonetici_forms
                  rol = @prol         
              WHERE perId = @id";
 
-            SqlCommand ekle = new SqlCommand(güncelle, baglanti);
+                SqlCommand ekle = new SqlCommand(güncelle, baglanti);
 
 
-            ekle.Parameters.AddWithValue("@pDogumTarihi", dateTimePickerDogum.Value);
-            ekle.Parameters.AddWithValue("@ptelNo", textBoxTelefon.Text);
-            ekle.Parameters.AddWithValue("@pemail", textBoxMail.Text);
-            ekle.Parameters.AddWithValue("@padres", textBoxAdres.Text);
-            ekle.Parameters.AddWithValue("@pisegiris", dateTimePickerIsegiris.Value);
-            ekle.Parameters.AddWithValue("@id", textBoxID.Text);
-            ekle.Parameters.AddWithValue("@prol", comboBoxRol.SelectedItem.ToString());
+                ekle.Parameters.AddWithValue("@pDogumTarihi", dateTimePickerDogum.Value);
+                ekle.Parameters.AddWithValue("@ptelNo", textBoxTelefon.Text);
+                ekle.Parameters.AddWithValue("@pemail", textBoxMail.Text);
+                ekle.Parameters.AddWithValue("@padres", textBoxAdres.Text);
+                ekle.Parameters.AddWithValue("@pisegiris", dateTimePickerIsegiris.Value);
+                ekle.Parameters.AddWithValue("@id", textBoxID.Text);
+                ekle.Parameters.AddWithValue("@prol", comboBoxRol.Text);
 
-            ekle.ExecuteNonQuery();
-            baglanti.Close();
+                ekle.ExecuteNonQuery();
 
-            MessageBox.Show("Düzenleme İşlemi Tamamlandı");
+                string güncelle2 = @"
+             UPDATE tbl_giris_Bilgileri
+             SET     
+                 rol = @prol         
+             WHERE KullaniciID = @id";
+                SqlCommand ekle2 = new SqlCommand(güncelle2, baglanti);
+                ekle2.Parameters.AddWithValue("@prol",comboBoxRol.Text);
+                ekle2.Parameters.AddWithValue("@id",textBoxID.Text);
+
+                ekle2.ExecuteNonQuery();
+                baglanti.Close();
+
+                MessageBox.Show("Düzenleme İşlemi Tamamlandı \nTüm Değişiklikler Uygulama Yeniden Başlatılınca Güncellenecektir");
+            }
+
+            catch
+            {
+                MessageBox.Show("Boşluk Bırakmayın!");
+            }
+            
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)

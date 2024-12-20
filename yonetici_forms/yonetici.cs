@@ -45,7 +45,7 @@ namespace gymKing.yonetici_forms
             SqlCommand kmt = new SqlCommand("SELECT KullaniciID, kullaniciAdi FROM tbl_giris_bilgileri WHERE rol = 'Pt'", baglanti);
             SqlDataReader dr = kmt.ExecuteReader();
 
-            if (dr.Read())
+            while(dr.Read())
             {
                 string kullaniciAdi = dr["kullaniciAdi"].ToString();
                 string kullaniciID = dr["KullaniciID"].ToString();
@@ -344,6 +344,16 @@ namespace gymKing.yonetici_forms
             {
                 Application.Exit();
             }
+        }
+
+        private void comboBoxKasiyer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxPT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

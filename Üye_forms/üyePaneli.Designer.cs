@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(üyePaneli));
             this.lbl_saat = new System.Windows.Forms.Label();
             this.lbl_gun = new System.Windows.Forms.Label();
             this.lbl_tarih = new System.Windows.Forms.Label();
@@ -330,6 +331,7 @@
             this.Controls.Add(this.pictureBox7);
             this.ForeColor = System.Drawing.Color.MidnightBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "üyePaneli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

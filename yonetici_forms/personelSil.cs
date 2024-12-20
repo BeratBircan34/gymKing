@@ -98,31 +98,40 @@ namespace gymKing.yonetici_forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            baglanti.Open();
-            SqlCommand getir = new SqlCommand("select * from tbl_per_bilgiler where perId = " + textBoxID.Text, baglanti);
-            SqlDataReader getir2 = getir.ExecuteReader();
-            while (getir2.Read())
+            try
             {
-                textBoxDogum.Text = getir2["dogumTarihi"].ToString();
-                textBoxisegiris.Text = getir2["isegiris"].ToString();
-                textBoxMail.Text = getir2["email"].ToString();
-                textBoxAdres.Text = getir2["adres"].ToString();
-                textBoxTelefon.Text = getir2["telNo"].ToString();
-               comboBoxRol.Text = getir2["rol"].ToString();
-            }
-            getir2.Close();
+                SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+                baglanti.Open();
+                SqlCommand getir = new SqlCommand("select * from tbl_per_bilgiler where perId = " + textBoxID.Text, baglanti);
+                SqlDataReader getir2 = getir.ExecuteReader();
+                while (getir2.Read())
+                {
+                    textBoxDogum.Text = getir2["dogumTarihi"].ToString();
+                    textBoxisegiris.Text = getir2["isegiris"].ToString();
+                    textBoxMail.Text = getir2["email"].ToString();
+                    textBoxAdres.Text = getir2["adres"].ToString();
+                    textBoxTelefon.Text = getir2["telNo"].ToString();
+                    comboBoxRol.Text = getir2["rol"].ToString();
+                }
+                getir2.Close();
 
 
-            SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID = " + textBoxID.Text, baglanti);
-            SqlDataReader getir4 = getir3.ExecuteReader();
-            while (getir4.Read())
-            {
-                textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
-                textBoxSifre.Text = getir4["sifre"].ToString();
+                SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID = " + textBoxID.Text, baglanti);
+                SqlDataReader getir4 = getir3.ExecuteReader();
+                while (getir4.Read())
+                {
+                    textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
+                    textBoxSifre.Text = getir4["sifre"].ToString();
+                }
+                getir4.Close();
+                baglanti.Close();
             }
-            getir4.Close();
-            baglanti.Close();
+
+            catch
+            {
+                MessageBox.Show("Lütfen Kullanıcı Seçiniz!");
+            }
+            
         }
 
         private void comboBoxSoyad_SelectedIndexChanged(object sender, EventArgs e)

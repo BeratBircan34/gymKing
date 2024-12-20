@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(yonetici));
             this.lbl_saat = new System.Windows.Forms.Label();
             this.lbl_gun = new System.Windows.Forms.Label();
             this.lbl_tarih = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
@@ -164,11 +166,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(131, 378);
+            this.label4.Location = new System.Drawing.Point(90, 379);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 24);
+            this.label4.Size = new System.Drawing.Size(237, 24);
             this.label4.TabIndex = 48;
-            this.label4.Text = "KASIYER PANEL";
+            this.label4.Text = "RESEPSIYON PANEL";
             // 
             // label7
             // 
@@ -176,11 +178,11 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Impact", 18F);
             this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label7.Location = new System.Drawing.Point(799, 518);
+            this.label7.Location = new System.Drawing.Point(787, 513);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 29);
+            this.label7.Size = new System.Drawing.Size(186, 29);
             this.label7.TabIndex = 56;
-            this.label7.Text = "Personel İlan";
+            this.label7.Text = "Personel Başvuru";
             // 
             // label8
             // 
@@ -246,6 +248,7 @@
             this.comboBoxPT.Name = "comboBoxPT";
             this.comboBoxPT.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPT.TabIndex = 76;
+            this.comboBoxPT.SelectedIndexChanged += new System.EventHandler(this.comboBoxPT_SelectedIndexChanged);
             // 
             // buttonGirisYap
             // 
@@ -280,6 +283,7 @@
             this.comboBoxKasiyer.Name = "comboBoxKasiyer";
             this.comboBoxKasiyer.Size = new System.Drawing.Size(121, 21);
             this.comboBoxKasiyer.TabIndex = 78;
+            this.comboBoxKasiyer.SelectedIndexChanged += new System.EventHandler(this.comboBoxKasiyer_SelectedIndexChanged);
             // 
             // pictureBox16
             // 
@@ -489,6 +493,10 @@
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click_1);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // yonetici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,6 +537,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "yonetici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -593,5 +602,6 @@
         private System.Windows.Forms.ComboBox comboBoxKasiyer;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

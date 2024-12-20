@@ -55,7 +55,9 @@ namespace gymKing.Üye_forms
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

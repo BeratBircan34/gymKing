@@ -64,38 +64,46 @@ namespace gymKing.kasiyer_forms
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
-            baglanti.Open();
-            SqlCommand getir = new SqlCommand("select * from tbl_musteriler where m_id = "+textBoxID.Text, baglanti);
-            SqlDataReader getir2 = getir.ExecuteReader();
-            while (getir2.Read())
+            try
             {
-                textBoxDogum.Text = getir2["m_DogumTarihi"].ToString();
-                textBoxBaslangic.Text = getir2["m_uyelikBaslangic"].ToString();
-                textBoxBitis.Text = getir2["m_uyelikBitis"].ToString();
-                textBoxMail.Text = getir2["m_eMail"].ToString();
-                textBoxAdres.Text = getir2["m_adres"].ToString();
-                textBoxPt.Text = getir2["m_personalTrainer"].ToString();
-                textBoxDiyetisyen.Text = getir2["m_diyetisyen"].ToString();
-                textBoxTelefon.Text = getir2["m_telNo"].ToString();
-                textBoxCins.Text = getir2["m_cinsiyet"].ToString();
-            }
-            getir2.Close();
+                SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
+                baglanti.Open();
+                SqlCommand getir = new SqlCommand("select * from tbl_musteriler where m_id = " + textBoxID.Text, baglanti);
+                SqlDataReader getir2 = getir.ExecuteReader();
+                while (getir2.Read())
+                {
+                    textBoxDogum.Text = getir2["m_DogumTarihi"].ToString();
+                    textBoxBaslangic.Text = getir2["m_uyelikBaslangic"].ToString();
+                    textBoxBitis.Text = getir2["m_uyelikBitis"].ToString();
+                    textBoxMail.Text = getir2["m_eMail"].ToString();
+                    textBoxAdres.Text = getir2["m_adres"].ToString();
+                    textBoxPt.Text = getir2["m_personalTrainer"].ToString();
+                    textBoxDiyetisyen.Text = getir2["m_diyetisyen"].ToString();
+                    textBoxTelefon.Text = getir2["m_telNo"].ToString();
+                    textBoxCins.Text = getir2["m_cinsiyet"].ToString();
+                }
+                getir2.Close();
 
 
-            SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID = "+textBoxID.Text, baglanti);
-            SqlDataReader getir4 = getir3.ExecuteReader();
-            while (getir4.Read())
-            {
-                textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
-                textBoxSifre.Text = getir4["sifre"].ToString();
+                SqlCommand getir3 = new SqlCommand("select * from tbl_giris_Bilgileri where KullaniciID = " + textBoxID.Text, baglanti);
+                SqlDataReader getir4 = getir3.ExecuteReader();
+                while (getir4.Read())
+                {
+                    textBoxKullaniciAdi.Text = getir4["kullaniciAdi"].ToString();
+                    textBoxSifre.Text = getir4["sifre"].ToString();
+                }
+                getir4.Close();
+                baglanti.Close();
             }
-            getir4.Close();
-            baglanti.Close();
+            catch 
+            {
+                MessageBox.Show("Lütfen Kullanıcı Seçiniz!");
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+
             SqlConnection baglanti = new SqlConnection(sqlOtoBaglanti.sqlBaglantiDize());
             baglanti.Open();
             SqlCommand sil = new SqlCommand("delete from tbl_musteriler where m_id = "+textBoxID.Text,baglanti);

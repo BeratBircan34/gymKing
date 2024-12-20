@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_pt_guncelKayitlar));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chkbx_islemTarihi_ye = new System.Windows.Forms.CheckBox();
@@ -732,6 +733,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_pt_guncelKayitlar";
             this.Text = "frm_pt_guncelKayitlar";
             this.Load += new System.EventHandler(this.frm_pt_guncelKayitlar_Load);
